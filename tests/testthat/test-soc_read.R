@@ -25,7 +25,18 @@ with_mock_dir(
         "2015-01-03 00:56:27",
         tz = "UTC"
       )
-      class(expected) <- c("socrata_tbl", "tbl_df", "tbl", "data.frame")
+      attr(expected, "description") <- character()
+      attr(expected$domain, "label") <- "Domain"
+      attr(expected$name, "label") <- "Name"
+      attr(expected$logo, "label") <- "Logo"
+      attr(expected$tags, "label") <- "Tags"
+      attr(expected$email, "label") <- "Email"
+      attr(expected$domain, "description") <- NA_character_
+      attr(expected$name, "description") <- NA_character_
+      attr(expected$logo, "description") <- NA_character_
+      attr(expected$tags, "description") <- NA_character_
+      attr(expected$email, "description") <- NA_character_
+      class(expected) <- c("soc_tbl", "tbl_df", "tbl", "data.frame")
 
       expect_equal(result, expected)
     })
@@ -37,7 +48,7 @@ with_mock_dir(
 
       result <- soc_read(url)
 
-      expect_s3_class(result, "socrata_tbl")
+      expect_s3_class(result, "soc_tbl")
       expect_s3_class(result, "tbl_df")
       expect_s3_class(result, "sf")
 

@@ -128,7 +128,7 @@ print(chi_community_areas)
 ```
 
 You can even perform complex queries using [Socrata Query Language
-(SoQL)](https://dev.socrata.com/docs/queries/).
+(SoQL)](https://dev.socrata.com/docs/queries/) using `soc_query()`.
 
 ``` r
 lower_west_side <- soc_read(
@@ -171,8 +171,19 @@ trips_to_lws_by_ca <- soc_read(
     order_by = "n DESC"
   )
 )
-#> ⠙ Iterating 1 done (0.38/s) | 2.7s
-#> ⠹ Iterating 2 done (0.38/s) | 5.3s
+#> ⠙ Iterating 1 done (0.38/s) | 2.6s
+#> ⠹ Iterating 2 done (0.37/s) | 5.4s
+trips_to_lws_by_ca <- soc_read(
+  "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
+  query = soc_query(
+    select = "pickup_community_area, count(*) as n",
+    where = glue::glue(
+      "dropoff_community_area = 31"
+    ),
+    group_by = "pickup_community_area",
+    order_by = "n DESC"
+  )
+)
 print(trips_to_lws_by_ca)
 #> ID: wrvz-psew
 #> Name: Taxi Trips (2013-2023)
@@ -203,4 +214,38 @@ print(trips_to_lws_by_ca)
 #>  9                    56  14142
 #> 10                     7  12191
 #> # ℹ 68 more rows
+```
+
+Access relevant metadata using `soc_metadata()`.
+
+``` r
+soc_metadata(lower_west_side)
+#> ID: igwz-8jzy
+#> Name: Boundaries - Community Areas
+#> Attribution: City of Chicago
+#> Category: Facilities & Geographic Boundaries
+#> Created: 2013-01-07 02:02:50
+#> Data last Updated: 2025-04-22 23:06:37
+#> Metadata last Updated: 2025-04-22 23:06:35
+#> Description: Community area boundaries in Chicago.  This dataset is in a format
+#> for spatial datasets that is inherently tabular but allows for a map as a
+#> derived view. Please click the indicated link below for such a map.  To export
+#> the data in either tabular or geographic format, please use the Export button
+#> on this dataset.
+#> Custom Fields:
+#> • Time Period: Current community area boundaries.
+#> • Changes and Other Historical Information Useful to Understanding This
+#> Dataset:
+#> https://www.google.com/search?as_q=%22Related+dataset+ID+s%22+%22igwz-8jzy%22+inurl%3Astories&as_sitesearch=data.cityofchicago.org
+#> • Frequency: Updated as needed.
+#> Columns:
+#> # A tibble: 6 × 3
+#>   name       label      description
+#>   <chr>      <chr>      <chr>      
+#> 1 the_geom   the_geom   ""         
+#> 2 area_numbe AREA_NUMBE ""         
+#> 3 community  COMMUNITY  ""         
+#> 4 area_num_1 AREA_NUM_1 ""         
+#> 5 shape_area SHAPE_AREA ""         
+#> 6 shape_len  SHAPE_LEN  ""
 ```

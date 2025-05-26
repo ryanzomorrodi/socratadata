@@ -121,9 +121,9 @@ soc_read <- function(url, query = soc_query(), alias = "label") {
     result <- sf::st_as_sf(result)
   }
 
-  class(result) <- c("socrata_tbl", class(result))
+  class(result) <- c("soc_tbl", class(result))
 
-  set_metadata(result, url_parsed, four_by_four, alias)
+  set_metadata(result, url_parsed, four_by_four, query, alias)
 }
 
 iterative_requests <- function(url_parsed, four_by_four, query) {
@@ -199,7 +199,7 @@ iterative_requests <- function(url_parsed, four_by_four, query) {
   resps
 }
 
-set_metadata <- function(result, url_parsed, four_by_four, alias) {
+set_metadata <- function(result, url_parsed, four_by_four, query, alias) {
   meta_url <- get_meta_url(url_parsed, four_by_four)
 
   metadata <- httr2::request(meta_url) |>
@@ -220,29 +220,35 @@ set_metadata <- function(result, url_parsed, four_by_four, alias) {
     tz = "UTC"
   )
   attr(result, "description") <- gsub("\\r\\n", "\n", metadata$description)
+  attr(result, "custom_fields") <- metadata$metadata$custom_fields$Metadata
 
+  col_names <- sapply(metadata$columns, \(col) col$fieldName)
   col_alias <- sapply(metadata$columns, \(col) col$name)
+  names(col_alias) <- col_names
   col_description <- sapply(
     metadata$columns,
     \(col) ifelse(is.null(col$description), NA_character_, col$description)
   )
+  names(col_description) <- col_names
 
   if (alias == "replace") {
-    colnames(result) <- col_alias
+    colnames(result) <- col_alias[colnames(result)]
   } else if (alias == "label") {
     for (i in seq_along(result)) {
-      attr(result[[i]], "label") <- col_alias[i]
+      attr(result[[i]], "label") <- unname(col_alias[colnames(result)[i]])
     }
   }
   for (i in seq_along(result)) {
-    attr(result[[i]], "description") <- col_description[[i]]
+    attr(result[[i]], "description") <- unname(
+      col_description[colnames(result)[i]]
+    )
   }
 
   result
 }
 
 #' @export
-print.socrata_tbl <- function(x, ...) {
+print.soc_tbl <- function(x, ...) {
   cli::cli_text("{.strong ID:} {attr(x, 'id')}")
   cli::cli_text("{.strong Name:} {attr(x, 'name')}")
   cli::cli_text("{.strong Attribution:} {attr(x, 'attribution')}")

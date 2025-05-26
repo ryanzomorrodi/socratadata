@@ -58,7 +58,7 @@ chi_community_areas <- soc_read(
 print(chi_community_areas)
 ```
 
-You can even perform complex queries using [Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/).
+You can even perform complex queries using [Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/) using `soc_query()`.
 ```{r}
 lower_west_side <- soc_read(
   "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data",
@@ -79,5 +79,21 @@ trips_to_lws_by_ca <- soc_read(
     order_by = "n DESC"
   )
 )
+trips_to_lws_by_ca <- soc_read(
+  "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
+  query = soc_query(
+    select = "pickup_community_area, count(*) as n",
+    where = glue::glue(
+      "dropoff_community_area = 31"
+    ),
+    group_by = "pickup_community_area",
+    order_by = "n DESC"
+  )
+)
 print(trips_to_lws_by_ca)
+```
+
+Access relevant metadata using `soc_metadata()`.
+```{r}
+soc_metadata(lower_west_side)
 ```
