@@ -2,6 +2,8 @@ with_mock_dir(
   "read_socrata",
   {
     test_that("read_socrata returns tibble when no spatial cols", {
+      skip_on_cran()
+
       url <- "https://soda.demo.socrata.com/resource/2646-ez2p.json"
 
       result <- read_socrata(url)
@@ -29,6 +31,8 @@ with_mock_dir(
     })
 
     test_that("read_socrata returns sf when there is one spatial col", {
+      skip_on_cran()
+
       url <- "https://soda.demo.socrata.com/resource/6yvf-kk3n.json"
 
       result <- read_socrata(url)

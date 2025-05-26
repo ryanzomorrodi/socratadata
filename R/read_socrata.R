@@ -54,10 +54,11 @@ get_meta_url <- function(url_parsed, four_by_four) {
 #'
 #' @examples
 #' \dontrun{
-#'   url <- "https://data.cityofchicago.org/resource/ijzp-q8t2.json"
-#'   data <- read_socrata(url)
-#'   print(data)
-#'   attr(data, "description")
+#' cta_ridership <- read_socrata(
+#'   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
+#' )
+#' print(cta_ridership)
+#' attr(cta_ridership, "description")
 #' }
 #'
 #' @export

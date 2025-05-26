@@ -1,0 +1,59 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# socratadata
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Explore Socrata data with ease.
+
+`socratadata` provides a modern interface for downloading data from [Socrata](https://socrata.com) open data portals powered by Rust. `socratadata` improves upon the existing [`RSocrata`](https://dev.socrata.com/connectors/rsocrata) package by introducing support for all [Socrata datatypes](https://dev.socrata.com/docs/datatypes/), as such `socratadata` natively supports datasets with geospatial fields by returning them as `sf` objects when applicable.
+
+## Installation
+
+You can install the development version of socratadata from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("ryanzomorrodi/socratadata")
+```
+
+## Example
+
+Use `list_socrata()` to explore the datasets available on any socrata data portal.
+
+```{r}
+library(socratadata)
+
+catalog <- list_socrata("https://data.cityofchicago.org")
+print(catalog)
+```
+
+Use `read_socrata()` to read a socrata dataset into R.
+```{r}
+cta_ridership <- read_socrata(
+  "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
+)
+print(cta_ridership)
+```
+
+Spatial data will be read as an `sf` object.
+```{r}
+chi_community_areas <- read_socrata(
+  "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"
+)
+print(chi_community_areas)
+```

@@ -7,3 +7,5 @@ src/Makevars.win
 .httr-oauth
 .DS_Store
 .quarto
+docs
+tests/testthat/read_socrata

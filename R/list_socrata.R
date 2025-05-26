@@ -8,17 +8,17 @@
 #' \describe{
 #'   \item{id}{Dataset identifier (four-by-four ID).}
 #'   \item{name}{Title of the dataset.}
-#'   \item{categories}{Themes or categories associated with the dataset.}
+#'   \item{categories}{Categories associated with the dataset.}
 #'   \item{keywords}{Keywords describing the dataset.}
-#'   \item{last_updated}{The most recent modification date of the dataset (as a `Date`).}
-#'   \item{landing_page}{URL linking to the dataset's page on the portal.}
+#'   \item{last_updated}{The date of the last dataset modification.}
+#'   \item{landing_page}{The landing page url of the dataset.}
 #'   \item{description}{Brief description of the dataset's content.}
 #' }
 #'
 #' @examples
 #' \dontrun{
-#'   catalog <- list_socrata("https://data.cityofchicago.org")
-#'   head(catalog)
+#' catalog <- list_socrata("https://data.cityofchicago.org")
+#' head(catalog)
 #' }
 #'
 #' @export
