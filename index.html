@@ -62,17 +62,17 @@
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>Use <code><a href="reference/list_socrata.html">list_socrata()</a></code> to explore the datasets available on any socrata data portal.</p>
+<p>Use <code><a href="reference/soc_list.html">soc_list()</a></code> to explore the datasets available on any socrata data portal.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ryanzomorrodi.github.io/socratadata/">socratadata</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">catalog</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/list_socrata.html">list_socrata</a></span><span class="op">(</span><span class="st">"https://data.cityofchicago.org"</span><span class="op">)</span></span>
+<span><span class="va">catalog</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_list.html">soc_list</a></span><span class="op">(</span><span class="st">"https://data.cityofchicago.org"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">catalog</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 1,045 × 7</span></span>
 <span><span class="co">#&gt;    id        name      categories keywords last_updated landing_page description</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;     &lt;list&gt;     &lt;list&gt;   &lt;date&gt;       &lt;chr&gt;        &lt;chr&gt;      </span></span>
 <span><span class="co">#&gt;  1 22bv-uv6r Open Spa… &lt;chr [1]&gt;  &lt;chr&gt;    2012-09-07   https://dat… "To view o…</span></span>
-<span><span class="co">#&gt;  2 22u3-xenr Building… &lt;chr [1]&gt;  &lt;chr&gt;    2025-05-25   https://dat… "Violation…</span></span>
+<span><span class="co">#&gt;  2 22u3-xenr Building… &lt;chr [1]&gt;  &lt;chr&gt;    2025-05-26   https://dat… "Violation…</span></span>
 <span><span class="co">#&gt;  3 24zt-jpfn PoliceDi… &lt;chr [1]&gt;  &lt;chr&gt;    2024-12-02   https://dat… "Current p…</span></span>
 <span><span class="co">#&gt;  4 26kv-zc52 Librarie… &lt;chr [1]&gt;  &lt;chr&gt;    2023-01-23   https://dat… "The Chica…</span></span>
 <span><span class="co">#&gt;  5 28km-gtjn Fire Sta… &lt;chr [1]&gt;  &lt;chr&gt;    2019-04-18   https://dat… "Fire stat…</span></span>
@@ -82,9 +82,9 @@
 <span><span class="co">#&gt;  9 2ani-ic5x COVID-19… &lt;chr [1]&gt;  &lt;chr&gt;    2025-05-21   https://dat… "NOTE: Thi…</span></span>
 <span><span class="co">#&gt; 10 2b3m-wnm2 7th Ward… &lt;chr [1]&gt;  &lt;chr&gt;    2018-07-11   https://dat… "Applicant…</span></span>
 <span><span class="co">#&gt; # ℹ 1,035 more rows</span></span></code></pre></div>
-<p>Use <code><a href="reference/read_socrata.html">read_socrata()</a></code> to read a socrata dataset into R.</p>
+<p>Use <code><a href="reference/soc_read.html">soc_read()</a></code> to read a socrata dataset into R.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">cta_ridership</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/read_socrata.html">read_socrata</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="va">cta_ridership</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"</span></span>
 <span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">cta_ridership</span><span class="op">)</span></span>
@@ -115,10 +115,15 @@
 <span><span class="co">#&gt; # ℹ 8,756 more rows</span></span></code></pre></div>
 <p>Spatial data will be read as an <code>sf</code> object.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">chi_community_areas</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/read_socrata.html">read_socrata</a></span><span class="op">(</span></span>
+<code class="sourceCode R"><span><span class="va">chi_community_areas</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"</span></span>
 <span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">chi_community_areas</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Simple feature collection with 77 features and 5 fields</span></span>
+<span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
+<span><span class="co">#&gt; Dimension:     XY</span></span>
+<span><span class="co">#&gt; Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52414 ymax: 42.02304</span></span>
+<span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
 <span><span class="co">#&gt; ID: igwz-8jzy</span></span>
 <span><span class="co">#&gt; Name: Boundaries - Community Areas</span></span>
 <span><span class="co">#&gt; Attribution: City of Chicago</span></span>
@@ -131,14 +136,9 @@
 <span><span class="co">#&gt; derived view. Please click the indicated link below for such a map.  To export</span></span>
 <span><span class="co">#&gt; the data in either tabular or geographic format, please use the Export button</span></span>
 <span><span class="co">#&gt; on this dataset.</span></span>
-<span><span class="co">#&gt; Simple feature collection with 77 features and 5 fields</span></span>
-<span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
-<span><span class="co">#&gt; Dimension:     XY</span></span>
-<span><span class="co">#&gt; Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52414 ymax: 42.02304</span></span>
-<span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
 <span><span class="co">#&gt; # A tibble: 77 × 6</span></span>
 <span><span class="co">#&gt;                              the_geom area_numbe community area_num_1 shape_area</span></span>
-<span><span class="co">#&gt;                    &lt;MULTIPOLYGON [°]&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt;  *                 &lt;MULTIPOLYGON [°]&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt;  1 (((-87.65456 41.99817, -87.65574 …          1 ROGERS P… 1           51259902.</span></span>
 <span><span class="co">#&gt;  2 (((-87.68465 42.01948, -87.68464 …          2 WEST RID… 2           98429095.</span></span>
 <span><span class="co">#&gt;  3 (((-87.64102 41.9548, -87.644 41.…          3 UPTOWN    3           65095643.</span></span>
@@ -151,6 +151,80 @@
 <span><span class="co">#&gt; 10 (((-87.78002 41.99741, -87.78049 …         10 NORWOOD … 10         121959105.</span></span>
 <span><span class="co">#&gt; # ℹ 67 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 1 more variable: shape_len &lt;dbl&gt;</span></span></code></pre></div>
+<p>You can even perform complex queries using complex <a href="https://dev.socrata.com/docs/queries/" class="external-link">Socrata Query Language (SOQL)</a>.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">lower_west_side</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
+<span>  <span class="st">"https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"</span>,</span>
+<span>  query <span class="op">=</span> <span class="fu"><a href="reference/soc_query.html">soc_query</a></span><span class="op">(</span></span>
+<span>    where <span class="op">=</span> <span class="st">"community LIKE 'LOWER WEST SIDE'"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">lower_west_side</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Simple feature collection with 1 feature and 5 fields</span></span>
+<span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
+<span><span class="co">#&gt; Dimension:     XY</span></span>
+<span><span class="co">#&gt; Bounding box:  xmin: -87.68807 ymin: 41.8348 xmax: -87.63516 ymax: 41.86002</span></span>
+<span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
+<span><span class="co">#&gt; ID: igwz-8jzy</span></span>
+<span><span class="co">#&gt; Name: Boundaries - Community Areas</span></span>
+<span><span class="co">#&gt; Attribution: City of Chicago</span></span>
+<span><span class="co">#&gt; Category: Facilities &amp; Geographic Boundaries</span></span>
+<span><span class="co">#&gt; Created: 2013-01-07 02:02:50</span></span>
+<span><span class="co">#&gt; Data last Updated: 2025-04-22 23:06:37</span></span>
+<span><span class="co">#&gt; Metadata last Updated: 2025-04-22 23:06:35</span></span>
+<span><span class="co">#&gt; Description: Community area boundaries in Chicago.  This dataset is in a format</span></span>
+<span><span class="co">#&gt; for spatial datasets that is inherently tabular but allows for a map as a</span></span>
+<span><span class="co">#&gt; derived view. Please click the indicated link below for such a map.  To export</span></span>
+<span><span class="co">#&gt; the data in either tabular or geographic format, please use the Export button</span></span>
+<span><span class="co">#&gt; on this dataset.</span></span>
+<span><span class="co">#&gt; # A tibble: 1 × 6</span></span>
+<span><span class="co">#&gt;                    the_geom area_numbe community area_num_1 shape_area shape_len</span></span>
+<span><span class="co">#&gt; *        &lt;MULTIPOLYGON [°]&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt; 1 (((-87.63516 41.85772, -…         31 LOWER WE… 31          81550724.    43229.</span></span>
+<span></span>
+<span><span class="va">trips_to_lws_by_ca</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
+<span>  <span class="st">"https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data"</span>,</span>
+<span>  query <span class="op">=</span> <span class="fu"><a href="reference/soc_query.html">soc_query</a></span><span class="op">(</span></span>
+<span>    select <span class="op">=</span> <span class="st">"pickup_community_area, count(*) as n"</span>,</span>
+<span>    where <span class="op">=</span> <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html" class="external-link">glue</a></span><span class="op">(</span></span>
+<span>      <span class="st">"within_polygon(dropoff_centroid_location, '{sf::st_as_text(lower_west_side$the_geom)}')"</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    group_by <span class="op">=</span> <span class="st">"pickup_community_area"</span>,</span>
+<span>    order_by <span class="op">=</span> <span class="st">"n DESC"</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; ⠙ Iterating 1 done (0.39/s) | 2.6s</span></span>
+<span><span class="co">#&gt; ⠹ Iterating 2 done (0.38/s) | 5.3s</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">trips_to_lws_by_ca</span><span class="op">)</span></span>
+<span><span class="co">#&gt; ID: wrvz-psew</span></span>
+<span><span class="co">#&gt; Name: Taxi Trips (2013-2023)</span></span>
+<span><span class="co">#&gt; Attribution: City of Chicago</span></span>
+<span><span class="co">#&gt; Category: Transportation</span></span>
+<span><span class="co">#&gt; Created: 2016-05-27 21:27:48</span></span>
+<span><span class="co">#&gt; Data last Updated: 2024-02-07 20:40:12</span></span>
+<span><span class="co">#&gt; Metadata last Updated: 2024-06-21 17:06:18</span></span>
+<span><span class="co">#&gt; Description: &lt;b&gt;This dataset ends with 2023. Please see the Featured Content</span></span>
+<span><span class="co">#&gt; link below for the dataset that starts in 2024.&lt;/b&gt; Taxi trips from 2013 to</span></span>
+<span><span class="co">#&gt; 2023 reported to the City of Chicago in its role as a regulatory agency.  To</span></span>
+<span><span class="co">#&gt; protect privacy but allow for aggregate analyses, the Taxi ID is consistent for</span></span>
+<span><span class="co">#&gt; any given taxi medallion number but does not show the number, Census Tracts are</span></span>
+<span><span class="co">#&gt; suppressed in some cases, and times are rounded to the nearest 15 minutes.  Due</span></span>
+<span><span class="co">#&gt; to the data reporting process, not all trips are reported but the City believes</span></span>
+<span><span class="co">#&gt; that most are.</span></span>
+<span><span class="co">#&gt; # A tibble: 78 × 2</span></span>
+<span><span class="co">#&gt;    pickup_community_area      n</span></span>
+<span><span class="co">#&gt;                    &lt;dbl&gt;  &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt;  1                    32 127474</span></span>
+<span><span class="co">#&gt;  2                     8 113797</span></span>
+<span><span class="co">#&gt;  3                    28  90983</span></span>
+<span><span class="co">#&gt;  4                    31  39509</span></span>
+<span><span class="co">#&gt;  5                    24  37789</span></span>
+<span><span class="co">#&gt;  6                    33  22793</span></span>
+<span><span class="co">#&gt;  7                    76  18006</span></span>
+<span><span class="co">#&gt;  8                     6  15160</span></span>
+<span><span class="co">#&gt;  9                    56  14142</span></span>
+<span><span class="co">#&gt; 10                     7  12191</span></span>
+<span><span class="co">#&gt; # ℹ 68 more rows</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
