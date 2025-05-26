@@ -11,8 +11,8 @@
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Explore Socrata Data with Ease">
-<meta name="description" content="Provides a modern interface for downloading data from Socrata open data portals powered by Rust. Introduces support for all Socrata datatypes, and as such, natively supports datasets with geospatial fields by returning them as sf objects when applicable.">
-<meta property="og:description" content="Provides a modern interface for downloading data from Socrata open data portals powered by Rust. Introduces support for all Socrata datatypes, and as such, natively supports datasets with geospatial fields by returning them as sf objects when applicable.">
+<meta name="description" content="Provides a modern interface for downloading data from Socrata open data portals powered by Rust. Introduces support for all Socrata datatypes and queries via the Socrata Query Language (SoQL).">
+<meta property="og:description" content="Provides a modern interface for downloading data from Socrata open data portals powered by Rust. Introduces support for all Socrata datatypes and queries via the Socrata Query Language (SoQL).">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -50,7 +50,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 <p>Explore Socrata data with ease.</p>
-<p><code>socratadata</code> provides a modern interface for downloading data from <a href="https://socrata.com" class="external-link">Socrata</a> open data portals powered by Rust. <code>socratadata</code> improves upon the existing <a href="https://dev.socrata.com/connectors/rsocrata" class="external-link"><code>RSocrata</code></a> package by introducing support for all <a href="https://dev.socrata.com/docs/datatypes/" class="external-link">Socrata datatypes</a>, as such <code>socratadata</code> natively supports datasets with geospatial fields by returning them as <code>sf</code> objects when applicable.</p>
+<p><code>socratadata</code> provides a modern interface for downloading data from <a href="https://socrata.com" class="external-link">Socrata</a> open data portals powered by Rust. <code>socratadata</code> improves upon the existing <a href="https://dev.socrata.com/connectors/rsocrata" class="external-link"><code>RSocrata</code></a> package by introducing support for all <a href="https://dev.socrata.com/docs/datatypes/" class="external-link">Socrata datatypes</a> and queries via the <a href="https://dev.socrata.com/docs/queries/" class="external-link">Socrata Query Language (SoQL)</a>.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -151,7 +151,7 @@
 <span><span class="co">#&gt; 10 (((-87.78002 41.99741, -87.78049 …         10 NORWOOD … 10         121959105.</span></span>
 <span><span class="co">#&gt; # ℹ 67 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 1 more variable: shape_len &lt;dbl&gt;</span></span></code></pre></div>
-<p>You can even perform complex queries using complex <a href="https://dev.socrata.com/docs/queries/" class="external-link">Socrata Query Language (SOQL)</a>.</p>
+<p>You can even perform complex queries using <a href="https://dev.socrata.com/docs/queries/" class="external-link">Socrata Query Language (SoQL)</a>.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">lower_west_side</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"</span>,</span>
@@ -193,7 +193,7 @@
 <span>    order_by <span class="op">=</span> <span class="st">"n DESC"</span></span>
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; ⠙ Iterating 1 done (0.39/s) | 2.6s</span></span>
+<span><span class="co">#&gt; ⠙ Iterating 1 done (0.38/s) | 2.7s</span></span>
 <span><span class="co">#&gt; ⠹ Iterating 2 done (0.38/s) | 5.3s</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">trips_to_lws_by_ca</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ID: wrvz-psew</span></span>
