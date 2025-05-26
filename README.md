@@ -13,9 +13,8 @@ Explore Socrata data with ease.
 `socratadata` improves upon the existing
 [`RSocrata`](https://dev.socrata.com/connectors/rsocrata) package by
 introducing support for all [Socrata
-datatypes](https://dev.socrata.com/docs/datatypes/), as such
-`socratadata` natively supports datasets with geospatial fields by
-returning them as `sf` objects when applicable.
+datatypes](https://dev.socrata.com/docs/datatypes/) and queries via the
+[Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/).
 
 ## Installation
 
@@ -128,8 +127,8 @@ print(chi_community_areas)
 #> # ℹ 1 more variable: shape_len <dbl>
 ```
 
-You can even perform complex queries using complex [Socrata Query
-Language (SOQL)](https://dev.socrata.com/docs/queries/).
+You can even perform complex queries using [Socrata Query Language
+(SoQL)](https://dev.socrata.com/docs/queries/).
 
 ``` r
 lower_west_side <- soc_read(
@@ -172,7 +171,7 @@ trips_to_lws_by_ca <- soc_read(
     order_by = "n DESC"
   )
 )
-#> ⠙ Iterating 1 done (0.39/s) | 2.6s
+#> ⠙ Iterating 1 done (0.38/s) | 2.7s
 #> ⠹ Iterating 2 done (0.38/s) | 5.3s
 print(trips_to_lws_by_ca)
 #> ID: wrvz-psew

@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 Explore Socrata data with ease.
 
-`socratadata` provides a modern interface for downloading data from [Socrata](https://socrata.com) open data portals powered by Rust. `socratadata` improves upon the existing [`RSocrata`](https://dev.socrata.com/connectors/rsocrata) package by introducing support for all [Socrata datatypes](https://dev.socrata.com/docs/datatypes/), as such `socratadata` natively supports datasets with geospatial fields by returning them as `sf` objects when applicable.
+`socratadata` provides a modern interface for downloading data from [Socrata](https://socrata.com) open data portals powered by Rust. `socratadata` improves upon the existing [`RSocrata`](https://dev.socrata.com/connectors/rsocrata) package by introducing support for all [Socrata datatypes](https://dev.socrata.com/docs/datatypes/) and queries via the [Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/).
 
 ## Installation
 
@@ -58,7 +58,7 @@ chi_community_areas <- soc_read(
 print(chi_community_areas)
 ```
 
-You can even perform complex queries using complex [Socrata Query Language (SOQL)](https://dev.socrata.com/docs/queries/).
+You can even perform complex queries using [Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/).
 ```{r}
 lower_west_side <- soc_read(
   "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data",
