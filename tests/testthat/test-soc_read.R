@@ -1,12 +1,12 @@
 with_mock_dir(
-  "read_socrata",
+  "soc_read",
   {
-    test_that("read_socrata returns tibble when no spatial cols", {
+    test_that("soc_read returns tibble when no spatial cols", {
       skip_on_cran()
 
       url <- "https://soda.demo.socrata.com/resource/2646-ez2p.json"
 
-      result <- read_socrata(url)
+      result <- soc_read(url)
 
       # fmt: skip
       expected <- tibble::tribble(
@@ -30,12 +30,12 @@ with_mock_dir(
       expect_equal(result, expected)
     })
 
-    test_that("read_socrata returns sf when there is one spatial col", {
+    test_that("soc_read returns sf when there is one spatial col", {
       skip_on_cran()
 
       url <- "https://soda.demo.socrata.com/resource/6yvf-kk3n.json"
 
-      result <- read_socrata(url)
+      result <- soc_read(url)
 
       expect_s3_class(result, "socrata_tbl")
       expect_s3_class(result, "tbl_df")

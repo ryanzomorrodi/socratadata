@@ -17,12 +17,14 @@
 #'
 #' @examples
 #' \dontrun{
-#' catalog <- list_socrata("https://data.cityofchicago.org")
+#' catalog <- soc_list("https://data.cityofchicago.org")
 #' head(catalog)
 #' }
 #'
 #' @export
-list_socrata <- function(url) {
+soc_list <- function(url) {
+  check_string(url)
+
   list_url <- httr2::url_parse(url) |>
     httr2::url_modify(path = "data.json") |>
     httr2::url_build()

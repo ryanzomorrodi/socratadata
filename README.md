@@ -29,19 +29,19 @@ pak::pak("ryanzomorrodi/socratadata")
 
 ## Example
 
-Use `list_socrata()` to explore the datasets available on any socrata
-data portal.
+Use `soc_list()` to explore the datasets available on any socrata data
+portal.
 
 ``` r
 library(socratadata)
 
-catalog <- list_socrata("https://data.cityofchicago.org")
+catalog <- soc_list("https://data.cityofchicago.org")
 print(catalog)
 #> # A tibble: 1,045 × 7
 #>    id        name      categories keywords last_updated landing_page description
 #>    <chr>     <chr>     <list>     <list>   <date>       <chr>        <chr>      
 #>  1 22bv-uv6r Open Spa… <chr [1]>  <chr>    2012-09-07   https://dat… "To view o…
-#>  2 22u3-xenr Building… <chr [1]>  <chr>    2025-05-25   https://dat… "Violation…
+#>  2 22u3-xenr Building… <chr [1]>  <chr>    2025-05-26   https://dat… "Violation…
 #>  3 24zt-jpfn PoliceDi… <chr [1]>  <chr>    2024-12-02   https://dat… "Current p…
 #>  4 26kv-zc52 Librarie… <chr [1]>  <chr>    2023-01-23   https://dat… "The Chica…
 #>  5 28km-gtjn Fire Sta… <chr [1]>  <chr>    2019-04-18   https://dat… "Fire stat…
@@ -53,10 +53,10 @@ print(catalog)
 #> # ℹ 1,035 more rows
 ```
 
-Use `read_socrata()` to read a socrata dataset into R.
+Use `soc_read()` to read a socrata dataset into R.
 
 ``` r
-cta_ridership <- read_socrata(
+cta_ridership <- soc_read(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
 print(cta_ridership)
@@ -90,10 +90,15 @@ print(cta_ridership)
 Spatial data will be read as an `sf` object.
 
 ``` r
-chi_community_areas <- read_socrata(
+chi_community_areas <- soc_read(
   "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"
 )
 print(chi_community_areas)
+#> Simple feature collection with 77 features and 5 fields
+#> Geometry type: MULTIPOLYGON
+#> Dimension:     XY
+#> Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52414 ymax: 42.02304
+#> Geodetic CRS:  WGS 84
 #> ID: igwz-8jzy
 #> Name: Boundaries - Community Areas
 #> Attribution: City of Chicago
@@ -106,14 +111,9 @@ print(chi_community_areas)
 #> derived view. Please click the indicated link below for such a map.  To export
 #> the data in either tabular or geographic format, please use the Export button
 #> on this dataset.
-#> Simple feature collection with 77 features and 5 fields
-#> Geometry type: MULTIPOLYGON
-#> Dimension:     XY
-#> Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52414 ymax: 42.02304
-#> Geodetic CRS:  WGS 84
 #> # A tibble: 77 × 6
 #>                              the_geom area_numbe community area_num_1 shape_area
-#>                    <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>
+#>  *                 <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>
 #>  1 (((-87.65456 41.99817, -87.65574 …          1 ROGERS P… 1           51259902.
 #>  2 (((-87.68465 42.01948, -87.68464 …          2 WEST RID… 2           98429095.
 #>  3 (((-87.64102 41.9548, -87.644 41.…          3 UPTOWN    3           65095643.
@@ -126,4 +126,82 @@ print(chi_community_areas)
 #> 10 (((-87.78002 41.99741, -87.78049 …         10 NORWOOD … 10         121959105.
 #> # ℹ 67 more rows
 #> # ℹ 1 more variable: shape_len <dbl>
+```
+
+You can even perform complex queries using complex [Socrata Query
+Language (SOQL)](https://dev.socrata.com/docs/queries/).
+
+``` r
+lower_west_side <- soc_read(
+  "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data",
+  query = soc_query(
+    where = "community LIKE 'LOWER WEST SIDE'"
+  )
+)
+print(lower_west_side)
+#> Simple feature collection with 1 feature and 5 fields
+#> Geometry type: MULTIPOLYGON
+#> Dimension:     XY
+#> Bounding box:  xmin: -87.68807 ymin: 41.8348 xmax: -87.63516 ymax: 41.86002
+#> Geodetic CRS:  WGS 84
+#> ID: igwz-8jzy
+#> Name: Boundaries - Community Areas
+#> Attribution: City of Chicago
+#> Category: Facilities & Geographic Boundaries
+#> Created: 2013-01-07 02:02:50
+#> Data last Updated: 2025-04-22 23:06:37
+#> Metadata last Updated: 2025-04-22 23:06:35
+#> Description: Community area boundaries in Chicago.  This dataset is in a format
+#> for spatial datasets that is inherently tabular but allows for a map as a
+#> derived view. Please click the indicated link below for such a map.  To export
+#> the data in either tabular or geographic format, please use the Export button
+#> on this dataset.
+#> # A tibble: 1 × 6
+#>                    the_geom area_numbe community area_num_1 shape_area shape_len
+#> *        <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>     <dbl>
+#> 1 (((-87.63516 41.85772, -…         31 LOWER WE… 31          81550724.    43229.
+
+trips_to_lws_by_ca <- soc_read(
+  "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
+  query = soc_query(
+    select = "pickup_community_area, count(*) as n",
+    where = glue::glue(
+      "within_polygon(dropoff_centroid_location, '{sf::st_as_text(lower_west_side$the_geom)}')"
+    ),
+    group_by = "pickup_community_area",
+    order_by = "n DESC"
+  )
+)
+#> ⠙ Iterating 1 done (0.39/s) | 2.6s
+#> ⠹ Iterating 2 done (0.38/s) | 5.3s
+print(trips_to_lws_by_ca)
+#> ID: wrvz-psew
+#> Name: Taxi Trips (2013-2023)
+#> Attribution: City of Chicago
+#> Category: Transportation
+#> Created: 2016-05-27 21:27:48
+#> Data last Updated: 2024-02-07 20:40:12
+#> Metadata last Updated: 2024-06-21 17:06:18
+#> Description: <b>This dataset ends with 2023. Please see the Featured Content
+#> link below for the dataset that starts in 2024.</b> Taxi trips from 2013 to
+#> 2023 reported to the City of Chicago in its role as a regulatory agency.  To
+#> protect privacy but allow for aggregate analyses, the Taxi ID is consistent for
+#> any given taxi medallion number but does not show the number, Census Tracts are
+#> suppressed in some cases, and times are rounded to the nearest 15 minutes.  Due
+#> to the data reporting process, not all trips are reported but the City believes
+#> that most are.
+#> # A tibble: 78 × 2
+#>    pickup_community_area      n
+#>                    <dbl>  <dbl>
+#>  1                    32 127474
+#>  2                     8 113797
+#>  3                    28  90983
+#>  4                    31  39509
+#>  5                    24  37789
+#>  6                    33  22793
+#>  7                    76  18006
+#>  8                     6  15160
+#>  9                    56  14142
+#> 10                     7  12191
+#> # ℹ 68 more rows
 ```

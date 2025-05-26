@@ -33,18 +33,18 @@ pak::pak("ryanzomorrodi/socratadata")
 
 ## Example
 
-Use `list_socrata()` to explore the datasets available on any socrata data portal.
+Use `soc_list()` to explore the datasets available on any socrata data portal.
 
 ```{r}
 library(socratadata)
 
-catalog <- list_socrata("https://data.cityofchicago.org")
+catalog <- soc_list("https://data.cityofchicago.org")
 print(catalog)
 ```
 
-Use `read_socrata()` to read a socrata dataset into R.
+Use `soc_read()` to read a socrata dataset into R.
 ```{r}
-cta_ridership <- read_socrata(
+cta_ridership <- soc_read(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
 print(cta_ridership)
@@ -52,8 +52,32 @@ print(cta_ridership)
 
 Spatial data will be read as an `sf` object.
 ```{r}
-chi_community_areas <- read_socrata(
+chi_community_areas <- soc_read(
   "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"
 )
 print(chi_community_areas)
+```
+
+You can even perform complex queries using complex [Socrata Query Language (SOQL)](https://dev.socrata.com/docs/queries/).
+```{r}
+lower_west_side <- soc_read(
+  "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data",
+  query = soc_query(
+    where = "community LIKE 'LOWER WEST SIDE'"
+  )
+)
+print(lower_west_side)
+
+trips_to_lws_by_ca <- soc_read(
+  "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
+  query = soc_query(
+    select = "pickup_community_area, count(*) as n",
+    where = glue::glue(
+      "within_polygon(dropoff_centroid_location, '{sf::st_as_text(lower_west_side$the_geom)}')"
+    ),
+    group_by = "pickup_community_area",
+    order_by = "n DESC"
+  )
+)
+print(trips_to_lws_by_ca)
 ```
