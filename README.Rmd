@@ -79,17 +79,6 @@ trips_to_lws_by_ca <- soc_read(
     order_by = "n DESC"
   )
 )
-trips_to_lws_by_ca <- soc_read(
-  "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
-  query = soc_query(
-    select = "pickup_community_area, count(*) as n",
-    where = glue::glue(
-      "dropoff_community_area = 31"
-    ),
-    group_by = "pickup_community_area",
-    order_by = "n DESC"
-  )
-)
 print(trips_to_lws_by_ca)
 ```
 

@@ -171,19 +171,8 @@ trips_to_lws_by_ca <- soc_read(
     order_by = "n DESC"
   )
 )
-#> ⠙ Iterating 1 done (0.38/s) | 2.6s
-#> ⠹ Iterating 2 done (0.37/s) | 5.4s
-trips_to_lws_by_ca <- soc_read(
-  "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
-  query = soc_query(
-    select = "pickup_community_area, count(*) as n",
-    where = glue::glue(
-      "dropoff_community_area = 31"
-    ),
-    group_by = "pickup_community_area",
-    order_by = "n DESC"
-  )
-)
+#> ⠙ Iterating 1 done (0.024/s) | 41.6s
+#> ⠹ Iterating 2 done (0.045/s) | 44.2s
 print(trips_to_lws_by_ca)
 #> ID: wrvz-psew
 #> Name: Taxi Trips (2013-2023)
