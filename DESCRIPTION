@@ -3,7 +3,7 @@ Title: Explore Socrata Data with Ease
 Version: 0.0.0.9003
 Authors@R: 
     person("Ryan", "Zomorrodi", , "rzomor2@uic.edu", role = c("aut", "cre"))
-Description: Provides a modern interface for downloading data from 'Socrata' open data portals powered by Rust. Introduces support for all 'Socrata' datatypes and queries via the 'Socrata Query Language (SoQL)'.
+Description: Provides an easy-to-use interface for downloading data from 'Socrata' open data portals powered by Rust. Introduces support for the 'Socrata Discovery API' and all 'Socrata' datatypes.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

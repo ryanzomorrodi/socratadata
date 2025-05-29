@@ -40,7 +40,7 @@ query <- soc_query(
   group_by = "pickup_community_area",
   order_by = "n DESC"
 )
-print(q)
+print(query)
 
 \dontrun{
 trips_to_lws_by_ca <- soc_read(

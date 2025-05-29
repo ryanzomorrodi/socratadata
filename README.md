@@ -8,13 +8,16 @@
 
 Explore Socrata data with ease.
 
-`socratadata` provides a modern interface for downloading data from
-[Socrata](https://dev.socrata.com/) open data portals powered by Rust.
-`socratadata` improves upon the existing
+`socratadata` provides an easy-to-use interface for downloading data
+from [Socrata](https://dev.socrata.com/) open data portals powered by
+Rust. `socratadata` improves upon the existing
 [`RSocrata`](https://dev.socrata.com/connectors/rsocrata) package by
-introducing support for all [Socrata
-datatypes](https://dev.socrata.com/docs/datatypes/) and queries via the
-[Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/).
+introducing support for the [Socrata Discovery
+API](https://dev.socrata.com/docs/other/discovery#?route=overview) and
+all [Socrata datatypes](https://dev.socrata.com/docs/datatypes/).
+
+Unlike `RSocrata`, `socratadata` does not support uploading or editing
+existing datasets.
 
 ## Installation
 
