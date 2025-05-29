@@ -4,33 +4,47 @@
 \alias{soc_metadata}
 \title{Extract Socrata Dataset Metadata}
 \usage{
-soc_metadata(soc_tbl)
+soc_metadata(dataset)
 }
 \arguments{
-\item{soc_tbl}{A \code{soc_tbl} object, typically returned by \code{read_socrata()}.}
+\item{dataset}{A tibble returned by \code{read_socrata()} or a url.}
 }
 \value{
 An object of class \code{soc_meta}, which includes:
 \describe{
-\item{id}{The dataset's unique Socrata identifier.}
-\item{name}{The name/title of the dataset.}
-\item{attribution}{The source or publisher of the data.}
-\item{category}{The assigned category or topic of the dataset.}
-\item{created}{The datetime when the dataset was created.}
-\item{data_last_updated}{The last time the data was updated.}
-\item{metadata_last_updated}{The last time the metadata was updated.}
-\item{description}{A description of the dataset contents.}
-\item{custom_fields}{Any additional metadata fields defined by the data publisher.}
-\item{columns}{A tibble with metadata for each column, including \code{name}, \code{label} (if available), and \code{description}.}
+\item{id}{Asset identifier (four-by-four ID).}
+\item{name}{Asset name.}
+\item{attribution}{Attribution or publisher of the asset.}
+\item{owner_name}{Display name of the asset owner.}
+\item{provenance}{Provenance of asset (official or community).}
+\item{description}{Textual description of the asset.}
+\item{created}{Date asset was created.}
+\item{data_last_updated}{Date asset data was last updated}
+\item{metadata_last_updated}{Date asset metadata was last updated}
+\item{domain_category}{Category label assigned by the domain.}
+\item{domain_tags}{Tags applied by the domain.}
+\item{domain_metadata}{Metadata associated with the asset assigned by the domain.}
+\item{columns}{A dataframe with the following columns:
+\describe{
+\item{column_name}{Names of asset columns.}
+\item{column_label}{Labels of asset columns.}
+\item{column_datatype}{Datatypes of asset columns.}
+\item{column_description}{Description of asset columns.}
+}
+}
+\item{permalink}{Permanent URL where the asset can be accessed.}
+\item{link}{Direct asset link.}
+\item{license}{License associated with the asset.}
 }
 }
 \description{
-Retrieves metadata attributes from a \code{soc_tbl} object returned by \code{read_socrata()}, including dataset-level
-information and column-level descriptions.
+Retrieves metadata attributes from a tibble returned by \code{read_socrata()} or using the dataset url, including
+dataset-level information and column-level descriptions.
 }
 \details{
 This function pulls out descriptive metadata such as the dataset's ID, title, attribution, category,
-creation and update timestamps, description, any custom fields, and field descriptions defined by the data provider.
+creation and update timestamps, description, any domain-specific fields, and field descriptions defined by the
+data provider.
 }
 \examples{
 \dontrun{

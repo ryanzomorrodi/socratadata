@@ -29,5 +29,5 @@ Retrieves a catalog of available datasets from a Socrata open data portal.
 catalog <- soc_list("https://data.cityofchicago.org")
 head(catalog)
 }
-
 }
+\keyword{internal}

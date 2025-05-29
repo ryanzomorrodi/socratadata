@@ -7,30 +7,45 @@
 soc_read(url, query = soc_query(), alias = "label")
 }
 \arguments{
-\item{url}{string; the URL of the Socrata dataset (e.g., from \verb{https://data.cityofchicago.org}).}
+\item{url}{string; URL of the Socrata dataset (e.g., from \verb{https://data.cityofchicago.org}).}
 
-\item{query}{\code{soc_query()}; query parameters specification}
+\item{query}{\code{soc_query()}; Query parameters specification}
 
-\item{alias}{string; use of field alias values. There are two options:
+\item{alias}{string; Use of field alias values. There are two options:
 \itemize{
 \item \code{"label"}: field alias values are assigned as a label attribute for each field.
 \item \code{"replace"}: field alias values replace existing column names.
 }}
 }
 \value{
-A \code{socrata_tbl}, which is a tibble with additional class and attributes containing dataset metadata.
+A tibble with additional attributes containing dataset metadata.
 If the dataset contains a single non-nested geospatial field, it will be returned as an \code{sf} object.
 
 The returned object has the following attributes:
 \describe{
-\item{id}{Dataset identifier (four-by-four ID).}
-\item{name}{Dataset name.}
-\item{attribution}{Attribution or publisher of the dataset.}
-\item{category}{Category label assigned on the portal.}
-\item{created}{POSIXct timestamp when the dataset was created.}
-\item{data_last_updated}{POSIXct timestamp of the last data update.}
-\item{metadata_last_updated}{POSIXct timestamp of the last metadata update.}
-\item{description}{Textual description of the dataset.}
+\item{id}{Asset identifier (four-by-four ID).}
+\item{name}{Asset name.}
+\item{attribution}{Attribution or publisher of the asset.}
+\item{owner_name}{Display name of the asset owner.}
+\item{provenance}{Provenance of asset (official or community).}
+\item{description}{Textual description of the asset.}
+\item{created}{Date asset was created.}
+\item{data_last_updated}{Date asset data was last updated}
+\item{metadata_last_updated}{Date asset metadata was last updated}
+\item{domain_category}{Category label assigned by the domain.}
+\item{domain_tags}{Tags applied by the domain.}
+\item{domain_metadata}{Metadata associated with the asset assigned by the domain.}
+\item{columns}{A dataframe with the following columns:
+\describe{
+\item{column_name}{Names of asset columns.}
+\item{column_label}{Labels of asset columns.}
+\item{column_datatype}{Datatypes of asset columns.}
+\item{column_description}{Description of asset columns.}
+}
+}
+\item{permalink}{Permanent URL where the asset can be accessed.}
+\item{link}{Direct asset link.}
+\item{license}{License associated with the asset.}
 }
 }
 \description{

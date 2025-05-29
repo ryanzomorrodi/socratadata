@@ -16,6 +16,8 @@ with_mock_dir(
       )
       attr(expected, "id") <- "2646-ez2p"
       attr(expected, "name") <- "Datasites for APIs.JSON"
+      attr(expected, "owner_name") <- "Chris Metcalf (Developer Experience)"
+      attr(expected, "provenance") <- "official"
       attr(expected, "created") <- as.POSIXct("2015-01-03 00:13:48", tz = "UTC")
       attr(expected, "data_last_updated") <- as.POSIXct(
         "2015-01-03 00:56:25",
@@ -25,18 +27,27 @@ with_mock_dir(
         "2015-01-03 00:56:27",
         tz = "UTC"
       )
-      attr(expected, "description") <- character()
+      attr(expected, "domain_metadata") <- tibble::tibble(
+        key = integer(),
+        value = logical()
+      )
+      attr(expected, "columns") <- tibble::tibble(
+        column_name = c("domain", "name", "logo", "tags", "email"),
+        column_label = c("Domain", "Name", "Logo", "Tags", "Email"),
+        column_datatype = c("text", "text", "text", "text", "text")
+      )
+      attr(expected, "permalink") <- "https://soda.demo.socrata.com/d/2646-ez2p"
+      attr(
+        expected,
+        "link"
+      ) <- "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p"
+      attr(expected, "license") <- NULL
+
       attr(expected$domain, "label") <- "Domain"
       attr(expected$name, "label") <- "Name"
       attr(expected$logo, "label") <- "Logo"
       attr(expected$tags, "label") <- "Tags"
       attr(expected$email, "label") <- "Email"
-      attr(expected$domain, "description") <- NA_character_
-      attr(expected$name, "description") <- NA_character_
-      attr(expected$logo, "description") <- NA_character_
-      attr(expected$tags, "description") <- NA_character_
-      attr(expected$email, "description") <- NA_character_
-      class(expected) <- c("soc_tbl", "tbl_df", "tbl", "data.frame")
 
       expect_equal(result, expected)
     })
@@ -48,7 +59,6 @@ with_mock_dir(
 
       result <- soc_read(url)
 
-      expect_s3_class(result, "soc_tbl")
       expect_s3_class(result, "tbl_df")
       expect_s3_class(result, "sf")
 
@@ -77,26 +87,6 @@ with_mock_dir(
         ":@computed_region_k83t_ady5"
       )
       expect_equal(expected_cols, colnames(result))
-
-      # Check metadata
-      expect_equal(attr(result, "id"), "4tka-6guv")
-      expect_equal(attr(result, "name"), "My super awesome Earthquakes dataset")
-      expect_equal(
-        attr(result, "created"),
-        as.POSIXct("2012-09-14 22:59:33", tz = "UTC")
-      )
-      expect_equal(
-        attr(result, "data_last_updated"),
-        as.POSIXct("2016-05-02 17:18:30", tz = "UTC")
-      )
-      expect_equal(
-        attr(result, "metadata_last_updated"),
-        as.POSIXct("2016-09-02 22:13:32", tz = "UTC")
-      )
-      expect_equal(
-        attr(result, "description"),
-        "Real-time, worldwide earthquake list for the past 7 days (not actually real-time)"
-      )
     })
   },
   simplify = FALSE

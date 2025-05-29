@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 Explore Socrata data with ease.
 
-`socratadata` provides a modern interface for downloading data from [Socrata](https://socrata.com) open data portals powered by Rust. `socratadata` improves upon the existing [`RSocrata`](https://dev.socrata.com/connectors/rsocrata) package by introducing support for all [Socrata datatypes](https://dev.socrata.com/docs/datatypes/) and queries via the [Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/).
+`socratadata` provides a modern interface for downloading data from [Socrata](https://dev.socrata.com/) open data portals powered by Rust. `socratadata` improves upon the existing [`RSocrata`](https://dev.socrata.com/connectors/rsocrata) package by introducing support for all [Socrata datatypes](https://dev.socrata.com/docs/datatypes/) and queries via the [Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/).
 
 ## Installation
 
@@ -33,14 +33,31 @@ pak::pak("ryanzomorrodi/socratadata")
 
 ## Example
 
-Use `soc_list()` to explore the datasets available on any socrata data portal.
+### Search for datasets
+
+Use `soc_discover()` to explore the datasets available on a Socrata data portal.
 
 ```{r}
 library(socratadata)
 
-catalog <- soc_list("https://data.cityofchicago.org")
-print(catalog)
+chi_datasets <- soc_discover(
+  domains = "https://data.cityofchicago.org",
+  only = "dataset"
+)
+print(chi_datasets)
 ```
+
+Or even search by category across many Socrata data portals.
+
+```{r}
+transportation_datasets <- soc_discover(
+  categories = "transportation",
+  only = "dataset"
+)
+print(chi_datasets)
+```
+
+### Download data
 
 Use `soc_read()` to read a socrata dataset into R.
 ```{r}
@@ -58,8 +75,8 @@ chi_community_areas <- soc_read(
 print(chi_community_areas)
 ```
 
-You can even perform complex queries using [Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/) using `soc_query()`.
-```{r}
+You can even perform complex queries using [Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/) via `soc_query()`.
+```{r, message = FALSE}
 lower_west_side <- soc_read(
   "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data",
   query = soc_query(
@@ -82,7 +99,18 @@ trips_to_lws_by_ca <- soc_read(
 print(trips_to_lws_by_ca)
 ```
 
-Access relevant metadata using `soc_metadata()`.
+### Extract metadata
+
+Access a dataset's metadata using `soc_metadata()`.
 ```{r}
-soc_metadata(lower_west_side)
+cta_ridership_meta <- soc_metadata(cta_ridership)
+print(cta_ridership_meta)
+```
+
+Or explore a dataset's metadata using it's url.
+```{r}
+taxi_trips_meta <- soc_metadata(
+  "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
+)
+print(taxi_trips_meta)
 ```

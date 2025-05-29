@@ -1,66 +1,43 @@
-get_four_by_four <- function(url_parsed) {
-  url_path_vec <- strsplit(url_parsed$path, "/")[[1]][-1]
-
-  if (url_path_vec[1] == "resource" || url_path_vec[1] == "d") {
-    four_by_four <- substr(url_path_vec[2], 1, 9)
-  } else {
-    four_by_four <- url_path_vec[3]
-  }
-
-  if (!valid_four_by_four(four_by_four)) {
-    cli::cli_abort("Invalid url.")
-  }
-
-  four_by_four
-}
-
-valid_four_by_four <- function(four_by_four) {
-  grepl("^[a-z0-9]{4}-[a-z0-9]{4}$", four_by_four)
-}
-
-get_data_url <- function(url_parsed, four_by_four) {
-  url_parsed |>
-    httr2::url_modify(path = paste0("/resource/", four_by_four, ".json")) |>
-    httr2::url_build()
-}
-
-get_count_url <- function(url_parsed, four_by_four) {
-  url_parsed |>
-    httr2::url_modify(path = paste0("/api/id/", four_by_four)) |>
-    httr2::url_build()
-}
-
-get_meta_url <- function(url_parsed, four_by_four) {
-  url_parsed |>
-    httr2::url_modify(path = paste0("/api/views/", four_by_four)) |>
-    httr2::url_build()
-}
-
 #' Read a Socrata Dataset into R
 #'
 #' Downloads and parses a dataset from a Socrata open data portal URL, returning it as a tibble or `sf` object.
 #' Metadata is also returned as attributes on the returned object.
 #'
-#' @param url string; the URL of the Socrata dataset (e.g., from `https://data.cityofchicago.org`).
-#' @param query `soc_query()`; query parameters specification
-#' @param alias string; use of field alias values. There are two options:
+#' @param url string; URL of the Socrata dataset (e.g., from `https://data.cityofchicago.org`).
+#' @param query `soc_query()`; Query parameters specification
+#' @param alias string; Use of field alias values. There are two options:
 #'
 #'  - `"label"`: field alias values are assigned as a label attribute for each field.
 #'  - `"replace"`: field alias values replace existing column names.
 #'
-#' @return A `socrata_tbl`, which is a tibble with additional class and attributes containing dataset metadata.
+#' @return A tibble with additional attributes containing dataset metadata.
 #' If the dataset contains a single non-nested geospatial field, it will be returned as an `sf` object.
 #'
 #' The returned object has the following attributes:
 #' \describe{
-#'   \item{id}{Dataset identifier (four-by-four ID).}
-#'   \item{name}{Dataset name.}
-#'   \item{attribution}{Attribution or publisher of the dataset.}
-#'   \item{category}{Category label assigned on the portal.}
-#'   \item{created}{POSIXct timestamp when the dataset was created.}
-#'   \item{data_last_updated}{POSIXct timestamp of the last data update.}
-#'   \item{metadata_last_updated}{POSIXct timestamp of the last metadata update.}
-#'   \item{description}{Textual description of the dataset.}
+#'   \item{id}{Asset identifier (four-by-four ID).}
+#'   \item{name}{Asset name.}
+#'   \item{attribution}{Attribution or publisher of the asset.}
+#'   \item{owner_name}{Display name of the asset owner.}
+#'   \item{provenance}{Provenance of asset (official or community).}
+#'   \item{description}{Textual description of the asset.}
+#'   \item{created}{Date asset was created.}
+#'   \item{data_last_updated}{Date asset data was last updated}
+#'   \item{metadata_last_updated}{Date asset metadata was last updated}
+#'   \item{domain_category}{Category label assigned by the domain.}
+#'   \item{domain_tags}{Tags applied by the domain.}
+#'   \item{domain_metadata}{Metadata associated with the asset assigned by the domain.}
+#'   \item{columns}{A dataframe with the following columns:
+#'     \describe{
+#'       \item{column_name}{Names of asset columns.}
+#'       \item{column_label}{Labels of asset columns.}
+#'       \item{column_datatype}{Datatypes of asset columns.}
+#'       \item{column_description}{Description of asset columns.}
+#'     }
+#'   }
+#'   \item{permalink}{Permanent URL where the asset can be accessed.}
+#'   \item{link}{Direct asset link.}
+#'   \item{license}{License associated with the asset.}
 #' }
 #'
 #' @examples
@@ -121,9 +98,7 @@ soc_read <- function(url, query = soc_query(), alias = "label") {
     result <- sf::st_as_sf(result)
   }
 
-  class(result) <- c("soc_tbl", class(result))
-
-  set_metadata(result, url_parsed, four_by_four, query, alias)
+  set_metadata(result, url, alias)
 }
 
 iterative_requests <- function(url_parsed, four_by_four, query) {
@@ -171,7 +146,7 @@ iterative_requests <- function(url_parsed, four_by_four, query) {
         }
       })
       is_complete <- function(resp) {
-        identical(httr2::resp_body_raw(resp), as.raw(c(0x5b, 0x5d, 0x0a))) &&
+        identical(httr2::resp_body_raw(resp), as.raw(c(0x5b, 0x5d, 0x0a))) ||
           (req_count() * chunk_size) >= query$`$limit`
       }
     } else {
@@ -199,38 +174,17 @@ iterative_requests <- function(url_parsed, four_by_four, query) {
   resps
 }
 
-set_metadata <- function(result, url_parsed, four_by_four, query, alias) {
-  meta_url <- get_meta_url(url_parsed, four_by_four)
 
-  metadata <- httr2::request(meta_url) |>
-    httr2::req_perform() |>
-    httr2::resp_body_json()
+set_metadata <- function(result, url, alias) {
+  metadata <- soc_metadata_from_url(url)
+  for (i in seq_along(metadata)) {
+    attr(result, names(metadata)[i]) <- metadata[[i]]
+  }
 
-  attr(result, "id") <- metadata$id
-  attr(result, "name") <- metadata$name
-  attr(result, "attribution") <- metadata$attribution
-  attr(result, "category") <- metadata$category
-  attr(result, "created") <- as.POSIXct(metadata$createdAt, tz = "UTC")
-  attr(result, "data_last_updated") <- as.POSIXct(
-    metadata$rowsUpdatedAt,
-    tz = "UTC"
-  )
-  attr(result, "metadata_last_updated") <- as.POSIXct(
-    metadata$viewLastModified,
-    tz = "UTC"
-  )
-  attr(result, "description") <- gsub("\\r\\n", "\n", metadata$description)
-  attr(result, "custom_fields") <- metadata$metadata$custom_fields$Metadata
-
-  col_names <- sapply(metadata$columns, \(col) col$fieldName)
-  col_alias <- sapply(metadata$columns, \(col) col$name)
-  names(col_alias) <- col_names
-  col_description <- sapply(
-    metadata$columns,
-    \(col) ifelse(is.null(col$description), NA_character_, col$description)
-  )
-  names(col_description) <- col_names
-
+  col_alias <- tibble::deframe(metadata$columns[c(
+    "column_name",
+    "column_label"
+  )])
   if (alias == "replace") {
     colnames(result) <- col_alias[colnames(result)]
   } else if (alias == "label") {
@@ -238,27 +192,6 @@ set_metadata <- function(result, url_parsed, four_by_four, query, alias) {
       attr(result[[i]], "label") <- unname(col_alias[colnames(result)[i]])
     }
   }
-  for (i in seq_along(result)) {
-    attr(result[[i]], "description") <- unname(
-      col_description[colnames(result)[i]]
-    )
-  }
 
   result
-}
-
-#' @export
-print.soc_tbl <- function(x, ...) {
-  cli::cli_text("{.strong ID:} {attr(x, 'id')}")
-  cli::cli_text("{.strong Name:} {attr(x, 'name')}")
-  cli::cli_text("{.strong Attribution:} {attr(x, 'attribution')}")
-  cli::cli_text("{.strong Category:} {attr(x, 'category')}")
-  cli::cli_text("{.strong Created:} {attr(x, 'created')}")
-  cli::cli_text("{.strong Data last Updated:} {attr(x, 'data_last_updated')}")
-  cli::cli_text(
-    "{.strong Metadata last Updated:} {attr(x, 'metadata_last_updated')}"
-  )
-  cli::cli_text("{.strong Description:} {attr(x, 'description')}")
-
-  NextMethod("print")
 }

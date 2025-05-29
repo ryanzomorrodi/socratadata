@@ -9,7 +9,7 @@
 Explore Socrata data with ease.
 
 `socratadata` provides a modern interface for downloading data from
-[Socrata](https://socrata.com) open data portals powered by Rust.
+[Socrata](https://dev.socrata.com/) open data portals powered by Rust.
 `socratadata` improves upon the existing
 [`RSocrata`](https://dev.socrata.com/connectors/rsocrata) package by
 introducing support for all [Socrata
@@ -28,29 +28,70 @@ pak::pak("ryanzomorrodi/socratadata")
 
 ## Example
 
-Use `soc_list()` to explore the datasets available on any socrata data
+### Search for datasets
+
+Use `soc_discover()` to explore the datasets available on a Socrata data
 portal.
 
 ``` r
 library(socratadata)
 
-catalog <- soc_list("https://data.cityofchicago.org")
-print(catalog)
-#> # A tibble: 1,045 × 7
-#>    id        name      categories keywords last_updated landing_page description
-#>    <chr>     <chr>     <list>     <list>   <date>       <chr>        <chr>      
-#>  1 22bv-uv6r Open Spa… <chr [1]>  <chr>    2012-09-07   https://dat… "To view o…
-#>  2 22u3-xenr Building… <chr [1]>  <chr>    2025-05-26   https://dat… "Violation…
-#>  3 24zt-jpfn PoliceDi… <chr [1]>  <chr>    2024-12-02   https://dat… "Current p…
-#>  4 26kv-zc52 Librarie… <chr [1]>  <chr>    2023-01-23   https://dat… "The Chica…
-#>  5 28km-gtjn Fire Sta… <chr [1]>  <chr>    2019-04-18   https://dat… "Fire stat…
-#>  6 28me-84fj Police S… <chr [1]>  <chr>    2025-02-05   https://dat… "This data…
-#>  7 28nh-39r3 Christma… <chr [1]>  <chr>    2018-07-11   https://dat… "Locations…
-#>  8 2a55-dhk8 Urban Fa… <chr [1]>  <chr>    2018-07-11   https://dat… "The locat…
-#>  9 2ani-ic5x COVID-19… <chr [1]>  <chr>    2025-05-21   https://dat… "NOTE: Thi…
-#> 10 2b3m-wnm2 7th Ward… <chr [1]>  <chr>    2018-07-11   https://dat… "Applicant…
-#> # ℹ 1,035 more rows
+chi_datasets <- soc_discover(
+  domains = "https://data.cityofchicago.org",
+  only = "dataset"
+)
+print(chi_datasets)
+#> # A tibble: 877 × 21
+#>    id    name  attribution owner_name provenance description created            
+#>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
+#>  1 xzkq… Curr… City of Ch… cocadmin   official   "This data… 2011-09-27 00:00:00
+#>  2 ijzp… Crim… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00
+#>  3 ydr8… Buil… City of Ch… cocadmin   official   "This data… 2011-09-30 00:00:00
+#>  4 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00
+#>  5 s6ha… Affo… City of Ch… cocadmin   official   "The renta… 2013-03-14 00:00:00
+#>  6 4ijn… Food… City of Ch… cocadmin   official   "This info… 2011-08-08 00:00:00
+#>  7 2ft4… Lobb… City of Ch… cocadmin   official   "All lobby… 2011-06-07 00:00:00
+#>  8 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
+#>  9 kn9c… Cens… U.S. Censu… Jamyia     official   "This data… 2012-01-05 00:00:00
+#> 10 z8bn… Poli… Chicago Po… cocadmin   official   "Chicago P… 2010-12-22 00:00:00
+#> # ℹ 867 more rows
+#> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
+#> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
+#> #   domain_metadata <list>, column_names <list>, column_labels <list>,
+#> #   column_datatypes <list>, column_descriptions <list>, permalink <chr>,
+#> #   link <chr>, license <chr>
 ```
+
+Or even search by category across many Socrata data portals.
+
+``` r
+transportation_datasets <- soc_discover(
+  categories = "transportation",
+  only = "dataset"
+)
+print(chi_datasets)
+#> # A tibble: 877 × 21
+#>    id    name  attribution owner_name provenance description created            
+#>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
+#>  1 xzkq… Curr… City of Ch… cocadmin   official   "This data… 2011-09-27 00:00:00
+#>  2 ijzp… Crim… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00
+#>  3 ydr8… Buil… City of Ch… cocadmin   official   "This data… 2011-09-30 00:00:00
+#>  4 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00
+#>  5 s6ha… Affo… City of Ch… cocadmin   official   "The renta… 2013-03-14 00:00:00
+#>  6 4ijn… Food… City of Ch… cocadmin   official   "This info… 2011-08-08 00:00:00
+#>  7 2ft4… Lobb… City of Ch… cocadmin   official   "All lobby… 2011-06-07 00:00:00
+#>  8 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
+#>  9 kn9c… Cens… U.S. Censu… Jamyia     official   "This data… 2012-01-05 00:00:00
+#> 10 z8bn… Poli… Chicago Po… cocadmin   official   "Chicago P… 2010-12-22 00:00:00
+#> # ℹ 867 more rows
+#> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
+#> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
+#> #   domain_metadata <list>, column_names <list>, column_labels <list>,
+#> #   column_datatypes <list>, column_descriptions <list>, permalink <chr>,
+#> #   link <chr>, license <chr>
+```
+
+### Download data
 
 Use `soc_read()` to read a socrata dataset into R.
 
@@ -59,17 +100,6 @@ cta_ridership <- soc_read(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
 print(cta_ridership)
-#> ID: 6iiy-9s97
-#> Name: CTA - Ridership - Daily Boarding Totals
-#> Attribution: Chicago Transit Authority
-#> Category: Transportation
-#> Created: 2011-08-12 15:40:31
-#> Data last Updated: 2025-04-29 16:34:39
-#> Metadata last Updated: 2025-04-29 16:35:04
-#> Description: This dataset shows systemwide boardings for both bus and rail
-#> services provided by CTA, dating back to 2001. Daytypes are as follows: W =
-#> Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for
-#> information on how these numbers are calculated.
 #> # A tibble: 8,766 × 5
 #>    service_date        day_type    bus rail_boardings total_rides
 #>    <dttm>              <chr>     <dbl>          <dbl>       <dbl>
@@ -98,18 +128,6 @@ print(chi_community_areas)
 #> Dimension:     XY
 #> Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52414 ymax: 42.02304
 #> Geodetic CRS:  WGS 84
-#> ID: igwz-8jzy
-#> Name: Boundaries - Community Areas
-#> Attribution: City of Chicago
-#> Category: Facilities & Geographic Boundaries
-#> Created: 2013-01-07 02:02:50
-#> Data last Updated: 2025-04-22 23:06:37
-#> Metadata last Updated: 2025-04-22 23:06:35
-#> Description: Community area boundaries in Chicago.  This dataset is in a format
-#> for spatial datasets that is inherently tabular but allows for a map as a
-#> derived view. Please click the indicated link below for such a map.  To export
-#> the data in either tabular or geographic format, please use the Export button
-#> on this dataset.
 #> # A tibble: 77 × 6
 #>                              the_geom area_numbe community area_num_1 shape_area
 #>  *                 <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>
@@ -128,7 +146,7 @@ print(chi_community_areas)
 ```
 
 You can even perform complex queries using [Socrata Query Language
-(SoQL)](https://dev.socrata.com/docs/queries/) using `soc_query()`.
+(SoQL)](https://dev.socrata.com/docs/queries/) via `soc_query()`.
 
 ``` r
 lower_west_side <- soc_read(
@@ -143,18 +161,6 @@ print(lower_west_side)
 #> Dimension:     XY
 #> Bounding box:  xmin: -87.68807 ymin: 41.8348 xmax: -87.63516 ymax: 41.86002
 #> Geodetic CRS:  WGS 84
-#> ID: igwz-8jzy
-#> Name: Boundaries - Community Areas
-#> Attribution: City of Chicago
-#> Category: Facilities & Geographic Boundaries
-#> Created: 2013-01-07 02:02:50
-#> Data last Updated: 2025-04-22 23:06:37
-#> Metadata last Updated: 2025-04-22 23:06:35
-#> Description: Community area boundaries in Chicago.  This dataset is in a format
-#> for spatial datasets that is inherently tabular but allows for a map as a
-#> derived view. Please click the indicated link below for such a map.  To export
-#> the data in either tabular or geographic format, please use the Export button
-#> on this dataset.
 #> # A tibble: 1 × 6
 #>                    the_geom area_numbe community area_num_1 shape_area shape_len
 #> *        <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>     <dbl>
@@ -171,24 +177,7 @@ trips_to_lws_by_ca <- soc_read(
     order_by = "n DESC"
   )
 )
-#> ⠙ Iterating 1 done (0.024/s) | 41.6s
-#> ⠹ Iterating 2 done (0.045/s) | 44.2s
 print(trips_to_lws_by_ca)
-#> ID: wrvz-psew
-#> Name: Taxi Trips (2013-2023)
-#> Attribution: City of Chicago
-#> Category: Transportation
-#> Created: 2016-05-27 21:27:48
-#> Data last Updated: 2024-02-07 20:40:12
-#> Metadata last Updated: 2024-06-21 17:06:18
-#> Description: <b>This dataset ends with 2023. Please see the Featured Content
-#> link below for the dataset that starts in 2024.</b> Taxi trips from 2013 to
-#> 2023 reported to the City of Chicago in its role as a regulatory agency.  To
-#> protect privacy but allow for aggregate analyses, the Taxi ID is consistent for
-#> any given taxi medallion number but does not show the number, Census Tracts are
-#> suppressed in some cases, and times are rounded to the nearest 15 minutes.  Due
-#> to the data reporting process, not all trips are reported but the City believes
-#> that most are.
 #> # A tibble: 78 × 2
 #>    pickup_community_area      n
 #>                    <dbl>  <dbl>
@@ -205,36 +194,78 @@ print(trips_to_lws_by_ca)
 #> # ℹ 68 more rows
 ```
 
-Access relevant metadata using `soc_metadata()`.
+### Extract metadata
+
+Access a dataset’s metadata using `soc_metadata()`.
 
 ``` r
-soc_metadata(lower_west_side)
-#> ID: igwz-8jzy
-#> Name: Boundaries - Community Areas
-#> Attribution: City of Chicago
-#> Category: Facilities & Geographic Boundaries
-#> Created: 2013-01-07 02:02:50
-#> Data last Updated: 2025-04-22 23:06:37
-#> Metadata last Updated: 2025-04-22 23:06:35
-#> Description: Community area boundaries in Chicago.  This dataset is in a format
-#> for spatial datasets that is inherently tabular but allows for a map as a
-#> derived view. Please click the indicated link below for such a map.  To export
-#> the data in either tabular or geographic format, please use the Export button
-#> on this dataset.
-#> Custom Fields:
-#> • Time Period: Current community area boundaries.
-#> • Changes and Other Historical Information Useful to Understanding This
-#> Dataset:
-#> https://www.google.com/search?as_q=%22Related+dataset+ID+s%22+%22igwz-8jzy%22+inurl%3Astories&as_sitesearch=data.cityofchicago.org
-#> • Frequency: Updated as needed.
+cta_ridership_meta <- soc_metadata(cta_ridership)
+print(cta_ridership_meta)
+#> ID: 6iiy-9s97
+#> Name: CTA - Ridership - Daily Boarding Totals
+#> Attribution: Chicago Transit Authority
+#> Owner: CTA
+#> Provenance: official
+#> Description: This dataset shows systemwide boardings for both bus and rail
+#> services provided by CTA, dating back to 2001. Daytypes are as follows: W =
+#> Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for
+#> information on how these numbers are calculated.
+#> Created: 2011-08-12 15:40:31
+#> Data last updated: 2025-04-29 16:34:39
+#> Metadata last Updated: 2025-04-29 16:35:04
+#> Domain Category: Transportation
+#> Domain Tags: cta, public transit, and ridership
+#> Domain fields:
+#> • Data Owner: Chicago Transit Authority
 #> Columns:
-#> # A tibble: 6 × 3
-#>   name       label      description
-#>   <chr>      <chr>      <chr>      
-#> 1 the_geom   the_geom   ""         
-#> 2 area_numbe AREA_NUMBE ""         
-#> 3 community  COMMUNITY  ""         
-#> 4 area_num_1 AREA_NUM_1 ""         
-#> 5 shape_area SHAPE_AREA ""         
-#> 6 shape_len  SHAPE_LEN  ""
+#> # A tibble: 5 × 4
+#>   column_name    column_label   column_datatype column_description
+#>   <chr>          <chr>          <chr>           <chr>             
+#> 1 service_date   service_date   calendar_date   ""                
+#> 2 day_type       day_type       text            ""                
+#> 3 bus            bus            number          ""                
+#> 4 rail_boardings rail_boardings number          ""                
+#> 5 total_rides    total_rides    number          ""
+#> Permalink: https://data.cityofchicago.org/d/6iiy-9s97
+#> Link:
+#> https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97
+#> License: See Terms of Use
+```
+
+Or explore a dataset’s metadata using it’s url.
+
+``` r
+taxi_trips_meta <- soc_metadata(
+  "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
+)
+print(taxi_trips_meta)
+#> ID: 6iiy-9s97
+#> Name: CTA - Ridership - Daily Boarding Totals
+#> Attribution: Chicago Transit Authority
+#> Owner: CTA
+#> Provenance: official
+#> Description: This dataset shows systemwide boardings for both bus and rail
+#> services provided by CTA, dating back to 2001. Daytypes are as follows: W =
+#> Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for
+#> information on how these numbers are calculated.
+#> Created: 2011-08-12 15:40:31
+#> Data last updated: 2025-04-29 16:34:39
+#> Metadata last Updated: 2025-04-29 16:35:04
+#> Domain Category: Transportation
+#> Domain Tags: cta, public transit, and ridership
+#> Domain fields:
+#> • Data Owner: Chicago Transit Authority
+#> Columns:
+#> # A tibble: 5 × 4
+#>   column_name    column_label   column_datatype column_description
+#>   <chr>          <chr>          <chr>           <chr>             
+#> 1 service_date   service_date   calendar_date   ""                
+#> 2 day_type       day_type       text            ""                
+#> 3 bus            bus            number          ""                
+#> 4 rail_boardings rail_boardings number          ""                
+#> 5 total_rides    total_rides    number          ""
+#> Permalink: https://data.cityofchicago.org/d/6iiy-9s97
+#> Link:
+#> https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97
+#> License: See Terms of Use
 ```

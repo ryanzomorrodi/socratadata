@@ -3,12 +3,12 @@
 #' Constructs a structured representation of a Socrata Query Language (SOQL) query that can be used with Socrata API endpoints.
 #' This function does not execute the query; it creates an object that can be passed to request functions or printed for inspection.
 #'
-#' @param select string; columns to retrieve.
-#' @param where string; filter conditions.
-#' @param group_by string; fields to group by.
-#' @param having string; conditions to apply to grouped records.
-#' @param order_by string; sort order.
-#' @param limit whole number; the maximum number of records to return.
+#' @param select string; Columns to retrieve.
+#' @param where string; Filter conditions.
+#' @param group_by string; Fields to group by.
+#' @param having string; Conditions to apply to grouped records.
+#' @param order_by string; Sort order.
+#' @param limit whole number; The maximum number of records to return.
 #'
 #' @return An object of class `soc_query`, which prints in a readable format and can be used to build query URLs.
 #'

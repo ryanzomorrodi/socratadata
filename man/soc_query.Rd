@@ -14,17 +14,17 @@ soc_query(
 )
 }
 \arguments{
-\item{select}{string; columns to retrieve.}
+\item{select}{string; Columns to retrieve.}
 
-\item{where}{string; filter conditions.}
+\item{where}{string; Filter conditions.}
 
-\item{group_by}{string; fields to group by.}
+\item{group_by}{string; Fields to group by.}
 
-\item{having}{string; conditions to apply to grouped records.}
+\item{having}{string; Conditions to apply to grouped records.}
 
-\item{order_by}{string; sort order.}
+\item{order_by}{string; Sort order.}
 
-\item{limit}{whole number; the maximum number of records to return.}
+\item{limit}{whole number; The maximum number of records to return.}
 }
 \value{
 An object of class \code{soc_query}, which prints in a readable format and can be used to build query URLs.

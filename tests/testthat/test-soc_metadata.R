@@ -7,6 +7,8 @@ test_that("soc_metadata", {
       )
   attr(dataset, "id") <- "2646-ez2p"
   attr(dataset, "name") <- "Datasites for APIs.JSON"
+  attr(dataset, "owner_name") <- "Chris Metcalf (Developer Experience)"
+  attr(dataset, "provenance") <- "official"
   attr(dataset, "created") <- as.POSIXct("2015-01-03 00:13:48", tz = "UTC")
   attr(dataset, "data_last_updated") <- as.POSIXct(
     "2015-01-03 00:56:25",
@@ -16,7 +18,22 @@ test_that("soc_metadata", {
     "2015-01-03 00:56:27",
     tz = "UTC"
   )
-  attr(dataset, "description") <- character()
+  attr(dataset, "domain_metadata") <- tibble::tibble(
+    key = integer(),
+    value = logical()
+  )
+  attr(dataset, "columns") <- tibble::tibble(
+    column_name = c("domain", "name", "logo", "tags", "email"),
+    column_label = c("Domain", "Name", "Logo", "Tags", "Email"),
+    column_datatype = c("text", "text", "text", "text", "text")
+  )
+  attr(dataset, "permalink") <- "https://soda.demo.socrata.com/d/2646-ez2p"
+  attr(
+    dataset,
+    "link"
+  ) <- "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p"
+  attr(dataset, "license") <- NULL
+
   attr(dataset$domain, "label") <- "Domain"
   attr(dataset$name, "label") <- "Name"
   attr(dataset$logo, "label") <- "Logo"
@@ -27,24 +44,32 @@ test_that("soc_metadata", {
   attr(dataset$logo, "description") <- NA_character_
   attr(dataset$tags, "description") <- NA_character_
   attr(dataset$email, "description") <- NA_character_
-  class(dataset) <- c("soc_tbl", "tbl_df", "tbl", "data.frame")
 
   expected <- structure(
     list(
       id = "2646-ez2p",
       name = "Datasites for APIs.JSON",
       attribution = NULL,
-      category = NULL,
+      owner_name = "Chris Metcalf (Developer Experience)",
+      provenance = "official",
+      description = NULL,
       created = as.POSIXct("2015-01-03 00:13:48", tz = "UTC"),
       data_last_updated = as.POSIXct("2015-01-03 00:56:25", tz = "UTC"),
       metadata_last_updated = as.POSIXct("2015-01-03 00:56:27", tz = "UTC"),
-      description = character(),
-      custom_fields = NULL,
+      domain_category = NULL,
+      domain_tags = NULL,
+      domain_metadata = tibble::tibble(
+        key = integer(),
+        value = logical()
+      ),
       columns = tibble::tibble(
-        name = c("domain", "name", "logo", "tags", "email"),
-        label = c("Domain", "Name", "Logo", "Tags", "Email"),
-        description = rep(NA_character_, 5)
-      )
+        column_name = c("domain", "name", "logo", "tags", "email"),
+        column_label = c("Domain", "Name", "Logo", "Tags", "Email"),
+        column_datatype = c("text", "text", "text", "text", "text")
+      ),
+      permalink = "https://soda.demo.socrata.com/d/2646-ez2p",
+      link = "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p",
+      license = NULL
     ),
     class = "soc_meta"
   )
