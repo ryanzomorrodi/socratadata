@@ -9,7 +9,7 @@ Metadata is also returned as attributes on the returned object."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">socratadata</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9002</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9003</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,46 +48,83 @@ Metadata is also returned as attributes on the returned object.</p>
 
 
 <dl><dt id="arg-url">url<a class="anchor" aria-label="anchor" href="#arg-url"></a></dt>
-<dd><p>string; the URL of the Socrata dataset (e.g., from <code>https://data.cityofchicago.org</code>).</p></dd>
+<dd><p>string; URL of the Socrata dataset (e.g., from <code>https://data.cityofchicago.org</code>).</p></dd>
 
 
 <dt id="arg-query">query<a class="anchor" aria-label="anchor" href="#arg-query"></a></dt>
-<dd><p><code><a href="soc_query.html">soc_query()</a></code>; query parameters specification</p></dd>
+<dd><p><code><a href="soc_query.html">soc_query()</a></code>; Query parameters specification</p></dd>
 
 
 <dt id="arg-alias">alias<a class="anchor" aria-label="anchor" href="#arg-alias"></a></dt>
-<dd><p>string; use of field alias values. There are two options:</p><ul><li><p><code>"label"</code>: field alias values are assigned as a label attribute for each field.</p></li>
+<dd><p>string; Use of field alias values. There are two options:</p><ul><li><p><code>"label"</code>: field alias values are assigned as a label attribute for each field.</p></li>
 <li><p><code>"replace"</code>: field alias values replace existing column names.</p></li>
 </ul></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A <code>socrata_tbl</code>, which is a tibble with additional class and attributes containing dataset metadata.
+    <p>A tibble with additional attributes containing dataset metadata.
 If the dataset contains a single non-nested geospatial field, it will be returned as an <code>sf</code> object.</p>
 <p>The returned object has the following attributes:</p><dl><dt>id</dt>
-<dd><p>Dataset identifier (four-by-four ID).</p></dd>
+<dd><p>Asset identifier (four-by-four ID).</p></dd>
 
 <dt>name</dt>
-<dd><p>Dataset name.</p></dd>
+<dd><p>Asset name.</p></dd>
 
 <dt>attribution</dt>
-<dd><p>Attribution or publisher of the dataset.</p></dd>
+<dd><p>Attribution or publisher of the asset.</p></dd>
 
-<dt>category</dt>
-<dd><p>Category label assigned on the portal.</p></dd>
+<dt>owner_name</dt>
+<dd><p>Display name of the asset owner.</p></dd>
 
-<dt>created</dt>
-<dd><p>POSIXct timestamp when the dataset was created.</p></dd>
-
-<dt>data_last_updated</dt>
-<dd><p>POSIXct timestamp of the last data update.</p></dd>
-
-<dt>metadata_last_updated</dt>
-<dd><p>POSIXct timestamp of the last metadata update.</p></dd>
+<dt>provenance</dt>
+<dd><p>Provenance of asset (official or community).</p></dd>
 
 <dt>description</dt>
-<dd><p>Textual description of the dataset.</p></dd>
+<dd><p>Textual description of the asset.</p></dd>
+
+<dt>created</dt>
+<dd><p>Date asset was created.</p></dd>
+
+<dt>data_last_updated</dt>
+<dd><p>Date asset data was last updated</p></dd>
+
+<dt>metadata_last_updated</dt>
+<dd><p>Date asset metadata was last updated</p></dd>
+
+<dt>domain_category</dt>
+<dd><p>Category label assigned by the domain.</p></dd>
+
+<dt>domain_tags</dt>
+<dd><p>Tags applied by the domain.</p></dd>
+
+<dt>domain_metadata</dt>
+<dd><p>Metadata associated with the asset assigned by the domain.</p></dd>
+
+<dt>columns</dt>
+<dd><p>A dataframe with the following columns:</p><dl><dt>column_name</dt>
+<dd><p>Names of asset columns.</p></dd>
+
+<dt>column_label</dt>
+<dd><p>Labels of asset columns.</p></dd>
+
+<dt>column_datatype</dt>
+<dd><p>Datatypes of asset columns.</p></dd>
+
+<dt>column_description</dt>
+<dd><p>Description of asset columns.</p></dd>
+
+
+</dl></dd>
+
+<dt>permalink</dt>
+<dd><p>Permanent URL where the asset can be accessed.</p></dd>
+
+<dt>link</dt>
+<dd><p>Direct asset link.</p></dd>
+
+<dt>license</dt>
+<dd><p>License associated with the asset.</p></dd>
 
 
 </dl></div>
