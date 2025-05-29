@@ -1,6 +1,6 @@
 Package: socratadata
 Title: Explore Socrata Data with Ease
-Version: 0.0.0.9002
+Version: 0.0.0.9003
 Authors@R: 
     person("Ryan", "Zomorrodi", , "rzomor2@uic.edu", role = c("aut", "cre"))
 Description: Provides a modern interface for downloading data from 'Socrata' open data portals powered by Rust. Introduces support for all 'Socrata' datatypes and queries via the 'Socrata Query Language (SoQL)'.
