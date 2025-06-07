@@ -10,7 +10,6 @@
 #' @useDynLib socratadata, .registration = TRUE
 NULL
 
-#' @export
 parse_data_json <- function(json_strs, header_col_names, header_col_types) .Call(wrap__parse_data_json, json_strs, header_col_names, header_col_types)
 
 

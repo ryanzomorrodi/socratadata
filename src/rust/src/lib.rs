@@ -7,7 +7,6 @@ use parse::*;
 use process::{as_rlist, Column};
 use serde_json::Value;
 
-/// @export
 #[extendr]
 fn parse_data_json(json_strs: Vec<String>, header_col_names: &str, header_col_types: &str) -> List {
     let col_names: Vec<String> =
@@ -47,7 +46,7 @@ fn parse_data_json(json_strs: Vec<String>, header_col_names: &str, header_col_ty
                 Vec::with_capacity(rows.len()),
                 Vec::with_capacity(rows.len()),
             )),
-            _ => panic!("Unsupported type"),
+            _ => unreachable!("Unsupported type"),
         })
         .collect();
 

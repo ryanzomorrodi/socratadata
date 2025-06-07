@@ -55,6 +55,3 @@ print(metadata)
 }
 
 }
-\seealso{
-\code{\link[=read_socrata]{read_socrata()}}
-}

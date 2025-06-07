@@ -44,8 +44,6 @@
 #' print(metadata)
 #' }
 #'
-#' @seealso [read_socrata()]
-#'
 #' @export
 soc_metadata <- function(dataset) {
   if (is.data.frame(dataset)) {
@@ -63,7 +61,7 @@ soc_metadata <- function(dataset) {
     stop_input_type(
       dataset,
       "a dataframe or url",
-      arg = rlang::caller_arg(query),
+      arg = rlang::caller_arg(dataset),
       call = rlang::caller_call(n = 0)
     )
   }

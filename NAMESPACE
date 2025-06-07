@@ -2,7 +2,6 @@
 
 S3method(print,soc_meta)
 S3method(print,soc_query)
-export(parse_data_json)
 export(soc_discover)
 export(soc_metadata)
 export(soc_query)

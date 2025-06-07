@@ -80,7 +80,7 @@ soc_read <- function(url, query = soc_query(), alias = "label") {
   resps <- iterative_requests(url_parsed, four_by_four, query)
 
   res_list <- parse_data_json(
-    json_str = sapply(resps, httr2::resp_body_string),
+    json_strs = sapply(resps, httr2::resp_body_string),
     header_col_names = httr2::resp_header(resps[[1]], "X-SODA2-Fields"),
     header_col_types = httr2::resp_header(resps[[1]], "X-SODA2-Types")
   )
@@ -89,7 +89,7 @@ soc_read <- function(url, query = soc_query(), alias = "label") {
   res_list[tib_cols] <- lapply(res_list[tib_cols], tibble::as_tibble)
   result <- tibble::as_tibble(res_list)
   if (!is.null(query$`$limit`)) {
-    result <- head(result, n = query$`$limit`)
+    result <- result[1:query$`$limit`, ]
   }
 
   sf_cols <- sapply(res_list, \(x) inherits(x, "sfc"))

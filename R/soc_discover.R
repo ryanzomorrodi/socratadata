@@ -57,7 +57,6 @@
 #' @export
 soc_discover <- function(
   attribution = NULL,
-  audience = NULL,
   categories = NULL,
   domains = NULL,
   ids = NULL,
@@ -110,7 +109,6 @@ soc_discover <- function(
   initial_resp <- httr2::request(req_url) |>
     httr2::req_url_query(
       attribution = attribution,
-      audience = audience,
       categories = categories,
       domains = domains,
       ids = ids,
@@ -130,7 +128,6 @@ soc_discover <- function(
   req <- httr2::request(req_url) |>
     httr2::req_url_query(
       attribution = attribution,
-      audience = audience,
       categories = categories,
       domains = domains,
       ids = ids,

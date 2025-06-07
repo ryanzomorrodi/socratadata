@@ -139,7 +139,7 @@ check_string <- function(
     return(TRUE)
   }
 
-  if (allow_na && (identical(x, NA) || identical(x, na_chr))) {
+  if (allow_na && (identical(x, NA) || identical(x, rlang::na_chr))) {
     return(TRUE)
   }
 

@@ -6,7 +6,6 @@
 \usage{
 soc_discover(
   attribution = NULL,
-  audience = NULL,
   categories = NULL,
   domains = NULL,
   ids = NULL,
