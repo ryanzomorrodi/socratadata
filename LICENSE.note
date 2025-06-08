@@ -1,0 +1,417 @@
+The binary compiled from the source code of this package contains the following Rust crates:
+
+
+-------------------------------------------------------------
+
+Name:        aho-corasick
+Repository:  https://github.com/BurntSushi/aho-corasick
+Authors:     Andrew Gallant
+License:     Unlicense OR MIT
+
+-------------------------------------------------------------
+
+Name:        android-tzdata
+Repository:  https://github.com/RumovZ/android-tzdata
+Authors:     RumovZ
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        android_system_properties
+Repository:  https://github.com/nical/android_system_properties
+Authors:     Nicolas Silva
+License:     MIT/Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        autocfg
+Repository:  https://github.com/cuviper/autocfg
+Authors:     Josh Stone
+License:     Apache-2.0 OR MIT
+
+-------------------------------------------------------------
+
+Name:        build-print
+Repository:  NA
+Authors:     sam0x17
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        bumpalo
+Repository:  https://github.com/fitzgen/bumpalo
+Authors:     Nick Fitzgerald
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        cc
+Repository:  https://github.com/rust-lang/cc-rs
+Authors:     Alex Crichton
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        cfg-if
+Repository:  https://github.com/alexcrichton/cfg-if
+Authors:     Alex Crichton
+License:     MIT/Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        chrono
+Repository:  https://github.com/chronotope/chrono
+Authors:     
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        chrono-tz
+Repository:  https://github.com/chronotope/chrono-tz
+Authors:     
+License:     MIT/Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        chrono-tz-build
+Repository:  NA
+Authors:     
+License:     MIT/Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        core-foundation-sys
+Repository:  https://github.com/servo/core-foundation-rs
+Authors:     The Servo Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        extendr-api
+Repository:  https://github.com/extendr/extendr
+Authors:     andy-thomason, Thomas Down, Mossa Merhi Reimert, Josiah Parry, Claus O. Wilke, Hiroaki Yutani, Ilia A. Kosenkov, Michael Milton
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        extendr-ffi
+Repository:  https://github.com/extendr/extendr
+Authors:     andy-thomason, Thomas Down, Mossa Merhi Reimert, Josiah Parry, Claus O. Wilke, Hiroaki Yutani, Ilia A. Kosenkov, Michael Milton
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        extendr-macros
+Repository:  https://github.com/extendr/extendr
+Authors:     andy-thomason, Thomas Down, Mossa Merhi Reimert, Josiah Parry, Claus O. Wilke, Hiroaki Yutani, Ilia A. Kosenkov, Michael Milton
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        iana-time-zone
+Repository:  https://github.com/strawlab/iana-time-zone
+Authors:     Andrew Straw, René Kijewski, Ryan Lopopolo
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        iana-time-zone-haiku
+Repository:  https://github.com/strawlab/iana-time-zone
+Authors:     René Kijewski
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        itoa
+Repository:  https://github.com/dtolnay/itoa
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        js-sys
+Repository:  https://github.com/rustwasm/wasm-bindgen/tree/master/crates/js-sys
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        libc
+Repository:  https://github.com/rust-lang/libc
+Authors:     The Rust Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        log
+Repository:  https://github.com/rust-lang/log
+Authors:     The Rust Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        memchr
+Repository:  https://github.com/BurntSushi/memchr
+Authors:     Andrew Gallant, bluss
+License:     Unlicense OR MIT
+
+-------------------------------------------------------------
+
+Name:        num-traits
+Repository:  https://github.com/rust-num/num-traits
+Authors:     The Rust Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        once_cell
+Repository:  https://github.com/matklad/once_cell
+Authors:     Aleksey Kladov
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        parse-zoneinfo
+Repository:  https://github.com/chronotope/chrono-tz
+Authors:     
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        paste
+Repository:  https://github.com/dtolnay/paste
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        phf
+Repository:  https://github.com/rust-phf/rust-phf
+Authors:     Steven Fackler
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        phf_codegen
+Repository:  https://github.com/rust-phf/rust-phf
+Authors:     Steven Fackler
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        phf_generator
+Repository:  https://github.com/rust-phf/rust-phf
+Authors:     Steven Fackler
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        phf_shared
+Repository:  https://github.com/rust-phf/rust-phf
+Authors:     Steven Fackler
+License:     MIT
+
+-------------------------------------------------------------
+
+Name:        proc-macro2
+Repository:  https://github.com/dtolnay/proc-macro2
+Authors:     David Tolnay, Alex Crichton
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        quote
+Repository:  https://github.com/dtolnay/quote
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        rand
+Repository:  https://github.com/rust-random/rand
+Authors:     The Rand Project Developers, The Rust Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        rand_core
+Repository:  https://github.com/rust-random/rand
+Authors:     The Rand Project Developers, The Rust Project Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        regex
+Repository:  https://github.com/rust-lang/regex
+Authors:     The Rust Project Developers, Andrew Gallant
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        regex-automata
+Repository:  https://github.com/rust-lang/regex/tree/master/regex-automata
+Authors:     The Rust Project Developers, Andrew Gallant
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        regex-syntax
+Repository:  https://github.com/rust-lang/regex/tree/master/regex-syntax
+Authors:     The Rust Project Developers, Andrew Gallant
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        rustversion
+Repository:  https://github.com/dtolnay/rustversion
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        ryu
+Repository:  https://github.com/dtolnay/ryu
+Authors:     David Tolnay
+License:     Apache-2.0 OR BSL-1.0
+
+-------------------------------------------------------------
+
+Name:        serde
+Repository:  https://github.com/serde-rs/serde
+Authors:     Erick Tryzelaar, David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        serde_derive
+Repository:  https://github.com/serde-rs/serde
+Authors:     Erick Tryzelaar, David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        serde_json
+Repository:  https://github.com/serde-rs/json
+Authors:     Erick Tryzelaar, David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        shlex
+Repository:  https://github.com/comex/rust-shlex
+Authors:     comex, Fenhl, Adrian Taylor, Alex Touchet, Daniel Parks, Garrett Berg
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        siphasher
+Repository:  https://github.com/jedisct1/rust-siphash
+Authors:     Frank Denis
+License:     MIT/Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        syn
+Repository:  https://github.com/dtolnay/syn
+Authors:     David Tolnay
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        uncased
+Repository:  https://github.com/SergioBenitez/uncased
+Authors:     Sergio Benitez
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        unicode-ident
+Repository:  https://github.com/dtolnay/unicode-ident
+Authors:     David Tolnay
+License:     (MIT OR Apache-2.0) AND Unicode-3.0
+
+-------------------------------------------------------------
+
+Name:        version_check
+Repository:  https://github.com/SergioBenitez/version_check
+Authors:     Sergio Benitez
+License:     MIT/Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen
+Repository:  https://github.com/rustwasm/wasm-bindgen
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen-backend
+Repository:  https://github.com/rustwasm/wasm-bindgen/tree/master/crates/backend
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen-macro
+Repository:  https://github.com/rustwasm/wasm-bindgen/tree/master/crates/macro
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen-macro-support
+Repository:  https://github.com/rustwasm/wasm-bindgen/tree/master/crates/macro-support
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        wasm-bindgen-shared
+Repository:  https://github.com/rustwasm/wasm-bindgen/tree/master/crates/shared
+Authors:     The wasm-bindgen Developers
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows-core
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows-implement
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows-interface
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows-link
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows-result
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
+
+Name:        windows-strings
+Repository:  https://github.com/microsoft/windows-rs
+Authors:     Microsoft
+License:     MIT OR Apache-2.0
+
+-------------------------------------------------------------
