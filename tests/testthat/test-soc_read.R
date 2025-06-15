@@ -2,8 +2,6 @@ with_mock_dir(
   "soc_read",
   {
     test_that("soc_read returns tibble when no spatial cols", {
-      skip_on_cran()
-
       url <- "https://soda.demo.socrata.com/resource/2646-ez2p.json"
 
       result <- soc_read(url)

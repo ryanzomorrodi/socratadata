@@ -25,7 +25,7 @@ A tibble with one row per dataset and the following columns:
 Retrieves a catalog of available datasets from a Socrata open data portal.
 }
 \examples{
-\dontrun{
+\donttest{
 catalog <- soc_list("https://data.cityofchicago.org")
 head(catalog)
 }

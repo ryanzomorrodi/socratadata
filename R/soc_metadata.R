@@ -37,7 +37,7 @@
 #' }
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' url <- "https://data.cityofchicago.org/resource/wrvz-psew.json"
 #' data <- read_socrata(url)
 #' metadata <- soc_metadata(data)

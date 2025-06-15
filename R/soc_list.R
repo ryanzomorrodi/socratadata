@@ -16,7 +16,7 @@
 #' }
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' catalog <- soc_list("https://data.cityofchicago.org")
 #' head(catalog)
 #' }
