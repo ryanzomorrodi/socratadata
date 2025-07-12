@@ -101,12 +101,12 @@ This function does not execute the query; it creates an object that can be passe
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">GROUP BY</span> pickup_community_area</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">ORDER BY</span> n DESC</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="va">trips_to_lws_by_ca</span> <span class="op">&lt;-</span> <span class="fu"><a href="soc_read.html">soc_read</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  <span class="st">"https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data"</span>,</span></span>
-<span class="r-in"><span>  query <span class="op">=</span> <span class="va">query</span></span></span>
-<span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span>  <span class="va">trips_to_lws_by_ca</span> <span class="op">&lt;-</span> <span class="fu"><a href="soc_read.html">soc_read</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    <span class="st">"https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data"</span>,</span></span>
+<span class="r-in"><span>    query <span class="op">=</span> <span class="va">query</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
