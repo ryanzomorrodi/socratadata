@@ -5,10 +5,11 @@
 #'
 #' @param url string; URL of the Socrata dataset (e.g., from `https://data.cityofchicago.org`).
 #' @param query `soc_query()`; Query parameters specification
-#' @param alias string; Use of field alias values. There are two options:
+#' @param alias string; Use of field alias values. There are three options:
 #'
 #'  - `"label"`: field alias values are assigned as a label attribute for each field.
 #'  - `"replace"`: field alias values replace existing column names.
+#'  - `"drop"`: field alias values replace existing column names.
 #'
 #' @return A tibble with additional attributes containing dataset metadata.
 #' If the dataset contains a single non-nested geospatial field, it will be returned as an `sf` object.
@@ -72,7 +73,7 @@ soc_read <- function(url, query = soc_query(), alias = "label") {
     )
   }
   check_string(alias)
-  rlang::arg_match(alias, c("label", "replace"))
+  rlang::arg_match(alias, c("label", "replace", "drop"))
 
   url_parsed <- httr2::url_parse(url)
   four_by_four <- get_four_by_four(url_parsed)
@@ -101,21 +102,25 @@ soc_read <- function(url, query = soc_query(), alias = "label") {
   set_metadata(result, url, alias)
 }
 
+get_dataset_row_count <- function(url_parsed, four_by_four) {
+  count_url <- get_count_url(url_parsed, four_by_four)
+
+  httr2::request(count_url) |>
+    httr2::req_url_query(
+      `$query` = "select count(*) as COLUMN_ALIAS_GUARD__count"
+    ) |>
+    httr2::req_perform() |>
+    httr2::resp_body_json() |>
+    unlist() |>
+    as.numeric()
+}
+
 iterative_requests <- function(url_parsed, four_by_four, query) {
   chunk_size <- 10000
   data_url <- get_data_url(url_parsed, four_by_four)
 
   if (all(sapply(query[2:5], is.null))) {
-    count_url <- get_count_url(url_parsed, four_by_four)
-
-    row_count <- httr2::request(count_url) |>
-      httr2::req_url_query(
-        `$query` = "select count(*) as COLUMN_ALIAS_GUARD__count"
-      ) |>
-      httr2::req_perform() |>
-      httr2::resp_body_json() |>
-      unlist() |>
-      as.numeric()
+    row_count <- get_dataset_row_count(url_parsed, four_by_four)
     if (!is.null(query$`$limit`)) {
       row_count <- min(row_count, query$`$limit`)
     }

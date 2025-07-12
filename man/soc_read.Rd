@@ -11,10 +11,11 @@ soc_read(url, query = soc_query(), alias = "label")
 
 \item{query}{\code{soc_query()}; Query parameters specification}
 
-\item{alias}{string; Use of field alias values. There are two options:
+\item{alias}{string; Use of field alias values. There are three options:
 \itemize{
 \item \code{"label"}: field alias values are assigned as a label attribute for each field.
 \item \code{"replace"}: field alias values replace existing column names.
+\item \code{"drop"}: field alias values replace existing column names.
 }}
 }
 \value{

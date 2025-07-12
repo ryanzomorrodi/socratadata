@@ -8,5 +8,4 @@ src/Makevars.win
 .DS_Store
 .quarto
 docs
-tests/testthat/soc_read
 inst/doc
