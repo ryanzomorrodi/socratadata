@@ -1,13 +1,13 @@
 #' Extract Socrata Dataset Metadata
 #'
-#' Retrieves metadata attributes from a tibble returned by `read_socrata()` or using the dataset url, including
+#' Retrieves metadata attributes from a tibble returned by `soc_read()` or using the dataset url, including
 #' dataset-level information and column-level descriptions.
 #'
 #' This function pulls out descriptive metadata such as the dataset's ID, title, attribution, category,
 #' creation and update timestamps, description, any domain-specific fields, and field descriptions defined by the
 #' data provider.
 #'
-#' @param dataset A tibble returned by `read_socrata()` or a url.
+#' @param dataset A tibble returned by `soc_read()` or a url.
 #'
 #' @return An object of class `soc_meta`, which includes:
 #' \describe{
@@ -37,9 +37,9 @@
 #' }
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' url <- "https://data.cityofchicago.org/resource/wrvz-psew.json"
-#' data <- read_socrata(url)
+#' data <- soc_read(url)
 #' metadata <- soc_metadata(data)
 #' print(metadata)
 #' }

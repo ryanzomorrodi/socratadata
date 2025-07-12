@@ -15,11 +15,6 @@
 #'   \item{description}{Brief description of the dataset's content.}
 #' }
 #'
-#' @examples
-#' \donttest{
-#' catalog <- soc_list("https://data.cityofchicago.org")
-#' head(catalog)
-#' }
 #' @keywords internal
 # I don't think this is useful (just use soc_discover(domains = "etc"))
 soc_list <- function(url) {

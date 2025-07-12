@@ -7,7 +7,7 @@
 soc_metadata(dataset)
 }
 \arguments{
-\item{dataset}{A tibble returned by \code{read_socrata()} or a url.}
+\item{dataset}{A tibble returned by \code{soc_read()} or a url.}
 }
 \value{
 An object of class \code{soc_meta}, which includes:
@@ -38,7 +38,7 @@ An object of class \code{soc_meta}, which includes:
 }
 }
 \description{
-Retrieves metadata attributes from a tibble returned by \code{read_socrata()} or using the dataset url, including
+Retrieves metadata attributes from a tibble returned by \code{soc_read()} or using the dataset url, including
 dataset-level information and column-level descriptions.
 }
 \details{
@@ -47,9 +47,9 @@ creation and update timestamps, description, any domain-specific fields, and fie
 data provider.
 }
 \examples{
-\donttest{
+\dontrun{
 url <- "https://data.cityofchicago.org/resource/wrvz-psew.json"
-data <- read_socrata(url)
+data <- soc_read(url)
 metadata <- soc_metadata(data)
 print(metadata)
 }

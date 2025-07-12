@@ -43,7 +43,7 @@
 #' }
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' # Search for crime-related datasets in the Public Safety category
 #' results <- soc_discover(
 #'   query = "crime",

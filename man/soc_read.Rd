@@ -54,7 +54,7 @@ Downloads and parses a dataset from a Socrata open data portal URL, returning it
 Metadata is also returned as attributes on the returned object.
 }
 \examples{
-\donttest{
+\dontrun{
 cta_ridership <- soc_read(
   "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
 )

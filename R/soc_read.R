@@ -42,7 +42,7 @@
 #' }
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' cta_ridership <- soc_read(
 #'   "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
 #' )

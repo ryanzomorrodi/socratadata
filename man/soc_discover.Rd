@@ -74,7 +74,7 @@ all levels publish data on topics including crime, permits, finance, healthcare,
 research, and performance.
 }
 \examples{
-\donttest{
+\dontrun{
 # Search for crime-related datasets in the Public Safety category
 results <- soc_discover(
   query = "crime",

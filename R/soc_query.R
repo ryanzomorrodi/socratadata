@@ -21,14 +21,14 @@
 #')
 #' print(query)
 #'
-#' \donttest{
+#' \dontrun{
 #' trips_to_lws_by_ca <- soc_read(
 #'   "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
 #'   query = query
 #' )
 #' }
 #'
-#' @seealso Use this with a function that executes Socrata requests, e.g., `read_socrata(url, query = soc_query(...))`
+#' @seealso Use this with a function that executes Socrata requests, e.g., `soc_read(url, query = soc_query(...))`
 #'
 #' @export
 soc_query <- function(
