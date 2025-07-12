@@ -52,7 +52,7 @@
 #'   )
 #' }
 #'
-#' @seealso \url{https://dev.socrata.com/docs/discovery/}
+#' @seealso \url{https://dev.socrata.com/docs/other/discovery}
 #'
 #' @export
 soc_discover <- function(

@@ -85,5 +85,5 @@ if (interactive()) {
 
 }
 \seealso{
-\url{https://dev.socrata.com/docs/discovery/}
+\url{https://dev.socrata.com/docs/other/discovery}
 }
