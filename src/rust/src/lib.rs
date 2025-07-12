@@ -8,7 +8,12 @@ use process::{as_rlist, Column};
 use serde_json::Value;
 
 #[extendr]
-fn parse_data_json(json_strs: Vec<String>, header_col_names: &str, header_col_types: &str) -> List {
+fn parse_data_json(
+    json_strs: Vec<String>,
+    header_col_names: &str,
+    header_col_types: &str,
+    meta_url: &str,
+) -> List {
     let col_names: Vec<String> =
         serde_json::from_str(header_col_names).expect("Failed to parse JSON array");
     let col_types: Vec<String> =
@@ -33,6 +38,8 @@ fn parse_data_json(json_strs: Vec<String>, header_col_names: &str, header_col_ty
                 Vec::with_capacity(rows.len()),
                 Vec::with_capacity(rows.len()),
             )),
+            "photo" => Column::Photo(Vec::with_capacity(rows.len())),
+            "document" => Column::Document(Vec::with_capacity(rows.len())),
             "point" => Column::Point(Vec::with_capacity(rows.len())),
             "line" => Column::Line(Vec::with_capacity(rows.len())),
             "polygon" => Column::Polygon(Vec::with_capacity(rows.len())),
@@ -81,6 +88,12 @@ fn parse_data_json(json_strs: Vec<String>, header_col_names: &str, header_col_ty
                     let (url_val, desc_val) = parse_url(val);
                     urls.push(url_val);
                     descs.push(desc_val);
+                }
+                Column::Photo(vec) => {
+                    vec.push(parse_photo(val, meta_url));
+                }
+                Column::Document(vec) => {
+                    vec.push(parse_document(val, meta_url));
                 }
                 Column::Point(vec) => {
                     vec.push(parse_point(val));

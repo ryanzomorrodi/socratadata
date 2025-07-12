@@ -46,6 +46,28 @@ pub fn parse_url(val: Option<&Value>) -> (Option<String>, Option<String>) {
     (url_opt, desc_opt)
 }
 
+pub fn parse_photo(val: Option<&Value>, meta_url: &str) -> Option<String> {
+    val.and_then(|v| v.as_str())
+        .map(|id| format!("{}/files/{}", meta_url, id))
+}
+
+pub fn parse_document(val: Option<&Value>, meta_url: &str) -> Option<String> {
+    val.and_then(|v| v.as_object())
+        .map(|map| {
+            let file_id = map.get("file_id")?.as_str()?;
+            let filename = map.get("filename").and_then(|v| v.as_str()).unwrap_or("");
+            let content_type = map
+                .get("content_type")
+                .and_then(|v| v.as_str())
+                .unwrap_or("");
+            Some(format!(
+                "{}/files/{}?filename={}&content_type={}",
+                meta_url, file_id, filename, content_type
+            ))
+        })
+        .flatten()
+}
+
 pub fn parse_point(val: Option<&Value>) -> Option<(f64, f64)> {
     val.and_then(|v| {
         v.get("coordinates")

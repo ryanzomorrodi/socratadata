@@ -3,7 +3,7 @@ test_that("parse boolean as logical", {
   col_names <- '["col"]'
   col_types <- '["boolean"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   expect_equal(result$col, c(TRUE, FALSE, NA))
 })
 
@@ -12,7 +12,7 @@ test_that("parse number as double", {
   col_names <- '["col"]'
   col_types <- '["number"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   expect_equal(result$col, c(42.5, -7.1, NA))
 })
 
@@ -26,7 +26,7 @@ test_that("parse fixed_timestamp as UTC POSIXct", {
   col_names <- '["col"]'
   col_types <- '["fixed_timestamp"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   expect_equal(
     result$col,
     as.POSIXct(
@@ -51,7 +51,7 @@ test_that("parse floating_timestamp as local POSIXct", {
   col_names <- '["col"]'
   col_types <- '["floating_timestamp"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   expect_equal(
     result$col,
     as.POSIXct(
@@ -70,7 +70,7 @@ test_that("parse text as character", {
   col_names <- '["col"]'
   col_types <- '["text"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   expect_equal(result$col, c("hello", "world", NA))
 })
 
@@ -85,7 +85,7 @@ test_that("parse url as list with url vector and description vector", {
   col_names <- '["col"]'
   col_types <- '["url"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
 
   expect_type(result$col, "list")
 
@@ -108,7 +108,7 @@ test_that("parse point as point sfc", {
   col_names <- '["col"]'
   col_types <- '["point"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   result$col <- sf::st_sfc(result$col)
 
   expect_equal(
@@ -132,7 +132,7 @@ test_that("parse linestring as linestring sfc", {
   col_names <- '["col"]'
   col_types <- '["line"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   result$col <- sf::st_sfc(result$col)
 
   expect_equal(
@@ -154,7 +154,7 @@ test_that("parse polygon as polygon sfc", {
   col_names <- '["col"]'
   col_types <- '["polygon"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   result$col <- sf::st_sfc(result$col)
 
   expect_equal(
@@ -178,7 +178,7 @@ test_that("parse multipoint as multipoint sfc", {
   col_names <- '["col"]'
   col_types <- '["multipoint"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   result$col <- sf::st_sfc(result$col)
 
   expect_equal(
@@ -199,7 +199,7 @@ test_that("parse multilinestring as multilinestring sfc", {
   col_names <- '["col"]'
   col_types <- '["multiline"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   result$col <- sf::st_sfc(result$col)
 
   expect_equal(
@@ -223,7 +223,7 @@ test_that("parse multipolygon as multipolygon sfc", {
   col_names <- '["col"]'
   col_types <- '["multipolygon"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   result$col <- sf::st_sfc(result$col)
 
   expect_equal(
@@ -267,7 +267,7 @@ test_that("parse multiple types", {
   col_names <- '["bool_col", "num_col", "text_col", "timestamp_col", "url_col", "geom_col"]'
   col_types <- '["boolean", "number", "text", "fixed_timestamp", "url", "point"]'
 
-  result <- parse_data_json(json_data, col_names, col_types)
+  result <- parse_data_json(json_data, col_names, col_types, meta_url = "")
   result$geom_col <- sf::st_sfc(result$geom_col)
 
   expect_equal(result$bool_col, c(TRUE, FALSE, NA))

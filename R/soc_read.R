@@ -83,23 +83,43 @@ soc_read <- function(url, query = soc_query(), alias = "label") {
   res_list <- parse_data_json(
     json_strs = sapply(resps, httr2::resp_body_string),
     header_col_names = httr2::resp_header(resps[[1]], "X-SODA2-Fields"),
-    header_col_types = httr2::resp_header(resps[[1]], "X-SODA2-Types")
+    header_col_types = httr2::resp_header(resps[[1]], "X-SODA2-Types"),
+    meta_url = get_meta_url(url_parsed, four_by_four)
   )
 
-  tib_cols <- sapply(res_list, \(x) is.list(x) && !inherits(x, "sfc"))
-  res_list[tib_cols] <- lapply(res_list[tib_cols], tibble::as_tibble)
+  col_types <- httr2::resp_header(resps[[1]], "X-SODA2-Types") |>
+    json_header_to_vec()
+  for (i in seq_along(res_list)) {
+    if (col_types[i] %in% c("url", "location")) {
+      res_list[[i]] <- tibble::as_tibble(res_list[[i]])
+    } else if (
+      col_types[i] %in%
+        c("point", "line", "polygon", "multipoint", "multiline", "multipolygon")
+    ) {
+      res_list[[i]] <- sf::st_sfc(res_list[[i]])
+    }
+
+    if (col_types[i] == "location") {
+      res_list[[i]]$geometry <- sf::st_sfc(res_list[[i]]$geometry)
+    }
+  }
+
   result <- tibble::as_tibble(res_list)
   if (!is.null(query$`$limit`)) {
     result <- result[1:query$`$limit`, ]
   }
 
-  sf_cols <- sapply(res_list, \(x) inherits(x, "sfc"))
-  result[sf_cols] <- lapply(result[sf_cols], sf::st_sfc)
-  if (sum(sf_cols) == 1) {
+  if (sum(sapply(res_list, \(x) inherits(x, "sfc"))) == 1) {
     result <- sf::st_as_sf(result)
   }
 
   set_metadata(result, url, alias)
+}
+
+json_header_to_vec <- function(json_string) {
+  cleaned <- gsub('^\\[|\\]$', '', json_string)
+  items <- strsplit(cleaned, '\\s*,\\s*')[[1]]
+  gsub('^"|"$', '', items)
 }
 
 get_dataset_row_count <- function(url_parsed, four_by_four) {
@@ -162,7 +182,6 @@ iterative_requests <- function(url_parsed, four_by_four, query) {
 
   resps
 }
-
 
 set_metadata <- function(result, url, alias) {
   metadata <- soc_metadata_from_url(url)

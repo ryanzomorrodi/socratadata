@@ -10,7 +10,7 @@
 #' @useDynLib socratadata, .registration = TRUE
 NULL
 
-parse_data_json <- function(json_strs, header_col_names, header_col_types) .Call(wrap__parse_data_json, json_strs, header_col_names, header_col_types)
+parse_data_json <- function(json_strs, header_col_names, header_col_types, meta_url) .Call(wrap__parse_data_json, json_strs, header_col_names, header_col_types, meta_url)
 
 
 # nolint end

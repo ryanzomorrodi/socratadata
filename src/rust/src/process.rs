@@ -7,6 +7,8 @@ pub enum Column {
     FloatingTimestamp(Vec<Option<f64>>),
     Text(Vec<Option<String>>),
     Url((Vec<Option<String>>, Vec<Option<String>>)),
+    Photo(Vec<Option<String>>),
+    Document(Vec<Option<String>>),
     Point(Vec<Option<(f64, f64)>>),
     Line(Vec<Option<Vec<(f64, f64)>>>),
     Polygon(Vec<Option<Vec<Vec<(f64, f64)>>>>),
@@ -36,6 +38,8 @@ pub fn as_rlist(col_names: Vec<String>, columns: Vec<Column>) -> List {
             Column::Text(values) => as_character(values),
             Column::Point(values) => as_point_sfc(values),
             Column::Url((urls, descs)) => as_url_list(urls, descs),
+            Column::Photo(values) => as_character(values), //
+            Column::Document(values) => as_character(values),
             Column::Line(values) => as_line_sfc(values),
             Column::Polygon(values) => as_polygon_sfc(values),
             Column::MultiPoint(vec) => as_multipoint_sfc(vec),

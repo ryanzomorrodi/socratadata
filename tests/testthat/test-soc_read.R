@@ -92,7 +92,6 @@ with_mock_dir(
         as.POSIXct("2014-05-05 21:46:58"), as.POSIXct("2014-05-05 22:24:18")
       )
 
-      # drop metadata
       attributes(object) <- attributes(object)[
         names(attributes(object)) %in% names(attributes(expected))
       ]
@@ -137,7 +136,126 @@ with_mock_dir(
           "https://data.cityofchicago.org/", NA_character_
         )
       )
-      # drop metadata
+
+      attributes(object) <- attributes(object)[
+        names(attributes(object)) %in% names(attributes(expected))
+      ]
+
+      expect_equal(object, expected)
+    })
+
+    test_that("soc datatype - photo", {
+      url <- "https://soda.demo.socrata.com/dataset/All-OBE-Column-Types/2asz-g9qq/about_data"
+      object <- soc_read(
+        url,
+        alias = "drop",
+        soc_query(select = "photo_column")
+      )
+
+      expected <- tibble::tibble(
+        photo_column = "https://soda.demo.socrata.com/api/views/2asz-g9qq/files/ZXF6YilAOjRH26G2TH05mvHMTlDnLCwn6CysLQP18hc"
+      )
+
+      attributes(object) <- attributes(object)[
+        names(attributes(object)) %in% names(attributes(expected))
+      ]
+
+      expect_equal(object, expected)
+    })
+
+    test_that("soc datatype - document", {
+      url <- "https://soda.demo.socrata.com/dataset/All-OBE-Column-Types/2asz-g9qq/about_data"
+      object <- soc_read(
+        url,
+        alias = "drop",
+        soc_query(select = "document")
+      )
+
+      expected <- tibble::tibble(
+        document = "https://soda.demo.socrata.com/api/views/2asz-g9qq/files/BFqKFH02U1wT_y_7EV_Llbka4p90HJrWkC-7ZalB2lA?filename=ping-pong.gif&content_type=image/gif; charset=binary"
+      )
+
+      attributes(object) <- attributes(object)[
+        names(attributes(object)) %in% names(attributes(expected))
+      ]
+
+      expect_equal(object, expected)
+    })
+
+    test_that("soc datatype - location", {
+      url <- "https://soda.demo.socrata.com/dataset/All-OBE-Column-Types/2asz-g9qq/about_data"
+      object <- soc_read(
+        url,
+        alias = "drop",
+        soc_query(select = "location_column")
+      )
+
+      expected <- tibble::tibble(
+        location_column = tibble::tibble(
+          geometry = sf::st_sfc(
+            sf::st_point(c(47.5982815, -122.3347795)),
+            crs = sf::st_crs(4326)
+          ),
+          address = "83 South King Street",
+          city = "Seattle",
+          state = "WA",
+          zip = ""
+        )
+      )
+
+      attributes(object) <- attributes(object)[
+        names(attributes(object)) %in% names(attributes(expected))
+      ]
+
+      expect_equal(object, expected)
+    })
+
+    test_that("soc datatype - all non-spatial (except location)", {
+      url <- "https://soda.demo.socrata.com/dataset/All-OBE-Column-Types/2asz-g9qq/about_data"
+      object <- soc_read(
+        url,
+        alias = "drop"
+      )
+      object$location_column$geometry <- sf::st_sfc(
+        object$location_column$geometry
+      )
+
+      expected <- tibble::tibble(
+        plain_text_column = "Sample Text",
+        formatted_text_column = "<p>Sample <strong>Rich Text</strong></p>",
+        number_column = 42,
+        money_column = 1000000,
+        percent_column = 66,
+        date_time_column = as.POSIXct("2014-10-13 00:00:00"),
+        date_time_with_timezone_column = as.POSIXct(
+          "2014-10-14 07:00:00",
+          tz = "UTC"
+        ),
+        location_column = tibble::tibble(
+          geometry = sf::st_sfc(
+            sf::st_point(c(47.5982815, -122.3347795)),
+            crs = sf::st_crs(4326)
+          ),
+          address = "83 South King Street",
+          city = "Seattle",
+          state = "WA",
+          zip = ""
+        ),
+        website_url_column = tibble::tibble(
+          url = "http://www.socrata.com",
+          description = "Socrata"
+        ),
+        email_column = "support@socrata.com",
+        checkbox_column = TRUE,
+        flag_column = "green",
+        star_column = 3,
+        phone_column = "206-555-1212",
+        multiple_choice = "Maybe",
+        photo_column = "https://soda.demo.socrata.com/api/views/2asz-g9qq/files/ZXF6YilAOjRH26G2TH05mvHMTlDnLCwn6CysLQP18hc",
+        document = "https://soda.demo.socrata.com/api/views/2asz-g9qq/files/BFqKFH02U1wT_y_7EV_Llbka4p90HJrWkC-7ZalB2lA?filename=ping-pong.gif&content_type=image/gif; charset=binary",
+        `:@computed_region_k83t_ady5` = 18379
+      )
+
       attributes(object) <- attributes(object)[
         names(attributes(object)) %in% names(attributes(expected))
       ]
