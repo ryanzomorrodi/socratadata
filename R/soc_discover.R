@@ -43,13 +43,13 @@
 #' }
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' # Search for crime-related datasets in the Public Safety category
-#' results <- soc_discover(
-#'   query = "crime",
-#'   categories = c("Public Safety"),
-#'   only = "dataset"
-#' )
+#'   results <- soc_discover(
+#'     query = "crime",
+#'     categories = c("Public Safety"),
+#'     only = "dataset"
+#'   )
 #' }
 #'
 #' @seealso \url{https://dev.socrata.com/docs/discovery/}

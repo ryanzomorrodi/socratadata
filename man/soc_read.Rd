@@ -54,23 +54,23 @@ Downloads and parses a dataset from a Socrata open data portal URL, returning it
 Metadata is also returned as attributes on the returned object.
 }
 \examples{
-\dontrun{
-cta_ridership <- soc_read(
-  "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
-)
-print(cta_ridership)
-attr(cta_ridership, "description")
+if (interactive()) {
+  cta_ridership <- soc_read(
+    "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
+  )
+  print(cta_ridership)
+  attr(cta_ridership, "description")
 
-trips_to_lws_by_ca <- soc_read(
-  "https://data.cityofchicago.org/transportation/taxi-trips-2013-2023-/wrvz-psew/about_data",
-  query = soc_query(
-    select = "violation_date, count(*) as n",
-    where = "dropoff_community_area = 31",
-    group_by = "pickup_community_area",
-    order_by = "n DESC"
-  ),
-  alias = "replace"
-)
+  trips_to_lws_by_ca <- soc_read(
+    "https://data.cityofchicago.org/transportation/taxi-trips-2013-2023-/wrvz-psew/about_data",
+    query = soc_query(
+      select = "violation_date, count(*) as n",
+      where = "dropoff_community_area = 31",
+      group_by = "pickup_community_area",
+      order_by = "n DESC"
+    ),
+    alias = "replace"
+  )
 }
 
 }

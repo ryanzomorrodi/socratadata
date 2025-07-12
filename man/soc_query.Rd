@@ -42,11 +42,11 @@ query <- soc_query(
 )
 print(query)
 
-\dontrun{
-trips_to_lws_by_ca <- soc_read(
-  "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
-  query = query
-)
+if (interactive()) {
+  trips_to_lws_by_ca <- soc_read(
+    "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
+    query = query
+  )
 }
 
 }
