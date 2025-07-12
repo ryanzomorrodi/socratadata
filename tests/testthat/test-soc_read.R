@@ -216,9 +216,6 @@ with_mock_dir(
         url,
         alias = "drop"
       )
-      object$location_column$geometry <- sf::st_sfc(
-        object$location_column$geometry
-      )
 
       expected <- tibble::tibble(
         plain_text_column = "Sample Text",
