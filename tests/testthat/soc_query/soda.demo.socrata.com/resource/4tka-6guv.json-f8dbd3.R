@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/4tka-6guv.json?%24where=depth%20%3E%20635&%24limit=10000&%24offset=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Sat, 12 Jul 2025 15:34:07 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 14 Jul 2025 16:01:21 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxMl80XzEyMmtLRmJBbjY3U1hBdjN0amJ6WGd6Rm5MQllkYw---gzimQCntrodDPnwvrF2lOlrACL6tvK--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"source\",\"earthquake_id\",\"version\",\"magnitude\",\"depth\",\"number_of_stations\",\"region\",\"location\"]", 
@@ -10,5 +10,7 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/4tk
         `Last-Modified` = "Wed, 04 Sep 2019 17:25:46 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "9e8275e43a6b20ea8081633c0ea10c46"), redact = character(0), class = "httr2_headers"), 
-    body = charToRaw("[]\n"), cache = new.env(parent = emptyenv())), class = "httr2_response")
+        `X-Socrata-RequestId` = "4f6f50cc61e5b9dae7a9bc62c20adc0c"), class = "httr2_headers"), 
+    body = charToRaw("[]\n"), timing = c(redirect = 0, namelookup = 1.4e-05, 
+    connect = 0, pretransfer = 6.2e-05, starttransfer = 0.504885, 
+    total = 0.504965), cache = new.env(parent = emptyenv())), class = "httr2_response")

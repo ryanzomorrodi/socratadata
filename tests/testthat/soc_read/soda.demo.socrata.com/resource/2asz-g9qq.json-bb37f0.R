@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2asz-g9qq.json?%24select=location_column&%24offset=0&%24limit=1", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Sat, 12 Jul 2025 07:05:02 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 14 Jul 2025 16:01:41 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxNF82XzIyOXRuVEtNWnc0RG9SZTd0OTBfczl0SzJESDhrcw---gzismxG3FsgsBQvKcFYFpPA_qV-udL--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"location_column\"]", `X-SODA2-Types` = "[\"location\"]", 
@@ -9,6 +9,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2as
         `Last-Modified` = "Mon, 16 Sep 2019 23:13:03 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "e2379d58db2f1b9399a7c3d87cb437fe"), redact = character(0), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "8dc893949b1f6fb2f23abb6321626592"), class = "httr2_headers"), 
     body = charToRaw("[{\"location_column\":{\"latitude\":\"47.5982815480005\",\"longitude\":\"-122.33477954499972\",\"human_address\":\"{\\\"address\\\": \\\"83 South King Street\\\", \\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"zip\\\": \\\"\\\"}\"}}]\n"), 
-    cache = new.env(parent = emptyenv())), class = "httr2_response")
+    timing = c(redirect = 0, namelookup = 1e-05, connect = 0, 
+    pretransfer = 4.6e-05, starttransfer = 0.198529, total = 0.198677
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

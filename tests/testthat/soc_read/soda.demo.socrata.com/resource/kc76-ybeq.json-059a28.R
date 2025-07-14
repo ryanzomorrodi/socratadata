@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/kc76-ybeq.json?%24offset=0&%24limit=5", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Sat, 12 Jul 2025 07:04:53 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 14 Jul 2025 16:01:30 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zOTEyOF8yXzc2NTY1WVpvSWhZVFAwN01sNDZCNXBQMUM0Z3VEY0U--gzi5vPVmCJxh8b2FpDO7xbmUHf1abY---gzip\"", 
         `X-SODA2-Fields` = "[\"x\",\"y\"]", `X-SODA2-Types` = "[\"number\",\"number\"]", 
@@ -9,6 +9,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/kc7
         `Last-Modified` = "Fri, 24 May 2019 17:40:18 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "e692cc2e3911ad5fbd7e2afd83e1c855"), redact = character(0), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "2b1c78451f5bb008ec81af2c4c76888f"), class = "httr2_headers"), 
     body = charToRaw("[{\"x\":\"112\",\"y\":\"663\"}\n,{\"x\":\"-798\",\"y\":\"-93\"}\n,{\"x\":\"317\",\"y\":\"-58\"}\n,{\"x\":\"-853\",\"y\":\"-797\"}\n,{\"x\":\"185\",\"y\":\"102\"}]\n"), 
-    cache = new.env(parent = emptyenv())), class = "httr2_response")
+    timing = c(redirect = 0, namelookup = 1.3e-05, connect = 0, 
+    pretransfer = 7e-05, starttransfer = 0.192903, total = 0.193019
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

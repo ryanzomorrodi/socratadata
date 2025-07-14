@@ -96,15 +96,22 @@ soc_metadata_from_tibble <- function(soc_tbl) {
 }
 
 soc_metadata_from_url <- function(url) {
-  url_parsed <- httr2::url_parse(url)
-  four_by_four <- get_four_by_four(url_parsed)
-
-  meta_url <- get_meta_url(url_parsed, four_by_four)
-  results <- httr2::request(meta_url) |>
+  url_base <- httr2::url_modify(
+    url,
+    username = NULL,
+    password = NULL,
+    port = NULL,
+    path = NULL,
+    query = NULL,
+    fragment = NULL
+  )
+  four_by_four <- get_four_by_four(url)
+  results <- httr2::request(url_base) |>
+    httr2::req_template("GET /api/views/{four_by_four}") |>
     httr2::req_perform() |>
     httr2::resp_body_json(simplifyVector = TRUE)
 
-  permalink <- paste0("https://", url_parsed$hostname, "/d/", four_by_four)
+  permalink <- paste0(url_base, "d/", four_by_four)
   link <- httr2::request(permalink) |>
     httr2::req_perform() |>
     httr2::resp_url()

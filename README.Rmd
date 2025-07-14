@@ -26,6 +26,12 @@ Unlike `RSocrata`, `socratadata` does not support uploading or editing existing 
 
 ## Installation
 
+You can install `socratadata` from CRAN.
+
+```r
+install.packages("socratadata")
+```
+
 You can install the development version of socratadata from [GitHub](https://github.com/) with:
 
 ``` r

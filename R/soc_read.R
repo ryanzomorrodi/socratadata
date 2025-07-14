@@ -75,16 +75,27 @@ soc_read <- function(url, query = soc_query(), alias = "label") {
   check_string(alias)
   rlang::arg_match(alias, c("label", "replace", "drop"))
 
-  url_parsed <- httr2::url_parse(url)
-  four_by_four <- get_four_by_four(url_parsed)
+  url_base <- httr2::url_modify(
+    url,
+    username = NULL,
+    password = NULL,
+    port = NULL,
+    path = NULL,
+    query = NULL,
+    fragment = NULL
+  )
+  four_by_four <- get_four_by_four(url)
 
-  resps <- iterative_requests(url_parsed, four_by_four, query)
+  resps <- iterative_requests(url_base, four_by_four, query)
 
   res_list <- parse_data_json(
     json_strs = sapply(resps, httr2::resp_body_string),
     header_col_names = httr2::resp_header(resps[[1]], "X-SODA2-Fields"),
     header_col_types = httr2::resp_header(resps[[1]], "X-SODA2-Types"),
-    meta_url = get_meta_url(url_parsed, four_by_four)
+    meta_url = httr2::url_modify(
+      url_base,
+      path = paste0("api/views/", four_by_four)
+    )
   )
 
   col_types <- httr2::resp_header(resps[[1]], "X-SODA2-Types") |>
@@ -122,10 +133,9 @@ json_header_to_vec <- function(json_string) {
   gsub('^"|"$', '', items)
 }
 
-get_dataset_row_count <- function(url_parsed, four_by_four) {
-  count_url <- get_count_url(url_parsed, four_by_four)
-
-  httr2::request(count_url) |>
+get_dataset_row_count <- function(url_base, four_by_four) {
+  httr2::request(url_base) |>
+    httr2::req_template("GET /api/id/{four_by_four}") |>
     httr2::req_url_query(
       `$query` = "select count(*) as COLUMN_ALIAS_GUARD__count"
     ) |>
@@ -135,19 +145,20 @@ get_dataset_row_count <- function(url_parsed, four_by_four) {
     as.numeric()
 }
 
-iterative_requests <- function(url_parsed, four_by_four, query) {
+iterative_requests <- function(url_base, four_by_four, query) {
   chunk_size <- 10000
-  data_url <- get_data_url(url_parsed, four_by_four)
+
+  req <- httr2::request(url_base) |>
+    httr2::req_template("GET /resource/{four_by_four}.json")
 
   if (all(sapply(query[2:5], is.null))) {
-    row_count <- get_dataset_row_count(url_parsed, four_by_four)
+    row_count <- get_dataset_row_count(url_base, four_by_four)
     if (!is.null(query$`$limit`)) {
       row_count <- min(row_count, query$`$limit`)
     }
     iteration_count <- ceiling(row_count / chunk_size)
 
-    req <- httr2::request(data_url) |>
-      httr2::req_url_query(!!!query)
+    req <- httr2::req_url_query(req, !!!query)
     reqs <- lapply(
       seq_len(iteration_count),
       function(i) {
@@ -162,7 +173,7 @@ iterative_requests <- function(url_parsed, four_by_four, query) {
     )
     resps <- httr2::req_perform_sequential(reqs)
   } else {
-    req <- httr2::request(data_url) |>
+    req <- req |>
       httr2::req_url_query(!!!query) |>
       httr2::req_url_query(`$limit` = chunk_size)
 

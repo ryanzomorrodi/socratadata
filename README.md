@@ -21,6 +21,12 @@ existing datasets.
 
 ## Installation
 
+You can install `socratadata` from CRAN.
+
+``` r
+install.packages("socratadata")
+```
+
 You can install the development version of socratadata from
 [GitHub](https://github.com/) with:
 
@@ -44,7 +50,7 @@ chi_datasets <- soc_discover(
   only = "dataset"
 )
 print(chi_datasets)
-#> # A tibble: 877 × 21
+#> # A tibble: 879 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
 #>  1 xzkq… Curr… City of Ch… cocadmin   official   "This data… 2011-09-27 00:00:00
@@ -57,7 +63,7 @@ print(chi_datasets)
 #>  8 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
 #>  9 kn9c… Cens… U.S. Censu… Jamyia     official   "This data… 2012-01-05 00:00:00
 #> 10 z8bn… Poli… Chicago Po… cocadmin   official   "Chicago P… 2010-12-22 00:00:00
-#> # ℹ 867 more rows
+#> # ℹ 869 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
@@ -73,7 +79,7 @@ transportation_datasets <- soc_discover(
   only = "dataset"
 )
 print(chi_datasets)
-#> # A tibble: 877 × 21
+#> # A tibble: 879 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
 #>  1 xzkq… Curr… City of Ch… cocadmin   official   "This data… 2011-09-27 00:00:00
@@ -86,7 +92,7 @@ print(chi_datasets)
 #>  8 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
 #>  9 kn9c… Cens… U.S. Censu… Jamyia     official   "This data… 2012-01-05 00:00:00
 #> 10 z8bn… Poli… Chicago Po… cocadmin   official   "Chicago P… 2010-12-22 00:00:00
-#> # ℹ 867 more rows
+#> # ℹ 869 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
@@ -103,7 +109,7 @@ cta_ridership <- soc_read(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
 print(cta_ridership)
-#> # A tibble: 8,766 × 5
+#> # A tibble: 8,886 × 5
 #>    service_date        day_type    bus rail_boardings total_rides
 #>    <dttm>              <chr>     <dbl>          <dbl>       <dbl>
 #>  1 2001-01-01 00:00:00 U        297192         126455      423647
@@ -116,7 +122,7 @@ print(cta_ridership)
 #>  8 2001-01-08 00:00:00 W        985221         590706     1575927
 #>  9 2001-01-09 00:00:00 W        978377         599905     1578282
 #> 10 2001-01-10 00:00:00 W        984884         602052     1586936
-#> # ℹ 8,756 more rows
+#> # ℹ 8,876 more rows
 ```
 
 Spatial data will be read as an `sf` object.
@@ -214,8 +220,8 @@ print(cta_ridership_meta)
 #> Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for
 #> information on how these numbers are calculated.
 #> Created: 2011-08-12 15:40:31
-#> Data last updated: 2025-04-29 16:34:39
-#> Metadata last Updated: 2025-04-29 16:35:04
+#> Data last updated: 2025-06-30 18:44:33
+#> Metadata last Updated: 2025-06-30 18:44:32
 #> Domain Category: Transportation
 #> Domain Tags: cta, public transit, and ridership
 #> Domain fields:
@@ -252,8 +258,8 @@ print(taxi_trips_meta)
 #> Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for
 #> information on how these numbers are calculated.
 #> Created: 2011-08-12 15:40:31
-#> Data last updated: 2025-04-29 16:34:39
-#> Metadata last Updated: 2025-04-29 16:35:04
+#> Data last updated: 2025-06-30 18:44:33
+#> Metadata last Updated: 2025-06-30 18:44:32
 #> Domain Category: Transportation
 #> Domain Tags: cta, public transit, and ridership
 #> Domain fields:

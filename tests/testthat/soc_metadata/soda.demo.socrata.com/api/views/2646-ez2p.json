@@ -1,0 +1,253 @@
+{
+    "id": "2646-ez2p",
+    "name": "Datasites for APIs.JSON",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1420244028,
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 58,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "indexUpdatedAt": 1420246613,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 9815461,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1420246587,
+    "publicationGroup": 2055249,
+    "publicationStage": "published",
+    "rowIdentifierColumnId": 182920865,
+    "rowsUpdatedAt": 1420246585,
+    "tableId": 2055375,
+    "totalTimesRated": 0,
+    "viewCount": 273,
+    "viewLastModified": 1420246587,
+    "viewType": "tabular",
+    "approvals": [
+        {
+            "reviewedAt": 1420246587,
+            "reviewedAutomatically": true,
+            "state": "approved",
+            "submissionId": 509403,
+            "submissionObject": "public_audience_request",
+            "submissionOutcome": "change_audience",
+            "submittedAt": 1420246587,
+            "targetAudience": "public",
+            "workflowId": 1674,
+            "submissionDetails": {
+                "permissionType": "READ"
+            },
+            "submissionOutcomeApplication": {
+                "failureCount": 0,
+                "status": "success"
+            },
+            "submitter": {
+                "id": "8wwb-4vf2",
+                "displayName": "Chris Metcalf (Developer Experience)"
+            }
+        }
+    ],
+    "clientContext": {
+        "clientContextVariables": [
+
+        ],
+        "inheritedVariables": {
+
+        }
+    },
+    "columns": [
+        {
+            "id": 182920865,
+            "name": "Domain",
+            "dataTypeName": "text",
+            "fieldName": "domain",
+            "position": 1,
+            "renderTypeName": "text",
+            "tableColumnId": 23717132,
+            "width": 100,
+            "cachedContents": {
+                "non_null": "2",
+                "largest": "data.sfgov.org",
+                "null": "0",
+                "top": [
+                    {
+                        "item": "data.sfgov.org",
+                        "count": "1"
+                    },
+                    {
+                        "item": "data.seattle.gov",
+                        "count": "1"
+                    }
+                ],
+                "smallest": "data.seattle.gov",
+                "count": "2",
+                "cardinality": "2"
+            },
+            "format": {
+
+            }
+        },
+        {
+            "id": 182920866,
+            "name": "Name",
+            "dataTypeName": "text",
+            "fieldName": "name",
+            "position": 2,
+            "renderTypeName": "text",
+            "tableColumnId": 23717194,
+            "width": 100,
+            "cachedContents": {
+                "non_null": "2",
+                "largest": "City of Seattle",
+                "null": "0",
+                "top": [
+                    {
+                        "item": "City of San Francisco",
+                        "count": "1"
+                    },
+                    {
+                        "item": "City of Seattle",
+                        "count": "1"
+                    }
+                ],
+                "smallest": "City of San Francisco",
+                "count": "2",
+                "cardinality": "2"
+            },
+            "format": {
+
+            }
+        },
+        {
+            "id": 182920867,
+            "name": "Logo",
+            "dataTypeName": "text",
+            "fieldName": "logo",
+            "position": 3,
+            "renderTypeName": "text",
+            "tableColumnId": 23717542,
+            "width": 100,
+            "cachedContents": {
+                "non_null": "0",
+                "null": "2",
+                "count": "2",
+                "cardinality": "0"
+            },
+            "format": {
+                "align": "left"
+            }
+        },
+        {
+            "id": 182920893,
+            "name": "Tags",
+            "dataTypeName": "text",
+            "fieldName": "tags",
+            "position": 4,
+            "renderTypeName": "text",
+            "tableColumnId": 23717893,
+            "width": 100,
+            "cachedContents": {
+                "non_null": "2",
+                "largest": "seattle, open data, washington, open government",
+                "null": "0",
+                "top": [
+                    {
+                        "item": "seattle, open data, washington, open government",
+                        "count": "1"
+                    },
+                    {
+                        "item": "san francisco, california, open data",
+                        "count": "1"
+                    }
+                ],
+                "smallest": "san francisco, california, open data",
+                "count": "2",
+                "cardinality": "2"
+            },
+            "format": {
+
+            }
+        },
+        {
+            "id": 182920894,
+            "name": "Email",
+            "dataTypeName": "text",
+            "fieldName": "email",
+            "position": 5,
+            "renderTypeName": "text",
+            "tableColumnId": 23717894,
+            "width": 100,
+            "cachedContents": {
+                "non_null": "2",
+                "largest": "open-data@sfgov.org",
+                "null": "0",
+                "top": [
+                    {
+                        "item": "open-data@seattle.gov",
+                        "count": "1"
+                    },
+                    {
+                        "item": "open-data@sfgov.org",
+                        "count": "1"
+                    }
+                ],
+                "smallest": "open-data@seattle.gov",
+                "count": "2",
+                "cardinality": "2"
+            },
+            "format": {
+
+            }
+        }
+    ],
+    "grants": [
+        {
+            "inherited": false,
+            "type": "viewer",
+            "flags": [
+                "public"
+            ]
+        }
+    ],
+    "metadata": {
+        "rdfSubject": "0",
+        "rowIdentifier": 182920865,
+        "availableDisplayTypes": [
+            "table",
+            "fatrow",
+            "page"
+        ],
+        "renderTypeConfig": {
+            "visible": {
+                "table": true
+            }
+        }
+    },
+    "owner": {
+        "id": "8wwb-4vf2",
+        "displayName": "Chris Metcalf (Developer Experience)",
+        "screenName": "Chris Metcalf (Developer Experience)",
+        "type": "interactive"
+    },
+    "query": {
+
+    },
+    "rights": [
+        "read"
+    ],
+    "tableAuthor": {
+        "id": "8wwb-4vf2",
+        "displayName": "Chris Metcalf (Developer Experience)",
+        "screenName": "Chris Metcalf (Developer Experience)",
+        "type": "interactive"
+    },
+    "flags": [
+        "default",
+        "ownerMayBeContacted",
+        "restorable",
+        "restorePossibleForType"
+    ]
+}

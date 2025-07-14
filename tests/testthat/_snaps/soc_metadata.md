@@ -1,4 +1,4 @@
-# soc_metadata
+# soc_metadata_from_tibble
 
     Code
       print(soc_metadata(dataset))
