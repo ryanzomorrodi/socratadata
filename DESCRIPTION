@@ -21,10 +21,8 @@ Imports:
 Suggests: 
     glue,
     httptest2,
-    knitr,
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 URL: https://ryanzomorrodi.github.io/socratadata/, https://github.com/ryanzomorrodi/socratadata
-VignetteBuilder: knitr
 BugReports: https://github.com/ryanzomorrodi/socratadata/issues
