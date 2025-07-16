@@ -39,30 +39,47 @@ You can install the development version of socratadata from [GitHub](https://git
 pak::pak("ryanzomorrodi/socratadata")
 ```
 
-## Example
+## Usage
 
 ### Search for datasets
 
-Use `soc_discover()` to explore the datasets available on a Socrata data portal.
+Use `soc_discover()` to explore the datasets with a domain.
 
-```{r}
+```{r setup}
 library(socratadata)
 
-chi_datasets <- soc_discover(
-  domains = "https://data.cityofchicago.org",
-  only = "dataset"
-)
-print(chi_datasets)
+soc_discover(domains = "data.cityofchicago.org")
 ```
 
-Or even search by category across many Socrata data portals.
+Or with a query.
 
 ```{r}
-transportation_datasets <- soc_discover(
-  categories = "transportation",
-  only = "dataset"
+soc_discover(query = "bus")
+```
+
+Or with categories.
+
+```{r}
+soc_discover(categories = "transportation")
+
+soc_discover(
+  domains = "data.cityofchicago.org",
+  domain_category = "Transportation"
 )
-print(chi_datasets)
+```
+
+Or with tags.
+
+```{r}
+soc_discover(
+  domains = "data.cityofchicago.org",
+  domain_tags = "public transit"
+)
+```
+
+Or with an id.
+```{r}
+dataset <- soc_discover(id = c("6iiy-9s97", "pnau-cf66"))
 ```
 
 ### Download data

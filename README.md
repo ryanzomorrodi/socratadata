@@ -35,21 +35,16 @@ You can install the development version of socratadata from
 pak::pak("ryanzomorrodi/socratadata")
 ```
 
-## Example
+## Usage
 
 ### Search for datasets
 
-Use `soc_discover()` to explore the datasets available on a Socrata data
-portal.
+Use `soc_discover()` to explore the datasets with a domain.
 
 ``` r
 library(socratadata)
 
-chi_datasets <- soc_discover(
-  domains = "https://data.cityofchicago.org",
-  only = "dataset"
-)
-print(chi_datasets)
+soc_discover(domains = "data.cityofchicago.org")
 #> # A tibble: 879 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
@@ -71,33 +66,113 @@ print(chi_datasets)
 #> #   link <chr>, license <chr>
 ```
 
-Or even search by category across many Socrata data portals.
+Or with a query.
 
 ``` r
-transportation_datasets <- soc_discover(
-  categories = "transportation",
-  only = "dataset"
-)
-print(chi_datasets)
-#> # A tibble: 879 × 21
+soc_discover(query = "bus")
+#> # A tibble: 806 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
-#>  1 xzkq… Curr… City of Ch… cocadmin   official   "This data… 2011-09-27 00:00:00
-#>  2 ijzp… Crim… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00
-#>  3 ydr8… Buil… City of Ch… cocadmin   official   "This data… 2011-09-30 00:00:00
-#>  4 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00
-#>  5 s6ha… Affo… City of Ch… cocadmin   official   "The renta… 2013-03-14 00:00:00
-#>  6 4ijn… Food… City of Ch… cocadmin   official   "This info… 2011-08-08 00:00:00
-#>  7 2ft4… Lobb… City of Ch… cocadmin   official   "All lobby… 2011-06-07 00:00:00
-#>  8 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
-#>  9 kn9c… Cens… U.S. Censu… Jamyia     official   "This data… 2012-01-05 00:00:00
-#> 10 z8bn… Poli… Chicago Po… cocadmin   official   "Chicago P… 2010-12-22 00:00:00
-#> # ℹ 869 more rows
+#>  1 ez4e… Bus … Department… NYC OpenD… official   "The Bus B… 2015-09-30 00:00:00
+#>  2 6qat… DART… Department… Delaware … official   "This cont… 2017-07-28 00:00:00
+#>  3 bd2s… KCAT… KCATA Tran… DataKC     official   "This data… 2013-04-23 00:00:00
+#>  4 ycrg… Bus … Department… NYC OpenD… official   "Bus lanes… 2020-12-04 00:00:00
+#>  5 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00
+#>  6 eqmj… Bron… mta.info    Elkin      official   "Bronx Tra… 2012-10-06 00:00:00
+#>  7 nmjv… Bus … Transit Se… City of M… official   "***NOTE: … 2019-06-03 00:00:00
+#>  8 s5c7… Bus … <NA>        Karl Suey… official   ""          2015-05-23 00:00:00
+#>  9 kv7t… MTA … Metropolit… NY Open D… official   "This data… 2023-05-11 00:00:00
+#> 10 cudb… MTA … Metropolit… NY Open D… official   "Bus Speed… 2021-12-29 00:00:00
+#> # ℹ 796 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
 #> #   column_datatypes <list>, column_descriptions <list>, permalink <chr>,
 #> #   link <chr>, license <chr>
+```
+
+Or with categories.
+
+``` r
+soc_discover(categories = "transportation")
+#> # A tibble: 470 × 21
+#>    id    name  attribution owner_name provenance description created            
+#>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
+#>  1 pksj… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
+#>  2 2tq4… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-22 00:00:00
+#>  3 wdpr… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
+#>  4 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00
+#>  5 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00
+#>  6 f57x… Vita… <NA>        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00
+#>  7 cwsm… Quar… New York S… NY Open D… official   "The Quart… 2013-02-15 00:00:00
+#>  8 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00
+#>  9 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00
+#> 10 w96p… Dail… Maryland T… Titlow, K… official   "The Daily… 2020-05-19 00:00:00
+#> # ℹ 460 more rows
+#> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
+#> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
+#> #   domain_metadata <list>, column_names <list>, column_labels <list>,
+#> #   column_datatypes <list>, column_descriptions <list>, permalink <chr>,
+#> #   link <chr>, license <chr>
+
+soc_discover(
+  domains = "data.cityofchicago.org",
+  domain_category = "Transportation"
+)
+#> # A tibble: 86 × 21
+#>    id    name  attribution owner_name provenance description created            
+#>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
+#>  1 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00
+#>  2 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
+#>  3 m6dm… Tran… City of Ch… Jonathan … official   "<b>This d… 2018-10-02 00:00:00
+#>  4 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00
+#>  5 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00
+#>  6 ygr5… Towe… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00
+#>  7 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00
+#>  8 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00
+#>  9 pfsx… Aver… City of Ch… cocadmin   official   "This data… 2010-04-22 00:00:00
+#> 10 t2qc… Chic… <NA>        cocadmin   official   "This data… 2011-11-20 00:00:00
+#> # ℹ 76 more rows
+#> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
+#> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
+#> #   domain_metadata <list>, column_names <list>, column_labels <list>,
+#> #   column_datatypes <list>, column_descriptions <list>, permalink <chr>,
+#> #   link <chr>, license <chr>
+```
+
+Or with tags.
+
+``` r
+soc_discover(
+  domains = "data.cityofchicago.org",
+  domain_tags = "public transit"
+)
+#> # A tibble: 12 × 21
+#>    id    name  attribution owner_name provenance description created            
+#>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
+#>  1 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00
+#>  2 pnau… CTA … Chicago Tr… CTA        official   "This list… 2011-08-12 00:00:00
+#>  3 t2rn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
+#>  4 5neh… CTA … Chicago Tr… CTA        official   "This list… 2011-08-05 00:00:00
+#>  5 w8km… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00
+#>  6 bynn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
+#>  7 8pix… CTA … Chicago Tr… CTA        official   "This list… 2011-08-04 00:00:00
+#>  8 mq3i… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00
+#>  9 jyb9… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
+#> 10 6uva… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-31 00:00:00
+#> 11 xbyr… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-12 00:00:00
+#> 12 3tzw… CTA … City of Ch… Jonathan … official   "Points re… 2024-08-09 00:00:00
+#> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
+#> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
+#> #   domain_metadata <list>, column_names <list>, column_labels <list>,
+#> #   column_datatypes <list>, column_descriptions <list>, permalink <chr>,
+#> #   link <chr>, license <chr>
+```
+
+Or with an id.
+
+``` r
+dataset <- soc_discover(id = c("6iiy-9s97", "pnau-cf66"))
 ```
 
 ### Download data

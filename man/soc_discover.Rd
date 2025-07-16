@@ -7,6 +7,7 @@
 soc_discover(
   attribution = NULL,
   categories = NULL,
+  domain_category = NULL,
   domains = NULL,
   ids = NULL,
   names = NULL,
@@ -14,8 +15,9 @@ soc_discover(
   provenance = NULL,
   query = NULL,
   tags = NULL,
+  domain_tags = NULL,
   location = "us",
-  chunk_size = 10000
+  limit = 10000
 )
 }
 \arguments{
@@ -23,23 +25,27 @@ soc_discover(
 
 \item{categories}{character vector; Filter by categories.}
 
+\item{domain_category}{string; Filter by domain category (requires a specified domain).}
+
 \item{domains}{character vector; Filter to domains.}
 
-\item{ids}{character vector; Filter by specific asset IDs.}
+\item{ids}{character vector; Filter by an asset IDs.}
 
 \item{names}{character vector; Filter by asset names.}
 
 \item{only}{character vector; Filter to specific asset types. Must be one or more of: \code{"chart"}, \code{"dataset"}, \code{"filter"}, \code{"link"}, \code{"map"}, \code{"measure"}, \code{"story"}, \code{"system_dataset"}, \code{"visualization"}. Default is \code{"dataset"}.}
 
-\item{provenance}{character vector; Filter by provenance. Must be one or more of: \code{"official"} or \code{"community"}.}
+\item{provenance}{string; Filter by provenance: \code{"official"} or \code{"community"}.}
 
 \item{query}{character string; Filter using a a token matching one from an asset's name, description, category, tags, column names, column fieldnames, column descriptions or attribution.}
 
 \item{tags}{character vector; Filter by tags associated with the assets.}
 
+\item{domain_tags}{string; Filter by domain tags associated with the assets (requires a specified domain).}
+
 \item{location}{string; Regional API domain: \code{"us"} (default) or \code{"eu"}.}
 
-\item{chunk_size}{whole number; Number of results per request; used for pagination. Default is 10,000.}
+\item{limit}{whole number; Maximum number of results (cannot exceed 10,000).}
 }
 \value{
 A tibble containing metadata for each discovered asset. Columns include:
@@ -74,13 +80,13 @@ all levels publish data on topics including crime, permits, finance, healthcare,
 research, and performance.
 }
 \examples{
-if (interactive()) {
+\dontrun{
 # Search for crime-related datasets in the Public Safety category
-  results <- soc_discover(
-    query = "crime",
-    categories = c("Public Safety"),
-    only = "dataset"
-  )
+results <- soc_discover(
+  query = "crime",
+  categories = "Public Safety",
+  only = "dataset"
+)
 }
 
 }
