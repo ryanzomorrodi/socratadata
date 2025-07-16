@@ -37,11 +37,14 @@
 #' }
 #'
 #' @examples
-#' if (interactive()) {
-#'   url <- "https://data.cityofchicago.org/resource/wrvz-psew.json"
-#'   data <- soc_read(url)
-#'   metadata <- soc_metadata(data)
-#'   print(metadata)
+#' \dontrun{
+#' url <- "https://data.cityofchicago.org/resource/wrvz-psew.json"
+#' data <- soc_read(url)
+#' metadata <- soc_metadata(data)
+#' print(metadata)
+#'
+#' metadata <- soc_metadata(url)
+#' print(metadata)
 #' }
 #'
 #' @export

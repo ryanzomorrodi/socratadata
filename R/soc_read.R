@@ -10,6 +10,7 @@
 #'  - `"label"`: field alias values are assigned as a label attribute for each field.
 #'  - `"replace"`: field alias values replace existing column names.
 #'  - `"drop"`: field alias values replace existing column names.
+#' @param page_size whole number; Maximum number of rows returned per request.
 #'
 #' @return A tibble with additional attributes containing dataset metadata.
 #' If the dataset contains a single non-nested geospatial field, it will be returned as an `sf` object.
@@ -42,27 +43,32 @@
 #' }
 #'
 #' @examples
-#' if (interactive()) {
-#'   cta_ridership <- soc_read(
-#'     "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
-#'   )
-#'   print(cta_ridership)
-#'   attr(cta_ridership, "description")
+#' \dontrun{
+#' cta_ridership <- soc_read(
+#'   "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
+#' )
+#' print(cta_ridership)
+#' attr(cta_ridership, "description")
 #'
-#'   trips_to_lws_by_ca <- soc_read(
-#'     "https://data.cityofchicago.org/transportation/taxi-trips-2013-2023-/wrvz-psew/about_data",
-#'     query = soc_query(
-#'       select = "violation_date, count(*) as n",
-#'       where = "dropoff_community_area = 31",
-#'       group_by = "pickup_community_area",
-#'       order_by = "n DESC"
-#'     ),
-#'     alias = "replace"
-#'   )
+#' trips_to_lws_by_ca <- soc_read(
+#'   "https://data.cityofchicago.org/transportation/taxi-trips-2013-2023-/wrvz-psew/about_data",
+#'   query = soc_query(
+#'     select = "violation_date, count(*) as n",
+#'     where = "dropoff_community_area = 31",
+#'     group_by = "pickup_community_area",
+#'     order_by = "n DESC"
+#'   ),
+#'   alias = "replace"
+#' )
 #' }
 #'
 #' @export
-soc_read <- function(url, query = soc_query(), alias = "label") {
+soc_read <- function(
+  url,
+  query = soc_query(),
+  alias = "label",
+  page_size = 10000
+) {
   check_string(url)
   if (!inherits(query, "soc_query")) {
     stop_input_type(
@@ -86,7 +92,7 @@ soc_read <- function(url, query = soc_query(), alias = "label") {
   )
   four_by_four <- get_four_by_four(url)
 
-  resps <- iterative_requests(url_base, four_by_four, query)
+  resps <- iterative_requests(url_base, four_by_four, query, page_size)
 
   res_list <- parse_data_json(
     json_strs = sapply(resps, httr2::resp_body_string),
@@ -145,9 +151,7 @@ get_dataset_row_count <- function(url_base, four_by_four) {
     as.numeric()
 }
 
-iterative_requests <- function(url_base, four_by_four, query) {
-  chunk_size <- 10000
-
+iterative_requests <- function(url_base, four_by_four, query, page_size) {
   req <- httr2::request(url_base) |>
     httr2::req_template("GET /resource/{four_by_four}.json")
 
@@ -156,14 +160,14 @@ iterative_requests <- function(url_base, four_by_four, query) {
     if (!is.null(query$`$limit`)) {
       row_count <- min(row_count, query$`$limit`)
     }
-    iteration_count <- ceiling(row_count / chunk_size)
+    iteration_count <- ceiling(row_count / page_size)
 
     req <- httr2::req_url_query(req, !!!query)
     reqs <- lapply(
       seq_len(iteration_count),
       function(i) {
-        offset <- chunk_size * (i - 1)
-        limit <- min(chunk_size, row_count - offset)
+        offset <- page_size * (i - 1)
+        limit <- min(page_size, row_count - offset)
         httr2::req_url_query(
           req,
           `$offset` = offset,
@@ -175,16 +179,17 @@ iterative_requests <- function(url_base, four_by_four, query) {
   } else {
     req <- req |>
       httr2::req_url_query(!!!query) |>
-      httr2::req_url_query(`$limit` = chunk_size)
+      httr2::req_url_query(`$limit` = page_size)
 
     resps <- httr2::req_perform_iterative(
       req,
       next_req = httr2::iterate_with_offset(
         "$offset",
         start = 0,
-        offset = chunk_size,
+        offset = page_size,
         resp_complete = \(resp) {
-          identical(httr2::resp_body_raw(resp), as.raw(c(0x5b, 0x5d, 0x0a)))
+          body_string <- httr2::resp_body_string(resp)
+          gsub("\\s+", "", body_string) %in% c("{}", "[]", "")
         }
       ),
       max_reqs = Inf

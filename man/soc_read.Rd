@@ -4,7 +4,7 @@
 \alias{soc_read}
 \title{Read a Socrata Dataset into R}
 \usage{
-soc_read(url, query = soc_query(), alias = "label")
+soc_read(url, query = soc_query(), alias = "label", page_size = 10000)
 }
 \arguments{
 \item{url}{string; URL of the Socrata dataset (e.g., from \verb{https://data.cityofchicago.org}).}
@@ -17,6 +17,8 @@ soc_read(url, query = soc_query(), alias = "label")
 \item \code{"replace"}: field alias values replace existing column names.
 \item \code{"drop"}: field alias values replace existing column names.
 }}
+
+\item{page_size}{whole number; Maximum number of rows returned per request.}
 }
 \value{
 A tibble with additional attributes containing dataset metadata.
@@ -54,23 +56,23 @@ Downloads and parses a dataset from a Socrata open data portal URL, returning it
 Metadata is also returned as attributes on the returned object.
 }
 \examples{
-if (interactive()) {
-  cta_ridership <- soc_read(
-    "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
-  )
-  print(cta_ridership)
-  attr(cta_ridership, "description")
+\dontrun{
+cta_ridership <- soc_read(
+  "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
+)
+print(cta_ridership)
+attr(cta_ridership, "description")
 
-  trips_to_lws_by_ca <- soc_read(
-    "https://data.cityofchicago.org/transportation/taxi-trips-2013-2023-/wrvz-psew/about_data",
-    query = soc_query(
-      select = "violation_date, count(*) as n",
-      where = "dropoff_community_area = 31",
-      group_by = "pickup_community_area",
-      order_by = "n DESC"
-    ),
-    alias = "replace"
-  )
+trips_to_lws_by_ca <- soc_read(
+  "https://data.cityofchicago.org/transportation/taxi-trips-2013-2023-/wrvz-psew/about_data",
+  query = soc_query(
+    select = "violation_date, count(*) as n",
+    where = "dropoff_community_area = 31",
+    group_by = "pickup_community_area",
+    order_by = "n DESC"
+  ),
+  alias = "replace"
+)
 }
 
 }

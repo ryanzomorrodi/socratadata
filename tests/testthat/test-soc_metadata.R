@@ -79,42 +79,46 @@ test_that("soc_metadata_from_tibble", {
 })
 
 
-with_mock_dir("soc_metadata", {
-  test_that("soc_metadata_from_url", {
-    url <- "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p"
-    object <- soc_metadata(url)
-    # httptest2 doesn't mock redirects
-    object$link <- "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p"
+with_mock_dir(
+  "soc_metadata",
+  {
+    test_that("soc_metadata_from_url", {
+      url <- "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p"
+      object <- soc_metadata(url)
+      # httptest2 doesn't mock redirects
+      object$link <- "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p"
 
-    expected <- structure(
-      list(
-        id = "2646-ez2p",
-        name = "Datasites for APIs.JSON",
-        attribution = NULL,
-        owner_name = "Chris Metcalf (Developer Experience)",
-        provenance = "official",
-        description = NULL,
-        created = as.POSIXct("2015-01-03 00:13:48", tz = "UTC"),
-        data_last_updated = as.POSIXct("2015-01-03 00:56:25", tz = "UTC"),
-        metadata_last_updated = as.POSIXct("2015-01-03 00:56:27", tz = "UTC"),
-        domain_category = NULL,
-        domain_tags = NULL,
-        domain_metadata = tibble::tibble(
-          key = integer(),
-          value = logical()
+      expected <- structure(
+        list(
+          id = "2646-ez2p",
+          name = "Datasites for APIs.JSON",
+          attribution = NULL,
+          owner_name = "Chris Metcalf (Developer Experience)",
+          provenance = "official",
+          description = NULL,
+          created = as.POSIXct("2015-01-03 00:13:48", tz = "UTC"),
+          data_last_updated = as.POSIXct("2015-01-03 00:56:25", tz = "UTC"),
+          metadata_last_updated = as.POSIXct("2015-01-03 00:56:27", tz = "UTC"),
+          domain_category = NULL,
+          domain_tags = NULL,
+          domain_metadata = tibble::tibble(
+            key = integer(),
+            value = logical()
+          ),
+          columns = tibble::tibble(
+            column_name = c("domain", "name", "logo", "tags", "email"),
+            column_label = c("Domain", "Name", "Logo", "Tags", "Email"),
+            column_datatype = c("text", "text", "text", "text", "text")
+          ),
+          permalink = "https://soda.demo.socrata.com/d/2646-ez2p",
+          link = "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p",
+          license = NULL
         ),
-        columns = tibble::tibble(
-          column_name = c("domain", "name", "logo", "tags", "email"),
-          column_label = c("Domain", "Name", "Logo", "Tags", "Email"),
-          column_datatype = c("text", "text", "text", "text", "text")
-        ),
-        permalink = "https://soda.demo.socrata.com/d/2646-ez2p",
-        link = "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p",
-        license = NULL
-      ),
-      class = "soc_meta"
-    )
+        class = "soc_meta"
+      )
 
-    expect_equal(object, expected = expected)
-  })
-})
+      expect_equal(object, expected = expected)
+    })
+  },
+  simplify = FALSE
+)
