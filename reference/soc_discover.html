@@ -13,7 +13,7 @@ research, and performance."><meta property="og:image" content="https://ryanzomor
 
     <a class="navbar-brand me-2" href="../index.html">socratadata</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9005</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9006</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,6 +50,7 @@ research, and performance.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">soc_discover</span><span class="op">(</span></span>
 <span>  attribution <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  categories <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  domain_category <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  domains <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  ids <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  names <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -57,8 +58,9 @@ research, and performance.</p>
 <span>  provenance <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  query <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  tags <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  domain_tags <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  location <span class="op">=</span> <span class="st">"us"</span>,</span>
-<span>  chunk_size <span class="op">=</span> <span class="fl">10000</span></span>
+<span>  limit <span class="op">=</span> <span class="fl">10000</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -74,12 +76,16 @@ research, and performance.</p>
 <dd><p>character vector; Filter by categories.</p></dd>
 
 
+<dt id="arg-domain-category">domain_category<a class="anchor" aria-label="anchor" href="#arg-domain-category"></a></dt>
+<dd><p>string; Filter by domain category (requires a specified domain).</p></dd>
+
+
 <dt id="arg-domains">domains<a class="anchor" aria-label="anchor" href="#arg-domains"></a></dt>
 <dd><p>character vector; Filter to domains.</p></dd>
 
 
 <dt id="arg-ids">ids<a class="anchor" aria-label="anchor" href="#arg-ids"></a></dt>
-<dd><p>character vector; Filter by specific asset IDs.</p></dd>
+<dd><p>character vector; Filter by an asset IDs.</p></dd>
 
 
 <dt id="arg-names">names<a class="anchor" aria-label="anchor" href="#arg-names"></a></dt>
@@ -91,7 +97,7 @@ research, and performance.</p>
 
 
 <dt id="arg-provenance">provenance<a class="anchor" aria-label="anchor" href="#arg-provenance"></a></dt>
-<dd><p>character vector; Filter by provenance. Must be one or more of: <code>"official"</code> or <code>"community"</code>.</p></dd>
+<dd><p>string; Filter by provenance: <code>"official"</code> or <code>"community"</code>.</p></dd>
 
 
 <dt id="arg-query">query<a class="anchor" aria-label="anchor" href="#arg-query"></a></dt>
@@ -102,12 +108,16 @@ research, and performance.</p>
 <dd><p>character vector; Filter by tags associated with the assets.</p></dd>
 
 
+<dt id="arg-domain-tags">domain_tags<a class="anchor" aria-label="anchor" href="#arg-domain-tags"></a></dt>
+<dd><p>string; Filter by domain tags associated with the assets (requires a specified domain).</p></dd>
+
+
 <dt id="arg-location">location<a class="anchor" aria-label="anchor" href="#arg-location"></a></dt>
 <dd><p>string; Regional API domain: <code>"us"</code> (default) or <code>"eu"</code>.</p></dd>
 
 
-<dt id="arg-chunk-size">chunk_size<a class="anchor" aria-label="anchor" href="#arg-chunk-size"></a></dt>
-<dd><p>whole number; Number of results per request; used for pagination. Default is 10,000.</p></dd>
+<dt id="arg-limit">limit<a class="anchor" aria-label="anchor" href="#arg-limit"></a></dt>
+<dd><p>whole number; Maximum number of results (cannot exceed 10,000).</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -184,14 +194,14 @@ research, and performance.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="co"># Search for crime-related datasets in the Public Safety category</span></span></span>
-<span class="r-in"><span>  <span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">soc_discover</span><span class="op">(</span></span></span>
-<span class="r-in"><span>    query <span class="op">=</span> <span class="st">"crime"</span>,</span></span>
-<span class="r-in"><span>    categories <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Public Safety"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>    only <span class="op">=</span> <span class="st">"dataset"</span></span></span>
-<span class="r-in"><span>  <span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">soc_discover</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  query <span class="op">=</span> <span class="st">"crime"</span>,</span></span>
+<span class="r-in"><span>  categories <span class="op">=</span> <span class="st">"Public Safety"</span>,</span></span>
+<span class="r-in"><span>  only <span class="op">=</span> <span class="st">"dataset"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
