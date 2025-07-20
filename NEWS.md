@@ -1,3 +1,3 @@
-# socratadata 0.1.0
+# socratadata (development version)
 
 * Initial CRAN submission.
