@@ -4,8 +4,8 @@ Version: 0.0.0.9007
 Authors@R: 
     person("Ryan", "Zomorrodi", , "rzomor2@uic.edu", role = c("aut", "cre"))
 Description: Provides an interface to search, read, query, and retrieve metadata for 
-    datasets hosted on 'Socrata' open data portals. Supports all Socrata data types, 
-    including spatial data returned as 'sf' objects.
+    datasets hosted on 'Socrata' open data portals. Supports all 'Socrata' data types, 
+    including spatial data returned as 'sf' objects. 
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
