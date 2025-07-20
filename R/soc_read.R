@@ -3,7 +3,7 @@
 #' Downloads and parses a dataset from a Socrata open data portal URL, returning it as a tibble or `sf` object.
 #' Metadata is also returned as attributes on the returned object.
 #'
-#' @param url string; URL of the Socrata dataset (e.g., from `https://data.cityofchicago.org`).
+#' @param url string; URL of the Socrata dataset.
 #' @param query `soc_query()`; Query parameters specification
 #' @param alias string; Use of field alias values. There are three options:
 #'

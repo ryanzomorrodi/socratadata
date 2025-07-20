@@ -7,7 +7,7 @@
 soc_read(url, query = soc_query(), alias = "label", page_size = 10000)
 }
 \arguments{
-\item{url}{string; URL of the Socrata dataset (e.g., from \verb{https://data.cityofchicago.org}).}
+\item{url}{string; URL of the Socrata dataset.}
 
 \item{query}{\code{soc_query()}; Query parameters specification}
 
