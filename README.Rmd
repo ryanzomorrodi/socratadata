@@ -77,27 +77,25 @@ soc_discover(
 )
 ```
 
-Or with an id.
+Or with ids.
 ```{r}
-dataset <- soc_discover(id = c("6iiy-9s97", "pnau-cf66"))
+soc_discover(ids = c("6iiy-9s97", "pnau-cf66"))
 ```
 
 ### Download data
 
 Use `soc_read()` to read a socrata dataset into R.
 ```{r}
-cta_ridership <- soc_read(
+soc_read(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
-print(cta_ridership)
 ```
 
 Spatial data will be read as an `sf` object.
 ```{r}
-chi_community_areas <- soc_read(
+soc_read(
   "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"
 )
-print(chi_community_areas)
 ```
 
 You can even perform complex queries using [Socrata Query Language (SoQL)](https://dev.socrata.com/docs/queries/) via `soc_query()`.
@@ -110,7 +108,7 @@ lower_west_side <- soc_read(
 )
 print(lower_west_side)
 
-trips_to_lws_by_ca <- soc_read(
+cta_ridership <- soc_read(
   "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
   query = soc_query(
     select = "pickup_community_area, count(*) as n",
@@ -121,21 +119,19 @@ trips_to_lws_by_ca <- soc_read(
     order_by = "n DESC"
   )
 )
-print(trips_to_lws_by_ca)
+print(cta_ridership)
 ```
 
 ### Extract metadata
 
 Access a dataset's metadata using `soc_metadata()`.
 ```{r}
-cta_ridership_meta <- soc_metadata(cta_ridership)
-print(cta_ridership_meta)
+soc_metadata(cta_ridership)
 ```
 
 Or explore a dataset's metadata using it's url.
 ```{r}
-taxi_trips_meta <- soc_metadata(
+soc_metadata(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
-print(taxi_trips_meta)
 ```

@@ -4,6 +4,7 @@
 # socratadata
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 Explore Socrata data with ease.
@@ -70,20 +71,20 @@ Or with a query.
 
 ``` r
 soc_discover(query = "bus")
-#> # A tibble: 806 × 21
+#> # A tibble: 875 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
 #>  1 ez4e… Bus … Department… NYC OpenD… official   "The Bus B… 2015-09-30 00:00:00
 #>  2 6qat… DART… Department… Delaware … official   "This cont… 2017-07-28 00:00:00
 #>  3 bd2s… KCAT… KCATA Tran… DataKC     official   "This data… 2013-04-23 00:00:00
-#>  4 ycrg… Bus … Department… NYC OpenD… official   "Bus lanes… 2020-12-04 00:00:00
-#>  5 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00
+#>  4 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00
+#>  5 s5c7… Bus … <NA>        Karl Suey… official   ""          2015-05-23 00:00:00
 #>  6 eqmj… Bron… mta.info    Elkin      official   "Bronx Tra… 2012-10-06 00:00:00
-#>  7 nmjv… Bus … Transit Se… City of M… official   "***NOTE: … 2019-06-03 00:00:00
-#>  8 s5c7… Bus … <NA>        Karl Suey… official   ""          2015-05-23 00:00:00
-#>  9 kv7t… MTA … Metropolit… NY Open D… official   "This data… 2023-05-11 00:00:00
-#> 10 cudb… MTA … Metropolit… NY Open D… official   "Bus Speed… 2021-12-29 00:00:00
-#> # ℹ 796 more rows
+#>  7 ycrg… Bus … Department… NYC OpenD… official   "Bus lanes… 2020-12-04 00:00:00
+#>  8 nmjv… Bus … Transit Se… City of M… official   "***NOTE: … 2019-06-03 00:00:00
+#>  9 cudb… MTA … Metropolit… NY Open D… official   "Bus Speed… 2021-12-29 00:00:00
+#> 10 6uva… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-31 00:00:00
+#> # ℹ 865 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
@@ -98,16 +99,16 @@ soc_discover(categories = "transportation")
 #> # A tibble: 470 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
-#>  1 pksj… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
-#>  2 2tq4… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-22 00:00:00
-#>  3 wdpr… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
-#>  4 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00
-#>  5 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00
-#>  6 f57x… Vita… <NA>        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00
-#>  7 cwsm… Quar… New York S… NY Open D… official   "The Quart… 2013-02-15 00:00:00
-#>  8 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00
-#>  9 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00
-#> 10 w96p… Dail… Maryland T… Titlow, K… official   "The Daily… 2020-05-19 00:00:00
+#>  1 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00
+#>  2 wdpr… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
+#>  3 2tq4… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-22 00:00:00
+#>  4 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00
+#>  5 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00
+#>  6 pksj… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
+#>  7 f57x… Vita… <NA>        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00
+#>  8 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00
+#>  9 w96p… Dail… Maryland T… Titlow, K… official   "The Daily… 2020-05-19 00:00:00
+#> 10 muzh… Calg… The City o… Calgary O… official   "Calgary T… 2018-09-07 00:00:00
 #> # ℹ 460 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
@@ -124,14 +125,14 @@ soc_discover(
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
 #>  1 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00
 #>  2 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
-#>  3 m6dm… Tran… City of Ch… Jonathan … official   "<b>This d… 2018-10-02 00:00:00
+#>  3 ygr5… Towe… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00
 #>  4 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00
-#>  5 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00
-#>  6 ygr5… Towe… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00
-#>  7 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00
-#>  8 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00
-#>  9 pfsx… Aver… City of Ch… cocadmin   official   "This data… 2010-04-22 00:00:00
-#> 10 t2qc… Chic… <NA>        cocadmin   official   "This data… 2011-11-20 00:00:00
+#>  5 m6dm… Tran… City of Ch… Jonathan … official   "<b>This d… 2018-10-02 00:00:00
+#>  6 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00
+#>  7 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00
+#>  8 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00
+#>  9 t2qc… Chic… <NA>        cocadmin   official   "This data… 2011-11-20 00:00:00
+#> 10 pfsx… Aver… City of Ch… cocadmin   official   "This data… 2010-04-22 00:00:00
 #> # ℹ 76 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
@@ -154,9 +155,9 @@ soc_discover(
 #>  2 pnau… CTA … Chicago Tr… CTA        official   "This list… 2011-08-12 00:00:00
 #>  3 t2rn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
 #>  4 5neh… CTA … Chicago Tr… CTA        official   "This list… 2011-08-05 00:00:00
-#>  5 w8km… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00
-#>  6 bynn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
-#>  7 8pix… CTA … Chicago Tr… CTA        official   "This list… 2011-08-04 00:00:00
+#>  5 bynn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
+#>  6 8pix… CTA … Chicago Tr… CTA        official   "This list… 2011-08-04 00:00:00
+#>  7 w8km… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00
 #>  8 mq3i… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00
 #>  9 jyb9… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
 #> 10 6uva… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-31 00:00:00
@@ -169,10 +170,20 @@ soc_discover(
 #> #   link <chr>, license <chr>
 ```
 
-Or with an id.
+Or with ids.
 
 ``` r
-dataset <- soc_discover(id = c("6iiy-9s97", "pnau-cf66"))
+soc_discover(ids = c("6iiy-9s97", "pnau-cf66"))
+#> # A tibble: 2 × 21
+#>   id     name  attribution owner_name provenance description created            
+#>   <chr>  <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
+#> 1 6iiy-… CTA … Chicago Tr… CTA        official   This datas… 2011-08-12 00:00:00
+#> 2 pnau-… CTA … Chicago Tr… CTA        official   This lists… 2011-08-12 00:00:00
+#> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
+#> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
+#> #   domain_metadata <list>, column_names <list>, column_labels <list>,
+#> #   column_datatypes <list>, column_descriptions <list>, permalink <chr>,
+#> #   link <chr>, license <chr>
 ```
 
 ### Download data
@@ -180,10 +191,9 @@ dataset <- soc_discover(id = c("6iiy-9s97", "pnau-cf66"))
 Use `soc_read()` to read a socrata dataset into R.
 
 ``` r
-cta_ridership <- soc_read(
+soc_read(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
-print(cta_ridership)
 #> # A tibble: 8,886 × 5
 #>    service_date        day_type    bus rail_boardings total_rides
 #>    <dttm>              <chr>     <dbl>          <dbl>       <dbl>
@@ -203,10 +213,9 @@ print(cta_ridership)
 Spatial data will be read as an `sf` object.
 
 ``` r
-chi_community_areas <- soc_read(
+soc_read(
   "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"
 )
-print(chi_community_areas)
 #> Simple feature collection with 77 features and 5 fields
 #> Geometry type: MULTIPOLYGON
 #> Dimension:     XY
@@ -250,7 +259,7 @@ print(lower_west_side)
 #> *        <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>     <dbl>
 #> 1 (((-87.63516 41.85772, -…         31 LOWER WE… 31          81550724.    43229.
 
-trips_to_lws_by_ca <- soc_read(
+cta_ridership <- soc_read(
   "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
   query = soc_query(
     select = "pickup_community_area, count(*) as n",
@@ -261,7 +270,7 @@ trips_to_lws_by_ca <- soc_read(
     order_by = "n DESC"
   )
 )
-print(trips_to_lws_by_ca)
+print(cta_ridership)
 #> # A tibble: 78 × 2
 #>    pickup_community_area      n
 #>                    <dbl>  <dbl>
@@ -283,46 +292,68 @@ print(trips_to_lws_by_ca)
 Access a dataset’s metadata using `soc_metadata()`.
 
 ``` r
-cta_ridership_meta <- soc_metadata(cta_ridership)
-print(cta_ridership_meta)
-#> ID: 6iiy-9s97
-#> Name: CTA - Ridership - Daily Boarding Totals
-#> Attribution: Chicago Transit Authority
-#> Owner: CTA
+soc_metadata(cta_ridership)
+#> ID: wrvz-psew
+#> Name: Taxi Trips (2013-2023)
+#> Attribution: City of Chicago
+#> Owner: Jonathan Levy
 #> Provenance: official
-#> Description: This dataset shows systemwide boardings for both bus and rail
-#> services provided by CTA, dating back to 2001. Daytypes are as follows: W =
-#> Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for
-#> information on how these numbers are calculated.
-#> Created: 2011-08-12 15:40:31
-#> Data last updated: 2025-06-30 18:44:33
-#> Metadata last Updated: 2025-06-30 18:44:32
+#> Description: <b>This dataset ends with 2023. Please see the Featured Content
+#> link below for the dataset that starts in 2024.</b> Taxi trips from 2013 to
+#> 2023 reported to the City of Chicago in its role as a regulatory agency.  To
+#> protect privacy but allow for aggregate analyses, the Taxi ID is consistent for
+#> any given taxi medallion number but does not show the number, Census Tracts are
+#> suppressed in some cases, and times are rounded to the nearest 15 minutes. Due
+#> to the data reporting process, not all trips are reported but the City believes
+#> that most are.
+#> Created: 2016-05-27 21:27:48
+#> Data last updated: 2024-02-07 20:40:12
+#> Metadata last Updated: 2024-06-21 17:06:18
 #> Domain Category: Transportation
-#> Domain Tags: cta, public transit, and ridership
+#> Domain Tags: taxis, transportation, and historical
 #> Domain fields:
-#> • Data Owner: Chicago Transit Authority
+#> • Time Period: 2013 - 2023
+#> • Changes and Other Historical Information Useful to Understanding This
+#> Dataset:
+#> https://www.google.com/search?as_q="Related+dataset+ID+s"+"wrvz-psew"+inurl:stories&as_sitesearch=data.cityofchicago.org
+#> • Data Owner: Department of Business Affairs & Consumer Protection
 #> Columns:
-#> # A tibble: 5 × 4
-#>   column_name    column_label   column_datatype column_description
-#>   <chr>          <chr>          <chr>           <chr>             
-#> 1 service_date   service_date   calendar_date   ""                
-#> 2 day_type       day_type       text            ""                
-#> 3 bus            bus            number          ""                
-#> 4 rail_boardings rail_boardings number          ""                
-#> 5 total_rides    total_rides    number          ""
-#> Permalink: https://data.cityofchicago.org/d/6iiy-9s97
+#> # A tibble: 24 × 4
+#>    column_name               column_label     column_datatype column_description
+#>    <chr>                     <chr>            <chr>           <chr>             
+#>  1 trip_id                   Trip ID          text            A unique identifi…
+#>  2 taxi_id                   Taxi ID          text            A unique identifi…
+#>  3 trip_start_timestamp      Trip Start Time… calendar_date   When the trip sta…
+#>  4 trip_end_timestamp        Trip End Timest… calendar_date   When the trip end…
+#>  5 trip_seconds              Trip Seconds     number          Time of the trip …
+#>  6 trip_miles                Trip Miles       number          Distance of the t…
+#>  7 pickup_census_tract       Pickup Census T… text            The Census Tract …
+#>  8 dropoff_census_tract      Dropoff Census … text            The Census Tract …
+#>  9 pickup_community_area     Pickup Communit… number          The Community Are…
+#> 10 dropoff_community_area    Dropoff Communi… number          The Community Are…
+#> 11 fare                      Fare             number          The fare for the …
+#> 12 tips                      Tips             number          The tip for the t…
+#> 13 tolls                     Tolls            number          The tolls for the…
+#> 14 extras                    Extras           number          Extra charges for…
+#> 15 trip_total                Trip Total       number          Total cost of the…
+#> 16 payment_type              Payment Type     text            Type of payment f…
+#> 17 company                   Company          text            The taxi company. 
+#> 18 pickup_centroid_latitude  Pickup Centroid… number          The latitude of t…
+#> 19 pickup_centroid_longitude Pickup Centroid… number          The longitude of …
+#> 20 pickup_centroid_location  Pickup Centroid… point           The location of t…
+#> # ℹ 4 more rows
+#> Permalink: https://data.cityofchicago.org/d/wrvz-psew
 #> Link:
-#> https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97
+#> https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew
 #> License: See Terms of Use
 ```
 
 Or explore a dataset’s metadata using it’s url.
 
 ``` r
-taxi_trips_meta <- soc_metadata(
+soc_metadata(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
-print(taxi_trips_meta)
 #> ID: 6iiy-9s97
 #> Name: CTA - Ridership - Daily Boarding Totals
 #> Attribution: Chicago Transit Authority
