@@ -47,7 +47,7 @@ creation and update timestamps, description, any domain-specific fields, and fie
 data provider.
 }
 \examples{
-\dontrun{
+\donttest{
 url <- "https://data.cityofchicago.org/resource/wrvz-psew.json"
 data <- soc_read(url)
 metadata <- soc_metadata(data)
