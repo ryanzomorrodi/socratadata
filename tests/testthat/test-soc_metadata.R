@@ -85,8 +85,6 @@ with_mock_dir(
     test_that("soc_metadata_from_url", {
       url <- "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p"
       object <- soc_metadata(url)
-      # httptest2 doesn't mock redirects
-      object$link <- "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p"
 
       expected <- structure(
         list(

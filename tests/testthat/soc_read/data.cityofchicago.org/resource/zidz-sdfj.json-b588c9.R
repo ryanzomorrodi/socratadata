@@ -1,8 +1,8 @@
-structure(list(method = "GET", url = "https://data.cityofchicago.org/resource/zidz-sdfj.json?%24offset=0&%24limit=10", 
+structure(list(method = "GET", url = "https://data.cityofchicago.org/resource/zidz-sdfj.json?%24limit=10", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Mon, 14 Jul 2025 16:01:32 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Tue, 22 Jul 2025 17:23:11 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
-        `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC43Mzc2XzRfMjhKRXFTRHZadWRlUGItR1BTeE1DelFMMTVpUUU---gziqqQtOSAJm7U6keB0DeFe2I-DBhuA--gzip--gzip\"", 
+        `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC43Mzc2XzRfMjhKVVdrV1Bpcjk4NjlxLWJwejRyX01YeHAwaUU---gzipu-PHJnG1I-nk3_9g4dxnElWR6bw--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"district_name\",\"designation_date\"]", 
         `X-SODA2-Types` = "[\"text\",\"fixed_timestamp\"]", `X-SODA2-Data-Out-Of-Date` = "false", 
         `X-SODA2-Truth-Last-Modified` = "Mon, 19 Aug 2019 01:27:09 GMT", 
@@ -10,8 +10,8 @@ structure(list(method = "GET", url = "https://data.cityofchicago.org/resource/zi
         `Last-Modified` = "Mon, 19 Aug 2019 01:27:09 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "1ddbf2c801ef09a2a861eb3147c0ace7"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "af73e19509ed5bdceb0c2cce46e95c32"), class = "httr2_headers"), 
     body = charToRaw("[{\"district_name\":\"Old Town Triangle\",\"designation_date\":\"1977-09-28T07:00:00.000Z\"}\n,{\"district_name\":\"Milwaukee Avenue\",\"designation_date\":\"2008-04-09T07:00:00.000Z\"}\n,{\"district_name\":\"Astor Street\",\"designation_date\":\"1975-12-19T08:00:00.000Z\"}\n,{\"district_name\":\"Beverly/Morgan Park Railroad Stations\",\"designation_date\":\"1995-04-15T07:00:00.000Z\"}\n,{\"district_name\":\"Black Metropolis-Bronzeville\",\"designation_date\":\"1998-09-09T07:00:00.000Z\"}\n,{\"district_name\":\"Surf-Pine Grove\",\"designation_date\":\"2007-07-19T07:00:00.000Z\"}\n,{\"district_name\":\"Five Houses on Avers Avenue\",\"designation_date\":\"1994-03-02T08:00:00.000Z\"}\n,{\"district_name\":\"Hawthorne Place\",\"designation_date\":\"1996-03-26T08:00:00.000Z\"}\n,{\"district_name\":\"Historic Michigan Boulevard\",\"designation_date\":\"2002-02-27T08:00:00.000Z\"}\n,{\"district_name\":\"Hutchinson Street\",\"designation_date\":\"1977-08-31T07:00:00.000Z\"}]\n"), 
-    timing = c(redirect = 0, namelookup = 1e-05, connect = 0, 
-    pretransfer = 4.4e-05, starttransfer = 0.511712, total = 0.511872
+    timing = c(redirect = 0, namelookup = 1.4e-05, connect = 0, 
+    pretransfer = 6.8e-05, starttransfer = 0.196478, total = 0.196581
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

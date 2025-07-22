@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/api/id/7caz-dk9s?%24query=select%20count%28%2A%29%20as%20COLUMN_ALIAS_GUARD__count", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Mon, 14 Jul 2025 16:01:36 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Tue, 22 Jul 2025 17:23:15 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"aG90ZWwuNDU5MjJfMl85cDRlQTZTYTZZOTc0TGNXaURmcHB0WkZ2SnBV--gzijoDKuclEOPyueDFxqhvK5oMLDx7---gzip\"", 
         `X-SODA2-Fields` = "[\"COLUMN_ALIAS_GUARD__count\"]", 
@@ -10,8 +10,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/api/id/7caz-
         `Last-Modified` = "Wed, 14 Oct 2020 19:54:15 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "6b4ad2fb7d2d797275fdb59258a6e52f"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "518f2da0ff1fb1d2c7cb5167e63e1530"), class = "httr2_headers"), 
     body = charToRaw("[{\"COLUMN_ALIAS_GUARD__count\":\"3\"}]\n"), 
-    timing = c(redirect = 0, namelookup = 1.6e-05, connect = 0, 
-    pretransfer = 6.3e-05, starttransfer = 0.182235, total = 0.182356
+    timing = c(redirect = 0, namelookup = 3e-05, connect = 0, 
+    pretransfer = 8.7e-05, starttransfer = 0.187897, total = 0.187936
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")
