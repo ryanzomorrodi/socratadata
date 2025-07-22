@@ -122,10 +122,6 @@ soc_read <- function(
   }
 
   result <- tibble::as_tibble(res_list)
-  if (!is.null(query$`$limit`)) {
-    result <- result[1:query$`$limit`, ]
-  }
-
   if (sum(sapply(res_list, \(x) inherits(x, "sfc"))) == 1) {
     result <- sf::st_as_sf(result)
   }
@@ -153,48 +149,42 @@ get_dataset_row_count <- function(url_base, four_by_four) {
 
 iterative_requests <- function(url_base, four_by_four, query, page_size) {
   req <- httr2::request(url_base) |>
-    httr2::req_template("GET /resource/{four_by_four}.json")
+    httr2::req_template("GET /resource/{four_by_four}.json") |>
+    httr2::req_url_query(!!!query)
 
+  row_count <- Inf
   if (all(sapply(query[2:5], is.null))) {
     row_count <- get_dataset_row_count(url_base, four_by_four)
-    if (!is.null(query$`$limit`)) {
-      row_count <- min(row_count, query$`$limit`)
-    }
-    iteration_count <- ceiling(row_count / page_size)
-
-    req <- httr2::req_url_query(req, !!!query)
-    reqs <- lapply(
-      seq_len(iteration_count),
-      function(i) {
-        offset <- page_size * (i - 1)
-        limit <- min(page_size, row_count - offset)
-        httr2::req_url_query(
-          req,
-          `$offset` = offset,
-          `$limit` = limit,
-        )
-      }
-    )
-    resps <- httr2::req_perform_sequential(reqs)
-  } else {
-    req <- req |>
-      httr2::req_url_query(!!!query) |>
-      httr2::req_url_query(`$limit` = page_size)
-
-    resps <- httr2::req_perform_iterative(
-      req,
-      next_req = httr2::iterate_with_offset(
-        "$offset",
-        start = 0,
-        offset = page_size,
-        resp_complete = \(resp) {
-          body_string <- httr2::resp_body_string(resp)
-          gsub("\\s+", "", body_string) %in% c("{}", "[]", "")
-        }
-      ),
-      max_reqs = Inf
-    )
   }
+  nrow_to_get <- min(query$`$limit`, row_count)
+  nrow_got <- 0
+  nrow_last_req <- min(page_size, nrow_to_get)
+
+  req <- httr2::req_url_query(req, `$limit` = nrow_last_req)
+
+  resps <- httr2::req_perform_iterative(
+    req,
+    next_req = function(resp, req) {
+      nrow_got <<- nrow_got + nrow_last_req
+      if (nrow_got >= nrow_to_get) {
+        return(NULL)
+      } else if (is.finite(nrow_to_get)) {
+        httr2::signal_total_pages(ceiling(nrow_to_get / page_size))
+      }
+
+      body_string <- httr2::resp_body_string(resp)
+      if (gsub("\\s+", "", body_string) %in% c("{}", "[]", "")) {
+        return(NULL)
+      }
+
+      httr2::req_url_query(
+        req,
+        `$offset` = nrow_got,
+        `$limit` = min(page_size, nrow_to_get - nrow_got)
+      )
+    },
+    max_reqs = Inf
+  )
 
   resps
 }
