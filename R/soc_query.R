@@ -14,16 +14,16 @@
 #'
 #' @examples
 #' query <- soc_query(
-#'   select = "pickup_community_area, count(*) as n",
-#'   where = "dropoff_community_area = 31",
-#'   group_by = "pickup_community_area",
-#'   order_by = "n DESC"
-#')
+#'   select = "region, avg(magnitude) as avg_magnitude, count(*) as count",
+#'   group_by = "region",
+#'   having = "count >= 5",
+#'   order_by = "avg_magnitude DESC"
+#' )
 #' print(query)
 #'
 #' \donttest{
-#' trips_to_lws_by_ca <- soc_read(
-#'   "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
+#' earthquakes_by_region <- soc_read(
+#'   "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/",
 #'   query = query
 #' )
 #' }

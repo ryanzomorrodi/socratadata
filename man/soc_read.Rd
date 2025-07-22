@@ -57,21 +57,18 @@ Metadata is also returned as attributes on the returned object.
 }
 \examples{
 \donttest{
-cta_ridership <- soc_read(
-  "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
+soc_read(
+  "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"
 )
-print(cta_ridership)
-attr(cta_ridership, "description")
 
-trips_to_lws_by_ca <- soc_read(
-  "https://data.cityofchicago.org/transportation/taxi-trips-2013-2023-/wrvz-psew/about_data",
-  query = soc_query(
-    select = "violation_date, count(*) as n",
-    where = "dropoff_community_area = 31",
-    group_by = "pickup_community_area",
-    order_by = "n DESC"
-  ),
-  alias = "replace"
+soc_read(
+  "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/",
+  soc_query(
+    select = "region, avg(magnitude) as avg_magnitude, count(*) as count",
+    group_by = "region",
+    having = "count >= 5",
+    order_by = "avg_magnitude DESC"
+  )
 )
 }
 

@@ -38,8 +38,8 @@
 #'
 #' @examples
 #' \donttest{
-#' url <- "https://data.cityofchicago.org/resource/wrvz-psew.json"
-#' data <- soc_read(url)
+#' url <- "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"
+#' data <- soc_read(url, soc_query(limit = 1000L))
 #' metadata <- soc_metadata(data)
 #' print(metadata)
 #'

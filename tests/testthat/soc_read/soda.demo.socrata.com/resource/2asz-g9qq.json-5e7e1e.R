@@ -1,16 +1,16 @@
-structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2asz-g9qq.json?%24select=location_column&%24limit=1", 
+structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2asz-g9qq.json?%24select=location_column&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Tue, 22 Jul 2025 17:23:19 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Tue, 22 Jul 2025 20:42:17 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
-        `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxNF82XzIyOTZrdDdzRlZPSEVoYk1WQWItejgwdmtjcFVVMA---gziskSx5z-0OBSpFCmHG6bx7zQYNgY--gzip--gzip\"", 
+        `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxNF82XzIyOXVkUEhIVVpVQlVmcEVvUzJYOHhwTnN5Q3hFMA---gzimSYBmQyrl_9iPfMkX94Bg9gUNQy--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"location_column\"]", `X-SODA2-Types` = "[\"location\"]", 
         `X-SODA2-Data-Out-Of-Date` = "false", `X-SODA2-Truth-Last-Modified` = "Mon, 16 Sep 2019 23:13:03 GMT", 
         `X-SODA2-Secondary-Last-Modified` = "Mon, 16 Sep 2019 23:13:03 GMT", 
         `Last-Modified` = "Mon, 16 Sep 2019 23:13:03 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "dc5d1911c25c02da8ba30297c5054cbd"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "9682ad39b2492f8e0d0e4e5273b3ee58"), class = "httr2_headers"), 
     body = charToRaw("[{\"location_column\":{\"latitude\":\"47.5982815480005\",\"longitude\":\"-122.33477954499972\",\"human_address\":\"{\\\"address\\\": \\\"83 South King Street\\\", \\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"zip\\\": \\\"\\\"}\"}}]\n"), 
-    timing = c(redirect = 0, namelookup = 1.9e-05, connect = 0, 
-    pretransfer = 7.3e-05, starttransfer = 0.117407, total = 0.117449
+    timing = c(redirect = 0, namelookup = 2.7e-05, connect = 0, 
+    pretransfer = 8.1e-05, starttransfer = 0.190161, total = 0.190316
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

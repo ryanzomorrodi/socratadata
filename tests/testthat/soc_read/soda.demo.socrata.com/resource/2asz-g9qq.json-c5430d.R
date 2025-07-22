@@ -1,8 +1,8 @@
-structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2asz-g9qq.json?%24limit=1", 
+structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2asz-g9qq.json?%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Tue, 22 Jul 2025 17:23:20 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Tue, 22 Jul 2025 20:42:19 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
-        `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxNF82XzIyOWtaRFJTcnNQSm5nQlFFMWRFY1E0aC0yNmhoNA---gzijhzsTFAe0-FxUQpEnvgjN49DXDi--gzip--gzip\"", 
+        `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxNF82XzIyOVN0SldLMW5xbFdSTzNQWmkza2kySU9PdTNNbw---gzisJjJyrx3UwDfo_e_8CBBL4HluDY--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"plain_text_column\",\"formatted_text_column\",\"number_column\",\"money_column\",\"percent_column\",\"date_time_column\",\"date_time_with_timezone_column\",\"location_column\",\"website_url_column\",\"email_column\",\"checkbox_column\",\"flag_column\",\"star_column\",\"phone_column\",\"multiple_choice\",\"photo_column\",\"document\",\":@computed_region_k83t_ady5\"]", 
         `X-SODA2-Types` = "[\"text\",\"text\",\"number\",\"number\",\"number\",\"floating_timestamp\",\"fixed_timestamp\",\"location\",\"url\",\"text\",\"boolean\",\"text\",\"number\",\"text\",\"text\",\"photo\",\"document\",\"number\"]", 
         `X-SODA2-Data-Out-Of-Date` = "false", `X-SODA2-Truth-Last-Modified` = "Mon, 16 Sep 2019 23:13:03 GMT", 
@@ -10,8 +10,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2as
         `Last-Modified` = "Mon, 16 Sep 2019 23:13:03 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "4c6d35d51c32ca3e2cba19637f2c9654"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "53b8a3e1436e13abe8717511fcb14428"), class = "httr2_headers"), 
     body = charToRaw("[{\"plain_text_column\":\"Sample Text\",\"formatted_text_column\":\"<p>Sample <strong>Rich Text</strong></p>\",\"number_column\":\"42\",\"money_column\":\"1000000\",\"percent_column\":\"66\",\"date_time_column\":\"2014-10-13T00:00:00.000\",\"date_time_with_timezone_column\":\"2014-10-14T07:00:00.000Z\",\"location_column\":{\"latitude\":\"47.5982815480005\",\"longitude\":\"-122.33477954499972\",\"human_address\":\"{\\\"address\\\": \\\"83 South King Street\\\", \\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"zip\\\": \\\"\\\"}\"},\"website_url_column\":{\"url\":\"http://www.socrata.com\",\"description\":\"Socrata\"},\"email_column\":\"support@socrata.com\",\"checkbox_column\":true,\"flag_column\":\"green\",\"star_column\":\"3\",\"phone_column\":\"206-555-1212\",\"multiple_choice\":\"Maybe\",\"photo_column\":\"ZXF6YilAOjRH26G2TH05mvHMTlDnLCwn6CysLQP18hc\",\"document\":{\"file_id\":\"BFqKFH02U1wT_y_7EV_Llbka4p90HJrWkC-7ZalB2lA\",\"content_type\":\"image/gif; charset=binary\",\"filename\":\"ping-pong.gif\"},\":@computed_region_k83t_ady5\":\"18379\"}]\n"), 
-    timing = c(redirect = 0, namelookup = 1.4e-05, connect = 0, 
-    pretransfer = 6.5e-05, starttransfer = 0.19662, total = 0.196774
+    timing = c(redirect = 0, namelookup = 1.7e-05, connect = 0, 
+    pretransfer = 5.3e-05, starttransfer = 0.108858, total = 0.109046
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

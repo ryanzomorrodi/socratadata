@@ -44,21 +44,18 @@
 #'
 #' @examples
 #' \donttest{
-#' cta_ridership <- soc_read(
-#'   "https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"
+#' soc_read(
+#'   "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"
 #' )
-#' print(cta_ridership)
-#' attr(cta_ridership, "description")
 #'
-#' trips_to_lws_by_ca <- soc_read(
-#'   "https://data.cityofchicago.org/transportation/taxi-trips-2013-2023-/wrvz-psew/about_data",
-#'   query = soc_query(
-#'     select = "violation_date, count(*) as n",
-#'     where = "dropoff_community_area = 31",
-#'     group_by = "pickup_community_area",
-#'     order_by = "n DESC"
-#'   ),
-#'   alias = "replace"
+#' soc_read(
+#'   "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/",
+#'   soc_query(
+#'     select = "region, avg(magnitude) as avg_magnitude, count(*) as count",
+#'     group_by = "region",
+#'     having = "count >= 5",
+#'     order_by = "avg_magnitude DESC"
+#'   )
 #' )
 #' }
 #'
@@ -135,28 +132,12 @@ json_header_to_vec <- function(json_string) {
   gsub('^"|"$', '', items)
 }
 
-get_dataset_row_count <- function(url_base, four_by_four) {
-  httr2::request(url_base) |>
-    httr2::req_template("GET /api/id/{four_by_four}") |>
-    httr2::req_url_query(
-      `$query` = "select count(*) as COLUMN_ALIAS_GUARD__count"
-    ) |>
-    httr2::req_perform() |>
-    httr2::resp_body_json() |>
-    unlist() |>
-    as.numeric()
-}
-
 iterative_requests <- function(url_base, four_by_four, query, page_size) {
   req <- httr2::request(url_base) |>
     httr2::req_template("GET /resource/{four_by_four}.json") |>
     httr2::req_url_query(!!!query)
 
-  row_count <- Inf
-  if (all(sapply(query[2:5], is.null))) {
-    row_count <- get_dataset_row_count(url_base, four_by_four)
-  }
-  nrow_to_get <- min(query$`$limit`, row_count)
+  nrow_to_get <- min(query$`$limit`, Inf)
   nrow_got <- 0
   nrow_last_req <- min(page_size, nrow_to_get)
 
