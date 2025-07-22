@@ -9,7 +9,7 @@ Metadata is also returned as attributes on the returned object."><meta property=
 
     <a class="navbar-brand me-2" href="../index.html">socratadata</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9007</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9008</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,12 +137,59 @@ If the dataset contains a single non-nested geospatial field, it will be returne
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="va">cta_ridership</span> <span class="op">&lt;-</span> <span class="fu">soc_read</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"https://data.cityofchicago.org/Transportation/Speed-Camera-Violations/hhkd-xvj4/about_data"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■                              </span>   2% | ETA: 44s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■                              </span>   5% | ETA:  1m</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■                            </span>   9% | ETA:  1m</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■                          </span>  16% | ETA: 49s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■                          </span>  18% | ETA:  1m</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■                        </span>  23% | ETA:  1m</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■                       </span>  27% | ETA: 46s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■                     </span>  32% | ETA: 43s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■                    </span>  36% | ETA: 42s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■                   </span>  41% | ETA: 41s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■                  </span>  43% | ETA: 39s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■                 </span>  45% | ETA: 39s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■                </span>  50% | ETA: 36s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■               </span>  55% | ETA: 33s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■              </span>  57% | ETA: 32s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■             </span>  59% | ETA: 31s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■            </span>  64% | ETA: 27s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■           </span>  68% | ETA: 24s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■          </span>  70% | ETA: 22s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■         </span>  73% | ETA: 21s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■        </span>  77% | ETA: 18s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■      </span>  82% | ETA: 14s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■      </span>  84% | ETA: 13s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■     </span>  86% | ETA: 11s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■    </span>  91% | ETA:  7s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■   </span>  93% | ETA:  5s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  </span>  98% | ETA:  2s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> iterating <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ </span> 100% | ETA:  0s</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">cta_ridership</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 434,000 × 14</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    address    camera_id violation_date      violations x_coordinate y_coordinate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>                   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 10318 S I… CHI120    2025-06-15 <span style="color: #949494;">00:00:00</span>        126     1<span style="text-decoration: underline;">203</span>645.     1<span style="text-decoration: underline;">837</span>056.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 10540 S W… CHI205    2025-06-15 <span style="color: #949494;">00:00:00</span>        525     1<span style="text-decoration: underline;">162</span>222.     1<span style="text-decoration: underline;">834</span>494.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 1111 N HU… CHI010    2025-06-15 <span style="color: #949494;">00:00:00</span>        116          <span style="color: #BB0000;">NA</span>           <span style="color: #BB0000;">NA</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 1142 W IR… CHI095    2025-06-15 <span style="color: #949494;">00:00:00</span>         91     1<span style="text-decoration: underline;">167</span>790.     1<span style="text-decoration: underline;">926</span>747.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 115 N OGD… CHI077    2025-06-15 <span style="color: #949494;">00:00:00</span>         36     1<span style="text-decoration: underline;">166</span>485.     1<span style="text-decoration: underline;">900</span>735.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 1274 E 83… CHI197    2025-06-15 <span style="color: #949494;">00:00:00</span>        120     1<span style="text-decoration: underline;">186</span>302.     1<span style="text-decoration: underline;">850</span>256.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 1306 W 76… CHI185    2025-06-15 <span style="color: #949494;">00:00:00</span>         46     1<span style="text-decoration: underline;">168</span>833.     1<span style="text-decoration: underline;">854</span>443.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 1315 W GA… CHI121    2025-06-15 <span style="color: #949494;">00:00:00</span>         83     1<span style="text-decoration: underline;">168</span>445.     1<span style="text-decoration: underline;">868</span>118.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 1334 W GA… CHI119    2025-06-15 <span style="color: #949494;">00:00:00</span>         95     1<span style="text-decoration: underline;">168</span>211.     1<span style="text-decoration: underline;">868</span>328.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 1461 W GR… CHI208    2025-06-15 <span style="color: #949494;">00:00:00</span>        150     1<span style="text-decoration: underline;">166</span>314.     1<span style="text-decoration: underline;">903</span>542.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 433,990 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 8 more variables: latitude &lt;dbl&gt;, longitude &lt;dbl&gt;, location &lt;tibble[,5]&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   `:@computed_region_awaf_s7ux` &lt;dbl&gt;, `:@computed_region_6mkv_f3dw` &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   `:@computed_region_vrxf_vc4k` &lt;dbl&gt;, `:@computed_region_bdys_3d7i` &lt;dbl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   `:@computed_region_43wa_7qmu` &lt;dbl&gt;</span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/attr.html" class="external-link">attr</a></span><span class="op">(</span><span class="va">cta_ridership</span>, <span class="st">"description"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "This dataset reflects the daily volume of violations that have occurred in Children's Safety Zones for each camera. The data reflects violations that occurred from July 1, 2014 until present, minus the most recent 14 days. This data may change due to occasional time lags between the capturing of a potential violation and the processing and determination of a violation. The most recent 14 days are not shown due to revised data being submitted to the City of Chicago. The reported violations are those that have been collected by the camera and radar system and reviewed by two separate City contractors. In some instances, due to the inability the registered owner of the offending vehicle, the violation may not be issued as a citation. However, this dataset contains all violations regardless of whether a citation was issued, which provides an accurate view into the Automated Speed Enforcement Program violations taking place in Children's Safety Zones. More information on the Safety Zone Program can be found here: http://www.cityofchicago.org/city/en/depts/cdot/supp_info/children_s_safetyzoneporgramautomaticspeedenforcement.html. The corresponding dataset for red light camera violations is https://data.cityofchicago.org/id/spqx-js37."</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">trips_to_lws_by_ca</span> <span class="op">&lt;-</span> <span class="fu">soc_read</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"https://data.cityofchicago.org/transportation/taxi-trips-2013-2023-/wrvz-psew/about_data"</span>,</span></span>
@@ -154,7 +201,8 @@ If the dataset contains a single non-nested geospatial field, it will be returne
 <span class="r-in"><span>  <span class="op">)</span>,</span></span>
 <span class="r-in"><span>  alias <span class="op">=</span> <span class="st">"replace"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req, path = get_path(i), mock = mock):</span> HTTP 400 Bad Request.</span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
