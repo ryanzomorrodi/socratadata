@@ -116,6 +116,7 @@ soc_metadata_from_url <- function(url) {
 
   permalink <- paste0(url_base, "d/", four_by_four)
   link <- httr2::request(permalink) |>
+    httr2::req_method("HEAD") |>
     httr2::req_perform() |>
     httr2::resp_url()
 
