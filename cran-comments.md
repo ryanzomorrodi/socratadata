@@ -2,4 +2,5 @@
 
 0 errors | 0 warnings | 1 note
 
-* This is a new release.
+* Changed all \dontrun(s) to \donttest.
+* Reduced the size of mocked responses within tests. Tarball is now 3.6 MBs.

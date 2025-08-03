@@ -92,7 +92,11 @@ soc_read <- function(
   resps <- iterative_requests(url_base, four_by_four, query, page_size)
 
   res_list <- parse_data_json(
-    json_strs = sapply(resps, httr2::resp_body_string),
+    json_strs = vapply(
+      resps,
+      httr2::resp_body_string,
+      FUN.VALUE = character(1)
+    ),
     header_col_names = httr2::resp_header(resps[[1]], "X-SODA2-Fields"),
     header_col_types = httr2::resp_header(resps[[1]], "X-SODA2-Types"),
     meta_url = httr2::url_modify(
@@ -119,7 +123,9 @@ soc_read <- function(
   }
 
   result <- tibble::as_tibble(res_list)
-  if (sum(sapply(res_list, \(x) inherits(x, "sfc"))) == 1) {
+  if (
+    sum(vapply(res_list, \(x) inherits(x, "sfc"), FUN.VALUE = logical(1))) == 1
+  ) {
     result <- sf::st_as_sf(result)
   }
 

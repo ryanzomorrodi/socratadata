@@ -30,7 +30,9 @@ soc_list <- function(url) {
 
   result <- tibble::as_tibble(resp$dataset)
 
-  result$id <- result$landingPage |> strsplit("/") |> sapply(\(x) x[length(x)])
+  result$id <- result$landingPage |>
+    strsplit("/") |>
+    vapply(\(x) x[length(x)], FUN.VALUE = character(1))
   result$issued <- as.Date(result$issued)
   result$modified <- as.Date(result$modified)
 
