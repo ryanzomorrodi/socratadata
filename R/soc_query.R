@@ -68,6 +68,18 @@ print.soc_query <- function(x, ...) {
   invisible(x)
 }
 
+stringify_query <- function(query) {
+  if (is.character(query)) {
+    return(query)
+  }
+  if (is.null(query$select)) {
+    query$select <- "*"
+  }
+
+  query_parts <- get_query_parts(query)
+  paste(query_parts$clauses, query_parts$params, collapse = " ")
+}
+
 get_query_parts <- function(query) {
   action_is_not_null <- !vapply(query, is.null, logical(1))
 

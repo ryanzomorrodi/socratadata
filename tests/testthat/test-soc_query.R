@@ -3,32 +3,38 @@ with_mock_dir(
   {
     test_that("select", {
       url <- "https://soda.demo.socrata.com/dataset/All-OBE-Column-Types/2asz-g9qq/about_data"
-      object <- soc_read(
+      args <- list(
         url,
         alias = "drop",
-        soc_query(select = "plain_text_column, formatted_text_column as html")
+        soc_query(select = "plain_text_column, formatted_text_column as html"),
+        include_synthetic_cols = FALSE
       )
-
       expected <- tibble::tibble(
         plain_text_column = "Sample Text",
         html = "<p>Sample <strong>Rich Text</strong></p>"
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("where", {
       url <- "https://soda.demo.socrata.com/dataset/My-super-awesome-Earthquakes-dataset/4tka-6guv/about_data"
-      object <- soc_read(
+      args <- list(
         url,
         alias = "drop",
-        soc_query(where = "depth > 635")
+        soc_query(where = "depth > 635"),
+        include_synthetic_cols = FALSE
       )
-
       expected <- tibble::tibble(
         source = "us",
         earthquake_id = "usb000qd0j",
@@ -49,64 +55,52 @@ with_mock_dir(
         )
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("group_by", {
       url <- "https://soda.demo.socrata.com/dataset/My-super-awesome-Earthquakes-dataset/4tka-6guv/about_data"
-      object <- soc_read(
+      args <- list(
         url,
         alias = "drop",
         soc_query(
           select = "magnitude, count(*) as count",
           where = "magnitude > 6",
           group_by = "magnitude"
-        )
+        ),
+        include_synthetic_cols = FALSE
       )
-
       expected <- tibble::tibble(
         magnitude = c(6.1, 6.2, 6.4, 6.5, 6.6),
         count = c(6, 4, 1, 2, 4)
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("having", {
       url <- "https://soda.demo.socrata.com/dataset/My-super-awesome-Earthquakes-dataset/4tka-6guv/about_data"
-      object <- soc_read(
-        url,
-        alias = "drop",
-        soc_query(
-          select = "magnitude, count(*) as count",
-          group_by = "magnitude",
-          having = "count > 400"
-        )
-      )
-
-      expected <- tibble::tibble(
-        magnitude = c(1.4, 0.9, 1, 1.1, 1.2, 1.3),
-        count = c(422, 405, 485, 537, 492, 467)
-      )
-
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
-
-      expect_equal(object, expected)
-    })
-
-    test_that("order_by", {
-      url <- "https://soda.demo.socrata.com/dataset/My-super-awesome-Earthquakes-dataset/4tka-6guv/about_data"
-      object <- soc_read(
+      args <- list(
         url,
         alias = "drop",
         soc_query(
@@ -114,38 +108,81 @@ with_mock_dir(
           group_by = "magnitude",
           having = "count > 400",
           order_by = "count"
-        )
+        ),
+        include_synthetic_cols = FALSE
       )
-
       expected <- tibble::tibble(
         magnitude = c(0.9, 1.4, 1.3, 1, 1.2, 1.1),
         count = c(405, 422, 467, 485, 492, 537)
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
+    })
+
+    test_that("order_by", {
+      url <- "https://soda.demo.socrata.com/dataset/My-super-awesome-Earthquakes-dataset/4tka-6guv/about_data"
+      args <- list(
+        url,
+        alias = "drop",
+        soc_query(
+          select = "magnitude, count(*) as count",
+          group_by = "magnitude",
+          having = "count > 400",
+          order_by = "count"
+        ),
+        include_synthetic_cols = FALSE
+      )
+      expected <- tibble::tibble(
+        magnitude = c(0.9, 1.4, 1.3, 1, 1.2, 1.1),
+        count = c(405, 422, 467, 485, 492, 537)
+      )
+
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
+
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("limit", {
       url <- "https://soda.demo.socrata.com/dataset/My-super-awesome-Earthquakes-dataset/4tka-6guv/about_data"
-      object <- soc_read(
+      args <- list(
         url,
         alias = "drop",
-        soc_query(select = "source", limit = 10)
+        soc_query(select = "source", limit = 10, order_by = "source"),
+        include_synthetic_cols = FALSE
       )
-
       expected <- tibble::tibble(
-        source = c("hv", "ak", "ak", "ak", "uw", "us", "ak", "us", "ak", "us")
+        source = c("ak", "ak", "ak", "ak", "ak", "ak", "ak", "ak", "ak", "ak")
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
   },
   simplify = FALSE

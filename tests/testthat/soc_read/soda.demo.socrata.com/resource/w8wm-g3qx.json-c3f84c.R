@@ -1,16 +1,16 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/w8wm-g3qx.json?%24select=%2A&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Mon, 18 Aug 2025 05:09:24 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 06:13:51 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC41NjgxNV8yXzE1ODBVUm5jMktjTUxiWkNPYXFlNFFZVGl4YXFn--gzihxRgOpWYpOBBhHa8X8dfBzKwcas---gzip\"", 
         `X-SODA2-Fields` = "[\"text\",\"checkbox\"]", `X-SODA2-Types` = "[\"text\",\"boolean\"]", 
         `X-SODA2-Data-Out-Of-Date` = "false", `X-SODA2-Truth-Last-Modified` = "Fri, 02 Dec 2016 17:45:50 GMT", 
         `X-SODA2-Secondary-Last-Modified` = "Fri, 02 Dec 2016 17:45:50 GMT", 
         `Last-Modified` = "Fri, 02 Dec 2016 17:45:50 GMT", Vary = "Accept-Encoding", 
-        `Content-Encoding` = "gzip", Age = "2", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
+        `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "54bef506d4e46463d44d56926675ed74"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "8967d391446f3a50741471e078adac8e"), class = "httr2_headers"), 
     body = charToRaw("[{\"text\":\"True\",\"checkbox\":true}\n,{\"text\":\"Null\"}\n,{\"text\":\"False\",\"checkbox\":false}]\n"), 
-    timing = c(redirect = 0, namelookup = 1.1e-05, connect = 0, 
-    pretransfer = 4.4e-05, starttransfer = 0.123797, total = 0.123867
+    timing = c(redirect = 0, namelookup = 1.9e-05, connect = 0, 
+    pretransfer = 8e-05, starttransfer = 0.263718, total = 0.263791
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2asz-g9qq.json?%24select=%2A&%24offset=10000&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Mon, 18 Aug 2025 05:09:35 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 06:14:12 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxNF82XzIyOUtveFJ5Wm5hNkpxMG5teHhQZGdXTTl4UkpTMA---gziggLiPUJ2X3OF-A0c3elemhGuk3w--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"plain_text_column\",\"formatted_text_column\",\"number_column\",\"money_column\",\"percent_column\",\"date_time_column\",\"date_time_with_timezone_column\",\"location_column\",\"website_url_column\",\"email_column\",\"checkbox_column\",\"flag_column\",\"star_column\",\"phone_column\",\"multiple_choice\",\"photo_column\",\"document\",\":@computed_region_k83t_ady5\"]", 
@@ -10,7 +10,7 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2as
         `Last-Modified` = "Mon, 16 Sep 2019 23:13:03 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "4dea29c85c11870a600272ee2357dbed"), class = "httr2_headers"), 
-    body = charToRaw("[]\n"), timing = c(redirect = 0, namelookup = 1.7e-05, 
-    connect = 0, pretransfer = 5.5e-05, starttransfer = 0.106255, 
-    total = 0.106326), cache = new.env(parent = emptyenv())), class = "httr2_response")
+        `X-Socrata-RequestId` = "59bfe080e5c86b0e39941f5675d97ef9"), class = "httr2_headers"), 
+    body = charToRaw("[]\n"), timing = c(redirect = 0, namelookup = 1.5e-05, 
+    connect = 0, pretransfer = 7.3e-05, starttransfer = 0.123748, 
+    total = 0.123833), cache = new.env(parent = emptyenv())), class = "httr2_response")

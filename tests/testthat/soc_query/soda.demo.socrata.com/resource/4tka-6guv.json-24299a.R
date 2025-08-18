@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/4tka-6guv.json?%24select=%2A&%24where=depth%20%3E%20635&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Mon, 18 Aug 2025 05:09:03 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 06:12:43 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxMl80XzEyMlNjemlIdzY3RVlzbW9nTlRlTjlMSWRmYTlucw---gzihKpjS_7p7vfUQE-PGrFx5NE1gyq--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"source\",\"earthquake_id\",\"version\",\"magnitude\",\"depth\",\"number_of_stations\",\"region\",\"location\"]", 
@@ -10,8 +10,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/4tk
         `Last-Modified` = "Wed, 04 Sep 2019 17:25:46 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "9326d4ac49e8e22880fe81a568899143"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "2747ea0d8bef394d4426f4583907b2c8"), class = "httr2_headers"), 
     body = charToRaw("[{\"source\":\"us\",\"earthquake_id\":\"usb000qd0j\",\"magnitude\":\"4.7\",\"depth\":\"635.78\",\"region\":\"59km SW of Ndoi Island, Fiji\"}]\n"), 
-    timing = c(redirect = 0, namelookup = 2.9e-05, connect = 0, 
-    pretransfer = 0.000113, starttransfer = 0.181546, total = 0.181634
+    timing = c(redirect = 0, namelookup = 1.7e-05, connect = 0, 
+    pretransfer = 8.1e-05, starttransfer = 0.13517, total = 0.135267
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

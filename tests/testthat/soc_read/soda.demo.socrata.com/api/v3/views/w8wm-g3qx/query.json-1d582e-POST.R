@@ -1,0 +1,17 @@
+structure(list(method = "POST", url = "https://soda.demo.socrata.com/api/v3/views/w8wm-g3qx/query.json", 
+    status_code = 200L, headers = structure(list(Server = "nginx", 
+        Date = "Mon, 18 Aug 2025 06:13:52 GMT", `Content-Type` = "application/json; charset=utf-8", 
+        `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
+        `Access-Control-Allow-Origin` = "*", `Last-Modified` = "Sun, 17 Aug 2025 16:10:17 GMT", 
+        ETag = "W/\"_OpPUvSMLMETAGUOs0YhJxPiaYYOiXBDk1WySRgd9gg\"", 
+        `x-soda2-secondary` = "pg.pg15-a-fedramp-prod", `x-soda2-cached` = "true", 
+        `x-soda2-data-out-of-date` = "[]", `X-SODA2-Warning` = "X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated", 
+        `X-SODA2-Fields` = "[\"text\",\"checkbox\"]", `X-SODA2-Types` = "[\"text\",\"boolean\"]", 
+        Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
+        `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
+        `X-Socrata-RequestId` = "a340f4c4a6bc365a9ced81138f646ffb", 
+        `Content-Encoding` = "gzip"), class = "httr2_headers"), 
+    body = charToRaw("[\n{\"text\":\"True\",\"checkbox\":true},\n{\"text\":\"Null\"},\n{\"text\":\"False\",\"checkbox\":false}\n]\n"), 
+    timing = c(redirect = 0, namelookup = 1.9e-05, connect = 0, 
+    pretransfer = 7.5e-05, starttransfer = 0.185458, total = 0.185535
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

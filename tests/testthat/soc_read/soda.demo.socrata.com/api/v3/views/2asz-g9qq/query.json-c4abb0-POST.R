@@ -1,0 +1,17 @@
+structure(list(method = "POST", url = "https://soda.demo.socrata.com/api/v3/views/2asz-g9qq/query.json", 
+    status_code = 200L, headers = structure(list(Server = "nginx", 
+        Date = "Mon, 18 Aug 2025 06:14:09 GMT", `Content-Type` = "application/json; charset=utf-8", 
+        `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
+        `Access-Control-Allow-Origin` = "*", `Last-Modified` = "Sun, 17 Aug 2025 16:10:38 GMT", 
+        ETag = "W/\"6ASQEMH1xKWgjSYMGsW-1JTsqRIa4VELv_m7GlokhkE\"", 
+        `x-soda2-secondary` = "pg.pg15-a-fedramp-prod", `x-soda2-cached` = "true", 
+        `x-soda2-data-out-of-date` = "[]", `X-SODA2-Warning` = "X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated", 
+        `X-SODA2-Fields` = "[\"document\"]", `X-SODA2-Types` = "[\"document\"]", 
+        Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
+        `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
+        `X-Socrata-RequestId` = "572f3f38dfc65c98fab04a23ce8e5d4f", 
+        `Content-Encoding` = "gzip"), class = "httr2_headers"), 
+    body = charToRaw("[\n{\"document\":{\"file_id\":\"BFqKFH02U1wT_y_7EV_Llbka4p90HJrWkC-7ZalB2lA\",\"content_type\":\"image/gif; charset=binary\",\"filename\":\"ping-pong.gif\"}}\n]\n"), 
+    timing = c(redirect = 0, namelookup = 1.4e-05, connect = 0, 
+    pretransfer = 7e-05, starttransfer = 0.292146, total = 0.29224
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

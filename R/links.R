@@ -1,19 +1,22 @@
 get_four_by_four <- function(url) {
   url_path <- httr2::url_parse(url)$path
 
-  url_path_vec <- strsplit(url_path, "/")[[1]][-1]
+  fbf_regex <- "[a-z0-9]{4}-[a-z0-9]{4}"
+  regexes <- c(
+    v2_api_regex = paste0("^/resource/(", fbf_regex, ")\\.json(?:\\?.*)?$"),
+    v3_api_regex = paste0("^/api/v3/views/(", fbf_regex, ")/query\\.json$"),
+    permalink_regex = paste0("^/d/(", fbf_regex, ")$"),
+    link_regex = paste0("/.*/.*/(", fbf_regex, ")")
+  )
 
-  if (url_path_vec[1] == "resource" || url_path_vec[1] == "d") {
-    four_by_four <- substr(url_path_vec[2], 1, 9)
-  } else {
-    four_by_four <- url_path_vec[3]
+  for (regex in regexes) {
+    reg <- regmatches(url_path, regexec(regex, url_path))[[1]]
+    if (length(reg) > 1) {
+      return(reg[2])
+    }
   }
 
-  if (!valid_four_by_four(four_by_four)) {
-    cli::cli_abort("Invalid url.")
-  }
-
-  four_by_four
+  cli::cli_abort("Invalid url.")
 }
 
 valid_four_by_four <- function(four_by_four) {

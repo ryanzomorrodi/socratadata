@@ -3,8 +3,7 @@ with_mock_dir(
   {
     test_that("soc datatype - boolean", {
       url <- "https://soda.demo.socrata.com/dataset/Checkboxen/w8wm-g3qx/about_data"
-      object <- soc_read(url, alias = "drop")
-
+      args <- list(url, alias = "drop", include_synthetic_cols = FALSE)
       # fmt: skip
       expected <- tibble::tribble(
         ~ text, ~ checkbox,
@@ -13,17 +12,22 @@ with_mock_dir(
         "False", FALSE
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("soc datatype - number", {
       url <- "https://soda.demo.socrata.com/dataset/R-Socrata-Test-Full-replace-dataset/kc76-ybeq/about_data"
-      object <- soc_read(url, alias = "drop")
-
+      args <- list(url, alias = "drop", include_synthetic_cols = FALSE)
       # fmt: skip
       expected <- tibble::tribble(
         ~ x,  ~ y,
@@ -34,17 +38,27 @@ with_mock_dir(
          185,  102
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("soc datatype - fixed timestamp", {
       url <- "https://data.cityofchicago.org/Historic-Preservation/Landmark-Districts/zidz-sdfj/about_data"
-      object <- soc_read(url, alias = "drop", soc_query(limit = 10))
-
+      args <- list(
+        url,
+        alias = "drop",
+        soc_query(limit = 10),
+        include_synthetic_cols = FALSE
+      )
       # fmt: skip
       expected <- tibble::tribble(
         ~ district_name,                         ~ designation_date,
@@ -60,23 +74,29 @@ with_mock_dir(
         "Hutchinson Street",                     as.POSIXct("1977-08-31 07:00:00", tz = "UTC")
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("soc datatype - floating timestamp", {
       url <- "https://soda.demo.socrata.com/dataset/Live-Earthquakes/jatp-jqxg/about_data"
-      object <- soc_read(
+      args <- list(
         url,
         alias = "drop",
         soc_query(
           select = "time, updated"
-        )
+        ),
+        include_synthetic_cols = FALSE
       )
-
       # fmt: skip
       expected <- tibble::tribble(
         ~ time,                            ~ updated,
@@ -92,17 +112,22 @@ with_mock_dir(
         as.POSIXct("2014-05-05 21:46:58"), as.POSIXct("2014-05-05 22:24:18")
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("soc datatype - text", {
       url <- "https://soda.demo.socrata.com/dataset/Datasites-for-APIs-JSON/2646-ez2p/about_data"
-      object <- soc_read(url, alias = "drop")
-
+      args <- list(url, alias = "drop", include_synthetic_cols = FALSE)
       # fmt: skip
       expected <- tibble::tribble(
         ~ domain,           ~ name,                  ~ logo,        ~ tags,                                            ~ email,
@@ -110,17 +135,22 @@ with_mock_dir(
         "data.sfgov.org",   "City of San Francisco", NA_character_, "san francisco, california, open data",            "open-data@sfgov.org"
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("soc datatype - url", {
       url <- "https://soda.demo.socrata.com/dataset/URL-Datatype/7caz-dk9s/about_data"
-      object <- soc_read(url, alias = "drop")
-
+      args <- list(url, alias = "drop", include_synthetic_cols = FALSE)
       # fmt: skip
       expected <- tibble::tibble(
         url_with_description = tibble::tribble(
@@ -137,59 +167,77 @@ with_mock_dir(
         )
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("soc datatype - photo", {
       url <- "https://soda.demo.socrata.com/dataset/All-OBE-Column-Types/2asz-g9qq/about_data"
-      object <- soc_read(
+      args <- list(
         url,
         alias = "drop",
-        soc_query(select = "photo_column")
+        soc_query(select = "photo_column"),
+        include_synthetic_cols = FALSE
       )
-
       expected <- tibble::tibble(
         photo_column = "https://soda.demo.socrata.com/api/views/2asz-g9qq/files/ZXF6YilAOjRH26G2TH05mvHMTlDnLCwn6CysLQP18hc"
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("soc datatype - document", {
       url <- "https://soda.demo.socrata.com/dataset/All-OBE-Column-Types/2asz-g9qq/about_data"
-      object <- soc_read(
+      args <- list(
         url,
         alias = "drop",
-        soc_query(select = "document")
+        soc_query(select = "document"),
+        include_synthetic_cols = FALSE
       )
-
       expected <- tibble::tibble(
         document = "https://soda.demo.socrata.com/api/views/2asz-g9qq/files/BFqKFH02U1wT_y_7EV_Llbka4p90HJrWkC-7ZalB2lA?filename=ping-pong.gif&content_type=image/gif; charset=binary"
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("soc datatype - location", {
       url <- "https://soda.demo.socrata.com/dataset/All-OBE-Column-Types/2asz-g9qq/about_data"
-      object <- soc_read(
+      args <- list(
         url,
         alias = "drop",
-        soc_query(select = "location_column")
+        soc_query(select = "location_column"),
+        include_synthetic_cols = FALSE
       )
-
       expected <- tibble::tibble(
         location_column = tibble::tibble(
           geometry = sf::st_sfc(
@@ -203,20 +251,26 @@ with_mock_dir(
         )
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v3, expected)
     })
 
     test_that("soc datatype - all non-spatial (except location)", {
       url <- "https://soda.demo.socrata.com/dataset/All-OBE-Column-Types/2asz-g9qq/about_data"
-      object <- soc_read(
+      args <- list(
         url,
-        alias = "drop"
+        alias = "drop",
+        include_synthetic_cols = FALSE
       )
-
       expected <- tibble::tibble(
         plain_text_column = "Sample Text",
         formatted_text_column = "<p>Sample <strong>Rich Text</strong></p>",
@@ -253,11 +307,18 @@ with_mock_dir(
         `:@computed_region_k83t_ady5` = 18379
       )
 
-      attributes(object) <- attributes(object)[
-        names(attributes(object)) %in% names(attributes(expected))
-      ]
+      "v2"
+      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      expect_equal(object_v2, expected)
 
-      expect_equal(object, expected)
+      "v3"
+      skip_if_no_api_key()
+      args <- append_api_keys(args)
+      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+        limit_attr_to_expected(expected)
+      object_v3$`:@computed_region_k83t_ady5` <- 18379 # synthetic col
+      expect_equal(object_v3, expected[])
     })
   },
   simplify = FALSE
