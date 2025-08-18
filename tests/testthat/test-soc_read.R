@@ -13,14 +13,18 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       expect_equal(object_v3, expected)
     })
@@ -39,14 +43,18 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       expect_equal(object_v3, expected)
     })
@@ -75,14 +83,18 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       expect_equal(object_v3, expected)
     })
@@ -113,14 +125,18 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       expect_equal(object_v3, expected)
     })
@@ -136,14 +152,18 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       expect_equal(object_v3, expected)
     })
@@ -168,14 +188,18 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       expect_equal(object_v3, expected)
     })
@@ -193,14 +217,18 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       expect_equal(object_v3, expected)
     })
@@ -218,14 +246,18 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       expect_equal(object_v3, expected)
     })
@@ -252,14 +284,18 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       expect_equal(object_v3, expected)
     })
@@ -308,17 +344,21 @@ with_mock_dir(
       )
 
       "v2"
-      object_v2 <- suppressMessages(do.call(soc_read, args)) |>
-        limit_attr_to_expected(expected)
+      with_mocked_bindings(
+        code = {
+          object_v2 <- suppressMessages(do.call(soc_read, args)) |>
+            limit_attr_to_expected(expected)
+        },
+        Sys_get_env = function(envvar) NULL
+      )
       expect_equal(object_v2, expected)
 
       "v3"
       skip_if_no_api_key()
-      args <- append_api_keys(args)
-      object_v3 <- suppressMessages(do.call(soc_read, args)) |>
+      object_v3 <- do.call(soc_read, args) |>
         limit_attr_to_expected(expected)
       object_v3$`:@computed_region_k83t_ady5` <- 18379 # synthetic col
-      expect_equal(object_v3, expected[])
+      expect_equal(object_v3, expected)
     })
   },
   simplify = FALSE

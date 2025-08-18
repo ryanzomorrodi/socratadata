@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2asz-g9qq.json?%24select=%2A&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Mon, 18 Aug 2025 06:14:12 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 16:31:29 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxNF82XzIyOVN0SldLMW5xbFdSTzNQWmkza2kySU9PdTNNbw---gzisJjJyrx3UwDfo_e_8CBBL4HluDY--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"plain_text_column\",\"formatted_text_column\",\"number_column\",\"money_column\",\"percent_column\",\"date_time_column\",\"date_time_with_timezone_column\",\"location_column\",\"website_url_column\",\"email_column\",\"checkbox_column\",\"flag_column\",\"star_column\",\"phone_column\",\"multiple_choice\",\"photo_column\",\"document\",\":@computed_region_k83t_ady5\"]", 
@@ -10,8 +10,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2as
         `Last-Modified` = "Mon, 16 Sep 2019 23:13:03 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "2085e7ab88de58a790f7dbb23a14bf84"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "7d07ce3695ccac42857b5597524cc19c"), class = "httr2_headers"), 
     body = charToRaw("[{\"plain_text_column\":\"Sample Text\",\"formatted_text_column\":\"<p>Sample <strong>Rich Text</strong></p>\",\"number_column\":\"42\",\"money_column\":\"1000000\",\"percent_column\":\"66\",\"date_time_column\":\"2014-10-13T00:00:00.000\",\"date_time_with_timezone_column\":\"2014-10-14T07:00:00.000Z\",\"location_column\":{\"latitude\":\"47.5982815480005\",\"longitude\":\"-122.33477954499972\",\"human_address\":\"{\\\"address\\\": \\\"83 South King Street\\\", \\\"city\\\": \\\"Seattle\\\", \\\"state\\\": \\\"WA\\\", \\\"zip\\\": \\\"\\\"}\"},\"website_url_column\":{\"url\":\"http://www.socrata.com\",\"description\":\"Socrata\"},\"email_column\":\"support@socrata.com\",\"checkbox_column\":true,\"flag_column\":\"green\",\"star_column\":\"3\",\"phone_column\":\"206-555-1212\",\"multiple_choice\":\"Maybe\",\"photo_column\":\"ZXF6YilAOjRH26G2TH05mvHMTlDnLCwn6CysLQP18hc\",\"document\":{\"file_id\":\"BFqKFH02U1wT_y_7EV_Llbka4p90HJrWkC-7ZalB2lA\",\"content_type\":\"image/gif; charset=binary\",\"filename\":\"ping-pong.gif\"},\":@computed_region_k83t_ady5\":\"18379\"}]\n"), 
-    timing = c(redirect = 0, namelookup = 1.4e-05, connect = 0, 
-    pretransfer = 0.000112, starttransfer = 0.106514, total = 0.106652
+    timing = c(redirect = 0, namelookup = 1.9e-05, connect = 0, 
+    pretransfer = 8e-05, starttransfer = 0.207591, total = 0.207741
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

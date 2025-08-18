@@ -1,0 +1,18 @@
+structure(list(method = "POST", url = "https://soda.demo.socrata.com/d/2646-ez2p", 
+    status_code = 200L, headers = structure(list(Server = "nginx", 
+        Date = "Mon, 18 Aug 2025 16:31:21 GMT", `Content-Type` = "application/json; charset=utf-8", 
+        `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
+        `Access-Control-Allow-Origin` = "*", `Last-Modified` = "Mon, 18 Aug 2025 05:24:12 GMT", 
+        ETag = "W/\"td94JcMR9kL4FFlkRThEqLbbx99LXP44k2-1bQlbIfw\"", 
+        `x-soda2-secondary` = "pg.pg15-a-fedramp-prod", `x-soda2-cached` = "true", 
+        `x-soda2-data-out-of-date` = "[]", `X-SODA2-Warning` = "X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated", 
+        `X-SODA2-Fields` = "[\"domain\",\"name\",\"logo\",\"tags\",\"email\"]", 
+        `X-SODA2-Types` = "[\"text\",\"text\",\"text\",\"text\",\"text\"]", 
+        Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
+        `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
+        `X-Socrata-RequestId` = "23404b00aecb031d473a9757a3de1d6d", 
+        `Content-Encoding` = "gzip"), class = "httr2_headers"), 
+    body = charToRaw("[\n{\"domain\":\"data.seattle.gov\",\"name\":\"City of Seattle\",\"tags\":\"seattle, open data, washington, open government\",\"email\":\"open-data@seattle.gov\"},\n{\"domain\":\"data.sfgov.org\",\"name\":\"City of San Francisco\",\"tags\":\"san francisco, california, open data\",\"email\":\"open-data@sfgov.org\"}\n]\n"), 
+    timing = c(redirect = 0, namelookup = 1.9e-05, connect = 0, 
+    pretransfer = 8.1e-05, starttransfer = 0.255359, total = 0.255461
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

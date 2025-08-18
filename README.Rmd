@@ -84,6 +84,25 @@ soc_discover(ids = c("6iiy-9s97", "pnau-cf66"))
 
 ### Download data
 
+`socratadata` supports unauthenticated requests via the v2.1 API. It is, however, recommended that you [obtain an api key](https://support.socrata.com/hc/en-us/articles/210138558-Generating-App-Tokens-and-API-Keys)
+to make your code more future-proof. `soc_read()` will automatically authenticate with the `"soc_api_key_id"` and `"soc_api_key_secret"` environment variables.
+
+You can create an `.Renviron` file and add your keys to it like so:
+
+```txt
+soc_api_key_id="your_id_here"
+soc_api_key_secret="your_secret_here"
+```
+
+And retrieve those keys using 
+
+```r
+Sys.getenv("soc_api_key_id")
+#> [1] "your_id_here"
+Sys.getenv("soc_api_key_secret")
+#> [1] "your_secret_here"
+```
+
 Use `soc_read()` to read a socrata dataset into R.
 ```{r}
 soc_read(

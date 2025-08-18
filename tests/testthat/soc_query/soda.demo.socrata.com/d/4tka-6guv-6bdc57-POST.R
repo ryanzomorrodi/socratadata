@@ -1,0 +1,17 @@
+structure(list(method = "POST", url = "https://soda.demo.socrata.com/d/4tka-6guv", 
+    status_code = 200L, headers = structure(list(Server = "nginx", 
+        Date = "Mon, 18 Aug 2025 16:31:09 GMT", `Content-Type` = "application/json; charset=utf-8", 
+        `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
+        `Access-Control-Allow-Origin` = "*", `Last-Modified` = "Sun, 17 Aug 2025 15:40:43 GMT", 
+        ETag = "W/\"luLPsfXHeJPW1emRf3W79tk6zTO1iGwmtCoy8t9t0Qg\"", 
+        `x-soda2-secondary` = "pg.pg15-a-fedramp-prod", `x-soda2-cached` = "true", 
+        `x-soda2-data-out-of-date` = "[]", `X-SODA2-Warning` = "X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated", 
+        `X-SODA2-Fields` = "[\"magnitude\",\"count\"]", `X-SODA2-Types` = "[\"number\",\"number\"]", 
+        Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
+        `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
+        `X-Socrata-RequestId` = "9d1ce48abe56cdee69a9476f6d77a76e", 
+        `Content-Encoding` = "gzip"), class = "httr2_headers"), 
+    body = charToRaw("[\n{\"magnitude\":\"0.9\",\"count\":\"405\"},\n{\"magnitude\":\"1.4\",\"count\":\"422\"},\n{\"magnitude\":\"1.3\",\"count\":\"467\"},\n{\"magnitude\":\"1\",\"count\":\"485\"},\n{\"magnitude\":\"1.2\",\"count\":\"492\"},\n{\"magnitude\":\"1.1\",\"count\":\"537\"}\n]\n"), 
+    timing = c(redirect = 0, namelookup = 1.2e-05, connect = 0, 
+    pretransfer = 7.8e-05, starttransfer = 0.212832, total = 0.212902
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/4tka-6guv.json?%24select=magnitude%2C%20count%28%2A%29%20as%20count&%24where=magnitude%20%3E%206&%24group=magnitude&%24offset=10000&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Mon, 18 Aug 2025 06:12:46 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 16:31:04 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxMl80XzEyMlA5RUpGSnJzcTRkM3NGdVkwUFlTUFUtUER5NA-oDLWpehJMUZvdqxD5UhWdp9VJXg--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"magnitude\",\"count\"]", `X-SODA2-Types` = "[\"number\",\"number\"]", 
@@ -9,7 +9,7 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/4tk
         `Last-Modified` = "Wed, 04 Sep 2019 17:25:46 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "e9c485c880742397c9fa6f2b8857ab42"), class = "httr2_headers"), 
-    body = charToRaw("[]\n"), timing = c(redirect = 0, namelookup = 1.2e-05, 
-    connect = 0, pretransfer = 7.1e-05, starttransfer = 0.214276, 
-    total = 0.214396), cache = new.env(parent = emptyenv())), class = "httr2_response")
+        `X-Socrata-RequestId` = "da34a831bd530a7a300b4bbbe9a9cb04"), class = "httr2_headers"), 
+    body = charToRaw("[]\n"), timing = c(redirect = 0, namelookup = 1.6e-05, 
+    connect = 0, pretransfer = 0.000103, starttransfer = 0.138577, 
+    total = 0.138689), cache = new.env(parent = emptyenv())), class = "httr2_response")

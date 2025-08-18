@@ -1,0 +1,17 @@
+structure(list(method = "POST", url = "https://soda.demo.socrata.com/d/2asz-g9qq", 
+    status_code = 200L, headers = structure(list(Server = "nginx", 
+        Date = "Mon, 18 Aug 2025 16:31:25 GMT", `Content-Type` = "application/json; charset=utf-8", 
+        `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
+        `Access-Control-Allow-Origin` = "*", `Last-Modified` = "Sun, 17 Aug 2025 16:10:35 GMT", 
+        ETag = "W/\"Ex6tB_qPTKz6djFSrS9PiYDRnYn1Bcgvm1STNn0gJ9Y\"", 
+        `x-soda2-secondary` = "pg.pg15-a-fedramp-prod", `x-soda2-cached` = "true", 
+        `x-soda2-data-out-of-date` = "[]", `X-SODA2-Warning` = "X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated", 
+        `X-SODA2-Fields` = "[\"photo_column\"]", `X-SODA2-Types` = "[\"photo\"]", 
+        Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
+        `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
+        `X-Socrata-RequestId` = "a9798ec27507a3fa81b8552d893c22a3", 
+        `Content-Encoding` = "gzip"), class = "httr2_headers"), 
+    body = charToRaw("[\n{\"photo_column\":\"ZXF6YilAOjRH26G2TH05mvHMTlDnLCwn6CysLQP18hc\"}\n]\n"), 
+    timing = c(redirect = 0, namelookup = 1.1e-05, connect = 0, 
+    pretransfer = 8.7e-05, starttransfer = 0.216867, total = 0.216917
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

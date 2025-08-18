@@ -12,8 +12,10 @@
 #'  - `"drop"`: field alias values replace existing column names.
 #' @param page_size whole number; Maximum number of rows returned per request.
 #' @param include_synthetic_cols logical; Should synthetic columns be included?
-#' @param api_key_id string; API key ID to authenticate requests.
-#' @param api_key_secret string; API key secret to authenticate requests.
+#' @param api_key_id string; API key ID to authenticate requests. (Can also be stored as `"soc_api_key_id"``
+#' environment variable)
+#' @param api_key_secret string; API key secret to authenticate requests. (Can also be stored as `"soc_api_key_secret"``
+#' environment variable)
 #'
 #' @return A tibble with additional attributes containing dataset metadata.
 #' If the dataset contains a single non-nested geospatial field, it will be returned as an `sf` object.
@@ -69,8 +71,8 @@ soc_read <- function(
   alias = "label",
   page_size = 10000,
   include_synthetic_cols = TRUE,
-  api_key_id,
-  api_key_secret
+  api_key_id = NULL,
+  api_key_secret = NULL
 ) {
   check_string(url)
   if (is.character(query)) {
@@ -86,10 +88,12 @@ soc_read <- function(
   check_string(alias)
   rlang::arg_match(alias, c("label", "replace", "drop"))
   check_number_whole(page_size, min = 1)
+  check_string(api_key_id, allow_null = TRUE)
+  check_string(api_key_secret, allow_null = TRUE)
 
-  no_api_key_id <- missing(api_key_id)
-  no_api_key_secret <- missing(api_key_secret)
-  if (no_api_key_secret && no_api_key_id) {
+  api_key_id <- api_key_id %||% Sys_get_env("soc_api_key_id")
+  api_key_secret <- api_key_secret %||% Sys_get_env("soc_api_key_secret")
+  if (is.null(api_key_id) && is.null(api_key_secret)) {
     request_version <- "v2"
     if (!inherits(query, "soc_query")) {
       cli::cli_abort(
@@ -99,7 +103,7 @@ soc_read <- function(
     cli::cli_alert_info(
       "Utilizing v2.1 API. {.arg include_synthetic_cols} will be ignored. Provide an {.arg api_key_id} and {.arg api_key_secret} to perform a v3 request."
     )
-  } else if (no_api_key_secret || no_api_key_id) {
+  } else if (is.null(api_key_id) || is.null(api_key_secret)) {
     cli::cli_abort(
       "Both an {.arg api_key_id} and {.arg api_key_secret} must be specified to authenticate a v3 request."
     )
@@ -131,6 +135,15 @@ soc_read <- function(
     parse_resps() |>
     convert_list_to_df() |>
     set_metdata(url, alias)
+}
+
+Sys_get_env <- function(x) {
+  envvar <- Sys.getenv(x, NA)
+  if (is.na(envvar)) {
+    NULL
+  } else {
+    envvar
+  }
 }
 
 parse_resps <- function(resps) {

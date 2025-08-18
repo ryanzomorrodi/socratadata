@@ -37,33 +37,23 @@ iterate_with_offset_and_limit <- function(
   limit_param_name,
   offset,
   total_limit,
-  resp_pages = NULL,
   resp_complete = NULL
 ) {
-  known_total <- FALSE
   current_offset <- 0
   current_limit <- min(offset, total_limit)
 
   function(resp, req) {
-    if (!is.null(resp_pages) && !known_total) {
-      n <- httr2::resp_pages(resp)
-      if (!is.null(n)) {
-        known_total <- TRUE
-        httr2::signal_total_pages(n)
-      }
-    }
-
     if (
       !isTRUE(resp_complete(resp)) &&
         current_offset + current_limit < total_limit
     ) {
       current_offset <<- current_offset + offset
       current_limit <<- min(offset, total_limit - current_offset)
-      httr2::req_url_query(
-        req,
-        !!offset_param_name := current_offset,
-        !!limit_param_name := current_limit
-      )
+
+      url_query_args <- list(current_offset, current_limit)
+      names(url_query_args) <- c(offset_param_name, limit_param_name)
+      url_query_args$.req <- req
+      do.call(httr2::req_url_query, url_query_args)
     }
   }
 }

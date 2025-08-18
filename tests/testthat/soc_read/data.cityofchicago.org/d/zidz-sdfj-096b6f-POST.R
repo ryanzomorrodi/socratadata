@@ -1,0 +1,17 @@
+structure(list(method = "POST", url = "https://data.cityofchicago.org/d/zidz-sdfj", 
+    status_code = 200L, headers = structure(list(Server = "nginx", 
+        Date = "Mon, 18 Aug 2025 16:31:17 GMT", `Content-Type` = "application/json; charset=utf-8", 
+        `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
+        `Access-Control-Allow-Origin` = "*", `Last-Modified` = "Sun, 17 Aug 2025 16:10:23 GMT", 
+        ETag = "W/\"i7wcXynNUOoFJUYA4VQhxfFraiiM_R0YQVTwa4elCII\"", 
+        `x-soda2-secondary` = "pg.pg13-a-fedramp-prod", `x-soda2-cached` = "true", 
+        `x-soda2-data-out-of-date` = "[]", `X-SODA2-Warning` = "X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated", 
+        `X-SODA2-Fields` = "[\"district_name\",\"designation_date\"]", 
+        `X-SODA2-Types` = "[\"text\",\"fixed_timestamp\"]", Age = "2", 
+        `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
+        `X-Socrata-RequestId` = "359b6459ed3c865adb2d2799ea1f4517", 
+        `Content-Encoding` = "gzip"), class = "httr2_headers"), 
+    body = charToRaw("[\n{\"district_name\":\"Old Town Triangle\",\"designation_date\":\"1977-09-28T07:00:00.000Z\"},\n{\"district_name\":\"Milwaukee Avenue\",\"designation_date\":\"2008-04-09T07:00:00.000Z\"},\n{\"district_name\":\"Astor Street\",\"designation_date\":\"1975-12-19T08:00:00.000Z\"},\n{\"district_name\":\"Beverly/Morgan Park Railroad Stations\",\"designation_date\":\"1995-04-15T07:00:00.000Z\"},\n{\"district_name\":\"Black Metropolis-Bronzeville\",\"designation_date\":\"1998-09-09T07:00:00.000Z\"},\n{\"district_name\":\"Surf-Pine Grove\",\"designation_date\":\"2007-07-19T07:00:00.000Z\"},\n{\"district_name\":\"Five Houses on Avers Avenue\",\"designation_date\":\"1994-03-02T08:00:00.000Z\"},\n{\"district_name\":\"Hawthorne Place\",\"designation_date\":\"1996-03-26T08:00:00.000Z\"},\n{\"district_name\":\"Historic Michigan Boulevard\",\"designation_date\":\"2002-02-27T08:00:00.000Z\"},\n{\"district_name\":\"Hutchinson Street\",\"designation_date\":\"1977-08-31T07:00:00.000Z\"}\n]\n"), 
+    timing = c(redirect = 0, namelookup = 3.4e-05, connect = 0, 
+    pretransfer = 0.000254, starttransfer = 0.216241, total = 0.216382
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

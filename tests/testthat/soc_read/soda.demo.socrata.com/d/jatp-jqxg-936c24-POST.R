@@ -1,0 +1,17 @@
+structure(list(method = "POST", url = "https://soda.demo.socrata.com/d/jatp-jqxg", 
+    status_code = 200L, headers = structure(list(Server = "nginx", 
+        Date = "Mon, 18 Aug 2025 16:31:18 GMT", `Content-Type` = "application/json; charset=utf-8", 
+        `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
+        `Access-Control-Allow-Origin` = "*", `Last-Modified` = "Sun, 17 Aug 2025 16:10:26 GMT", 
+        ETag = "W/\"08udIEvLiLV5JJUuKTZqdgtA5dxjKQXwdwnt5zFFuHI\"", 
+        `x-soda2-secondary` = "pg.pg15-a-fedramp-prod", `x-soda2-cached` = "true", 
+        `x-soda2-data-out-of-date` = "[]", `X-SODA2-Warning` = "X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated", 
+        `X-SODA2-Fields` = "[\"time\",\"updated\"]", `X-SODA2-Types` = "[\"floating_timestamp\",\"floating_timestamp\"]", 
+        Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
+        `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
+        `X-Socrata-RequestId` = "e984c519896147e153e237679ad0e56b", 
+        `Content-Encoding` = "gzip"), class = "httr2_headers"), 
+    body = charToRaw("[\n{\"time\":\"2013-09-05T22:05:50.000\",\"updated\":\"2013-09-05T22:19:42.000\"},\n{\"time\":\"2013-09-05T21:57:06.000\",\"updated\":\"2013-09-05T22:19:21.000\"},\n{\"time\":\"2013-09-05T21:52:35.000\",\"updated\":\"2013-09-05T22:09:12.000\"},\n{\"time\":\"2013-09-05T21:46:36.000\",\"updated\":\"2013-09-05T22:08:27.000\"},\n{\"time\":\"2013-09-05T21:32:19.000\",\"updated\":\"2013-09-05T21:43:53.000\"},\n{\"time\":\"2014-05-05T22:36:44.000\",\"updated\":\"2014-05-05T22:39:34.000\"},\n{\"time\":\"2014-05-05T22:04:10.000\",\"updated\":\"2014-05-05T22:24:13.000\"},\n{\"time\":\"2014-05-05T22:03:30.000\",\"updated\":\"2014-05-05T22:24:15.000\"},\n{\"time\":\"2014-05-05T21:49:43.000\",\"updated\":\"2014-05-05T22:03:04.000\"},\n{\"time\":\"2014-05-05T21:46:58.000\",\"updated\":\"2014-05-05T22:24:18.000\"}\n]\n"), 
+    timing = c(redirect = 0, namelookup = 2e-05, connect = 0, 
+    pretransfer = 8.8e-05, starttransfer = 0.21371, total = 0.213781
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

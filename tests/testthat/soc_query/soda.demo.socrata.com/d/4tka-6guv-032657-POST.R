@@ -1,0 +1,17 @@
+structure(list(method = "POST", url = "https://soda.demo.socrata.com/d/4tka-6guv", 
+    status_code = 200L, headers = structure(list(Server = "nginx", 
+        Date = "Mon, 18 Aug 2025 16:31:11 GMT", `Content-Type` = "application/json; charset=utf-8", 
+        `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
+        `Access-Control-Allow-Origin` = "*", `Last-Modified` = "Sun, 17 Aug 2025 15:40:57 GMT", 
+        ETag = "W/\"Dd9cExqU-wwp6wALIq5GYBME_OhTJsd0CvJRzMYEsbc\"", 
+        `x-soda2-secondary` = "pg.pg15-a-fedramp-prod", `x-soda2-cached` = "true", 
+        `x-soda2-data-out-of-date` = "[]", `X-SODA2-Warning` = "X-SODA2-Fields, X-SODA2-Types, and X-SODA2-Legacy-Types are deprecated", 
+        `X-SODA2-Fields` = "[\"source\"]", `X-SODA2-Types` = "[\"text\"]", 
+        Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
+        `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
+        `X-Socrata-RequestId` = "abe50953fa1ea320d73d84517540b0c1", 
+        `Content-Encoding` = "gzip"), class = "httr2_headers"), 
+    body = charToRaw("[\n{\"source\":\"ak\"},\n{\"source\":\"ak\"},\n{\"source\":\"ak\"},\n{\"source\":\"ak\"},\n{\"source\":\"ak\"},\n{\"source\":\"ak\"},\n{\"source\":\"ak\"},\n{\"source\":\"ak\"},\n{\"source\":\"ak\"},\n{\"source\":\"ak\"}\n]\n"), 
+    timing = c(redirect = 0, namelookup = 1.3e-05, connect = 0, 
+    pretransfer = 7.8e-05, starttransfer = 0.172482, total = 0.172556
+    ), cache = new.env(parent = emptyenv())), class = "httr2_response")

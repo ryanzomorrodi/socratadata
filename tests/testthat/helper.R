@@ -1,6 +1,7 @@
 skip_if_no_api_key <- function() {
   skip_if(
-    Sys.getenv("api_key_id") == "" || Sys.getenv("api_key_secret") == "",
+    is.na(Sys.getenv("soc_api_key_id", NA)) ||
+      is.na(Sys.getenv("soc_api_key_secret", NA)),
     message = "No api key or secret"
   )
 }

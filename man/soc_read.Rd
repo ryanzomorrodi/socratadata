@@ -10,8 +10,8 @@ soc_read(
   alias = "label",
   page_size = 10000,
   include_synthetic_cols = TRUE,
-  api_key_id,
-  api_key_secret
+  api_key_id = NULL,
+  api_key_secret = NULL
 )
 }
 \arguments{
@@ -30,9 +30,11 @@ soc_read(
 
 \item{include_synthetic_cols}{logical; Should synthetic columns be included?}
 
-\item{api_key_id}{string; API key ID to authenticate requests.}
+\item{api_key_id}{string; API key ID to authenticate requests. (Can also be stored as `"soc_api_key_id"``
+environment variable)}
 
-\item{api_key_secret}{string; API key secret to authenticate requests.}
+\item{api_key_secret}{string; API key secret to authenticate requests. (Can also be stored as `"soc_api_key_secret"``
+environment variable)}
 }
 \value{
 A tibble with additional attributes containing dataset metadata.

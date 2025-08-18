@@ -46,7 +46,7 @@ Use `soc_discover()` to explore the datasets with a domain.
 library(socratadata)
 
 soc_discover(domains = "data.cityofchicago.org")
-#> # A tibble: 879 × 21
+#> # A tibble: 880 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
 #>  1 xzkq… Curr… City of Ch… cocadmin   official   "This data… 2011-09-27 00:00:00
@@ -59,7 +59,7 @@ soc_discover(domains = "data.cityofchicago.org")
 #>  8 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
 #>  9 kn9c… Cens… U.S. Censu… Jamyia     official   "This data… 2012-01-05 00:00:00
 #> 10 z8bn… Poli… Chicago Po… cocadmin   official   "Chicago P… 2010-12-22 00:00:00
-#> # ℹ 869 more rows
+#> # ℹ 870 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
@@ -71,20 +71,20 @@ Or with a query.
 
 ``` r
 soc_discover(query = "bus")
-#> # A tibble: 875 × 21
+#> # A tibble: 876 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
 #>  1 ez4e… Bus … Department… NYC OpenD… official   "The Bus B… 2015-09-30 00:00:00
-#>  2 6qat… DART… Department… Delaware … official   "This cont… 2017-07-28 00:00:00
-#>  3 bd2s… KCAT… KCATA Tran… DataKC     official   "This data… 2013-04-23 00:00:00
-#>  4 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00
+#>  2 bd2s… KCAT… KCATA Tran… DataKC     official   "This data… 2013-04-23 00:00:00
+#>  3 6qat… DART… Department… Delaware … official   "This cont… 2017-07-28 00:00:00
+#>  4 ycrg… Bus … Department… NYC OpenD… official   "Bus lanes… 2020-12-04 00:00:00
 #>  5 s5c7… Bus … <NA>        Karl Suey… official   ""          2015-05-23 00:00:00
 #>  6 eqmj… Bron… mta.info    Elkin      official   "Bronx Tra… 2012-10-06 00:00:00
-#>  7 ycrg… Bus … Department… NYC OpenD… official   "Bus lanes… 2020-12-04 00:00:00
+#>  7 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00
 #>  8 nmjv… Bus … Transit Se… City of M… official   "***NOTE: … 2019-06-03 00:00:00
 #>  9 cudb… MTA … Metropolit… NY Open D… official   "Bus Speed… 2021-12-29 00:00:00
 #> 10 6uva… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-31 00:00:00
-#> # ℹ 865 more rows
+#> # ℹ 866 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
@@ -96,20 +96,20 @@ Or with categories.
 
 ``` r
 soc_discover(categories = "transportation")
-#> # A tibble: 470 × 21
+#> # A tibble: 457 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
-#>  1 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00
-#>  2 wdpr… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
+#>  1 pksj… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
+#>  2 f57x… Vita… <NA>        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00
 #>  3 2tq4… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-22 00:00:00
-#>  4 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00
-#>  5 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00
-#>  6 pksj… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
-#>  7 f57x… Vita… <NA>        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00
-#>  8 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00
-#>  9 w96p… Dail… Maryland T… Titlow, K… official   "The Daily… 2020-05-19 00:00:00
-#> 10 muzh… Calg… The City o… Calgary O… official   "Calgary T… 2018-09-07 00:00:00
-#> # ℹ 460 more rows
+#>  4 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00
+#>  5 cwsm… Quar… New York S… NY Open D… official   "The Quart… 2013-02-15 00:00:00
+#>  6 muzh… Calg… The City o… Calgary O… official   "Calgary T… 2018-09-07 00:00:00
+#>  7 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00
+#>  8 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00
+#>  9 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00
+#> 10 w96p… Dail… Maryland T… Titlow, K… official   "The Daily… 2020-05-19 00:00:00
+#> # ℹ 447 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
@@ -126,13 +126,13 @@ soc_discover(
 #>  1 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00
 #>  2 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
 #>  3 ygr5… Towe… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00
-#>  4 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00
+#>  4 5k2z… Relo… City of Ch… cocadmin   official   "This data… 2011-09-30 00:00:00
 #>  5 m6dm… Tran… City of Ch… Jonathan … official   "<b>This d… 2018-10-02 00:00:00
-#>  6 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00
-#>  7 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00
-#>  8 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00
-#>  9 t2qc… Chic… <NA>        cocadmin   official   "This data… 2011-11-20 00:00:00
-#> 10 pfsx… Aver… City of Ch… cocadmin   official   "This data… 2010-04-22 00:00:00
+#>  6 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00
+#>  7 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00
+#>  8 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00
+#>  9 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00
+#> 10 hhkd… Spee… City of Ch… cocadmin   official   "This data… 2014-08-08 00:00:00
 #> # ℹ 76 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
@@ -155,8 +155,8 @@ soc_discover(
 #>  2 pnau… CTA … Chicago Tr… CTA        official   "This list… 2011-08-12 00:00:00
 #>  3 t2rn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
 #>  4 5neh… CTA … Chicago Tr… CTA        official   "This list… 2011-08-05 00:00:00
-#>  5 bynn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
-#>  6 8pix… CTA … Chicago Tr… CTA        official   "This list… 2011-08-04 00:00:00
+#>  5 8pix… CTA … Chicago Tr… CTA        official   "This list… 2011-08-04 00:00:00
+#>  6 bynn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
 #>  7 w8km… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00
 #>  8 mq3i… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00
 #>  9 jyb9… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00
@@ -188,26 +188,51 @@ soc_discover(ids = c("6iiy-9s97", "pnau-cf66"))
 
 ### Download data
 
+`socratadata` supports unauthenticated requests via the v2.1 API. It is,
+however, recommended that you [obtain an api
+key](https://support.socrata.com/hc/en-us/articles/210138558-Generating-App-Tokens-and-API-Keys)
+to make your code more future-proof. `soc_read()` will automatically
+authenticate with the `"soc_api_key_id"` and `"soc_api_key_secret"`
+environment variables.
+
+You can create an `.Renviron` file and add your keys to it like so:
+
+``` txt
+soc_api_key_id="your_id_here"
+soc_api_key_secret="your_secret_here"
+```
+
+And retrieve those keys using
+
+``` r
+Sys.getenv("soc_api_key_id")
+#> [1] "your_id_here"
+Sys.getenv("soc_api_key_secret")
+#> [1] "your_secret_here"
+```
+
 Use `soc_read()` to read a socrata dataset into R.
 
 ``` r
 soc_read(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
-#> # A tibble: 8,886 × 5
-#>    service_date        day_type    bus rail_boardings total_rides
-#>    <dttm>              <chr>     <dbl>          <dbl>       <dbl>
-#>  1 2001-01-01 00:00:00 U        297192         126455      423647
-#>  2 2001-01-02 00:00:00 W        780827         501952     1282779
-#>  3 2001-01-03 00:00:00 W        824923         536432     1361355
-#>  4 2001-01-04 00:00:00 W        870021         550011     1420032
-#>  5 2001-01-05 00:00:00 W        890426         557917     1448343
-#>  6 2001-01-06 00:00:00 A        577401         255356      832757
-#>  7 2001-01-07 00:00:00 U        375831         169825      545656
-#>  8 2001-01-08 00:00:00 W        985221         590706     1575927
-#>  9 2001-01-09 00:00:00 W        978377         599905     1578282
-#> 10 2001-01-10 00:00:00 W        984884         602052     1586936
+#> # A tibble: 8,886 × 9
+#>    service_date        day_type    bus rail_boardings total_rides `:id`         
+#>    <dttm>              <chr>     <dbl>          <dbl>       <dbl> <chr>         
+#>  1 2001-01-01 00:00:00 U        297192         126455      423647 row-pux9_24p6…
+#>  2 2001-01-02 00:00:00 W        780827         501952     1282779 row-ekyk_7mqh…
+#>  3 2001-01-03 00:00:00 W        824923         536432     1361355 row-7knw-h4az…
+#>  4 2001-01-04 00:00:00 W        870021         550011     1420032 row-xnam~m72f…
+#>  5 2001-01-05 00:00:00 W        890426         557917     1448343 row-7pqj-uxkc…
+#>  6 2001-01-06 00:00:00 A        577401         255356      832757 row-kvuw~shzc…
+#>  7 2001-01-07 00:00:00 U        375831         169825      545656 row-3f5d.axqe…
+#>  8 2001-01-08 00:00:00 W        985221         590706     1575927 row-mxrr.356r…
+#>  9 2001-01-09 00:00:00 W        978377         599905     1578282 row-i9ii.759a…
+#> 10 2001-01-10 00:00:00 W        984884         602052     1586936 row-fedk_g2kd…
 #> # ℹ 8,876 more rows
+#> # ℹ 3 more variables: `:version` <chr>, `:created_at` <dttm>,
+#> #   `:updated_at` <dttm>
 ```
 
 Spatial data will be read as an `sf` object.
@@ -216,12 +241,12 @@ Spatial data will be read as an `sf` object.
 soc_read(
   "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"
 )
-#> Simple feature collection with 77 features and 5 fields
+#> Simple feature collection with 77 features and 9 fields
 #> Geometry type: MULTIPOLYGON
 #> Dimension:     XY
 #> Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52414 ymax: 42.02304
 #> Geodetic CRS:  WGS 84
-#> # A tibble: 77 × 6
+#> # A tibble: 77 × 10
 #>                              the_geom area_numbe community area_num_1 shape_area
 #>  *                 <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>
 #>  1 (((-87.65456 41.99817, -87.65574 …          1 ROGERS P… 1           51259902.
@@ -235,7 +260,8 @@ soc_read(
 #>  9 (((-87.80676 42.00084, -87.80676 …          9 EDISON P… 9           31636314.
 #> 10 (((-87.78002 41.99741, -87.78049 …         10 NORWOOD … 10         121959105.
 #> # ℹ 67 more rows
-#> # ℹ 1 more variable: shape_len <dbl>
+#> # ℹ 5 more variables: shape_len <dbl>, `:id` <chr>, `:version` <chr>,
+#> #   `:created_at` <dttm>, `:updated_at` <dttm>
 ```
 
 You can even perform complex queries using [Socrata Query Language
@@ -249,15 +275,17 @@ lower_west_side <- soc_read(
   )
 )
 print(lower_west_side)
-#> Simple feature collection with 1 feature and 5 fields
+#> Simple feature collection with 1 feature and 9 fields
 #> Geometry type: MULTIPOLYGON
 #> Dimension:     XY
 #> Bounding box:  xmin: -87.68807 ymin: 41.8348 xmax: -87.63516 ymax: 41.86002
 #> Geodetic CRS:  WGS 84
-#> # A tibble: 1 × 6
+#> # A tibble: 1 × 10
 #>                    the_geom area_numbe community area_num_1 shape_area shape_len
 #> *        <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>     <dbl>
 #> 1 (((-87.63516 41.85772, -…         31 LOWER WE… 31          81550724.    43229.
+#> # ℹ 4 more variables: `:id` <chr>, `:version` <chr>, `:created_at` <dttm>,
+#> #   `:updated_at` <dttm>
 
 cta_ridership <- soc_read(
   "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
