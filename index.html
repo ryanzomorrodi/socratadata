@@ -28,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="index.html">socratadata</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9002</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,7 +84,7 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ryanzomorrodi.github.io/socratadata/">socratadata</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>domains <span class="op">=</span> <span class="st">"data.cityofchicago.org"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 879 × 21</span></span>
+<span><span class="co">#&gt; # A tibble: 880 × 21</span></span>
 <span><span class="co">#&gt;    id    name  attribution owner_name provenance description created            </span></span>
 <span><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;       &lt;dttm&gt;             </span></span>
 <span><span class="co">#&gt;  1 xzkq… Curr… City of Ch… cocadmin   official   "This data… 2011-09-27 00:00:00</span></span>
@@ -97,7 +97,7 @@
 <span><span class="co">#&gt;  8 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00</span></span>
 <span><span class="co">#&gt;  9 kn9c… Cens… U.S. Censu… Jamyia     official   "This data… 2012-01-05 00:00:00</span></span>
 <span><span class="co">#&gt; 10 z8bn… Poli… Chicago Po… cocadmin   official   "Chicago P… 2010-12-22 00:00:00</span></span>
-<span><span class="co">#&gt; # ℹ 869 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 870 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
 <span><span class="co">#&gt; #   domain_metadata &lt;list&gt;, column_names &lt;list&gt;, column_labels &lt;list&gt;,</span></span>
@@ -106,20 +106,20 @@
 <p>Or with a query.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>query <span class="op">=</span> <span class="st">"bus"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 875 × 21</span></span>
+<span><span class="co">#&gt; # A tibble: 876 × 21</span></span>
 <span><span class="co">#&gt;    id    name  attribution owner_name provenance description created            </span></span>
 <span><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;       &lt;dttm&gt;             </span></span>
 <span><span class="co">#&gt;  1 ez4e… Bus … Department… NYC OpenD… official   "The Bus B… 2015-09-30 00:00:00</span></span>
-<span><span class="co">#&gt;  2 6qat… DART… Department… Delaware … official   "This cont… 2017-07-28 00:00:00</span></span>
-<span><span class="co">#&gt;  3 bd2s… KCAT… KCATA Tran… DataKC     official   "This data… 2013-04-23 00:00:00</span></span>
-<span><span class="co">#&gt;  4 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00</span></span>
+<span><span class="co">#&gt;  2 bd2s… KCAT… KCATA Tran… DataKC     official   "This data… 2013-04-23 00:00:00</span></span>
+<span><span class="co">#&gt;  3 6qat… DART… Department… Delaware … official   "This cont… 2017-07-28 00:00:00</span></span>
+<span><span class="co">#&gt;  4 ycrg… Bus … Department… NYC OpenD… official   "Bus lanes… 2020-12-04 00:00:00</span></span>
 <span><span class="co">#&gt;  5 s5c7… Bus … &lt;NA&gt;        Karl Suey… official   ""          2015-05-23 00:00:00</span></span>
 <span><span class="co">#&gt;  6 eqmj… Bron… mta.info    Elkin      official   "Bronx Tra… 2012-10-06 00:00:00</span></span>
-<span><span class="co">#&gt;  7 ycrg… Bus … Department… NYC OpenD… official   "Bus lanes… 2020-12-04 00:00:00</span></span>
+<span><span class="co">#&gt;  7 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00</span></span>
 <span><span class="co">#&gt;  8 nmjv… Bus … Transit Se… City of M… official   "***NOTE: … 2019-06-03 00:00:00</span></span>
 <span><span class="co">#&gt;  9 cudb… MTA … Metropolit… NY Open D… official   "Bus Speed… 2021-12-29 00:00:00</span></span>
 <span><span class="co">#&gt; 10 6uva… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-31 00:00:00</span></span>
-<span><span class="co">#&gt; # ℹ 865 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 866 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
 <span><span class="co">#&gt; #   domain_metadata &lt;list&gt;, column_names &lt;list&gt;, column_labels &lt;list&gt;,</span></span>
@@ -128,20 +128,20 @@
 <p>Or with categories.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>categories <span class="op">=</span> <span class="st">"transportation"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 470 × 21</span></span>
+<span><span class="co">#&gt; # A tibble: 457 × 21</span></span>
 <span><span class="co">#&gt;    id    name  attribution owner_name provenance description created            </span></span>
 <span><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;       &lt;dttm&gt;             </span></span>
-<span><span class="co">#&gt;  1 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00</span></span>
-<span><span class="co">#&gt;  2 wdpr… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00</span></span>
+<span><span class="co">#&gt;  1 pksj… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00</span></span>
+<span><span class="co">#&gt;  2 f57x… Vita… &lt;NA&gt;        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00</span></span>
 <span><span class="co">#&gt;  3 2tq4… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-22 00:00:00</span></span>
-<span><span class="co">#&gt;  4 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00</span></span>
-<span><span class="co">#&gt;  5 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00</span></span>
-<span><span class="co">#&gt;  6 pksj… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00</span></span>
-<span><span class="co">#&gt;  7 f57x… Vita… &lt;NA&gt;        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00</span></span>
-<span><span class="co">#&gt;  8 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00</span></span>
-<span><span class="co">#&gt;  9 w96p… Dail… Maryland T… Titlow, K… official   "The Daily… 2020-05-19 00:00:00</span></span>
-<span><span class="co">#&gt; 10 muzh… Calg… The City o… Calgary O… official   "Calgary T… 2018-09-07 00:00:00</span></span>
-<span><span class="co">#&gt; # ℹ 460 more rows</span></span>
+<span><span class="co">#&gt;  4 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00</span></span>
+<span><span class="co">#&gt;  5 cwsm… Quar… New York S… NY Open D… official   "The Quart… 2013-02-15 00:00:00</span></span>
+<span><span class="co">#&gt;  6 muzh… Calg… The City o… Calgary O… official   "Calgary T… 2018-09-07 00:00:00</span></span>
+<span><span class="co">#&gt;  7 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00</span></span>
+<span><span class="co">#&gt;  8 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00</span></span>
+<span><span class="co">#&gt;  9 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00</span></span>
+<span><span class="co">#&gt; 10 w96p… Dail… Maryland T… Titlow, K… official   "The Daily… 2020-05-19 00:00:00</span></span>
+<span><span class="co">#&gt; # ℹ 447 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
 <span><span class="co">#&gt; #   domain_metadata &lt;list&gt;, column_names &lt;list&gt;, column_labels &lt;list&gt;,</span></span>
@@ -158,13 +158,13 @@
 <span><span class="co">#&gt;  1 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00</span></span>
 <span><span class="co">#&gt;  2 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00</span></span>
 <span><span class="co">#&gt;  3 ygr5… Towe… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00</span></span>
-<span><span class="co">#&gt;  4 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00</span></span>
+<span><span class="co">#&gt;  4 5k2z… Relo… City of Ch… cocadmin   official   "This data… 2011-09-30 00:00:00</span></span>
 <span><span class="co">#&gt;  5 m6dm… Tran… City of Ch… Jonathan … official   "&lt;b&gt;This d… 2018-10-02 00:00:00</span></span>
-<span><span class="co">#&gt;  6 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00</span></span>
-<span><span class="co">#&gt;  7 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00</span></span>
-<span><span class="co">#&gt;  8 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00</span></span>
-<span><span class="co">#&gt;  9 t2qc… Chic… &lt;NA&gt;        cocadmin   official   "This data… 2011-11-20 00:00:00</span></span>
-<span><span class="co">#&gt; 10 pfsx… Aver… City of Ch… cocadmin   official   "This data… 2010-04-22 00:00:00</span></span>
+<span><span class="co">#&gt;  6 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00</span></span>
+<span><span class="co">#&gt;  7 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00</span></span>
+<span><span class="co">#&gt;  8 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00</span></span>
+<span><span class="co">#&gt;  9 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00</span></span>
+<span><span class="co">#&gt; 10 hhkd… Spee… City of Ch… cocadmin   official   "This data… 2014-08-08 00:00:00</span></span>
 <span><span class="co">#&gt; # ℹ 76 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
@@ -184,8 +184,8 @@
 <span><span class="co">#&gt;  2 pnau… CTA … Chicago Tr… CTA        official   "This list… 2011-08-12 00:00:00</span></span>
 <span><span class="co">#&gt;  3 t2rn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00</span></span>
 <span><span class="co">#&gt;  4 5neh… CTA … Chicago Tr… CTA        official   "This list… 2011-08-05 00:00:00</span></span>
-<span><span class="co">#&gt;  5 bynn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00</span></span>
-<span><span class="co">#&gt;  6 8pix… CTA … Chicago Tr… CTA        official   "This list… 2011-08-04 00:00:00</span></span>
+<span><span class="co">#&gt;  5 8pix… CTA … Chicago Tr… CTA        official   "This list… 2011-08-04 00:00:00</span></span>
+<span><span class="co">#&gt;  6 bynn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00</span></span>
 <span><span class="co">#&gt;  7 w8km… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00</span></span>
 <span><span class="co">#&gt;  8 mq3i… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00</span></span>
 <span><span class="co">#&gt;  9 jyb9… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00</span></span>
@@ -214,36 +214,48 @@
 <div class="section level3">
 <h3 id="download-data">Download data<a class="anchor" aria-label="anchor" href="#download-data"></a>
 </h3>
+<p><code>socratadata</code> supports unauthenticated requests via the v2.1 API. It is, however, recommended that you <a href="https://support.socrata.com/hc/en-us/articles/210138558-Generating-App-Tokens-and-API-Keys" class="external-link">obtain an api key</a> to make your code more future-proof. <code><a href="reference/soc_read.html">soc_read()</a></code> will automatically authenticate with the <code>"soc_api_key_id"</code> and <code>"soc_api_key_secret"</code> environment variables.</p>
+<p>You can create an <code>.Renviron</code> file and add your keys to it like so:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode txt"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>soc_api_key_id="your_id_here"</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>soc_api_key_secret="your_secret_here"</span></code></pre></div>
+<p>And retrieve those keys using</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html" class="external-link">Sys.getenv</a></span><span class="op">(</span><span class="st">"soc_api_key_id"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "your_id_here"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html" class="external-link">Sys.getenv</a></span><span class="op">(</span><span class="st">"soc_api_key_secret"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "your_secret_here"</span></span></code></pre></div>
 <p>Use <code><a href="reference/soc_read.html">soc_read()</a></code> to read a socrata dataset into R.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 8,886 × 5</span></span>
-<span><span class="co">#&gt;    service_date        day_type    bus rail_boardings total_rides</span></span>
-<span><span class="co">#&gt;    &lt;dttm&gt;              &lt;chr&gt;     &lt;dbl&gt;          &lt;dbl&gt;       &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt;  1 2001-01-01 00:00:00 U        297192         126455      423647</span></span>
-<span><span class="co">#&gt;  2 2001-01-02 00:00:00 W        780827         501952     1282779</span></span>
-<span><span class="co">#&gt;  3 2001-01-03 00:00:00 W        824923         536432     1361355</span></span>
-<span><span class="co">#&gt;  4 2001-01-04 00:00:00 W        870021         550011     1420032</span></span>
-<span><span class="co">#&gt;  5 2001-01-05 00:00:00 W        890426         557917     1448343</span></span>
-<span><span class="co">#&gt;  6 2001-01-06 00:00:00 A        577401         255356      832757</span></span>
-<span><span class="co">#&gt;  7 2001-01-07 00:00:00 U        375831         169825      545656</span></span>
-<span><span class="co">#&gt;  8 2001-01-08 00:00:00 W        985221         590706     1575927</span></span>
-<span><span class="co">#&gt;  9 2001-01-09 00:00:00 W        978377         599905     1578282</span></span>
-<span><span class="co">#&gt; 10 2001-01-10 00:00:00 W        984884         602052     1586936</span></span>
-<span><span class="co">#&gt; # ℹ 8,876 more rows</span></span></code></pre></div>
+<span><span class="co">#&gt; # A tibble: 8,886 × 9</span></span>
+<span><span class="co">#&gt;    service_date        day_type    bus rail_boardings total_rides `:id`         </span></span>
+<span><span class="co">#&gt;    &lt;dttm&gt;              &lt;chr&gt;     &lt;dbl&gt;          &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;         </span></span>
+<span><span class="co">#&gt;  1 2001-01-01 00:00:00 U        297192         126455      423647 row-pux9_24p6…</span></span>
+<span><span class="co">#&gt;  2 2001-01-02 00:00:00 W        780827         501952     1282779 row-ekyk_7mqh…</span></span>
+<span><span class="co">#&gt;  3 2001-01-03 00:00:00 W        824923         536432     1361355 row-7knw-h4az…</span></span>
+<span><span class="co">#&gt;  4 2001-01-04 00:00:00 W        870021         550011     1420032 row-xnam~m72f…</span></span>
+<span><span class="co">#&gt;  5 2001-01-05 00:00:00 W        890426         557917     1448343 row-7pqj-uxkc…</span></span>
+<span><span class="co">#&gt;  6 2001-01-06 00:00:00 A        577401         255356      832757 row-kvuw~shzc…</span></span>
+<span><span class="co">#&gt;  7 2001-01-07 00:00:00 U        375831         169825      545656 row-3f5d.axqe…</span></span>
+<span><span class="co">#&gt;  8 2001-01-08 00:00:00 W        985221         590706     1575927 row-mxrr.356r…</span></span>
+<span><span class="co">#&gt;  9 2001-01-09 00:00:00 W        978377         599905     1578282 row-i9ii.759a…</span></span>
+<span><span class="co">#&gt; 10 2001-01-10 00:00:00 W        984884         602052     1586936 row-fedk_g2kd…</span></span>
+<span><span class="co">#&gt; # ℹ 8,876 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 3 more variables: `:version` &lt;chr&gt;, `:created_at` &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   `:updated_at` &lt;dttm&gt;</span></span></code></pre></div>
 <p>Spatial data will be read as an <code>sf</code> object.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; Simple feature collection with 77 features and 5 fields</span></span>
+<span><span class="co">#&gt; Simple feature collection with 77 features and 9 fields</span></span>
 <span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
 <span><span class="co">#&gt; Dimension:     XY</span></span>
 <span><span class="co">#&gt; Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52414 ymax: 42.02304</span></span>
 <span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
-<span><span class="co">#&gt; # A tibble: 77 × 6</span></span>
+<span><span class="co">#&gt; # A tibble: 77 × 10</span></span>
 <span><span class="co">#&gt;                              the_geom area_numbe community area_num_1 shape_area</span></span>
 <span><span class="co">#&gt;  *                 &lt;MULTIPOLYGON [°]&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt;  1 (((-87.65456 41.99817, -87.65574 …          1 ROGERS P… 1           51259902.</span></span>
@@ -257,9 +269,10 @@
 <span><span class="co">#&gt;  9 (((-87.80676 42.00084, -87.80676 …          9 EDISON P… 9           31636314.</span></span>
 <span><span class="co">#&gt; 10 (((-87.78002 41.99741, -87.78049 …         10 NORWOOD … 10         121959105.</span></span>
 <span><span class="co">#&gt; # ℹ 67 more rows</span></span>
-<span><span class="co">#&gt; # ℹ 1 more variable: shape_len &lt;dbl&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # ℹ 5 more variables: shape_len &lt;dbl&gt;, `:id` &lt;chr&gt;, `:version` &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   `:created_at` &lt;dttm&gt;, `:updated_at` &lt;dttm&gt;</span></span></code></pre></div>
 <p>You can even perform complex queries using <a href="https://dev.socrata.com/docs/queries/" class="external-link">Socrata Query Language (SoQL)</a> via <code><a href="reference/soc_query.html">soc_query()</a></code>.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">lower_west_side</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"</span>,</span>
 <span>  query <span class="op">=</span> <span class="fu"><a href="reference/soc_query.html">soc_query</a></span><span class="op">(</span></span>
@@ -267,15 +280,17 @@
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">lower_west_side</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Simple feature collection with 1 feature and 5 fields</span></span>
+<span><span class="co">#&gt; Simple feature collection with 1 feature and 9 fields</span></span>
 <span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
 <span><span class="co">#&gt; Dimension:     XY</span></span>
 <span><span class="co">#&gt; Bounding box:  xmin: -87.68807 ymin: 41.8348 xmax: -87.63516 ymax: 41.86002</span></span>
 <span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
-<span><span class="co">#&gt; # A tibble: 1 × 6</span></span>
+<span><span class="co">#&gt; # A tibble: 1 × 10</span></span>
 <span><span class="co">#&gt;                    the_geom area_numbe community area_num_1 shape_area shape_len</span></span>
 <span><span class="co">#&gt; *        &lt;MULTIPOLYGON [°]&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt; 1 (((-87.63516 41.85772, -…         31 LOWER WE… 31          81550724.    43229.</span></span>
+<span><span class="co">#&gt; # ℹ 4 more variables: `:id` &lt;chr&gt;, `:version` &lt;chr&gt;, `:created_at` &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   `:updated_at` &lt;dttm&gt;</span></span>
 <span></span>
 <span><span class="va">cta_ridership</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data"</span>,</span>
@@ -308,7 +323,7 @@
 <h3 id="extract-metadata">Extract metadata<a class="anchor" aria-label="anchor" href="#extract-metadata"></a>
 </h3>
 <p>Access a dataset’s metadata using <code><a href="reference/soc_metadata.html">soc_metadata()</a></code>.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_metadata.html">soc_metadata</a></span><span class="op">(</span><span class="va">cta_ridership</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ID: wrvz-psew</span></span>
 <span><span class="co">#&gt; Name: Taxi Trips (2013-2023)</span></span>
@@ -364,7 +379,7 @@
 <span><span class="co">#&gt; https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew</span></span>
 <span><span class="co">#&gt; License: See Terms of Use</span></span></code></pre></div>
 <p>Or explore a dataset’s metadata using it’s url.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_metadata.html">soc_metadata</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"</span></span>
 <span><span class="op">)</span></span>

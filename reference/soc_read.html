@@ -9,7 +9,7 @@ Metadata is also returned as attributes on the returned object."><meta property=
 
     <a class="navbar-brand me-2" href="../index.html">socratadata</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9002</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,15 @@ Metadata is also returned as attributes on the returned object.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">soc_read</span><span class="op">(</span><span class="va">url</span>, query <span class="op">=</span> <span class="fu"><a href="soc_query.html">soc_query</a></span><span class="op">(</span><span class="op">)</span>, alias <span class="op">=</span> <span class="st">"label"</span>, page_size <span class="op">=</span> <span class="fl">10000</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">soc_read</span><span class="op">(</span></span>
+<span>  <span class="va">url</span>,</span>
+<span>  query <span class="op">=</span> <span class="fu"><a href="soc_query.html">soc_query</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  alias <span class="op">=</span> <span class="st">"label"</span>,</span>
+<span>  page_size <span class="op">=</span> <span class="fl">10000</span>,</span>
+<span>  include_synthetic_cols <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  api_key_id <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  api_key_secret <span class="op">=</span> <span class="cn">NULL</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -53,7 +61,7 @@ Metadata is also returned as attributes on the returned object.</p>
 
 
 <dt id="arg-query">query<a class="anchor" aria-label="anchor" href="#arg-query"></a></dt>
-<dd><p><code><a href="soc_query.html">soc_query()</a></code>; Query parameters specification</p></dd>
+<dd><p>string or <code><a href="soc_query.html">soc_query()</a></code>; Query parameters specification</p></dd>
 
 
 <dt id="arg-alias">alias<a class="anchor" aria-label="anchor" href="#arg-alias"></a></dt>
@@ -65,6 +73,20 @@ Metadata is also returned as attributes on the returned object.</p>
 
 <dt id="arg-page-size">page_size<a class="anchor" aria-label="anchor" href="#arg-page-size"></a></dt>
 <dd><p>whole number; Maximum number of rows returned per request.</p></dd>
+
+
+<dt id="arg-include-synthetic-cols">include_synthetic_cols<a class="anchor" aria-label="anchor" href="#arg-include-synthetic-cols"></a></dt>
+<dd><p>logical; Should synthetic columns be included?</p></dd>
+
+
+<dt id="arg-api-key-id">api_key_id<a class="anchor" aria-label="anchor" href="#arg-api-key-id"></a></dt>
+<dd><p>string; API key ID to authenticate requests. (Can also be stored as `"soc_api_key_id"“
+environment variable)</p></dd>
+
+
+<dt id="arg-api-key-secret">api_key_secret<a class="anchor" aria-label="anchor" href="#arg-api-key-secret"></a></dt>
+<dd><p>string; API key secret to authenticate requests. (Can also be stored as `"soc_api_key_secret"“
+environment variable)</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -141,6 +163,7 @@ If the dataset contains a single non-nested geospatial field, it will be returne
 <span class="r-in"><span><span class="fu">soc_read</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Utilizing v2.1 API. `include_synthetic_cols` will be ignored. Provide an `api_key_id` and `api_key_secret` to perform a v3 request.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,935 × 10</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    source earthquake_id version datetime            magnitude depth</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
@@ -167,6 +190,7 @@ If the dataset contains a single non-nested geospatial field, it will be returne
 <span class="r-in"><span>    order_by <span class="op">=</span> <span class="st">"avg_magnitude DESC"</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Utilizing v2.1 API. `include_synthetic_cols` will be ignored. Provide an `api_key_id` and `api_key_secret` to perform a v3 request.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 40 × 3</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    region                                avg_magnitude count</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
