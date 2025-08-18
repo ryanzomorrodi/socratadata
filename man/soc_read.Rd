@@ -4,12 +4,20 @@
 \alias{soc_read}
 \title{Read a Socrata Dataset into R}
 \usage{
-soc_read(url, query = soc_query(), alias = "label", page_size = 10000)
+soc_read(
+  url,
+  query = soc_query(),
+  alias = "label",
+  page_size = 10000,
+  include_synthetic_cols = TRUE,
+  api_key_id,
+  api_key_secret
+)
 }
 \arguments{
 \item{url}{string; URL of the Socrata dataset.}
 
-\item{query}{\code{soc_query()}; Query parameters specification}
+\item{query}{string or \code{soc_query()}; Query parameters specification}
 
 \item{alias}{string; Use of field alias values. There are three options:
 \itemize{
@@ -19,6 +27,12 @@ soc_read(url, query = soc_query(), alias = "label", page_size = 10000)
 }}
 
 \item{page_size}{whole number; Maximum number of rows returned per request.}
+
+\item{include_synthetic_cols}{logical; Should synthetic columns be included?}
+
+\item{api_key_id}{string; API key ID to authenticate requests.}
+
+\item{api_key_secret}{string; API key secret to authenticate requests.}
 }
 \value{
 A tibble with additional attributes containing dataset metadata.

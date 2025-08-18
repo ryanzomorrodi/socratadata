@@ -130,10 +130,24 @@ fn parse_data_json(
     as_rlist(col_names, columns)
 }
 
+#[extendr]
+fn is_empty_raw_json(raw_json: Robj) -> bool {
+    let bytes = raw_json.as_raw_slice().unwrap();
+
+    match serde_json::from_slice::<Value>(bytes) {
+        Ok(Value::Array(arr)) => arr.is_empty(),
+        Ok(Value::Object(map)) => map.is_empty(),
+        Ok(Value::Null) => true,
+        Ok(_) => false,
+        Err(_) => false,
+    }
+}
+
 // Macro to generate exports.
 // This ensures exported functions are registered with R.
 // See corresponding C code in `entrypoint.c`.
 extendr_module! {
     mod socratadata;
     fn parse_data_json;
+    fn is_empty_raw_json;
 }

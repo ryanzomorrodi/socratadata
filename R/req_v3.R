@@ -46,9 +46,6 @@ iterate_with_json_body_offset <- function(resp, req) {
 }
 
 is_empty_resp <- function(resp) {
-  body_string <- httr2::resp_body_string(resp)
-  if (gsub("\\s+", "", body_string) %in% c("{}", "[]", "")) {
-    return(TRUE)
-  }
-  FALSE
+  httr2::resp_body_raw(resp) |>
+    is_empty_raw_json()
 }

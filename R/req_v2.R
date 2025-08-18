@@ -67,11 +67,3 @@ iterate_with_offset_and_limit <- function(
     }
   }
 }
-
-is_empty_resp <- function(resp) {
-  body_string <- httr2::resp_body_string(resp)
-  if (gsub("\\s+", "", body_string) %in% c("{}", "[]", "")) {
-    return(TRUE)
-  }
-  FALSE
-}

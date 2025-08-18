@@ -5,7 +5,7 @@
 \title{Build a Socrata Query Object}
 \usage{
 soc_query(
-  select = NULL,
+  select = "*",
   where = NULL,
   group_by = NULL,
   having = NULL,
