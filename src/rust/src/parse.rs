@@ -214,13 +214,19 @@ pub fn parse_location(
 
     let lat = location
         .and_then(|loc| loc.get("latitude"))
-        .and_then(|v| v.as_str())
-        .and_then(|s| s.parse::<f64>().ok());
+        .and_then(|v| {
+            v.as_f64().or_else(|| {
+                v.as_str().and_then(|s| s.parse::<f64>().ok())
+            })
+        });
 
     let lon = location
         .and_then(|loc| loc.get("longitude"))
-        .and_then(|v| v.as_str())
-        .and_then(|s| s.parse::<f64>().ok());
+        .and_then(|v| {
+            v.as_f64().or_else(|| {
+                v.as_str().and_then(|s| s.parse::<f64>().ok())
+            })
+        });
 
     let latlon = match (lat, lon) {
         (Some(lat), Some(lon)) => Some((lat, lon)),
