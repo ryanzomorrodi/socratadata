@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2asz-g9qq.json?%24select=plain_text_column%2C%20formatted_text_column%20as%20html&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Tue, 22 Jul 2025 20:42:02 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 05:09:00 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMzQxNF82XzIyOXo3TkRPaG4xVE5UTFdHd2NqMDNJMmlSLW5UOA-ZbpLXlSVjpwWsMv6ncsQe4B-2QQ--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"plain_text_column\",\"html\"]", 
@@ -10,8 +10,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2as
         `Last-Modified` = "Mon, 16 Sep 2019 23:13:03 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "cc237b24fecdc396d26fc2aa848ff25f"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "1b118ce7846073f1721a54a0da3429a3"), class = "httr2_headers"), 
     body = charToRaw("[{\"plain_text_column\":\"Sample Text\",\"html\":\"<p>Sample <strong>Rich Text</strong></p>\"}]\n"), 
-    timing = c(redirect = 0, namelookup = 1.2e-05, connect = 0, 
-    pretransfer = 5.8e-05, starttransfer = 0.207351, total = 0.207447
+    timing = c(redirect = 0, namelookup = 2.3e-05, connect = 0, 
+    pretransfer = 8.6e-05, starttransfer = 0.298915, total = 0.298991
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

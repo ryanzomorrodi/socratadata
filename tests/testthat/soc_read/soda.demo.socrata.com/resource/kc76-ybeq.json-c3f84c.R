@@ -1,16 +1,16 @@
-structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/kc76-ybeq.json?%24limit=10000", 
+structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/kc76-ybeq.json?%24select=%2A&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Tue, 22 Jul 2025 20:42:09 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 05:09:25 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zOTEyOF8yXzc2NTZ2MnZmNWU0YjQtSlJGaXVCR1RsSEl1c2NQSmc--gziysq3H7FTbbqGjMb_tCL1vwqRTGw---gzip\"", 
         `X-SODA2-Fields` = "[\"x\",\"y\"]", `X-SODA2-Types` = "[\"number\",\"number\"]", 
         `X-SODA2-Data-Out-Of-Date` = "false", `X-SODA2-Truth-Last-Modified` = "Fri, 24 May 2019 17:40:18 GMT", 
         `X-SODA2-Secondary-Last-Modified` = "Fri, 24 May 2019 17:40:18 GMT", 
         `Last-Modified` = "Fri, 24 May 2019 17:40:18 GMT", Vary = "Accept-Encoding", 
-        `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
+        `Content-Encoding` = "gzip", Age = "2", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "8583a9dbd7a37e49116870b7e24f841c"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "0ead829a4958294514ba733f26dea55d"), class = "httr2_headers"), 
     body = charToRaw("[{\"x\":\"112\",\"y\":\"663\"}\n,{\"x\":\"-798\",\"y\":\"-93\"}\n,{\"x\":\"317\",\"y\":\"-58\"}\n,{\"x\":\"-853\",\"y\":\"-797\"}\n,{\"x\":\"185\",\"y\":\"102\"}]\n"), 
-    timing = c(redirect = 0, namelookup = 1.2e-05, connect = 0, 
-    pretransfer = 7.8e-05, starttransfer = 0.193175, total = 0.193252
+    timing = c(redirect = 0, namelookup = 1.1e-05, connect = 0, 
+    pretransfer = 4.9e-05, starttransfer = 0.194458, total = 0.194552
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

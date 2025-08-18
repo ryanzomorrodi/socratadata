@@ -1,6 +1,6 @@
-structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2646-ez2p.json?%24limit=10000", 
+structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/2646-ez2p.json?%24select=%2A&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Tue, 22 Jul 2025 20:42:13 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 05:09:29 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMDE0NF8yXzExM2x2YTdBak0yM0QxOTExdEg2MmYzbzFKWUFN---gzipJLo3Ni65qDfm912j4UsbJQ_vXoc--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"domain\",\"name\",\"logo\",\"tags\",\"email\"]", 
@@ -10,8 +10,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/264
         `Last-Modified` = "Tue, 26 Apr 2016 23:01:00 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "e171094107ed0017ae43bb0af4f16f6a"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "a85e599a0bd1392cadfa59c9d7d59c36"), class = "httr2_headers"), 
     body = charToRaw("[{\"domain\":\"data.seattle.gov\",\"name\":\"City of Seattle\",\"tags\":\"seattle, open data, washington, open government\",\"email\":\"open-data@seattle.gov\"}\n,{\"domain\":\"data.sfgov.org\",\"name\":\"City of San Francisco\",\"tags\":\"san francisco, california, open data\",\"email\":\"open-data@sfgov.org\"}]\n"), 
-    timing = c(redirect = 0, namelookup = 2.5e-05, connect = 0, 
-    pretransfer = 7.8e-05, starttransfer = 0.207107, total = 0.207173
+    timing = c(redirect = 0, namelookup = 1.6e-05, connect = 0, 
+    pretransfer = 0.000116, starttransfer = 0.290249, total = 0.290371
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

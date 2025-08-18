@@ -1,6 +1,6 @@
-structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/7caz-dk9s.json?%24limit=10000", 
+structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/7caz-dk9s.json?%24select=%2A&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Tue, 22 Jul 2025 20:42:14 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 05:09:30 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"aG90ZWwuNDU5MjJfMl85eVZQb0R1YzhPdi01SmVwUllzd1VPY003OVY4---gzip56Sn3n4JEoLSlwgdaheGCuf8Kuk--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"url_with_description\",\"url_without_description\"]", 
@@ -10,8 +10,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/7ca
         `Last-Modified` = "Wed, 14 Oct 2020 19:54:15 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "38749f52a363dc8d8990f1f02bc96d88"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "e310fadf7ccc30cdda99ebfc8925553c"), class = "httr2_headers"), 
     body = charToRaw("[{\"url_with_description\":{\"url\":\"https://opendata.cityofnewyork.us/\",\"description\":\"I'm Description Text!\"},\"url_without_description\":{\"url\":\"https://opendata.cityofnewyork.us/\"}}\n,{\"url_with_description\":{\"url\":\"https://data.sfgov.org/\",\"description\":\"I'm Description Text!\"},\"url_without_description\":{\"url\":\"https://data.sfgov.org/\"}}\n,{\"url_with_description\":{\"url\":\"https://data.cityofchicago.org/\",\"description\":\"I'm Description Text!\"},\"url_without_description\":{\"url\":\"https://data.cityofchicago.org/\"}}]\n"), 
-    timing = c(redirect = 0, namelookup = 6e-05, connect = 0, 
-    pretransfer = 0.000156, starttransfer = 0.193443, total = 0.193515
+    timing = c(redirect = 0, namelookup = 1.3e-05, connect = 0, 
+    pretransfer = 6.1e-05, starttransfer = 0.292273, total = 0.292492
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

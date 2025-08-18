@@ -19,3 +19,15 @@ get_four_by_four <- function(url) {
 valid_four_by_four <- function(four_by_four) {
   grepl("^[a-z0-9]{4}-[a-z0-9]{4}$", four_by_four)
 }
+
+get_base_url <- function(url) {
+  httr2::url_modify(
+    url,
+    username = NULL,
+    password = NULL,
+    port = NULL,
+    path = NULL,
+    query = NULL,
+    fragment = NULL
+  )
+}

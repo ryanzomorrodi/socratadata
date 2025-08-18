@@ -1,6 +1,6 @@
 structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/jatp-jqxg.json?%24select=time%2C%20updated&%24limit=10000", 
     status_code = 200L, headers = structure(list(Server = "nginx", 
-        Date = "Tue, 22 Jul 2025 20:42:12 GMT", `Content-Type` = "application/json;charset=utf-8", 
+        Date = "Mon, 18 Aug 2025 05:09:28 GMT", `Content-Type` = "application/json;charset=utf-8", 
         `Transfer-Encoding` = "chunked", Connection = "keep-alive", 
         `Access-Control-Allow-Origin` = "*", ETag = "\"Zm94dHJvdC4zMDE4MV8yXzIxTmRMZDRNQUxNa1dOUzJFWWRKMVRrNWFJem04---gzipXsRL0IoA6XSNwiE2yhuvpj2AReQ--gzip--gzip\"", 
         `X-SODA2-Fields` = "[\"time\",\"updated\"]", `X-SODA2-Types` = "[\"floating_timestamp\",\"floating_timestamp\"]", 
@@ -9,8 +9,8 @@ structure(list(method = "GET", url = "https://soda.demo.socrata.com/resource/jat
         `Last-Modified` = "Tue, 26 Apr 2016 23:01:08 GMT", Vary = "Accept-Encoding", 
         `Content-Encoding` = "gzip", Age = "0", `X-Socrata-Region` = "aws-us-east-1-fedramp-prod", 
         `Strict-Transport-Security` = "max-age=31536000; includeSubDomains", 
-        `X-Socrata-RequestId` = "b255875a27384ad63e9e1ba0fb201ed9"), class = "httr2_headers"), 
+        `X-Socrata-RequestId` = "9b70ad5f30a85157694b11c64070070b"), class = "httr2_headers"), 
     body = charToRaw("[{\"time\":\"2013-09-05T22:05:50.000\",\"updated\":\"2013-09-05T22:19:42.000\"}\n,{\"time\":\"2013-09-05T21:57:06.000\",\"updated\":\"2013-09-05T22:19:21.000\"}\n,{\"time\":\"2013-09-05T21:52:35.000\",\"updated\":\"2013-09-05T22:09:12.000\"}\n,{\"time\":\"2013-09-05T21:46:36.000\",\"updated\":\"2013-09-05T22:08:27.000\"}\n,{\"time\":\"2013-09-05T21:32:19.000\",\"updated\":\"2013-09-05T21:43:53.000\"}\n,{\"time\":\"2014-05-05T22:36:44.000\",\"updated\":\"2014-05-05T22:39:34.000\"}\n,{\"time\":\"2014-05-05T22:04:10.000\",\"updated\":\"2014-05-05T22:24:13.000\"}\n,{\"time\":\"2014-05-05T22:03:30.000\",\"updated\":\"2014-05-05T22:24:15.000\"}\n,{\"time\":\"2014-05-05T21:49:43.000\",\"updated\":\"2014-05-05T22:03:04.000\"}\n,{\"time\":\"2014-05-05T21:46:58.000\",\"updated\":\"2014-05-05T22:24:18.000\"}]\n"), 
-    timing = c(redirect = 0, namelookup = 2e-05, connect = 0, 
-    pretransfer = 7.8e-05, starttransfer = 0.29556, total = 0.295609
+    timing = c(redirect = 0, namelookup = 1.3e-05, connect = 0, 
+    pretransfer = 7e-05, starttransfer = 0.292424, total = 0.292523
     ), cache = new.env(parent = emptyenv())), class = "httr2_response")

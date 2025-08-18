@@ -78,113 +78,72 @@ soc_read <- function(
   check_string(alias)
   rlang::arg_match(alias, c("label", "replace", "drop"))
 
-  url_base <- httr2::url_modify(
-    url,
-    username = NULL,
-    password = NULL,
-    port = NULL,
-    path = NULL,
-    query = NULL,
-    fragment = NULL
-  )
+  base_url <- get_base_url(url)
   four_by_four <- get_four_by_four(url)
 
-  resps <- iterative_requests(url_base, four_by_four, query, page_size)
+  create_v2_request(base_url, four_by_four) |>
+    set_v2_options(query, page_size) |>
+    perform_v2_iteration(page_size, query$limit) |>
+    parse_resps() |>
+    convert_list_to_df() |>
+    set_metdata(url, alias)
+}
 
-  res_list <- parse_data_json(
-    json_strs = lapply(
-      resps,
-      httr2::resp_body_raw
-    ),
-    header_col_names = httr2::resp_header(resps[[1]], "X-SODA2-Fields"),
-    header_col_types = httr2::resp_header(resps[[1]], "X-SODA2-Types"),
-    meta_url = httr2::url_modify(
-      url_base,
-      path = paste0("api/views/", four_by_four)
-    )
+parse_resps <- function(resps) {
+  resp_strings <- lapply(resps, httr2::resp_body_raw)
+  header_col_names <- httr2::resp_header(resps[[1]], "X-SODA2-Fields")
+  header_col_types <- httr2::resp_header(resps[[1]], "X-SODA2-Types")
+
+  resp_url <- httr2::resp_url(resps[[1]])
+  base_url <- get_base_url(resp_url)
+  four_by_four <- get_four_by_four(resp_url)
+  meta_url <- httr2::url_modify(
+    base_url,
+    path = paste0("api/views/", four_by_four)
   )
 
-  col_types <- httr2::resp_header(resps[[1]], "X-SODA2-Types") |>
-    json_header_to_vec()
-  for (i in seq_along(res_list)) {
-    if (col_types[i] %in% c("url", "location")) {
-      res_list[[i]] <- tibble::as_tibble(res_list[[i]])
-    } else if (
-      col_types[i] %in%
-        c("point", "line", "polygon", "multipoint", "multiline", "multipolygon")
-    ) {
-      res_list[[i]] <- sf::st_sfc(res_list[[i]])
-    }
+  parse_data_json(resp_strings, header_col_names, header_col_types, meta_url)
+}
 
-    if (col_types[i] == "location") {
-      res_list[[i]]$geometry <- sf::st_sfc(res_list[[i]]$geometry)
-    }
-  }
+convert_list_to_df <- function(parsed_list) {
+  spatial_cols <- vapply(parsed_list, is_sfc, logical(1))
+  list_cols <- vapply(parsed_list, is.list, logical(1)) & !spatial_cols
+  location_cols <- vapply(parsed_list, is_location, logical(1))
 
-  result <- tibble::as_tibble(res_list)
-  if (
-    sum(vapply(res_list, \(x) inherits(x, "sfc"), FUN.VALUE = logical(1))) == 1
-  ) {
+  parsed_list[spatial_cols] <- lapply(parsed_list[spatial_cols], sf::st_sfc)
+  parsed_list[list_cols] <- lapply(parsed_list[list_cols], tibble::as_tibble)
+  parsed_list[location_cols] <- lapply(
+    parsed_list[location_cols],
+    function(col) {
+      col$geometry <- sf::st_sfc(col$geometry)
+      col
+    }
+  )
+
+  result <- tibble::as_tibble(parsed_list)
+  if (sum(spatial_cols) == 1) {
     result <- sf::st_as_sf(result)
   }
 
-  set_metadata(result, url, alias)
+  result
 }
 
-json_header_to_vec <- function(json_string) {
-  cleaned <- gsub('^\\[|\\]$', '', json_string)
-  items <- strsplit(cleaned, '\\s*,\\s*')[[1]]
-  gsub('^"|"$', '', items)
+is_sfc <- function(x) {
+  inherits(x, "sfc")
 }
 
-iterative_requests <- function(url_base, four_by_four, query, page_size) {
-  req <- httr2::request(url_base) |>
-    httr2::req_template("GET /resource/{four_by_four}.json") |>
-    httr2::req_url_query(!!!query)
-
-  nrow_to_get <- min(query$`$limit`, Inf)
-  nrow_got <- 0
-  nrow_last_req <- min(page_size, nrow_to_get)
-
-  req <- httr2::req_url_query(req, `$limit` = nrow_last_req)
-
-  resps <- httr2::req_perform_iterative(
-    req,
-    next_req = function(resp, req) {
-      nrow_got <<- nrow_got + nrow_last_req
-      if (nrow_got >= nrow_to_get) {
-        return(NULL)
-      } else if (is.finite(nrow_to_get)) {
-        httr2::signal_total_pages(ceiling(nrow_to_get / page_size))
-      }
-
-      body_string <- httr2::resp_body_string(resp)
-      if (gsub("\\s+", "", body_string) %in% c("{}", "[]", "")) {
-        return(NULL)
-      }
-
-      httr2::req_url_query(
-        req,
-        `$offset` = nrow_got,
-        `$limit` = min(page_size, nrow_to_get - nrow_got)
-      )
-    },
-    max_reqs = Inf
-  )
-
-  resps
+is_location <- function(x) {
+  is.list(x) && is_sfc(x$geometry)
 }
 
-set_metadata <- function(result, url, alias) {
+set_metdata <- function(result, url, alias) {
   metadata <- soc_metadata_from_url(url)
   for (i in seq_along(metadata)) {
     attr(result, names(metadata)[i]) <- metadata[[i]]
   }
 
-  col_alias <- tibble::deframe(metadata$columns[c(
-    "column_name",
-    "column_label"
-  )])
+  col_alias <- metadata$columns$column_label
+  names(col_alias) <- metadata$columns$column_name
   if (alias == "replace") {
     colnames(result) <- col_alias[colnames(result)]
   } else if (alias == "label") {
