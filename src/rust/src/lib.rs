@@ -35,7 +35,7 @@ fn parse_data_json(
             "number" => Column::Number(Vec::with_capacity(rows.len())),
             "fixed_timestamp" => Column::FixedTimestamp(Vec::with_capacity(rows.len())),
             "floating_timestamp" => Column::FloatingTimestamp(Vec::with_capacity(rows.len())),
-            "text" => Column::Text(Vec::with_capacity(rows.len())),
+            "text" | "row_identifier" | "row_version" => Column::Text(Vec::with_capacity(rows.len())),
             "url" => Column::Url((
                 Vec::with_capacity(rows.len()),
                 Vec::with_capacity(rows.len()),
