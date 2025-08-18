@@ -9,7 +9,7 @@ use serde_json::Value;
 
 #[extendr]
 fn parse_data_json(
-    json_strs: Vec<String>,
+    raw_json: List,
     header_col_names: &str,
     header_col_types: &str,
     meta_url: &str,
@@ -18,10 +18,12 @@ fn parse_data_json(
         serde_json::from_str(header_col_names).expect("Failed to parse JSON array");
     let col_types: Vec<String> =
         serde_json::from_str(header_col_types).expect("Failed to parse JSON array");
-    let rows: Vec<Value> = json_strs
+    let rows: Vec<Value> = raw_json
         .iter()
-        .flat_map(|s| {
-            let parsed: Vec<Value> = serde_json::from_str(s).expect("Failed to parse JSON");
+        .flat_map(|(_, robj)| {
+            let bytes = robj.as_raw_slice().unwrap();
+            let parsed: Vec<Value> = serde_json::from_slice(bytes)
+                .expect("Failed to parse JSON");
             parsed
         })
         .collect();

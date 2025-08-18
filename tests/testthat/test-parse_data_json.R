@@ -1,5 +1,5 @@
 test_that("parse boolean as logical", {
-  json_data <- '[{"col": true}, {"col": false}, {}]'
+  json_data <- list(charToRaw('[{"col": true}, {"col": false}, {}]'))
   col_names <- '["col"]'
   col_types <- '["boolean"]'
 
@@ -8,7 +8,7 @@ test_that("parse boolean as logical", {
 })
 
 test_that("parse number as double", {
-  json_data <- '[{"col": "42.5"}, {"col": "-7.1"}, {}]'
+  json_data <- list(charToRaw('[{"col": "42.5"}, {"col": "-7.1"}, {}]'))
   col_names <- '["col"]'
   col_types <- '["number"]'
 
@@ -17,12 +17,14 @@ test_that("parse number as double", {
 })
 
 test_that("parse fixed_timestamp as UTC POSIXct", {
-  json_data <- '[{
+  json_data <- list(charToRaw(
+    '[{
     "col": "2014-10-13T00:00:00.000Z"
   }, {
     "col": "2021-06-15T13:45:30.123Z"
   }, {
   }]'
+  ))
   col_names <- '["col"]'
   col_types <- '["fixed_timestamp"]'
 
@@ -42,12 +44,14 @@ test_that("parse fixed_timestamp as UTC POSIXct", {
 })
 
 test_that("parse floating_timestamp as local POSIXct", {
-  json_data <- '[{
+  json_data <- list(charToRaw(
+    '[{
     "col": "2014-10-13T00:00:00.000"
   }, {
     "col": "2021-06-15T13:45:30.123"
   }, {
   }]'
+  ))
   col_names <- '["col"]'
   col_types <- '["floating_timestamp"]'
 
@@ -66,7 +70,7 @@ test_that("parse floating_timestamp as local POSIXct", {
 })
 
 test_that("parse text as character", {
-  json_data <- '[{"col": "hello"}, {"col": "world"}, {}]'
+  json_data <- list(charToRaw('[{"col": "hello"}, {"col": "world"}, {}]'))
   col_names <- '["col"]'
   col_types <- '["text"]'
 
@@ -75,13 +79,15 @@ test_that("parse text as character", {
 })
 
 test_that("parse url as list with url vector and description vector", {
-  json_data <- '[{
+  json_data <- list(charToRaw(
+    '[{
     "col": {"url": "http://example.com", "description": "Example site"}
   }, {
     "col": {"url": "http://another.com"}
   }, {
     "col": {"description": "forgot the website"}
   }]'
+  ))
   col_names <- '["col"]'
   col_types <- '["url"]'
 
@@ -99,12 +105,14 @@ test_that("parse url as list with url vector and description vector", {
 })
 
 test_that("parse point as point sfc", {
-  json_data <- '[{
+  json_data <- list(charToRaw(
+    '[{
       "col": {"type": "Point", "coordinates": [-87.653274, 41.936172]}
     }, {
       "col": {"type": "Point", "coordinates": [-87.629798, 41.878114]}
     }, {
     }]'
+  ))
   col_names <- '["col"]'
   col_types <- '["point"]'
 
@@ -123,12 +131,14 @@ test_that("parse point as point sfc", {
 })
 
 test_that("parse linestring as linestring sfc", {
-  json_data <- '[{
+  json_data <- list(charToRaw(
+    '[{
       "col": {"type": "LineString", "coordinates": [[-87.6, 41.9], [-87.7, 41.95]]}
     }, {
       "col": {"type": "LineString", "coordinates": [[-87.65, 41.88], [-87.66, 41.89]]}
     }, {
     }]'
+  ))
   col_names <- '["col"]'
   col_types <- '["line"]'
 
@@ -147,10 +157,12 @@ test_that("parse linestring as linestring sfc", {
 })
 
 test_that("parse polygon as polygon sfc", {
-  json_data <- '[{
+  json_data <- list(charToRaw(
+    '[{
       "col": {"type": "Polygon", "coordinates": [[[-87.6, 41.9], [-87.7, 41.9], [-87.7, 41.95], [-87.6, 41.95], [-87.6, 41.9]]]}
     }, {
     }]'
+  ))
   col_names <- '["col"]'
   col_types <- '["polygon"]'
 
@@ -171,10 +183,12 @@ test_that("parse polygon as polygon sfc", {
 })
 
 test_that("parse multipoint as multipoint sfc", {
-  json_data <- '[{
+  json_data <- list(charToRaw(
+    '[{
       "col": {"type": "MultiPoint", "coordinates": [[-87.6, 41.9], [-87.7, 41.95]]}
     }, {
     }]'
+  ))
   col_names <- '["col"]'
   col_types <- '["multipoint"]'
 
@@ -192,10 +206,12 @@ test_that("parse multipoint as multipoint sfc", {
 })
 
 test_that("parse multilinestring as multilinestring sfc", {
-  json_data <- '[{
+  json_data <- list(charToRaw(
+    '[{
       "col": {"type": "MultiLineString", "coordinates": [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]}
     }, {
     }]'
+  ))
   col_names <- '["col"]'
   col_types <- '["multiline"]'
 
@@ -216,10 +232,12 @@ test_that("parse multilinestring as multilinestring sfc", {
 })
 
 test_that("parse multipolygon as multipolygon sfc", {
-  json_data <- '[{
+  json_data <- list(charToRaw(
+    '[{
       "col": {"type": "MultiPolygon", "coordinates": [[[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]]]}
     }, {
     }]'
+  ))
   col_names <- '["col"]'
   col_types <- '["multipolygon"]'
 
@@ -240,7 +258,8 @@ test_that("parse multipolygon as multipolygon sfc", {
 })
 
 test_that("parse multiple types", {
-  json_data <- '[
+  json_data <- list(charToRaw(
+    '[
     {
       "bool_col": true,
       "num_col": "3.14",
@@ -263,6 +282,7 @@ test_that("parse multiple types", {
       "geom_col": {}
     }
   ]'
+  ))
 
   col_names <- '["bool_col", "num_col", "text_col", "timestamp_col", "url_col", "geom_col"]'
   col_types <- '["boolean", "number", "text", "fixed_timestamp", "url", "point"]'

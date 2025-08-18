@@ -92,10 +92,9 @@ soc_read <- function(
   resps <- iterative_requests(url_base, four_by_four, query, page_size)
 
   res_list <- parse_data_json(
-    json_strs = vapply(
+    json_strs = lapply(
       resps,
-      httr2::resp_body_string,
-      FUN.VALUE = character(1)
+      httr2::resp_body_raw
     ),
     header_col_names = httr2::resp_header(resps[[1]], "X-SODA2-Fields"),
     header_col_types = httr2::resp_header(resps[[1]], "X-SODA2-Types"),
