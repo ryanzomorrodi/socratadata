@@ -12,9 +12,9 @@
 #'  - `"drop"`: field alias values replace existing column names.
 #' @param page_size whole number; Maximum number of rows returned per request.
 #' @param include_synthetic_cols logical; Should synthetic columns be included?
-#' @param api_key_id string; API key ID to authenticate requests. (Can also be stored as `"soc_api_key_id"``
+#' @param api_key_id string; API key ID to authenticate requests. (Can also be stored as `"soc_api_key_id"`
 #' environment variable)
-#' @param api_key_secret string; API key secret to authenticate requests. (Can also be stored as `"soc_api_key_secret"``
+#' @param api_key_secret string; API key secret to authenticate requests. (Can also be stored as `"soc_api_key_secret"`
 #' environment variable)
 #'
 #' @return A tibble with additional attributes containing dataset metadata.
