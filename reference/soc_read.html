@@ -80,12 +80,12 @@ Metadata is also returned as attributes on the returned object.</p>
 
 
 <dt id="arg-api-key-id">api_key_id<a class="anchor" aria-label="anchor" href="#arg-api-key-id"></a></dt>
-<dd><p>string; API key ID to authenticate requests. (Can also be stored as `"soc_api_key_id"“
+<dd><p>string; API key ID to authenticate requests. (Can also be stored as <code>"soc_api_key_id"</code>
 environment variable)</p></dd>
 
 
 <dt id="arg-api-key-secret">api_key_secret<a class="anchor" aria-label="anchor" href="#arg-api-key-secret"></a></dt>
-<dd><p>string; API key secret to authenticate requests. (Can also be stored as `"soc_api_key_secret"“
+<dd><p>string; API key secret to authenticate requests. (Can also be stored as <code>"soc_api_key_secret"</code>
 environment variable)</p></dd>
 
 </dl></div>
@@ -164,7 +164,24 @@ If the dataset contains a single non-nested geospatial field, it will be returne
 <span class="r-in"><span>  <span class="st">"https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Utilizing v2.1 API. `include_synthetic_cols` will be ignored. Provide an `api_key_id` and `api_key_secret` to perform a v3 request.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req, path = get_path(i), mock = mock):</span> HTTP 503 Service Unavailable.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> ⠙ iterating 1 done (0.062/s) | 16.2s</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> ⠹ iterating 2 done (0.12/s) | 16.9s</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1,935 × 10</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    source earthquake_id version datetime            magnitude depth</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> uu     09101857      2       2012-09-10 <span style="color: #949494;">18:57:30</span>       2.2   0.9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> uu     09081656      2       2012-09-08 <span style="color: #949494;">16:56:06</span>       2.7   1.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> ak     10555601      2       2012-09-10 <span style="color: #949494;">13:16:13</span>       1.1  11.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> nc     71839715      2       2012-09-08 <span style="color: #949494;">17:12:28</span>       1     2.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> uu     09140856      2       2012-09-14 <span style="color: #949494;">08:56:35</span>       2.3   0.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> ak     10503556      2       2012-07-01 <span style="color: #949494;">02:01:00</span>       2.5   1  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> hv     60365026      1       2012-06-28 <span style="color: #949494;">12:06:00</span>       1.7   8.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> ci     11131234      0       2012-07-03 <span style="color: #949494;">08:12:00</span>       1.1  10.2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> hv     60365151      1       2012-06-29 <span style="color: #949494;">00:26:00</span>       1.8  11.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> ak     10502928      2       2012-06-29 <span style="color: #949494;">17:12:00</span>       2    96.8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1,925 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 4 more variables: number_of_stations &lt;dbl&gt;, region &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   location &lt;tibble[,5]&gt;, `:@computed_region_k83t_ady5` &lt;dbl&gt;</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">soc_read</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"</span>,</span></span>
@@ -176,7 +193,20 @@ If the dataset contains a single non-nested geospatial field, it will be returne
 <span class="r-in"><span>  <span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Utilizing v2.1 API. `include_synthetic_cols` will be ignored. Provide an `api_key_id` and `api_key_secret` to perform a v3 request.</span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in req_perform(req, path = get_path(i), mock = mock):</span> HTTP 503 Service Unavailable.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 40 × 3</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    region                                avg_magnitude count</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> Kuril Islands                                  5.32     5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> northern Xinjiang, China                       4.87     6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> south of Java, Indonesia                       4.86     9</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> Tonga                                          4.85     6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> near the east coast of Honshu, Japan           4.72    10</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> Costa Rica                                     4.66     5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> Dominican Republic region                      3.25     6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Virgin Islands region                          3.11    47</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> Puerto Rico region                             2.92    18</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> Rat Islands, Aleutian Islands, Alaska          2.77    21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 30 more rows</span></span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
