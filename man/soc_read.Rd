@@ -30,10 +30,10 @@ soc_read(
 
 \item{include_synthetic_cols}{logical; Should synthetic columns be included?}
 
-\item{api_key_id}{string; API key ID to authenticate requests. (Can also be stored as `"soc_api_key_id"``
+\item{api_key_id}{string; API key ID to authenticate requests. (Can also be stored as \code{"soc_api_key_id"}
 environment variable)}
 
-\item{api_key_secret}{string; API key secret to authenticate requests. (Can also be stored as `"soc_api_key_secret"``
+\item{api_key_secret}{string; API key secret to authenticate requests. (Can also be stored as \code{"soc_api_key_secret"}
 environment variable)}
 }
 \value{
