@@ -1,0 +1,2751 @@
+{
+    "results": [
+        {
+            "resource": {
+                "name": "Dallas Police Active Calls",
+                "id": "9fxf-t2tr",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "<b><p>Due to technical issues the Active Calls dataset may experience intermittent delays in automated data refreshing.<\/b><\/p>\n<b>Staff is actively monitoring the situation.<\/b>\n\n<p>The calls listed here are only those where the element assigned to the call has arrived and is currently working the call.   It does not include any calls for service, whether currently being worked or not, that are not releasable due to privacy laws. <\/p>",
+                "attribution": "Dallas Police Department",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T16:40:56.000Z",
+                "createdAt": "2013-10-08T16:07:58.000Z",
+                "metadata_updated_at": "2023-07-07T15:17:44.000Z",
+                "data_updated_at": "2025-08-25T16:40:56.000Z",
+                "page_views": {
+                    "page_views_last_week": 14027,
+                    "page_views_last_month": 62142,
+                    "page_views_total": 9279632,
+                    "page_views_last_week_log": 13.776021715252812,
+                    "page_views_last_month_log": 15.923304269877086,
+                    "page_views_total_log": 23.14563631869105
+                },
+                "columns_name": [
+                    "Date",
+                    "Nature of Call",
+                    "Unit Num",
+                    "Priority",
+                    "Date_Time",
+                    "Status",
+                    "Division",
+                    "Incident Number",
+                    "Reporting Area",
+                    "Location",
+                    "Beat",
+                    "Time",
+                    "Block"
+                ],
+                "columns_field_name": [
+                    "date",
+                    "nature_of_call",
+                    "unit_number",
+                    "priority",
+                    "date_time",
+                    "status",
+                    "division",
+                    "incident_number",
+                    "reporting_area",
+                    "location",
+                    "beat",
+                    "time",
+                    "block"
+                ],
+                "columns_datatype": [
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Call Date",
+                    "Problem type of call, for example loud music, burglary…etc.",
+                    "Responding officers element (unit) number",
+                    "Calls are broken down to priority type 1-4,…. 1 being most urgent",
+                    "Date and Time of the call",
+                    "Status of the call as it relates to the responding officers",
+                    "The Largest of the police geographic areas ( 7 patrol divisions)",
+                    "Master incident number as it relates to the call (different from incident as it relates to an offense)",
+                    "Smallest police geography which makes up all other police geographic areas (Beats, Sectors, Divisions)",
+                    "Street name of address for call",
+                    "The 2nd to smallest police geography (Beats are made of Reporting Areas)",
+                    "Call Time",
+                    "Block number of address for the call"
+                ],
+                "columns_format": [
+                    {
+                        "view": "date"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 6311287,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2020-05-14T21:33:38.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Public Safety",
+                "domain_tags": [
+                    "drugs",
+                    "street",
+                    "speeding",
+                    "shooting",
+                    "robbery",
+                    "resistance",
+                    "disturbance",
+                    "racing",
+                    "public safety",
+                    "warrant",
+                    "violence",
+                    "theft",
+                    "prowler",
+                    "property",
+                    "prisoner",
+                    "police",
+                    "officer",
+                    "criminal",
+                    "crime",
+                    "motor",
+                    "marijuana",
+                    "illegal",
+                    "harassment",
+                    "burglary",
+                    "bruise",
+                    "handcuff",
+                    "gun",
+                    "fraud",
+                    "dpd",
+                    "assault",
+                    "arrest",
+                    "alcohol",
+                    "aggression",
+                    "active calls",
+                    "accident",
+                    "abrasion"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Additional-Information_Scope",
+                        "value": "Official Data"
+                    },
+                    {
+                        "key": "Additional-Information_Update-Frequency",
+                        "value": "Every 2 Minutes"
+                    },
+                    {
+                        "key": "Custom-Metadata-Fields_Category",
+                        "value": "Public Safety"
+                    },
+                    {
+                        "key": "Custom-Metadata-Fields_Data-Type",
+                        "value": "File (Excel, CSV)"
+                    },
+                    {
+                        "key": "Custom-Metadata-Fields_Contact-Email",
+                        "value": "dldpdcrimeanalysis@dallascityhall.com"
+                    },
+                    {
+                        "key": "Custom-Metadata-Fields_Automated-Updates",
+                        "value": "Yes"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "www.dallasopendata.com",
+                "license": "Open Data Commons Attribution License"
+            },
+            "permalink": "https://www.dallasopendata.com/d/9fxf-t2tr",
+            "link": "https://www.dallasopendata.com/Public-Safety/Dallas-Police-Active-Calls/9fxf-t2tr",
+            "owner": {
+                "id": "jhxk-y6ib",
+                "user_type": "interactive",
+                "display_name": "Dallas OpenData"
+            },
+            "creator": {
+                "id": "jhxk-y6ib",
+                "user_type": "interactive",
+                "display_name": "Dallas OpenData"
+            }
+        },
+        {
+            "resource": {
+                "name": "Lottery Cash 4 Life Winning Numbers: Beginning 2014",
+                "id": "kwxv-fwze",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Go to http://on.ny.gov/1xRIvPz on the New York Lottery website for past Cash 4 Life results and payouts.",
+                "attribution": "New York State Gaming Commission",
+                "attribution_link": "http://nylottery.ny.gov/wps/portal/Home/Lottery/home/your+lottery/drawing+results/drawingresults_cash4life",
+                "contact_email": "opendata@its.ny.gov",
+                "type": "dataset",
+                "updatedAt": "2025-08-25T10:01:15.000Z",
+                "createdAt": "2014-06-17T19:47:54.000Z",
+                "metadata_updated_at": "2025-08-25T10:01:12.000Z",
+                "data_updated_at": "2025-08-25T10:01:15.000Z",
+                "page_views": {
+                    "page_views_last_week": 686,
+                    "page_views_last_month": 3221,
+                    "page_views_total": 5959445,
+                    "page_views_last_week_log": 9.4241662888181,
+                    "page_views_last_month_log": 11.65374077870657,
+                    "page_views_total_log": 22.506746790917408
+                },
+                "columns_name": [
+                    "Draw Date",
+                    "Winning Numbers",
+                    "Cash Ball"
+                ],
+                "columns_field_name": [
+                    "draw_date",
+                    "winning_numbers",
+                    "cash_ball"
+                ],
+                "columns_datatype": [
+                    "Calendar date",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Draw date",
+                    "Winning numbers",
+                    "Cash ball"
+                ],
+                "columns_format": [
+                    {
+                        "view": "date",
+                        "align": "center"
+                    },
+                    {
+                        "align": "center"
+                    },
+                    {
+                        "align": "center"
+                    }
+                ],
+                "download_count": 247638,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2021-04-27T14:13:45.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Government & Finance",
+                "domain_tags": [
+                    "cash 4 life",
+                    "winning",
+                    "results",
+                    "new york lottery"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Common-Core_Publisher",
+                        "value": "State of New York"
+                    },
+                    {
+                        "key": "Common-Core_Contact-Name",
+                        "value": "Open Data NY"
+                    },
+                    {
+                        "key": "Common-Core_Contact-Email",
+                        "value": "opendata@its.ny.gov"
+                    },
+                    {
+                        "key": "Additional-Resources_See-Also",
+                        "value": "http://www.gaming.ny.gov/"
+                    },
+                    {
+                        "key": "Dataset-Summary_Dataset-Owner",
+                        "value": "New York State Gaming Commission"
+                    },
+                    {
+                        "key": "Dataset-Summary_Contact-Information",
+                        "value": "Info@gaming.ny.gov"
+                    },
+                    {
+                        "key": "Dataset-Summary_Granularity",
+                        "value": "By draw"
+                    },
+                    {
+                        "key": "Dataset-Summary_Coverage",
+                        "value": "Statewide"
+                    },
+                    {
+                        "key": "Dataset-Summary_Data-Frequency",
+                        "value": "Daily beginning 7/1/19; twice weekly previously"
+                    },
+                    {
+                        "key": "Dataset-Summary_Posting-Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Dataset-Summary_Organization",
+                        "value": "The New York Lottery"
+                    },
+                    {
+                        "key": "Dataset-Summary_Time-Period",
+                        "value": "Beginning 6/16/2014"
+                    },
+                    {
+                        "key": "Dataset-Information_Agency",
+                        "value": "Gaming Commission, New York State"
+                    },
+                    {
+                        "key": "Notes_Notes",
+                        "value": "The information contained on these pages is believed to be accurate. In the event of a discrepancy between the information displayed on this Web site concerning winning numbers and payouts and the information contained in the official and certified files maintained by the New York Lottery's Drawing Unit, those maintained by the Drawing Unit shall prevail."
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.ny.gov"
+            },
+            "permalink": "https://data.ny.gov/d/kwxv-fwze",
+            "link": "https://data.ny.gov/Government-Finance/Lottery-Cash-4-Life-Winning-Numbers-Beginning-2014/kwxv-fwze",
+            "owner": {
+                "id": "xzik-pf59",
+                "user_type": "interactive",
+                "display_name": "NY Open Data"
+            },
+            "creator": {
+                "id": "xzik-pf59",
+                "user_type": "interactive",
+                "display_name": "NY Open Data"
+            }
+        },
+        {
+            "resource": {
+                "name": "Provisional COVID-19 Deaths by Sex and Age",
+                "id": "9bhg-hcku",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Effective September 27, 2023, this dataset will no longer be updated. Similar data are accessible from wonder.cdc.gov.\n\nDeaths involving COVID-19, pneumonia, and influenza reported to NCHS by sex, age group, and jurisdiction of occurrence.",
+                "attribution": "NCHS/DVS",
+                "attribution_link": "https://www.cdc.gov/nchs/nvss/vsrr/covid_weekly/index.htm",
+                "contact_email": "cdcinfo@cdc.gov",
+                "type": "dataset",
+                "updatedAt": "2025-04-21T16:20:29.000Z",
+                "createdAt": "2020-05-01T16:01:23.000Z",
+                "metadata_updated_at": "2025-04-21T16:20:29.000Z",
+                "data_updated_at": "2023-09-27T14:43:31.000Z",
+                "page_views": {
+                    "page_views_last_week": 1817,
+                    "page_views_last_month": 5605,
+                    "page_views_total": 4246519,
+                    "page_views_last_week_log": 10.828136484194108,
+                    "page_views_last_month_log": 12.452756029032495,
+                    "page_views_total_log": 22.0178496140218
+                },
+                "columns_name": [
+                    "Influenza Deaths",
+                    "Data As Of",
+                    "Pneumonia, Influenza, or COVID-19 Deaths",
+                    "Footnote",
+                    "Pneumonia Deaths",
+                    "Age Group",
+                    "Total Deaths",
+                    "Start Date",
+                    "End Date",
+                    "Month",
+                    "Sex",
+                    "Pneumonia and COVID-19 Deaths",
+                    "State",
+                    "Group",
+                    "COVID-19 Deaths",
+                    "Year"
+                ],
+                "columns_field_name": [
+                    "influenza_deaths",
+                    "data_as_of",
+                    "pneumonia_influenza_or_covid",
+                    "footnote",
+                    "pneumonia_deaths",
+                    "age_group",
+                    "total_deaths",
+                    "start_date",
+                    "end_date",
+                    "month",
+                    "sex",
+                    "pneumonia_and_covid_19_deaths",
+                    "state",
+                    "group",
+                    "covid_19_deaths",
+                    "year"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Calendar date",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Calendar date",
+                    "Calendar date",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number"
+                ],
+                "columns_description": [
+                    "Influenza Deaths (ICD-10 codes J09-J11)",
+                    "Date of analysis",
+                    "Deaths with Pneumonia, Influenza, or COVID-19 (ICD-10 codes U07.1 or J09-J18.9)",
+                    "Suppressed counts (1-9)",
+                    "Pneumonia Deaths (ICD-10 codes J12.0-J18.9)",
+                    "Age group",
+                    "Deaths from all causes of death",
+                    "First date of data period",
+                    "Last date of data period",
+                    "Month in which death occurred",
+                    "Sex",
+                    "Deaths with Pneumonia and COVID-19 (ICD-10 codes J12.0-J18.9 and U07.1)",
+                    "Jurisdiction of occurrence",
+                    "Indicator of whether data measured by Month, by Year, or Total",
+                    "Deaths involving COVID-19 (ICD-code U07.1)",
+                    "Year in which death occurred"
+                ],
+                "columns_format": [
+                    {
+                        "precisionStyle": "standard",
+                        "align": "right"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "view": "date"
+                    },
+                    {
+                        "view": "date"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true"
+                    }
+                ],
+                "download_count": 566300,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2021-02-24T20:02:36.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "National Center for Health Statistics",
+                "domain_tags": [
+                    "influenza",
+                    "yearly",
+                    "provisional",
+                    "united states",
+                    "state",
+                    "sex",
+                    "puerto rico",
+                    "monthly",
+                    "mortality",
+                    "nchs",
+                    "pneumonia",
+                    "age",
+                    "age group",
+                    "coronavirus",
+                    "covid-19",
+                    "nvss",
+                    "deaths"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Common-Core_Contact-Email",
+                        "value": "cdcinfo@cdc.gov"
+                    },
+                    {
+                        "key": "Common-Core_Program-Code",
+                        "value": "009:020"
+                    },
+                    {
+                        "key": "Common-Core_Public-Access-Level",
+                        "value": "public"
+                    },
+                    {
+                        "key": "Common-Core_Temporal-Applicability",
+                        "value": "2020-01-01/2023-07-29"
+                    },
+                    {
+                        "key": "Common-Core_Geographic-Coverage",
+                        "value": "United States, Puerto Rico"
+                    },
+                    {
+                        "key": "Common-Core_Publisher",
+                        "value": "National Center for Health Statistics"
+                    },
+                    {
+                        "key": "Common-Core_Update-Frequency",
+                        "value": "irregular"
+                    },
+                    {
+                        "key": "Common-Core_Homepage",
+                        "value": "https://www.cdc.gov/nchs/covid19/covid-19-mortality-data-files.htm"
+                    },
+                    {
+                        "key": "Common-Core_Bureau-Code",
+                        "value": "009:20"
+                    },
+                    {
+                        "key": "Common-Core_Issued",
+                        "value": "2020-05-01"
+                    },
+                    {
+                        "key": "Common-Core_Contact-Name",
+                        "value": "National Center for Health Statistics"
+                    },
+                    {
+                        "key": "Data-Quality_Suggested-Citation",
+                        "value": "National Center for Health Statistics. Provisional COVID-19 Deaths by Sex and Age. Date accessed [Last accessed date]. Available from https://data.cdc.gov/d/9bhg-hcku."
+                    },
+                    {
+                        "key": "Data-Quality_Geographic-Coverage",
+                        "value": "United States, Puerto Rico"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cdc.gov",
+                "license": "Public Domain U.S. Government"
+            },
+            "permalink": "https://data.cdc.gov/d/9bhg-hcku",
+            "link": "https://data.cdc.gov/National-Center-for-Health-Statistics/Provisional-COVID-19-Deaths-by-Sex-and-Age/9bhg-hcku",
+            "owner": {
+                "id": "xfvr-ns68",
+                "user_type": "interactive",
+                "display_name": "NCHS"
+            },
+            "creator": {
+                "id": "xfvr-ns68",
+                "user_type": "interactive",
+                "display_name": "NCHS"
+            }
+        },
+        {
+            "resource": {
+                "name": "COVID-19 Public Therapeutic Locator",
+                "id": "rxn6-qnx8",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "<b>NOTE: This dataset is no longer updated as of 1/31/2024. Please use <a href=\"https://healthdata.gov/ASPR/COVID-19-Treatments/xkzp-zhs7/about_data\">COVID-19 Treatments.<\/a><\/b>\n<p>\nLocations of publicly available COVID-19 Therapeutics. Dataset only includes locations for Paxlovid (oral antiviral), Lagevrio (oral antiviral), and outpatient Veklury (intravenous antiviral infusion). COVID-19 therapeutics require a prescription to obtain. Limitations: public contact information.\n<\/p>\n<p>\n<b> To filter, click 'View Data' below, then 'Filter.' To save your view, click 'Save as,' and this configuration will be saved in your profile under 'My Assets.' <u>Please try not to publish dataset publicly, unless necessary.<\/b><\/u>\n<\/p>\n\nOn 1/3/2022 - The following changes were made to this dataset.\n- Dropped the Expected Deliver Date column - This was a derived field set to 3 days after the Last Order Date field.\n- Added the following fields\n   Last Date Delivered\n   Total Courses\n   Courses Available\n   Courses Available Date\n\nOn 1/4/2022 - Added Geocoded Address\n\nOn 1/11/2022 - Added NPI - National Provider Identifier\n\nOn 2/18/2022 - Added new therapeutics, Bebtelovimab & Sotrovimab.\n\nOn 3/16/2022 - Dropped the following columns\n      - last_order_date\n      - last_date_delivered\n      - total_courses\n      - courses_available_date\n   Added the following columns\n      - facility_id\n      - last_report_date\n      - grantee_code\n      - provider_pin\n      - state_provider_pin\n\nOn 3/31/2022 - Dropped the following columns\n      - facility_id\n      - grantee_code\n      - provider_pin\n      - state_provider_pin\n   Added the following columns\n      - provider_status\n      - provider_note",
+                "attribution": "U.S. Department of Health & Human Services",
+                "attribution_link": null,
+                "contact_email": "HealthData@hhs.gov",
+                "type": "dataset",
+                "updatedAt": "2025-07-03T14:26:28.000Z",
+                "createdAt": "2021-12-28T15:47:44.000Z",
+                "metadata_updated_at": "2025-07-03T14:26:28.000Z",
+                "data_updated_at": "2024-01-31T09:30:24.000Z",
+                "page_views": {
+                    "page_views_last_week": 6,
+                    "page_views_last_month": 25,
+                    "page_views_total": 152,
+                    "page_views_last_week_log": 2.807354922057604,
+                    "page_views_last_month_log": 4.700439718141093,
+                    "page_views_total_log": 7.257387842692652
+                },
+                "columns_name": [
+                    "County",
+                    "Provider Note",
+                    "National Drug Code",
+                    "Geocoded Address",
+                    "Address2",
+                    "Last Report Date",
+                    "State Code",
+                    "Provider Status",
+                    "Zip",
+                    "Order Label",
+                    "Demo | State Geographic Boundaries",
+                    "City",
+                    "NPI",
+                    "Address1",
+                    "Courses Available",
+                    "Provider Name"
+                ],
+                "columns_field_name": [
+                    "county",
+                    "provider_note",
+                    "national_drug_code",
+                    "geocoded_address",
+                    "address2",
+                    "last_report_date",
+                    "state_code",
+                    "provider_status",
+                    "zip",
+                    "order_label",
+                    ":@computed_region_pqdx_y6mm",
+                    "city",
+                    "npi",
+                    "address1",
+                    "courses_available",
+                    "provider_name"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Point",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Provider's county",
+                    "Extended description for Provider Status",
+                    "Therapeutic NDC",
+                    "The geocoded latitude and longitude of the therapeutic provider.",
+                    "Provider's address",
+                    "The date the current therapeutic availability was last reported by given provider",
+                    "Provider's state",
+                    "Provider's inventory status",
+                    "Provider's Zip Code",
+                    "Therapeutic name",
+                    "This column was automatically created in order to record in what polygon from the dataset 'Demo | State Geographic Boundaries' (pqdx-y6mm) the point in column 'geocoded_address' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                    "Provider's city",
+                    "National Provider Identifier\nhttps://npiregistry.cms.hhs.gov/",
+                    "Provider's address",
+                    "Total courses remaining in on-hand inventory at this provider site",
+                    "Name of provider location receiving therapeutic product"
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 1063,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2022-03-31T19:09:22.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Health",
+                "domain_tags": [
+                    "hhs covid-19",
+                    "covid-19",
+                    "theraputic care"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Archive_Archive-Repository",
+                        "value": "https://healthdata.gov/d/j7fh-jg79"
+                    },
+                    {
+                        "key": "Common-Core_Contact-Email",
+                        "value": "HealthData@hhs.gov"
+                    },
+                    {
+                        "key": "Common-Core_Last-Update",
+                        "value": "March 21, 2022, 14:16"
+                    },
+                    {
+                        "key": "Common-Core_Program-Code",
+                        "value": "009:028"
+                    },
+                    {
+                        "key": "Common-Core_Public-Access-Level",
+                        "value": "public"
+                    },
+                    {
+                        "key": "Common-Core_Is-Quality-Data",
+                        "value": "true"
+                    },
+                    {
+                        "key": "Common-Core_Language",
+                        "value": "English"
+                    },
+                    {
+                        "key": "Common-Core_Publisher",
+                        "value": "U.S. Department of Health and Human Services"
+                    },
+                    {
+                        "key": "Common-Core_Theme",
+                        "value": "Health"
+                    },
+                    {
+                        "key": "Common-Core_Bureau-Code",
+                        "value": "009:00"
+                    },
+                    {
+                        "key": "Common-Core_Contact-Name",
+                        "value": "HealthData.gov Team"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "datahub.hhs.gov",
+                "license": "Public Domain U.S. Government"
+            },
+            "permalink": "https://datahub.hhs.gov/d/rxn6-qnx8",
+            "link": "https://datahub.hhs.gov/Health/COVID-19-Public-Therapeutic-Locator/rxn6-qnx8",
+            "owner": {
+                "id": "7rgq-62vg",
+                "user_type": "team",
+                "display_name": "Office of Chief Data Officer (OCDO)"
+            },
+            "creator": {
+                "id": "7rgq-62vg",
+                "user_type": "team",
+                "display_name": "Office of Chief Data Officer (OCDO)"
+            }
+        },
+        {
+            "resource": {
+                "name": "Health Care Provider Credential Data",
+                "id": "qxh8-f4bd",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "The Washington State Department of Health presents this information as a service to the public. True and correct copies of legal disciplinary actions taken after July 1998 are available on our Provider Credential Search site. These records are considered certified by the Department of Health. \n\nThis includes information on health care providers.\n\nPlease contact our Customer Service Center at 360-236-4700 for information about actions before July 1998. \nThe information on this site comes directly from our database and is updated daily at 10:00 a.m.. This data is a primary source for verification of credentials and is extracted from the primary database at 2:00 a.m. daily.\n\nNews releases about disciplinary actions taken against Washington State healthcare providers, agencies or facilities are on the agency's Newsroom webpage.\n\nDisclaimer\nThe absence of information in the Provider Credential Search system doesn't imply any recommendation, endorsement or guarantee of competence of any healthcare professional. The presence of information in this system doesn't imply a provider isn't competent or qualified to practice. The reader is encouraged to carefully evaluate any information found in this data set.",
+                "attribution": "Washington State Department of Health",
+                "attribution_link": "https://fortress.wa.gov/doh/providercredentialsearch/",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-24T17:17:02.000Z",
+                "createdAt": "2016-01-20T23:20:45.000Z",
+                "metadata_updated_at": "2025-05-20T23:17:55.000Z",
+                "data_updated_at": "2025-08-24T17:17:02.000Z",
+                "page_views": {
+                    "page_views_last_week": 8937,
+                    "page_views_last_month": 38641,
+                    "page_views_total": 3782985,
+                    "page_views_last_week_log": 13.125736329395012,
+                    "page_views_last_month_log": 15.237882145447015,
+                    "page_views_total_log": 21.85109400662398
+                },
+                "columns_name": [
+                    "LastName",
+                    "MiddleName",
+                    "CEDueDate",
+                    "BirthYear",
+                    "LastIssueDate",
+                    "CredentialType",
+                    "ExpirationDate",
+                    "ActionTaken",
+                    "CredentialNumber",
+                    "FirstIssueDate",
+                    "FirstName",
+                    "Status"
+                ],
+                "columns_field_name": [
+                    "lastname",
+                    "middlename",
+                    "ceduedate",
+                    "birthyear",
+                    "lastissuedate",
+                    "credentialtype",
+                    "expirationdate",
+                    "actiontaken",
+                    "credentialnumber",
+                    "firstissuedate",
+                    "firstname",
+                    "status"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 181470,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2016-01-25T17:39:10.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "public safety",
+                    "economy",
+                    "health"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "health",
+                "domain_tags": [
+                    "credential",
+                    "department",
+                    "health",
+                    "provider",
+                    "public",
+                    "state",
+                    "washington",
+                    "care"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Notes_1.-",
+                        "value": "Application Status: A \"pending\" status means the review process is underway. We quickly update this status information from our licensing system, and it's a primary source for verifying your credentials.  https://www.doh.wa.gov/LicensesPermitsandCertificates/ProfessionsNewReneworUpdate/ApplicationStatus"
+                    },
+                    {
+                        "key": "Notes_2.-",
+                        "value": "Contact Us: https://www.doh.wa.gov/AboutUs/ProgramsandServices/HealthSystemsQualityAssurance/ContactUs#heading28603"
+                    },
+                    {
+                        "key": "Notes_3.-",
+                        "value": "Profession-Specific Guidance: https://www.doh.wa.gov/LicensesPermitsandCertificates/ProfessionsNewReneworUpdate"
+                    },
+                    {
+                        "key": "Temporal_Period-of-Time",
+                        "value": "1/1/1907 to present"
+                    },
+                    {
+                        "key": "Temporal_Posting-Frequency",
+                        "value": "Daily"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.wa.gov",
+                "license": "Public Domain"
+            },
+            "permalink": "https://data.wa.gov/d/qxh8-f4bd",
+            "link": "https://data.wa.gov/health/Health-Care-Provider-Credential-Data/qxh8-f4bd",
+            "owner": {
+                "id": "ypwc-5ce7",
+                "user_type": "interactive",
+                "display_name": "Department of Health Open Data"
+            },
+            "creator": {
+                "id": "ypwc-5ce7",
+                "user_type": "interactive",
+                "display_name": "Department of Health Open Data"
+            }
+        },
+        {
+            "resource": {
+                "name": "Howard County Police Department Call For Service - 2014-2023",
+                "id": "qccx-65fg",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Calls for Service by computer aided dispatch (CAD) event type, date, time, location, statistical reporting area (SRA), and beat.",
+                "attribution": null,
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2024-03-15T13:37:59.000Z",
+                "createdAt": "2015-05-04T15:33:31.000Z",
+                "metadata_updated_at": "2024-03-15T13:37:55.000Z",
+                "data_updated_at": "2024-03-15T13:37:59.000Z",
+                "page_views": {
+                    "page_views_last_week": 21,
+                    "page_views_last_month": 70,
+                    "page_views_total": 3675700,
+                    "page_views_last_week_log": 4.459431618637297,
+                    "page_views_last_month_log": 6.149747119504682,
+                    "page_views_total_log": 21.809587984655835
+                },
+                "columns_name": [
+                    "Computer_Aided_Dispatch_Event_Type",
+                    "Beat",
+                    "Statistical_Reporting_Area",
+                    "Location",
+                    "Time_Reported",
+                    "Date_Reported"
+                ],
+                "columns_field_name": [
+                    "computer_aided_dispatch_event_type",
+                    "beat",
+                    "statistical_reporting_area",
+                    "location",
+                    "time_reported",
+                    "date_reported"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Calendar date"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 1238,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2018-02-15T15:31:08.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Public Safety",
+                "domain_tags": [
+                    "beat",
+                    "cad",
+                    "sra",
+                    "calls",
+                    "dispatch"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Additional-Metadata_Coverage",
+                        "value": "2014-2020"
+                    },
+                    {
+                        "key": "Additional-Metadata_Frequency",
+                        "value": "Annually"
+                    },
+                    {
+                        "key": "Additional-Metadata_Publisher",
+                        "value": "Howard County, MD"
+                    },
+                    {
+                        "key": "Additional-Metadata_Contributor",
+                        "value": "Police Department"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "opendata.howardcountymd.gov"
+            },
+            "permalink": "https://opendata.howardcountymd.gov/d/qccx-65fg",
+            "link": "https://opendata.howardcountymd.gov/Public-Safety/Howard-County-Police-Department-Call-For-Service-2/qccx-65fg",
+            "owner": {
+                "id": "n9w7-tmda",
+                "user_type": "interactive",
+                "display_name": "Jeanne Upchurch"
+            },
+            "creator": {
+                "id": "n9w7-tmda",
+                "user_type": "interactive",
+                "display_name": "Jeanne Upchurch"
+            }
+        },
+        {
+            "resource": {
+                "name": "For Hire Vehicles (FHV) - Active",
+                "id": "8wbx-tsch",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "<b>PLEASE NOTE:<\/b> This dataset, which includes all TLC licensed for-hire vehicles which are in good standing and able to drive, is updated every day in the evening between 4-7pm. Please check the 'Last Update Date' field to make sure the list has updated successfully. 'Last Update Date'  should show either today or yesterday's date, depending on the time of day. If the list is outdated, please download the most recent list from the link below. \r\nhttp://www1.nyc.gov/assets/tlc/downloads/datasets/tlc_for_hire_vehicle_active_and_inactive.csv\r\n\r\nTLC authorized For-Hire vehicles that are active. This list is accurate to the date and time represented in the Last Date Updated and Last Time Updated fields. For inquiries about the contents of this dataset, please email licensinginquiries@tlc.nyc.gov.",
+                "attribution": "Taxi and Limousine Commission (TLC)",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-24T18:58:27.000Z",
+                "createdAt": "2015-07-16T17:33:32.000Z",
+                "metadata_updated_at": "2022-09-06T21:05:32.000Z",
+                "data_updated_at": "2025-08-24T18:58:27.000Z",
+                "page_views": {
+                    "page_views_last_week": 10190,
+                    "page_views_last_month": 48915,
+                    "page_views_total": 3358152,
+                    "page_views_last_week_log": 13.315008003600358,
+                    "page_views_last_month_log": 15.578018814974365,
+                    "page_views_total_log": 21.6792365313778
+                },
+                "columns_name": [
+                    "Certification Date",
+                    "Base Type",
+                    "VEH",
+                    "Hack Up Date",
+                    "Base Address",
+                    "Website",
+                    "Base Telephone Number",
+                    "Active",
+                    "Base Name",
+                    "Permit License Number",
+                    "Expiration Date",
+                    "Name",
+                    "Vehicle License Number",
+                    "Reason",
+                    "Vehicle Year",
+                    "Base Number",
+                    "License Type",
+                    "DMV License Plate Number",
+                    "Vehicle VIN Number",
+                    "Order Date",
+                    "Last Time Updated",
+                    "Wheelchair Accessible",
+                    "Last Date Updated"
+                ],
+                "columns_field_name": [
+                    "certification_date",
+                    "base_type",
+                    "veh",
+                    "hack_up_date",
+                    "base_address",
+                    "website",
+                    "base_telephone_number",
+                    "active",
+                    "base_name",
+                    "permit_license_number",
+                    "expiration_date",
+                    "name",
+                    "vehicle_license_number",
+                    "reason",
+                    "vehicle_year",
+                    "base_number",
+                    "license_type",
+                    "dmv_license_plate_number",
+                    "vehicle_vin_number",
+                    "order_date",
+                    "last_time_updated",
+                    "wheelchair_accessible",
+                    "last_date_updated"
+                ],
+                "columns_datatype": [
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Calendar date"
+                ],
+                "columns_description": [
+                    "Certification Date",
+                    "Base Type",
+                    "Hybrid vehicle indicator\n",
+                    "Hack Up Date",
+                    "Base Address",
+                    "Base Website",
+                    "Base Telephone NumberBase Telephone Number",
+                    "Permit active or not\n",
+                    "Base Name",
+                    "Permit License Number",
+                    "Expiration Date",
+                    "Owner Name\n",
+                    "FHV Vehicle License Number",
+                    "Reason Code A,B,C or G\n",
+                    "Vehicle Year",
+                    "Base Number",
+                    "TLC License Type\n",
+                    "DMV License Plate Number",
+                    "Vehicle VIN Number",
+                    "Date Suspension ordered\n",
+                    "Last Time Updated",
+                    "Wheelchair Accessible Indicator\n",
+                    "Last Date Updated"
+                ],
+                "columns_format": [
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 578009,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2021-04-05T13:20:47.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "active",
+                    "drivers",
+                    "fhv",
+                    "for hire",
+                    "for-hire",
+                    "for-hire-vehicles",
+                    "inactive",
+                    "taxi"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Update_Automation",
+                        "value": "Yes"
+                    },
+                    {
+                        "key": "Update_Date-Made-Public",
+                        "value": "7/20/2015"
+                    },
+                    {
+                        "key": "Update_Update-Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Dataset-Information_Agency",
+                        "value": "Taxi and Limousine Commission (TLC)"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofnewyork.us"
+            },
+            "permalink": "https://data.cityofnewyork.us/d/8wbx-tsch",
+            "link": "https://data.cityofnewyork.us/Transportation/For-Hire-Vehicles-FHV-Active/8wbx-tsch",
+            "owner": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            },
+            "creator": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            }
+        },
+        {
+            "resource": {
+                "name": "Civil Service List (Active)",
+                "id": "vx8i-nprf",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "A Civil Service List consists of all candidates who passed an exam, ranked in score order. An established list is considered active for no less than one year and no more than four years from the date of establishment. For more information visit DCAS’ “Work for the City” webpage at: https://www1.nyc.gov/site/dcas/employment/take-an-exam.page",
+                "attribution": "Department of Citywide Administrative Services (DCAS)",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T13:09:18.000Z",
+                "createdAt": "2016-06-14T21:12:15.000Z",
+                "metadata_updated_at": "2024-05-14T14:26:52.000Z",
+                "data_updated_at": "2025-08-25T13:09:18.000Z",
+                "page_views": {
+                    "page_views_last_week": 5817,
+                    "page_views_last_month": 25409,
+                    "page_views_total": 3075239,
+                    "page_views_last_week_log": 12.506307581100307,
+                    "page_views_last_month_log": 14.633108754940716,
+                    "page_views_total_log": 21.55226757597067
+                },
+                "columns_name": [
+                    "Published Date",
+                    "Parent Lgy Credit",
+                    "Extension Date",
+                    "Residency Credit",
+                    "List Div Code",
+                    "Group No",
+                    "MI",
+                    "Sibling Lgy Credit",
+                    "Anniversary Date",
+                    "Exam No",
+                    "List Title Code",
+                    "Last Name",
+                    "Veteran Credit",
+                    "Established Date",
+                    "List Title Desc",
+                    "List Agency Desc",
+                    "List Agency Code",
+                    "List No",
+                    "Adj. FA",
+                    "First Name"
+                ],
+                "columns_field_name": [
+                    "published_date",
+                    "parent_lgy_credit",
+                    "extension_date",
+                    "residency_credit",
+                    "list_div_code",
+                    "group_no",
+                    "mi",
+                    "sibling_lgy_credit",
+                    "anniversary_date",
+                    "exam_no",
+                    "list_title_code",
+                    "last_name",
+                    "veteran_credit",
+                    "established_date",
+                    "list_title_desc",
+                    "list_agency_desc",
+                    "list_agency_code",
+                    "list_no",
+                    "adj_fa",
+                    "first_name"
+                ],
+                "columns_datatype": [
+                    "Calendar date",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "The date on which an eligible list is made available for review by the general public and appointing agencies.  \n",
+                    "A “Parent Legacy credit” is an additional credit given on an exam (10 points) to a candidate who lost a parent (FDNY, NYPD, or a First Responder, during or as a result of 911).\n",
+                    "The date on which a list will be extended beyond its original expiration date.  \n",
+                    "An additional credit given on an exam to a candidate who maintains a continuous period of residency in New York City as described in the Notice of Examination for a specific title.     \n",
+                    "The promotional division codes/descriptions within the New York City Transit Authority only.\n",
+                    "Represents the certification order for a list. (e.g. – eligible candidates on a list with a 01 group number may be considered for appointment before an eligible candidate on primary list with a 00 group number).\n",
+                    "A candidate’s middle initial (MI) as it appears on their application.\n",
+                    "A “Sibling Legacy Credit” is additional credit given on an exam (10 points) to a candidate who lost a sibling (FDNY, NYPD, or a First Responder, during or as a result of 911).\n",
+                    "The date on which an eligible list is scheduled to expire.      \n",
+                    "A four (4) digit number that identifies a civil service examination. \n\n",
+                    "A five (5) digit number that corresponds to and represents a civil service title.\n",
+                    "A candidate’s last name as it appears on their application.\n",
+                    "An additional credit given to a Veteran (5 points) or disabled veteran (10 points) when s/he accepts a permanent position from an eligible list. \n",
+                    "The date on which an eligible list is made available for certification to agencies to consider an eligible candidate for appointment.\n",
+                    "A descriptive name that identifies a civil service title. \n",
+                    "The name of an appointing Agency.\n",
+                    "A three (3) digit number used to identify an agency (For Promotion List Only).\n",
+                    "An eligible candidate’s placement on a given list as of the business day that the data set is populated. \n\n",
+                    "The Adjusted Final Average (“Adj. FA” or “AFA”) is an eligible candidate’s test score in addition to any additional credits granted.\n",
+                    "A candidate’s first name as it appears on their application.\n"
+                ],
+                "columns_format": [
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "precision": "3",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "precision": "2",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 80004,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2024-01-12T16:15:05.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "City Government",
+                "domain_tags": [
+                    "admin",
+                    "cei",
+                    "citywide equity and inclusion",
+                    "civil service list",
+                    "construction and technical services",
+                    "cts",
+                    "dcas",
+                    "dem",
+                    "department of citywide administrative services",
+                    "department of energy management",
+                    "eal estate services",
+                    "exam",
+                    "facilities management",
+                    "fbm",
+                    "fiscal and business management",
+                    "fleet",
+                    "fm",
+                    "hc",
+                    "human capital",
+                    "name",
+                    "ocp",
+                    "office of citywide procurement",
+                    "office of general counsel",
+                    "ogc",
+                    "rank",
+                    "res",
+                    "score"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Update_Automation",
+                        "value": "Yes"
+                    },
+                    {
+                        "key": "Update_Date-Made-Public",
+                        "value": "7/12/2016"
+                    },
+                    {
+                        "key": "Update_Update-Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Update_Data-Change-Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Dataset-Information_Agency",
+                        "value": "Department of Citywide Administrative Services (DCAS)"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofnewyork.us"
+            },
+            "permalink": "https://data.cityofnewyork.us/d/vx8i-nprf",
+            "link": "https://data.cityofnewyork.us/City-Government/Civil-Service-List-Active-/vx8i-nprf",
+            "owner": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            },
+            "creator": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            }
+        },
+        {
+            "resource": {
+                "name": "Building, Electrical, Fire, Grading, Mechanical, Plumbing & Sign Permits",
+                "id": "kvz2-j5cj",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Issued Permits - File Date:  5/23/2013 - 11/30/2024",
+                "attribution": "Department of Inspections, Licenses & Permits",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2024-12-12T14:16:05.000Z",
+                "createdAt": "2015-04-30T17:13:40.000Z",
+                "metadata_updated_at": "2024-12-12T14:15:54.000Z",
+                "data_updated_at": "2024-12-12T14:16:05.000Z",
+                "page_views": {
+                    "page_views_last_week": 13,
+                    "page_views_last_month": 56,
+                    "page_views_total": 2391209,
+                    "page_views_last_week_log": 3.8073549220576037,
+                    "page_views_last_month_log": 5.832890014164742,
+                    "page_views_total_log": 21.189309404791832
+                },
+                "columns_name": [
+                    "ZIP",
+                    "CITY",
+                    "ISSUE_DATE",
+                    "CENSUS_TRACT",
+                    "PERMIT_TYPE",
+                    "FILE_DATE",
+                    "TYPE",
+                    "CATEGORY",
+                    "PERMIT_NUMBER",
+                    "SEWER",
+                    "WATER"
+                ],
+                "columns_field_name": [
+                    "zip",
+                    "city",
+                    "issue_date",
+                    "census_tract",
+                    "permit_type",
+                    "file_date",
+                    "type",
+                    "category",
+                    "permit_number",
+                    "sewer",
+                    "water"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 1496,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2017-12-04T15:23:39.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "infrastructure"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Licenses and Permits",
+                "domain_tags": [
+                    "mechanical permit",
+                    "plumbing permit",
+                    "sign permit",
+                    "hvac permit",
+                    "fire permit",
+                    "electrical permit",
+                    "building permit",
+                    "grading permit",
+                    "issued permits",
+                    "permits"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Additional-Metadata_Coverage",
+                        "value": "2010 - Present"
+                    },
+                    {
+                        "key": "Additional-Metadata_Frequency",
+                        "value": "Yearly"
+                    },
+                    {
+                        "key": "Additional-Metadata_Publisher",
+                        "value": "Howard County, Maryland"
+                    },
+                    {
+                        "key": "Additional-Metadata_Contributor",
+                        "value": "Department of Inspections, Licenses & Permits"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "opendata.howardcountymd.gov",
+                "license": "Public Domain"
+            },
+            "permalink": "https://opendata.howardcountymd.gov/d/kvz2-j5cj",
+            "link": "https://opendata.howardcountymd.gov/Licenses-and-Permits/Building-Electrical-Fire-Grading-Mechanical-Plumbi/kvz2-j5cj",
+            "owner": {
+                "id": "y48e-rpnp",
+                "user_type": "interactive",
+                "display_name": "Walker, C."
+            },
+            "creator": {
+                "id": "y48e-rpnp",
+                "user_type": "interactive",
+                "display_name": "Walker, C."
+            }
+        },
+        {
+            "resource": {
+                "name": "DOB Job Application Filings",
+                "id": "ic3t-wcy2",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset contains all job applications submitted through the Borough Offices, through eFiling, or through the HUB, which have a \"Latest Action Date\" since January 1, 2000. This dataset does not include jobs submitted through DOB NOW. See the <a href=\"https://data.cityofnewyork.us/d/w9ak-ipjd\" target=\"_blank\" rel=\"noreferrer\"\n>DOB NOW: Build – Job Application Filings<\/a> dataset for DOB NOW jobs.",
+                "attribution": "Department of Buildings (DOB)",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-23T20:02:47.000Z",
+                "createdAt": "2013-04-18T15:18:56.000Z",
+                "metadata_updated_at": "2025-07-11T18:35:13.000Z",
+                "data_updated_at": "2025-08-23T20:02:47.000Z",
+                "page_views": {
+                    "page_views_last_week": 1502,
+                    "page_views_last_month": 4082,
+                    "page_views_total": 2388518,
+                    "page_views_last_week_log": 10.553629293916366,
+                    "page_views_last_month_log": 11.995413852225152,
+                    "page_views_total_log": 21.18768492241418
+                },
+                "columns_name": [
+                    "Owner'sHouse Street Name",
+                    "Special District 2",
+                    "Mechanical",
+                    "Applicant's First Name",
+                    "Applicant License #",
+                    "Pre- Filing Date",
+                    "Paid",
+                    "Fully Paid",
+                    "Fully Permitted",
+                    "Proposed Occupancy",
+                    "Loft Board",
+                    "Proposed Zoning Sqft",
+                    "Existing Height",
+                    "Zoning Dist1",
+                    "Zoning Dist3",
+                    "Owner'sPhone #",
+                    "City ",
+                    "Vertical Enlrgmt",
+                    "Standpipe",
+                    "GIS_BIN",
+                    "Bin #",
+                    "Other Description",
+                    "Block",
+                    "Applicant Professional Title",
+                    "Fire Suppression",
+                    "ExistingNo. of Stories",
+                    "Existing Dwelling Units",
+                    "Site Fill",
+                    "Latest Action Date",
+                    "Horizontal Enlrgmt",
+                    "Adult Estab",
+                    "eFiling Filed",
+                    "PC Filed",
+                    "Proposed No. of Stories",
+                    "Zip",
+                    "Owner Type",
+                    "Enlargement SQ Footage",
+                    "GIS_COUNCIL_DISTRICT",
+                    "Cluster",
+                    "Building Type",
+                    "BUILDING_CLASS",
+                    "Plumbing",
+                    "Borough",
+                    "Doc #",
+                    "Job Description",
+                    "TOTAL_CONSTRUCTION_FLOOR_AREA",
+                    "Approved",
+                    "GIS_LATITUDE",
+                    "Sprinkler",
+                    "Proposed Dwelling Units",
+                    "Professional Cert",
+                    "Total Est. Fee",
+                    "Initial Cost",
+                    "SIGNOFF_DATE",
+                    "GIS_CENSUS_TRACT",
+                    "Street Frontage",
+                    "Owner's Business Name",
+                    "Assigned",
+                    "Job Status Descrp",
+                    "JOB_S1_NO",
+                    "Community - Board",
+                    "GIS_NTA_NAME",
+                    "Landmarked",
+                    "Street Name",
+                    "Owner's Last Name",
+                    "Owner's House Number",
+                    "Existing Occupancy",
+                    "Owner's First Name",
+                    "DOBRunDate",
+                    "Existing Zoning Sqft",
+                    "Other",
+                    "Curb Cut",
+                    "Special District 1",
+                    "Equipment",
+                    "Fuel Burning",
+                    "SPECIAL_ACTION_DATE",
+                    "GIS_LONGITUDE",
+                    "Fire Alarm",
+                    "Non-Profit",
+                    "Proposed Height",
+                    "Little e",
+                    "Zoning Dist2",
+                    "Boiler",
+                    "Job Type",
+                    "House #",
+                    "Fuel Storage",
+                    "State",
+                    "WITHDRAWAL_FLAG",
+                    "Job Status",
+                    "Lot",
+                    "Fee Status",
+                    "Applicant's Last Name",
+                    "SPECIAL_ACTION_STATUS",
+                    "City Owned",
+                    "Job #",
+                    "JOB_NO_GOOD_COUNT"
+                ],
+                "columns_field_name": [
+                    "owner_shouse_street_name",
+                    "special_district_2",
+                    "mechanical",
+                    "applicant_s_first_name",
+                    "applicant_license__",
+                    "pre__filing_date",
+                    "paid",
+                    "fully_paid",
+                    "fully_permitted",
+                    "proposed_occupancy",
+                    "loft_board",
+                    "proposed_zoning_sqft",
+                    "existing_height",
+                    "zoning_dist1",
+                    "zoning_dist3",
+                    "owner_sphone__",
+                    "city_",
+                    "vertical_enlrgmt",
+                    "standpipe",
+                    "gis_bin",
+                    "bin__",
+                    "other_description",
+                    "block",
+                    "applicant_professional_title",
+                    "fire_suppression",
+                    "existingno_of_stories",
+                    "existing_dwelling_units",
+                    "site_fill",
+                    "latest_action_date",
+                    "horizontal_enlrgmt",
+                    "adult_estab",
+                    "efiling_filed",
+                    "pc_filed",
+                    "proposed_no_of_stories",
+                    "zip",
+                    "owner_type",
+                    "enlargement_sq_footage",
+                    "gis_council_district",
+                    "cluster",
+                    "building_type",
+                    "building_class",
+                    "plumbing",
+                    "borough",
+                    "doc__",
+                    "job_description",
+                    "total_construction_floor_area",
+                    "approved",
+                    "gis_latitude",
+                    "sprinkler",
+                    "proposed_dwelling_units",
+                    "professional_cert",
+                    "total_est__fee",
+                    "initial_cost",
+                    "signoff_date",
+                    "gis_census_tract",
+                    "street_frontage",
+                    "owner_s_business_name",
+                    "assigned",
+                    "job_status_descrp",
+                    "job_s1_no",
+                    "community___board",
+                    "gis_nta_name",
+                    "landmarked",
+                    "street_name",
+                    "owner_s_last_name",
+                    "owner_s_house_number",
+                    "existing_occupancy",
+                    "owner_s_first_name",
+                    "dobrundate",
+                    "existing_zoning_sqft",
+                    "other",
+                    "curb_cut",
+                    "special_district_1",
+                    "equipment",
+                    "fuel_burning",
+                    "special_action_date",
+                    "gis_longitude",
+                    "fire_alarm",
+                    "non_profit",
+                    "proposed_height",
+                    "little_e",
+                    "zoning_dist2",
+                    "boiler",
+                    "job_type",
+                    "house__",
+                    "fuel_storage",
+                    "state",
+                    "withdrawal_flag",
+                    "job_status",
+                    "lot",
+                    "fee_status",
+                    "applicant_s_last_name",
+                    "special_action_status",
+                    "city_owned",
+                    "job__",
+                    "job_no_good_count"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "House Street Name of Property Owner",
+                    "Special District 2",
+                    "Mechanical  Work Type? (X=Yes, Blank=No)",
+                    "First Name of Applicant",
+                    "Number assigned to the skilled trade person/contractor or licensed professional",
+                    "Date when job is prefiled",
+                    "Date when job is paid",
+                    "Date when job is paid and entered",
+                    "Date when job is fully permitted",
+                    "Proposed Occupancy",
+                    "Loft Board",
+                    "Proposed Zoning Sqft",
+                    "Existing Height",
+                    "Zoning Distr 1",
+                    "Zoning Distr 3",
+                    "Owner's  Phone #",
+                    "City ",
+                    "Vertical Enlrgmt",
+                    "Standpipe Work Type? (X=Yes, Blank=No)",
+                    "BIN",
+                    "Number assigned by City Planning to a specific building",
+                    "Other Description",
+                    "Tax block assigned by Department of Finance",
+                    "Applicant's Professional Title",
+                    "Fire Suppression  Work Type? (X=Yes, Blank=No)",
+                    "ExistingNo. of Stories",
+                    "Existing Dwelling Units",
+                    "Site Fill",
+                    "Latest status date",
+                    "Horizontal Enlrgmt",
+                    "Adult Estab",
+                    "Application Filed electronically, rather than manually",
+                    "Application Filed electronically, rather than manually",
+                    "Proposed No. of Stories",
+                    "Zip",
+                    "Owner Type",
+                    "Enlargement SQ Footage",
+                    "Council District",
+                    "Cluster",
+                    "1-2-3 Family  or Other",
+                    "Building Class",
+                    "Plumbing Work Type? (X=Yes, Blank=No)",
+                    "1= Manhattan, 2= Bronx, 3 = Brooklyn, 4 = Queens, 5 = Staten Island",
+                    "Document Number",
+                    "Job Description",
+                    "Total  Construction Floor Area",
+                    "Date when job is approved",
+                    "Latitude",
+                    "Sprinkler  Work Type? (X=Yes, Blank=No)",
+                    "Proposed Dwelling Units",
+                    "Job is Professionally Certified by Licensed Professional instead of having it reviewed by Department of Building's Plan Examiners",
+                    "Estimated fee of job",
+                    " Estimated cost of job",
+                    "Sign-off Date",
+                    "Census Tract",
+                    "Street Frontage",
+                    "Business Name of Property Owner",
+                    "Date when job is assigned to plan examiner",
+                    "Status code description",
+                    "JOB_S1_NO",
+                    "3-digit identifier: Borough code = first position, last 2 = community board",
+                    "NTA Name",
+                    "L code indicates that the building has been assigned landmark status",
+                    "Street Name where Property is located",
+                    "Last Name of property owner",
+                    "House Number of Property Owner",
+                    "Existing Occupancy",
+                    "First Name of property owner",
+                    "Date when query is run and pushed to Open Data. Could be used to differentiate report dates.",
+                    "Existing Zoning Sqft",
+                    "Other? (X=Yes, Blank=No)",
+                    "Curb Cut  Work Type? (X=Yes, Blank=No)",
+                    "Special Distr 1",
+                    "Equipment  Work Type? (X=Yes, Blank=No)",
+                    "Fuel Burning  Work Type? (X=Yes, Blank=No)",
+                    "Special Action Date",
+                    "Longitude",
+                    "Fire Alarm  Work Type? (X=Yes, Blank=No)",
+                    "Non-Profit",
+                    "Proposed Height",
+                    "Hazardous",
+                    "Zoning Distr 2",
+                    "Boiler  Work Type? (X=Yes, Blank=No)",
+                    "Job Type, based on DOB Job Code (NB-New Building, A1, A2, A3- Alterations 1-3, SG-Sign, etc.)",
+                    "House Number of Residence or Commercial Property",
+                    "Fuel Storage  Work Type? (X=Yes, Blank=No)",
+                    "State",
+                    "Withdrawal Indicator",
+                    "DOB Status code of job (A-Pre Filed, I-Sign Off, P- Approved, R-Permit Entire) Complete List - http://www.nyc.gov/html/dob/downloads/pdf/bisjobstatus.pdf",
+                    "Tax lot assigned by Department of Finance",
+                    "Type of Fee",
+                    "Last Name of Applicant",
+                    "Special Action Status",
+                    "City Owned",
+                    "Number assigned by DOB to Job Filing",
+                    "Job No Good Count"
+                ],
+                "columns_format": [
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "view": "date",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    }
+                ],
+                "download_count": 67250,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2020-06-22T18:23:35.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Housing & Development",
+                "domain_tags": [
+                    "buildings",
+                    "dob",
+                    "job"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Update_Automation",
+                        "value": "Yes"
+                    },
+                    {
+                        "key": "Update_Date-Made-Public",
+                        "value": "4/26/2013"
+                    },
+                    {
+                        "key": "Update_Update-Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Dataset-Information_Agency",
+                        "value": "Department of Buildings (DOB)"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofnewyork.us"
+            },
+            "permalink": "https://data.cityofnewyork.us/d/ic3t-wcy2",
+            "link": "https://data.cityofnewyork.us/Housing-Development/DOB-Job-Application-Filings/ic3t-wcy2",
+            "owner": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            },
+            "creator": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            }
+        }
+    ],
+    "resultSetSize": 10000,
+    "timings": {
+        "serviceMillis": 51,
+        "searchMillis": [
+            5,
+            20
+        ]
+    },
+    "warnings": [
+
+    ]
+}

@@ -1,0 +1,1965 @@
+{
+    "results": [
+        {
+            "resource": {
+                "name": "Bus Breakdown and Delays",
+                "id": "ez4e-fazm",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "The Bus Breakdown and Delay system collects information from school bus vendors operating out in the field in real time. Bus staff that encounter delays during the route are instructed to radio the dispatcher at the bus vendor’s central office. The bus vendor staff are then instructed to log into the Bus Breakdown and Delay system to record the event and notify OPT. OPT customer service agents use this system to inform parents who call with questions regarding bus service. The Bus Breakdown and Delay system is publicly accessible and contains real time updates. All information in the system is entered by school bus vendor staff.",
+                "attribution": "Department of Education (DOE)",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T10:35:42.000Z",
+                "createdAt": "2015-09-30T17:08:23.000Z",
+                "metadata_updated_at": "2024-11-26T23:16:32.000Z",
+                "data_updated_at": "2025-08-25T10:35:42.000Z",
+                "page_views": {
+                    "page_views_last_week": 240,
+                    "page_views_last_month": 1023,
+                    "page_views_total": 38740,
+                    "page_views_last_week_log": 7.912889336229962,
+                    "page_views_last_month_log": 10.0,
+                    "page_views_total_log": 15.241573573460181
+                },
+                "columns_name": [
+                    "Busbreakdown_ID",
+                    "Has_Contractor_Notified_Parents",
+                    "How_Long_Delayed",
+                    "Informed_On",
+                    "Last_Updated_On",
+                    "Created_On",
+                    "Route_Number",
+                    "Number_Of_Students_On_The_Bus",
+                    "Bus_Company_Name",
+                    "Boro",
+                    "Run_Type",
+                    "Has_Contractor_Notified_Schools",
+                    "Breakdown_or_Running_Late",
+                    "Have_You_Alerted_OPT",
+                    "Occurred_On",
+                    "Schools_Serviced",
+                    "School_Year",
+                    "Reason",
+                    "School_Age_or_PreK",
+                    "Bus_No",
+                    "Incident_Number"
+                ],
+                "columns_field_name": [
+                    "busbreakdown_id",
+                    "has_contractor_notified_parents",
+                    "how_long_delayed",
+                    "informed_on",
+                    "last_updated_on",
+                    "created_on",
+                    "route_number",
+                    "number_of_students_on_the_bus",
+                    "bus_company_name",
+                    "boro",
+                    "run_type",
+                    "has_contractor_notified_schools",
+                    "breakdown_or_running_late",
+                    "have_you_alerted_opt",
+                    "occurred_on",
+                    "schools_serviced",
+                    "school_year",
+                    "reason",
+                    "school_age_or_prek",
+                    "bus_no",
+                    "incident_number"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Calendar date",
+                    "Calendar date",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Unique ID of each record.",
+                    "Indicator status as reported by the staff employed by the reporting bus vendor. OPT does not systematically monitor the contents of this field in real time.",
+                    "Length of delay as estimated by the staff employed by the reporting bus vendor. OPT does not systematically monitor the contents of this field in real time.",
+                    "Date on which the school, parents or OPT was notified, as reported by the bus vendor.",
+                    "Time/date the record was last edited in the OPT Breakdown and Delay system.",
+                    "Time/date the record was created in the OPT Breakdown and Delay system.",
+                    "This refers to the unique identifier four (1 alpha + 3 numeric) character route numbers indicate curb-to-curb service while five (1 alpha + 4 numeric) indicates stop-to-school service. Pre-K/EI routes may have any value in the Route Number field; bus vendors are not required to follow any naming convention for those routes.",
+                    "Number of students on the bus at the time of the incident as estimated by the staff employed by the reporting bus vendor. OPT does not systematically monitor the contents of this field in real time.",
+                    "Bus vendor name of the reporting bus vendor.",
+                    "Borough, county or state in which the delay occurred, as entered by the staff employed by the reporting bus vendor.",
+                    "Designates whether a breakdown or delay occurred on a specific category of busing service. The categories are:\n•\tGeneral Ed AM Run - stop-to-school service in the morning with pick-ups at bus stops and drops-offs at school(s). \n•\tGeneral Ed PM Run - stop-to-school service in the afternoon with pick-ups at school(s) and drop-offs at bus stops.\n•\tGeneral Ed Field Trip - refers to any mid-day bus trip that does not involve at least one student with an IEP for busing. For OPT, the term \"field trip\" is a contract term referring to any mid-day trip, including work programs as well as traditional field trips to the museum.\n•\tSpecial Ed AM Run – curb-to-curb service in the morning with pick-ups at residences and drop-offs at school(s).\n•\tSpecial Ed PM Run - curb-to-curb service in the afternoon with pick-ups at school(s) and drop-offs at residences.\n•\tSpecial Ed Field Trip - refers to any mid-day bus trip that includes at least one student with an IEP for busing. For OPT, the term \"field trip\" is a contract term referring to any mid-day trip, including work programs as well as traditional field trips to the museum.\n•\tPre-K/EI - Pre-Kindergarten or Early Intervention program curb-to-curb run. Pre-K/EI service has different service levels and contract terms from OPT's school aged service. OPT provides curb-to-curb busing to Pre-K students with an Individualized Education Program (IEP) for busing and selected children in the Dept. of Health and Mental Hygiene’s Early Intervention program.\n•\tProject Read PM Run – curb-to-curb busing service for special education students enrolled in late-day programs. As a rule, bus service is only available to schools or sites that dismiss students before 4:30 PM. There are a small number of approved programs that dismiss students after 4:30 PM.\n",
+                    "Indicator status as reported by the staff employed by the reporting bus vendor. OPT does not systematically monitor the contents of this field in real time.",
+                    "Indicator status as reported by the staff employed by the reporting bus vendor. OPT does not edit this field. Designates whether a bus has broken down (and requires another vehicle to be dispatched to finish the route) or is delayed (and may not require another vehicle).",
+                    "Indicator status as reported by the staff employed by the reporting bus vendor. OPT does not systematically monitor the contents of this field in real time.",
+                    "Time/date the incident occurred, as entered by the staff employed by the reporting bus vendor",
+                    "OPT Codes of all transportation sites on the route. If there is more than one site, each site code will be separated by a comma. If the incident occurred on a bus used for Pre-K/EI service, the code will have one alpha, three numeric and sometimes one additional alpha character. If the incident occurred on a bus used for school-aged service, the code will have five text formatted numerals and may include a leading zero.",
+                    "Indicates the school year the record refers to. The DOE school year starts in September every year. ",
+                    "Reason for delay as entered by staff employed by reporting bus vendor. User chooses from the following categories:\n•\tAccident - to be selected if any accident that delays the bus is recorded. The bus can be delayed by an accident that the bus itself is not actually involved in. \n•\tDelayed by School - to be selected by reporting bus vendors when schools have delays ushering students to or from the bus.\n•\tFlat Tire - to be selected by reporting bus vendors for any flat tire that requires the bus to stop and wait for assistance\n•\tHeavy Traffic - to be selected by the reporting bus vendor when heavy traffic conditions delay the scheduled service.\n•\tMechanical Problem -  to be selected by reporting bus vendors for any type of mechanical problem other than 'Flat Tire' or 'Won't Start'\n•\tOther - to be selected by the reporting bus vendor when the delay cannot be classified within the available categories\n•\tProblem Run - Some routes may be late to a destination because the bus vendor believes the route has too many stops or is too long. There is a process for bus vendors to submit these Problem Runs to OPT staff for research and resolution. While that work is being done, bus vendors can record routes as being delayed by selecting the Problem Run category.\n•\tWeather Conditions - to be selected by the reporting bus vendor when weather conditions delay the scheduled service.\n•\tWon't Start - to be selected by the reporting bus vendor when a bus that has already left the bus yard won't start. There is usually a delay while a replacement bus is dispatched to the out-of-service bus's location\n",
+                    "Indicator of whether the route serves the school-age or Pre-K/EI population. These two busing types have very different contract terms. OPT does not perform route planning for Pre-K service and doesn't assign route numbers.",
+                    "The bus number is assigned by the bus vendor. The numbers are not unique identifiers and may be repeated across vendors. For example, many bus vendors may have a Bus #1. Each bus vendor may have their own numbering convention.",
+                    "Some reports of bus breakdowns or delays originate from calls to the OPT Customer Service line who records incidents. When this happens, the record will have the Incident reference number."
+                ],
+                "columns_format": [
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    }
+                ],
+                "download_count": 15173,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2016-05-03T22:59:56.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "bus",
+                    "doe",
+                    "schools",
+                    "transportation"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Update_Automation",
+                        "value": "Yes"
+                    },
+                    {
+                        "key": "Update_Date-Made-Public",
+                        "value": "4/11/2016"
+                    },
+                    {
+                        "key": "Update_Update-Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Dataset-Information_Agency",
+                        "value": "Department of Education (DOE)"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofnewyork.us"
+            },
+            "permalink": "https://data.cityofnewyork.us/d/ez4e-fazm",
+            "link": "https://data.cityofnewyork.us/Transportation/Bus-Breakdown-and-Delays/ez4e-fazm",
+            "owner": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            },
+            "creator": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            }
+        },
+        {
+            "resource": {
+                "name": "KCATA Bus Stops",
+                "id": "bd2s-bfst",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This data set includes the location of bus stops.",
+                "attribution": "KCATA Transit Data",
+                "attribution_link": "http://www.kcata.org/transit_data/access_gtdf",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2023-12-29T17:57:53.000Z",
+                "createdAt": "2013-04-23T15:40:05.000Z",
+                "metadata_updated_at": "2023-12-29T17:57:53.000Z",
+                "data_updated_at": "2023-03-02T21:35:47.000Z",
+                "page_views": {
+                    "page_views_last_week": 24,
+                    "page_views_last_month": 99,
+                    "page_views_total": 8278,
+                    "page_views_last_week_log": 4.643856189774724,
+                    "page_views_last_month_log": 6.643856189774725,
+                    "page_views_total_log": 13.015240803332683
+                },
+                "columns_name": [
+                    "County Boundary",
+                    "Location 1 (zip)",
+                    "Stop Name",
+                    "Location 1 (city)",
+                    "Stop ID",
+                    "Location",
+                    "Location 1 (address)",
+                    "Zip Codes",
+                    "Council Districts",
+                    "Neighborhood Census",
+                    "Location 1 (state)"
+                ],
+                "columns_field_name": [
+                    ":@computed_region_my34_vmp8",
+                    "location_zip",
+                    "stop_name",
+                    "location_city",
+                    "stop_id",
+                    "location",
+                    "location_address",
+                    ":@computed_region_w4hf_t6bp",
+                    ":@computed_region_9t2m_phkm",
+                    ":@computed_region_kk66_ngf4",
+                    "location_state"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Point",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 11977,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2023-03-02T21:31:44.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "transportation"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "bdkc",
+                    "transit",
+                    "bus stops",
+                    "bus"
+                ],
+                "domain_metadata": [
+
+                ]
+            },
+            "metadata": {
+                "domain": "data.kcmo.org",
+                "license": "Public Domain"
+            },
+            "permalink": "https://data.kcmo.org/d/bd2s-bfst",
+            "link": "https://data.kcmo.org/Transportation/KCATA-Bus-Stops/bd2s-bfst",
+            "owner": {
+                "id": "p5d5-8ryp",
+                "user_type": "interactive",
+                "display_name": "DataKC"
+            },
+            "creator": {
+                "id": "p5d5-8ryp",
+                "user_type": "interactive",
+                "display_name": "DataKC"
+            }
+        },
+        {
+            "resource": {
+                "name": "DART Bus Schedules",
+                "id": "6qat-uaei",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This contains all the routes, stop location, stop times, and trip information for all DART bus routes.",
+                "attribution": "Department of Transportation, Delaware Transit Corportation",
+                "attribution_link": "http://www.dartfirststate.com/information/routes/index.shtml",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2022-10-06T20:17:33.000Z",
+                "createdAt": "2017-07-28T12:22:01.000Z",
+                "metadata_updated_at": "2022-10-06T20:17:33.000Z",
+                "data_updated_at": "2019-10-30T19:58:29.000Z",
+                "page_views": {
+                    "page_views_last_week": 24,
+                    "page_views_last_month": 63,
+                    "page_views_total": 6642,
+                    "page_views_last_week_log": 4.643856189774724,
+                    "page_views_last_month_log": 6.0,
+                    "page_views_total_log": 12.697619199078714
+                },
+                "columns_name": [
+                    "STOP_TIME",
+                    "BLOCK_NUM",
+                    "STOP_ABBR",
+                    "STOP_NAME",
+                    "STOPID",
+                    "TRIP_TOTIME",
+                    "DESTINATIONSIGN_NAME",
+                    "WEEK_TEMPLATE",
+                    "SERVICE_ID",
+                    "POCKETSCHEDULE_NAME",
+                    "ROUTE_NAME",
+                    "ROUTE",
+                    "Geocoded Location (state)",
+                    "DIRECTION_NAME",
+                    "Geocoded Location (zip)",
+                    "Geocoded Location (city)",
+                    "Geocoded Location (address)",
+                    "Geocoded Location",
+                    "PATTERNID",
+                    "TRIPID",
+                    "TRIP_FROMTIME",
+                    "STOP_LAT",
+                    "STOP_LON",
+                    "STOP_SEQUENCE",
+                    "SERVICE_NAME"
+                ],
+                "columns_field_name": [
+                    "stop_time",
+                    "block_num",
+                    "stop_abbr",
+                    "stop_name",
+                    "stopid",
+                    "trip_totime",
+                    "destinationsign_name",
+                    "week_template",
+                    "service_id",
+                    "pocketschedule_name",
+                    "route_name",
+                    "route",
+                    "geocoded_location_state",
+                    "direction_name",
+                    "geocoded_location_zip",
+                    "geocoded_location_city",
+                    "geocoded_location_address",
+                    "geocoded_location",
+                    "patternid",
+                    "tripid",
+                    "trip_fromtime",
+                    "stop_lat",
+                    "stop_lon",
+                    "stop_sequence",
+                    "service_name"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Point",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Specifies the stop arrival time at a specific stop for a specific trip on a route. ",
+                    "Contains an ID that uniquely identifies a Block. \nIt used in identifying which trip belongs to a block. A block consists of two or more sequential trips made using the same vehicle, where a passenger can transfer from one trip to the next just by staying in the vehicle. The block_num is referenced by two or more TripID’s. ",
+                    "Contains short text or alpha numeric value that used in identifying the stop, referenced by the StopID column. ",
+                    "Contains the name of a stop. ",
+                    "Contains an ID that uniquely identifies a stop. Multiple routes may use the same stop. The StopID is unique.",
+                    "Contains specific Trip end time. The last stop time(Stop_Time) value of a specific Trip(TripID) is entered here.",
+                    "Contains the text that appears on the bus sign that identifies the trip's destination to passengers. This field is also used to distinguish between different patterns (PatternID) of service in the same route. Usually, major landmark names are used in this data.",
+                    "Contains a binary value that indicates whether the service is valid for the day(s) of the week starting from Sunday to Saturday.\n“Sunday Monday Tuesday Wednesday Thursday Friday Saturday.”\nExample: 0111110. A value of ‘0’ indicates that service is not available for that day, whereas 1 represents service is available for that day. \nNote: Transit day Start time and End time of all days is from 3:00 am to next day 2:59 am.  ",
+                    "Contains an ID that uniquely identifies a service. It is referenced by the Service_Name and Week_Template columns. ",
+                    "Contains the alias name of a stop used on DART pocket schedule time table. ",
+                    "Contains the full name of a route. This name will often include the route's destination sign name or last stop name. ",
+                    "Contains an ID that uniquely identifies a route. ",
+                    "",
+                    "Contains text which indicates the direction of travel for a Trip. Used for separating trips by direction when publishing time tables and distinguishing between bi-directional trips with the same Route. \nValues = Outbound, Inbound\nOutbound: Travel in one direction\nInbound: Travel in opposite direction. ",
+                    "",
+                    "",
+                    "",
+                    "This field is used to combine latitude and longitude into one field to be able to display on a map.",
+                    "Contains an ID that uniquely identifies a Pattern. Multiple blocks are a combination of a specific Pattern. ",
+                    "Contains an ID that identifies a trip.",
+                    "Contains specific Trip start time. The first stop time(Stop_Time) value of a specific Trip(TripID) is entered here.",
+                    "Contains the latitude of a stop. ",
+                    "Contains the longitude of a stop.",
+                    "Identifies the order of the stops for a particular trip. The values for Stop_Sequence will be increasing along the trip. There might be missing Stop_Sequence values in the order, which is common. ",
+                    "Contains the full name of the service. This text often indicates what type of service is being used. Example: Weekday, Saturday, Sunday, Resort Weekday. "
+                ],
+                "columns_format": [
+                    {
+                        "displayStyle": "plain",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "address_coords",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 671,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2018-08-03T17:10:34.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "transportation"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "route",
+                    "schedule",
+                    "dart",
+                    "transit",
+                    "trip",
+                    "bus"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Additional-Information_Geographic-Unit",
+                        "value": "Latitude/Longitude"
+                    },
+                    {
+                        "key": "Additional-Information_Temporal-Coverage",
+                        "value": "Current bus schedules"
+                    },
+                    {
+                        "key": "Additional-Information_Frequency-of-publishing",
+                        "value": "Semi-annually"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.delaware.gov",
+                "license": "Public Domain"
+            },
+            "permalink": "https://data.delaware.gov/d/6qat-uaei",
+            "link": "https://data.delaware.gov/Transportation/DART-Bus-Schedules/6qat-uaei",
+            "owner": {
+                "id": "hcy5-vbv6",
+                "user_type": "interactive",
+                "display_name": "Delaware Open Data"
+            },
+            "creator": {
+                "id": "hcy5-vbv6",
+                "user_type": "interactive",
+                "display_name": "Delaware Open Data"
+            }
+        },
+        {
+            "resource": {
+                "name": "Bus Lanes - Local Streets",
+                "id": "ycrg-ses3",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Bus lanes are travel lanes that are restricted to buses during certain hours of the day. All bus lanes have signs posted along the route with specific regulations; lanes marked \"Bus Only\" and /or painted red. Bus lanes help to keep buses from getting stuck in traffic, generally making travel for bus riders faster and reliable and improving the overall traffic flow of a corridor. Each record represents a segment of a bus lane based on the LION geographic base file of NYC streets. User may use the SegmentID field in this dataset to join with the LION data for more information.",
+                "attribution": "Department of Transportation (DOT)",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2024-05-24T16:46:49.000Z",
+                "createdAt": "2020-12-04T21:06:13.000Z",
+                "metadata_updated_at": "2024-05-24T16:46:49.000Z",
+                "data_updated_at": "2024-05-24T16:46:42.000Z",
+                "page_views": {
+                    "page_views_last_week": 68,
+                    "page_views_last_month": 240,
+                    "page_views_total": 6858,
+                    "page_views_last_week_log": 6.10852445677817,
+                    "page_views_last_month_log": 7.912889336229962,
+                    "page_views_total_log": 12.743782540330756
+                },
+                "columns_name": [
+                    "Street",
+                    "Lane_Type1",
+                    "Shape_Leng",
+                    "Last_Updat",
+                    "Year3",
+                    "Chron_ID_1",
+                    "Facility",
+                    "Year2",
+                    "Lane_Type2",
+                    "RW_TYPE",
+                    "Hours",
+                    "SBS_Route1",
+                    "Open_dates",
+                    "TrafDir",
+                    "the_geom",
+                    "SBS_Route2",
+                    "StreetWidt",
+                    "Days_Code",
+                    "SBS_Route3",
+                    "Shape_Le_1",
+                    "Boro",
+                    "Lane_Color",
+                    "Year1",
+                    "SegmentID",
+                    "Days",
+                    "Lane_width"
+                ],
+                "columns_field_name": [
+                    "street",
+                    "lane_type1",
+                    "shape_leng",
+                    "last_updat",
+                    "year3",
+                    "chron_id_1",
+                    "facility",
+                    "year2",
+                    "lane_type2",
+                    "rw_type",
+                    "hours",
+                    "sbs_route1",
+                    "open_dates",
+                    "bltrafdir",
+                    "the_geom",
+                    "sbs_route2",
+                    "streetwidt",
+                    "days_code",
+                    "sbs_route3",
+                    "shape_le_1",
+                    "boro",
+                    "lane_color",
+                    "year1",
+                    "segmentid",
+                    "days",
+                    "lane_width"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "MultiLine",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "MultiLine",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 2330,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2024-05-24T16:46:49.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "bus",
+                    "lanes",
+                    "mta"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Update_Automation",
+                        "value": "No"
+                    },
+                    {
+                        "key": "Update_Date-Made-Public",
+                        "value": "12/7/2020"
+                    },
+                    {
+                        "key": "Update_Update-Frequency",
+                        "value": "Annually"
+                    },
+                    {
+                        "key": "Dataset-Information_Agency",
+                        "value": "Department of Transportation (DOT)"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofnewyork.us"
+            },
+            "permalink": "https://data.cityofnewyork.us/d/ycrg-ses3",
+            "link": "https://data.cityofnewyork.us/Transportation/Bus-Lanes-Local-Streets/ycrg-ses3",
+            "owner": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            },
+            "creator": {
+                "id": "5fuc-pqz2",
+                "user_type": "interactive",
+                "display_name": "NYC OpenData"
+            }
+        },
+        {
+            "resource": {
+                "name": "Bronx Bus Stops",
+                "id": "eqmj-6b8d",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Bronx Transit Bus Stops",
+                "attribution": "mta.info",
+                "attribution_link": "http://mta.info/developers/download.html",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2019-02-15T18:15:27.000Z",
+                "createdAt": "2012-10-06T01:37:39.000Z",
+                "metadata_updated_at": "2019-02-15T18:15:27.000Z",
+                "data_updated_at": "2012-10-06T01:43:42.000Z",
+                "page_views": {
+                    "page_views_last_week": 2,
+                    "page_views_last_month": 5,
+                    "page_views_total": 8176,
+                    "page_views_last_week_log": 1.5849625007211563,
+                    "page_views_last_month_log": 2.584962500721156,
+                    "page_views_total_log": 12.997355925020381
+                },
+                "columns_name": [
+                    "Location",
+                    "Stop ID",
+                    "Zip Codes",
+                    "Stop Name"
+                ],
+                "columns_field_name": [
+                    "location",
+                    "stop_id",
+                    ":@computed_region_tx27_6f7w",
+                    "stop_name"
+                ],
+                "columns_datatype": [
+                    "Point",
+                    "Number",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 553,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2012-10-06T01:44:12.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Environment",
+                "domain_tags": [
+                    "mta",
+                    "transit bus stops"
+                ],
+                "domain_metadata": [
+
+                ]
+            },
+            "metadata": {
+                "domain": "bronx.lehman.cuny.edu",
+                "license": "Public Domain"
+            },
+            "permalink": "https://bronx.lehman.cuny.edu/d/eqmj-6b8d",
+            "link": "https://bronx.lehman.cuny.edu/Environment/Bronx-Bus-Stops/eqmj-6b8d",
+            "owner": {
+                "id": "3fqa-4a6j",
+                "user_type": "interactive",
+                "display_name": "Elkin"
+            },
+            "creator": {
+                "id": "3fqa-4a6j",
+                "user_type": "interactive",
+                "display_name": "Elkin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Bus Ridership",
+                "id": "nmjv-498y",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "***NOTE: There are problems with data accuracy on bus ridership counts for June 2019, July 2019, and August 2019 as Phoenix and Valley Metro attempt to integrate new hardware with the existing system. For Mesa this is clearly impacting routes 156, 531, and 541, however, there are minor anomalies with some of the other routes. \n\nBreakdown of bus service ridership on a monthly basis per route in Mesa (data lags for approximately 30 days) and data is provided by Valley Metro, an external agency who is responsible for both bus service and light rail in Mesa. For a regional view of both bus service and light rail ridership, please go to their website, under their Publications/Reports section. Valley Metro tracks bus riders as they board. Bus service expands the scope and range of light rail, in addition to being a geographically more flexible means of public transportation in comparison to light rail. \n\nThe data set captures information starting in July 2013. Effective October 24, 2016, AZ Link has been consolidated with route 112, and the Main Street Link consolidated with route 40.\n\nData reporting can be delayed up to 60 days.",
+                "attribution": "Transit Services",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-21T22:25:16.000Z",
+                "createdAt": "2019-06-03T17:34:05.000Z",
+                "metadata_updated_at": "2025-08-21T22:25:15.000Z",
+                "data_updated_at": "2025-08-21T22:25:16.000Z",
+                "page_views": {
+                    "page_views_last_week": 0,
+                    "page_views_last_month": 6,
+                    "page_views_total": 534,
+                    "page_views_last_week_log": 0.0,
+                    "page_views_last_month_log": 2.807354922057604,
+                    "page_views_total_log": 9.06339508128851
+                },
+                "columns_name": [
+                    "Route",
+                    "Row ID",
+                    "Fiscal Year",
+                    "Calendar Year",
+                    "Month Date",
+                    "Month",
+                    "Riders"
+                ],
+                "columns_field_name": [
+                    "route",
+                    "row_id",
+                    "fiscal_year",
+                    "calendar_year",
+                    "month_date",
+                    "month",
+                    "riders"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Number"
+                ],
+                "columns_description": [
+                    "Route number of the bus for which riders were measured. See www.valleymetro.org for specific bus route map and other detailed route information.",
+                    "This is derived by combining Month, Calendar year and Bus Route Number",
+                    "Fiscal year in which bus riders were measured",
+                    "Calendar year in which bus riders were measured",
+                    "The month and year in which bus riders were measured",
+                    "Month for which bus riders were measured",
+                    "The number of riders per route per month"
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 78,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2021-02-16T22:55:57.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transit Services",
+                "domain_tags": [
+                    "valley metro",
+                    "route",
+                    "ridership",
+                    "downtown",
+                    "bus"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Frequency_Publishing",
+                        "value": "Monthly"
+                    },
+                    {
+                        "key": "Frequency_Data-Change",
+                        "value": "Monthly"
+                    },
+                    {
+                        "key": "Frequency_Scheduled-Data-Update",
+                        "value": "Manual Post"
+                    },
+                    {
+                        "key": "Data-Quality_Max-Expected-Data-Age",
+                        "value": "90"
+                    },
+                    {
+                        "key": "Terms-of-Use_Terms-of-Use",
+                        "value": "https://data.mesaaz.gov/stories/s/2dcd-j2nx/"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "citydata.mesaaz.gov",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://citydata.mesaaz.gov/d/nmjv-498y",
+            "link": "https://citydata.mesaaz.gov/Transit-Services/Bus-Ridership/nmjv-498y",
+            "owner": {
+                "id": "pxyu-mdaq",
+                "user_type": "interactive",
+                "display_name": "City of Mesa"
+            },
+            "creator": {
+                "id": "pxyu-mdaq",
+                "user_type": "interactive",
+                "display_name": "City of Mesa"
+            }
+        },
+        {
+            "resource": {
+                "name": "Bus Routes",
+                "id": "s5c7-gtgi",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "",
+                "attribution": null,
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2015-05-23T02:10:06.000Z",
+                "createdAt": "2015-05-23T02:08:05.000Z",
+                "metadata_updated_at": "2015-05-23T02:10:06.000Z",
+                "data_updated_at": "2015-05-23T02:08:18.000Z",
+                "page_views": {
+                    "page_views_last_week": 7,
+                    "page_views_last_month": 19,
+                    "page_views_total": 1585,
+                    "page_views_last_week_log": 3.0,
+                    "page_views_last_month_log": 4.321928094887363,
+                    "page_views_total_log": 10.63117705570398
+                },
+                "columns_name": [
+                    "route_long_name",
+                    "route_id",
+                    "route_text_color",
+                    "route_color",
+                    "agency_id",
+                    "route_url",
+                    "route_type",
+                    "route_desc",
+                    "route_short_name"
+                ],
+                "columns_field_name": [
+                    "route_long_name",
+                    "route_id",
+                    "route_text_color",
+                    "route_color",
+                    "agency_id",
+                    "route_url",
+                    "route_type",
+                    "route_desc",
+                    "route_short_name"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 2858,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2015-05-23T02:08:46.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "transportation"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+
+                ],
+                "domain_metadata": [
+
+                ]
+            },
+            "metadata": {
+                "domain": "data.honolulu.gov"
+            },
+            "permalink": "https://data.honolulu.gov/d/s5c7-gtgi",
+            "link": "https://data.honolulu.gov/Transportation/Bus-Routes/s5c7-gtgi",
+            "owner": {
+                "id": "b4zr-4dtj",
+                "user_type": "interactive",
+                "display_name": "Karl Sueyoshi"
+            },
+            "creator": {
+                "id": "b4zr-4dtj",
+                "user_type": "interactive",
+                "display_name": "Karl Sueyoshi"
+            }
+        },
+        {
+            "resource": {
+                "name": "Capital District Bus Stops",
+                "id": "wgnh-hpq9",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Bus stops from the Capital District Transportation Authority",
+                "attribution": "Capital District Transportation Authority",
+                "attribution_link": null,
+                "contact_email": "opendata@its.ny.gov",
+                "type": "dataset",
+                "updatedAt": "2024-10-28T12:55:54.000Z",
+                "createdAt": "2013-05-22T20:13:49.000Z",
+                "metadata_updated_at": "2024-10-28T12:55:53.000Z",
+                "data_updated_at": "2024-10-28T12:55:54.000Z",
+                "page_views": {
+                    "page_views_last_week": 13,
+                    "page_views_last_month": 81,
+                    "page_views_total": 4922,
+                    "page_views_last_week_log": 3.8073549220576037,
+                    "page_views_last_month_log": 6.357552004618085,
+                    "page_views_total_log": 12.26532202423487
+                },
+                "columns_name": [
+                    "Bench",
+                    "Discontinued",
+                    "Routes",
+                    "Shelter",
+                    "Stop ID",
+                    "Municipality",
+                    "Bikerack",
+                    "Signpost",
+                    "Longitude",
+                    "Info Booth",
+                    "Location",
+                    "Location (state)",
+                    "Location (city)",
+                    "Counties",
+                    "New York Zip Codes",
+                    "NYS Municipal Boundaries",
+                    "Location (zip)",
+                    "Location (address)",
+                    "Description",
+                    "Latitude",
+                    "Nearest Intersection"
+                ],
+                "columns_field_name": [
+                    "bench",
+                    "discontinued",
+                    "routes",
+                    "shelter",
+                    "stop_id",
+                    "municipality",
+                    "bikerack",
+                    "signpost",
+                    "longitude",
+                    "info_booth",
+                    "location",
+                    "location_state",
+                    "location_city",
+                    ":@computed_region_kjdx_g34t",
+                    ":@computed_region_wbg7_3whc",
+                    ":@computed_region_yamh_8v7k",
+                    "location_zip",
+                    "location_address",
+                    "description",
+                    "latitude",
+                    "nearest_intersection"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Point",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Does stop have a bench",
+                    "Is stop Discontinued",
+                    "Routes that service stop",
+                    "Does stop have a shelter",
+                    "Unique ID associated to stop located on sign. Can be used for obtaining stop schedule information through cdta.org or customer service",
+                    "Municipality where stop is located",
+                    "Does stop have bike rack",
+                    "Does stop have a sign (Discontinued Stops will not have)",
+                    "Longitude of Stop",
+                    "Does stop have an info booth",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Stop Description",
+                    "Latitude of Stop",
+                    "Nearest intersection to stop"
+                ],
+                "columns_format": [
+                    {
+                        "align": "center"
+                    },
+                    {
+                        "align": "center"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "center"
+                    },
+                    {
+                        "align": "center"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "center"
+                    },
+                    {
+                        "align": "center"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "align": "left"
+                    },
+                    {
+                        "align": "center"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    }
+                ],
+                "download_count": 4737,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2019-04-08T16:25:48.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "transportation"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "stops",
+                    "routes",
+                    "bus",
+                    "cdta"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Common-Core_Publisher",
+                        "value": "State of New York"
+                    },
+                    {
+                        "key": "Common-Core_Contact-Name",
+                        "value": "Open Data NY"
+                    },
+                    {
+                        "key": "Common-Core_Contact-Email",
+                        "value": "opendata@its.ny.gov"
+                    },
+                    {
+                        "key": "Dataset-Summary_Dataset-Owner",
+                        "value": "Planning and Scheduling"
+                    },
+                    {
+                        "key": "Dataset-Summary_Contact-Information",
+                        "value": "KenG@CDTA.org"
+                    },
+                    {
+                        "key": "Dataset-Summary_Granularity",
+                        "value": "Region"
+                    },
+                    {
+                        "key": "Dataset-Summary_Coverage",
+                        "value": "Capital Region"
+                    },
+                    {
+                        "key": "Dataset-Summary_Data-Frequency",
+                        "value": "Annually"
+                    },
+                    {
+                        "key": "Dataset-Summary_Posting-Frequency",
+                        "value": "Annually"
+                    },
+                    {
+                        "key": "Dataset-Summary_Organization",
+                        "value": "Capital District Transportation Authority"
+                    },
+                    {
+                        "key": "Local-Data_Municipality-Filter",
+                        "value": "Yes"
+                    },
+                    {
+                        "key": "Local-Data_Municipality_Column",
+                        "value": "municipality"
+                    },
+                    {
+                        "key": "Dataset-Information_Agency",
+                        "value": "Capital District Transit Authority"
+                    },
+                    {
+                        "key": "Disclaimers_Limitations",
+                        "value": "This information is not continuously updated. As such, any information reported represents a specific snapshot in time."
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.ny.gov"
+            },
+            "permalink": "https://data.ny.gov/d/wgnh-hpq9",
+            "link": "https://data.ny.gov/Transportation/Capital-District-Bus-Stops/wgnh-hpq9",
+            "owner": {
+                "id": "xzik-pf59",
+                "user_type": "interactive",
+                "display_name": "NY Open Data"
+            },
+            "creator": {
+                "id": "xzik-pf59",
+                "user_type": "interactive",
+                "display_name": "NY Open Data"
+            }
+        },
+        {
+            "resource": {
+                "name": "MTA Bus Hourly Ridership: 2020-2024",
+                "id": "kv7t-n8in",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset provides bus ridership estimates on an hourly basis by bus route and class of fare payment.",
+                "attribution": "Metropolitan Transportation Authority",
+                "attribution_link": "https://www.mta.info/open-data",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-05-19T14:03:58.000Z",
+                "createdAt": "2023-05-11T20:28:56.000Z",
+                "metadata_updated_at": "2025-05-19T14:03:58.000Z",
+                "data_updated_at": "2025-05-07T21:04:55.000Z",
+                "page_views": {
+                    "page_views_last_week": 145,
+                    "page_views_last_month": 427,
+                    "page_views_total": 12148,
+                    "page_views_last_week_log": 7.189824558880018,
+                    "page_views_last_month_log": 8.741466986401146,
+                    "page_views_total_log": 13.568549948161222
+                },
+                "columns_name": [
+                    "transfers",
+                    "transit_timestamp",
+                    "payment_method",
+                    "bus_route",
+                    "ridership",
+                    "fare_class_category"
+                ],
+                "columns_field_name": [
+                    "transfers",
+                    "transit_timestamp",
+                    "payment_method",
+                    "bus_route",
+                    "ridership",
+                    "fare_class_category"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Number of individuals who entered a bus via a free subway-to-bus, bus-to-bus, or out of network transfer (from Westchester Bee-Line, NICEbus, the Roosevelt Island Tramway, or Hudson RailLink). This represents a subset of total ridership, meaning that these transfers are already included in the preceding ridership column.",
+                    "Timestamp payment took place in local time. All transactions here are rounded down to the nearest hour. For example, a swipe that took place at 1:37pm will be reported as having taken place at 1pm.",
+                    "Specifies whether the payment method used to enter the bus was from OMNY or MetroCard.",
+                    "Identifies the bus route (e.g., M15, Q10). Data for the Q52 SBS and Q53 SBS are reported together.",
+                    "Total number of riders that entered a bus via OMNY or MetroCard at the specific hour and for that specific fare type.",
+                    "The class of fare payment used for the trip. The consolidated categories are:\n•\tMetroCard – Fair Fare;\n•\tMetroCard – Full Fare;\n•\tMetroCard – Other;\n•\tMetroCard – Senior & Disability;\n•\tMetroCard – Students;\n•\tMetroCard – Unlimited 30-Day;\n•\tMetroCard – Unlimited 7-Day;\n•\tOMNY – Full Fare;\n•\tOMNY – Other;\n•\tOMNY – Seniors & Disabilities;\n"
+                ],
+                "columns_format": [
+                    {
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "center"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 2847,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2023-12-20T19:09:45.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "bus route",
+                    "transfers",
+                    "route",
+                    "ridership",
+                    "passengers",
+                    "omny",
+                    "nyct",
+                    "new york city transit",
+                    "mta bus",
+                    "mtabc",
+                    "metrocard",
+                    "hourly",
+                    "fare",
+                    "customers",
+                    "bus"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Dataset-Summary_Dataset-Owner",
+                        "value": "Metropolitan Transportation Authority"
+                    },
+                    {
+                        "key": "Dataset-Summary_Contact-Information",
+                        "value": "OpenData@mtahq.org"
+                    },
+                    {
+                        "key": "Dataset-Summary_Granularity",
+                        "value": "Hour, bus route, fare medium, class of fare payment"
+                    },
+                    {
+                        "key": "Dataset-Summary_Coverage",
+                        "value": "New York City and parts of Nassau, Hudson and Westchester counties"
+                    },
+                    {
+                        "key": "Dataset-Summary_Posting-Frequency",
+                        "value": "Static - Not Updated"
+                    },
+                    {
+                        "key": "Dataset-Summary_Organization",
+                        "value": "New York City Transit, MTA Bus Company"
+                    },
+                    {
+                        "key": "Dataset-Summary_Time-Period",
+                        "value": "February 2022 - 2024"
+                    },
+                    {
+                        "key": "Dataset-Information_Agency",
+                        "value": "Metropolitan Transportation Authority"
+                    },
+                    {
+                        "key": "Additional-Resources_See-Also",
+                        "value": "https://metrics.mta.info/"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.ny.gov"
+            },
+            "permalink": "https://data.ny.gov/d/kv7t-n8in",
+            "link": "https://data.ny.gov/Transportation/MTA-Bus-Hourly-Ridership-2020-2024/kv7t-n8in",
+            "owner": {
+                "id": "xzik-pf59",
+                "user_type": "interactive",
+                "display_name": "NY Open Data"
+            },
+            "creator": {
+                "id": "xzik-pf59",
+                "user_type": "interactive",
+                "display_name": "NY Open Data"
+            }
+        },
+        {
+            "resource": {
+                "name": "CTA - Bus Routes",
+                "id": "6uva-a5ei",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Lines representing CTA bus routes.\n\nThis dataset is in a format for spatial datasets that is inherently tabular but allows for a map as a derived view. Please click the indicated link below for such a map.\n\nTo export the data in either tabular or geographic format, please use the Export button on this dataset.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.transitchicago.com/",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-01-08T17:26:16.000Z",
+                "createdAt": "2024-07-31T16:59:40.000Z",
+                "metadata_updated_at": "2025-01-08T17:26:15.000Z",
+                "data_updated_at": "2025-01-08T17:26:16.000Z",
+                "page_views": {
+                    "page_views_last_week": 51,
+                    "page_views_last_month": 172,
+                    "page_views_total": 1659,
+                    "page_views_last_week_log": 5.700439718141093,
+                    "page_views_last_month_log": 7.4346282276367255,
+                    "page_views_total_log": 10.696967526234287
+                },
+                "columns_name": [
+                    "SAT",
+                    "NAME",
+                    "WKDAY",
+                    "SUN",
+                    "ROUTE",
+                    "the_geom"
+                ],
+                "columns_field_name": [
+                    "sat",
+                    "name",
+                    "wkday",
+                    "sun",
+                    "route",
+                    "the_geom"
+                ],
+                "columns_datatype": [
+                    "Checkbox",
+                    "Text",
+                    "Checkbox",
+                    "Checkbox",
+                    "Text",
+                    "MultiLine"
+                ],
+                "columns_description": [
+                    "Does the route run on Saturday?",
+                    "Route Name",
+                    "Does the route run on weekdays?",
+                    "Does the route run on Sunday?",
+                    "Route Number",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "displayStyle": "yesno"
+                    },
+                    {
+
+                    },
+                    {
+                        "displayStyle": "yesno"
+                    },
+                    {
+                        "displayStyle": "yesno"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 555,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2024-07-31T17:15:34.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "bus",
+                    "cta",
+                    "geo_layer",
+                    "public transit",
+                    "sustainability",
+                    "transportation"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Chicago Transit Authority"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "March 2024"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/6uva-a5ei",
+            "link": "https://data.cityofchicago.org/Transportation/CTA-Bus-Routes/6uva-a5ei",
+            "owner": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            },
+            "creator": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            }
+        }
+    ],
+    "resultSetSize": 882,
+    "timings": {
+        "serviceMillis": 42,
+        "searchMillis": [
+            5,
+            10
+        ]
+    },
+    "warnings": [
+
+    ]
+}

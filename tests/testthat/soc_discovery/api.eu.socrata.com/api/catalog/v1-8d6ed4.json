@@ -1,0 +1,2622 @@
+{
+    "results": [
+        {
+            "resource": {
+                "name": "Open Data RDW: Gekentekende_voertuigen",
+                "id": "m9d7-ebf2",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "",
+                "attribution": "Team Open Data RDW",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T06:32:04.000Z",
+                "createdAt": "2015-09-08T21:39:57.000Z",
+                "metadata_updated_at": "2025-07-16T16:11:02.000Z",
+                "data_updated_at": "2025-08-25T06:32:04.000Z",
+                "page_views": {
+                    "page_views_last_week": 5164,
+                    "page_views_last_month": 23534,
+                    "page_views_total": 1006140,
+                    "page_views_last_week_log": 12.334552633752423,
+                    "page_views_last_month_log": 14.522520232576616,
+                    "page_views_total_log": 19.940401067058588
+                },
+                "columns_name": [
+                    "Aanwijzingsnummer",
+                    "API Gekentekende_voertuigen_brandstof",
+                    "Kenteken",
+                    "Merk",
+                    "Voertuigsoort",
+                    "Afstand voorzijde voertuig tot hart koppeling",
+                    "Lengte",
+                    "Breedte",
+                    "Europese voertuigcategorie",
+                    "Europese voertuigcategorie toevoeging",
+                    "Europese uitvoeringcategorie toevoeging",
+                    "Plaats chassisnummer",
+                    "Technische max. massa voertuig",
+                    "Type",
+                    "Type gasinstallatie",
+                    "Typegoedkeuringsnummer",
+                    "Variant",
+                    "Uitvoering",
+                    "Volgnummer wijziging EU typegoedkeuring",
+                    "Vermogen massarijklaar",
+                    "Wielbasis",
+                    "Export indicator",
+                    "Openstaande terugroepactie indicator",
+                    "Vervaldatum tachograaf",
+                    "Taxi indicator",
+                    "Maximum massa samenstelling",
+                    "Aantal rolstoelplaatsen",
+                    "Maximum ondersteunende snelheid",
+                    "Jaar laatste registratie tellerstand",
+                    "Tellerstandoordeel",
+                    "Code toelichting tellerstandoordeel",
+                    "Tenaamstellen mogelijk",
+                    "Vervaldatum APK DT",
+                    "Datum tenaamstelling DT",
+                    "Datum eerste toelating DT",
+                    "Datum eerste tenaamstelling in Nederland DT",
+                    "Vervaldatum tachograaf DT",
+                    "Maximum last onder de vooras(sen) (tezamen)/koppeling",
+                    "Type remsysteem voertuig code",
+                    "Rupsonderstelconfiguratiecode",
+                    "Wielbasis voertuig minimum",
+                    "Wielbasis voertuig maximum",
+                    "Lengte voertuig minimum",
+                    "Lengte voertuig maximum",
+                    "Breedte voertuig minimum",
+                    "Breedte voertuig maximum",
+                    "Hoogte voertuig",
+                    "Hoogte voertuig minimum",
+                    "Hoogte voertuig maximum",
+                    "Massa bedrijfsklaar minimaal",
+                    "Massa bedrijfsklaar maximaal",
+                    "Technisch toelaatbaar massa koppelpunt",
+                    "Maximum massa technisch maximaal",
+                    "Maximum massa technisch minimaal",
+                    "Subcategorie Nederland",
+                    "Verticale belasting koppelpunt getrokken voertuig",
+                    "Zuinigheidsclassificatie",
+                    "Registratie datum goedkeuring (afschrijvingsmoment BPM)",
+                    "Registratie datum goedkeuring (afschrijvingsmoment BPM) DT",
+                    "Gemiddelde Lading Waarde",
+                    "Aerodynamische voorziening of uitrusting",
+                    "Additionele massa alternatieve aandrijving",
+                    "Verlengde cabine indicator",
+                    "API Gekentekende_voertuigen_voertuigklasse",
+                    "API Gekentekende_voertuigen_carrosserie_specifiek",
+                    "Handelsbenaming",
+                    "API Gekentekende_voertuigen_assen",
+                    "API Gekentekende_voertuigen_carrosserie",
+                    "Aantal passagiers zitplaatsen wettelijk",
+                    "Vervaldatum APK",
+                    "Datum tenaamstelling",
+                    "Bruto BPM",
+                    "Inrichting",
+                    "Aantal zitplaatsen",
+                    "Eerste kleur",
+                    "Tweede kleur",
+                    "Aantal cilinders",
+                    "Cilinderinhoud",
+                    "Massa ledig voertuig",
+                    "Toegestane maximum massa voertuig",
+                    "Massa rijklaar",
+                    "Maximum massa trekken ongeremd",
+                    "Maximum trekken massa geremd",
+                    "Datum eerste toelating",
+                    "Datum eerste tenaamstelling in Nederland",
+                    "Wacht op keuren",
+                    "Catalogusprijs",
+                    "WAM verzekerd",
+                    "Maximale constructiesnelheid",
+                    "Laadvermogen",
+                    "Oplegger geremd",
+                    "Aanhangwagen autonoom geremd",
+                    "Aanhangwagen middenas geremd",
+                    "Aantal staanplaatsen",
+                    "Aantal deuren",
+                    "Aantal wielen",
+                    "Afstand hart koppeling tot achterzijde voertuig",
+                    "Afwijkende maximum snelheid"
+                ],
+                "columns_field_name": [
+                    "aanwijzingsnummer",
+                    "api_gekentekende_voertuigen_brandstof",
+                    "kenteken",
+                    "merk",
+                    "voertuigsoort",
+                    "afstand_voorzijde_voertuig_tot_hart_koppeling",
+                    "lengte",
+                    "breedte",
+                    "europese_voertuigcategorie",
+                    "europese_voertuigcategorie_toevoeging",
+                    "europese_uitvoeringcategorie_toevoeging",
+                    "plaats_chassisnummer",
+                    "technische_max_massa_voertuig",
+                    "type",
+                    "type_gasinstallatie",
+                    "typegoedkeuringsnummer",
+                    "variant",
+                    "uitvoering",
+                    "volgnummer_wijziging_eu_typegoedkeuring",
+                    "vermogen_massarijklaar",
+                    "wielbasis",
+                    "export_indicator",
+                    "openstaande_terugroepactie_indicator",
+                    "vervaldatum_tachograaf",
+                    "taxi_indicator",
+                    "maximum_massa_samenstelling",
+                    "aantal_rolstoelplaatsen",
+                    "maximum_ondersteunende_snelheid",
+                    "jaar_laatste_registratie_tellerstand",
+                    "tellerstandoordeel",
+                    "code_toelichting_tellerstandoordeel",
+                    "tenaamstellen_mogelijk",
+                    "vervaldatum_apk_dt",
+                    "datum_tenaamstelling_dt",
+                    "datum_eerste_toelating_dt",
+                    "datum_eerste_tenaamstelling_in_nederland_dt",
+                    "vervaldatum_tachograaf_dt",
+                    "maximum_last_onder_de_vooras_sen_tezamen_koppeling",
+                    "type_remsysteem_voertuig_code",
+                    "rupsonderstelconfiguratiecode",
+                    "wielbasis_voertuig_minimum",
+                    "wielbasis_voertuig_maximum",
+                    "lengte_voertuig_minimum",
+                    "lengte_voertuig_maximum",
+                    "breedte_voertuig_minimum",
+                    "breedte_voertuig_maximum",
+                    "hoogte_voertuig",
+                    "hoogte_voertuig_minimum",
+                    "hoogte_voertuig_maximum",
+                    "massa_bedrijfsklaar_minimaal",
+                    "massa_bedrijfsklaar_maximaal",
+                    "technisch_toelaatbaar_massa_koppelpunt",
+                    "maximum_massa_technisch_maximaal",
+                    "maximum_massa_technisch_minimaal",
+                    "subcategorie_nederland",
+                    "verticale_belasting_koppelpunt_getrokken_voertuig",
+                    "zuinigheidsclassificatie",
+                    "registratie_datum_goedkeuring_afschrijvingsmoment_bpm",
+                    "registratie_datum_goedkeuring_afschrijvingsmoment_bpm_dt",
+                    "gem_lading_wrde",
+                    "aerodyn_voorz",
+                    "massa_alt_aandr",
+                    "verl_cab_ind",
+                    "api_gekentekende_voertuigen_voertuigklasse",
+                    "api_gekentekende_voertuigen_carrosserie_specifiek",
+                    "handelsbenaming",
+                    "api_gekentekende_voertuigen_assen",
+                    "api_gekentekende_voertuigen_carrosserie",
+                    "aantal_passagiers_zitplaatsen_wettelijk",
+                    "vervaldatum_apk",
+                    "datum_tenaamstelling",
+                    "bruto_bpm",
+                    "inrichting",
+                    "aantal_zitplaatsen",
+                    "eerste_kleur",
+                    "tweede_kleur",
+                    "aantal_cilinders",
+                    "cilinderinhoud",
+                    "massa_ledig_voertuig",
+                    "toegestane_maximum_massa_voertuig",
+                    "massa_rijklaar",
+                    "maximum_massa_trekken_ongeremd",
+                    "maximum_trekken_massa_geremd",
+                    "datum_eerste_toelating",
+                    "datum_eerste_tenaamstelling_in_nederland",
+                    "wacht_op_keuren",
+                    "catalogusprijs",
+                    "wam_verzekerd",
+                    "maximale_constructiesnelheid",
+                    "laadvermogen",
+                    "oplegger_geremd",
+                    "aanhangwagen_autonoom_geremd",
+                    "aanhangwagen_middenas_geremd",
+                    "aantal_staanplaatsen",
+                    "aantal_deuren",
+                    "aantal_wielen",
+                    "afstand_hart_koppeling_tot_achterzijde_voertuig",
+                    "afwijkende_maximum_snelheid"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Calendar date",
+                    "Calendar date",
+                    "Calendar date",
+                    "Calendar date",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Calendar date",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "decimalSeparator": ".",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "precision": "2",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "decimalSeparator": ".",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "decimalSeparator": ".",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "decimalSeparator": ".",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "decimalSeparator": ".",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "decimalSeparator": ".",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 132179580,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2025-07-16T16:11:01.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Voertuigen",
+                "domain_tags": [
+                    "kenteken"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Licentie_Licentie",
+                        "value": "Creative Commons 0 (CC0)"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "opendata.rdw.nl",
+                "license": "Public Domain"
+            },
+            "permalink": "https://opendata.rdw.nl/d/m9d7-ebf2",
+            "link": "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen/m9d7-ebf2",
+            "owner": {
+                "id": "dtwm-nf4m",
+                "user_type": "interactive",
+                "display_name": "Team Open Data RDW"
+            },
+            "creator": {
+                "id": "dtwm-nf4m",
+                "user_type": "interactive",
+                "display_name": "Team Open Data RDW"
+            }
+        },
+        {
+            "resource": {
+                "name": "Quantitat d’aigua als embassaments de les Conques Internes de Catalunya",
+                "id": "gn9e-3qhr",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Estat dels embassaments de les Conques Internes de Catalunya a partir dels valors de Nivell de l’aigua a l’embassament, Volum embassat i Percentatge del volum embassat respecte la capacitat de l’embassament (dades agregades del dia anterior).",
+                "attribution": "Agència Catalana de l’Aigua (ACA)",
+                "attribution_link": "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T10:00:14.000Z",
+                "createdAt": "2021-01-22T11:27:16.000Z",
+                "metadata_updated_at": "2025-08-25T10:00:06.000Z",
+                "data_updated_at": "2025-08-25T10:00:14.000Z",
+                "page_views": {
+                    "page_views_last_week": 347,
+                    "page_views_last_month": 1247,
+                    "page_views_total": 346883,
+                    "page_views_last_week_log": 8.442943495848729,
+                    "page_views_last_month_log": 10.285402218862249,
+                    "page_views_total_log": 18.40409377238887
+                },
+                "columns_name": [
+                    "Volum embassat (hm3)",
+                    "Nivell absolut (msnm)",
+                    "Dia",
+                    "Estació",
+                    "Percentatge volum embassat (%)"
+                ],
+                "columns_field_name": [
+                    "volum_embassat",
+                    "nivell_absolut",
+                    "dia",
+                    "estaci",
+                    "percentatge_volum_embassat"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Number",
+                    "Calendar date",
+                    "Text",
+                    "Number"
+                ],
+                "columns_description": [
+                    "Volum d’aigua (hm3) al qual correspon el nivell mesurat",
+                    "Nivell de l’aigua (msnm) mesurat a l’embassament",
+                    "Data en què s’ha pres la mesura",
+                    "Embassament on s’ha pres la mesura",
+                    "Percentatge de volum d’aigua en relació a la capacitat màxima de l’embassament"
+                ],
+                "columns_format": [
+                    {
+                        "decimalSeparator": ",",
+                        "precision": "2",
+                        "groupSeparator": ".",
+                        "align": "left"
+                    },
+                    {
+                        "decimalSeparator": ",",
+                        "precision": "2",
+                        "groupSeparator": ".",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_dmy"
+                    },
+                    {
+
+                    },
+                    {
+                        "decimalSeparator": ",",
+                        "precision": "1",
+                        "groupSeparator": ".",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 19840,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2023-10-18T09:48:20.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Medi Ambient",
+                "domain_tags": [
+                    "embassaments",
+                    "nivell",
+                    "msnm",
+                    "volum",
+                    "hm3",
+                    "ods6_aigua neta i sanejament",
+                    "ods13_acció pel clima",
+                    "ods12_producció i consum responsable",
+                    "aca",
+                    "percentatge"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Enllaços-relacionats_Nom",
+                        "value": "Sobre  l'ACA. Conques internes de Catalunya i conques intercomunitàries"
+                    },
+                    {
+                        "key": "Enllaços-relacionats_URL",
+                        "value": "https://aca.gencat.cat/ca/laca/sobre-laca/#competencies--un-pais--dues-realitats-"
+                    },
+                    {
+                        "key": "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                        "value": "No aplicable"
+                    },
+                    {
+                        "key": "Idioma_Idioma",
+                        "value": "Català"
+                    },
+                    {
+                        "key": "Idioma_Dataset-name-(EN)",
+                        "value": "Water quantity in the dams of Catalonia Internal Basins"
+                    },
+                    {
+                        "key": "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                        "value": "Cantidad de agua en los embalses de las Cuencas Internas de Catalunya"
+                    },
+                    {
+                        "key": "Àmbit-geogràfic_Àmbit-geogràfic",
+                        "value": "Conques internes de Catalunya"
+                    },
+                    {
+                        "key": "Àmbit-geogràfic_Informació-geogràfica",
+                        "value": "Nom d'element"
+                    },
+                    {
+                        "key": "Actors_Departament",
+                        "value": "Territori, Habitatge i Transició Ecològica"
+                    },
+                    {
+                        "key": "Actors_Tipus-actor",
+                        "value": "Generalitat de Catalunya"
+                    },
+                    {
+                        "key": "Freqüència-d'actualització_Freqüència-d'actualització",
+                        "value": "Diària"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "analisi.transparenciacatalunya.cat",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://analisi.transparenciacatalunya.cat/d/gn9e-3qhr",
+            "link": "https://analisi.transparenciacatalunya.cat/Medi-Ambient/Quantitat-d-aigua-als-embassaments-de-les-Conques-/gn9e-3qhr",
+            "owner": {
+                "id": "a4b5-gx6v",
+                "user_type": "interactive",
+                "display_name": "Dades Obertes Catalunya"
+            },
+            "creator": {
+                "id": "a4b5-gx6v",
+                "user_type": "interactive",
+                "display_name": "Dades Obertes Catalunya"
+            }
+        },
+        {
+            "resource": {
+                "name": "Agenda de la ciutat",
+                "id": "qtv3-9x52",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Informació sobre els actes i activitats que tenen lloc a L'Hospitalet",
+                "attribution": "Ajuntament de L'Hospitalet de Llobregat",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2024-02-12T06:00:39.000Z",
+                "createdAt": "2017-06-14T10:21:54.000Z",
+                "metadata_updated_at": "2017-12-18T07:18:13.000Z",
+                "data_updated_at": "2024-02-12T06:00:39.000Z",
+                "page_views": {
+                    "page_views_last_week": 1,
+                    "page_views_last_month": 1,
+                    "page_views_total": 310206,
+                    "page_views_last_week_log": 1.0,
+                    "page_views_last_month_log": 1.0,
+                    "page_views_total_log": 18.242871716424425
+                },
+                "columns_name": [
+                    "AdrecaEquipament",
+                    "Organitzador",
+                    "NomEquipament",
+                    "TipusEntrada",
+                    "NomActe",
+                    "PaginaWeb",
+                    "HoraInici",
+                    "DataInici",
+                    "TelefonEquipament",
+                    "Observacions",
+                    "CorreuEquipament",
+                    "DataFi",
+                    "LlistaTemes",
+                    "CoordenadesEquipament",
+                    "BarriEquipament",
+                    "Durada",
+                    "IdActe",
+                    "Preu",
+                    "CoordenadesEquipament (zip)",
+                    "TipusPublic",
+                    "CoordenadesEquipament (city)",
+                    "CoordenadesEquipament (state)",
+                    "CoordenadesEquipament (address)",
+                    "Descripcio"
+                ],
+                "columns_field_name": [
+                    "adrecaequipament",
+                    "organitzador",
+                    "nomequipament",
+                    "tipusentrada",
+                    "nomacte",
+                    "paginaweb",
+                    "horainici",
+                    "datainici",
+                    "telefonequipament",
+                    "observacions",
+                    "correuequipament",
+                    "datafi",
+                    "llistatemes",
+                    "coordenadesequipament",
+                    "barriequipament",
+                    "durada",
+                    "idacte",
+                    "preu",
+                    "coordenadesequipament_zip",
+                    "tipuspublic",
+                    "coordenadesequipament_city",
+                    "coordenadesequipament_state",
+                    "coordenadesequipament_address",
+                    "descripcio"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Point",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Adreça de l'equipament\n",
+                    "Qui organitza l'acte\n",
+                    "Nom de l'equipament on es desenvolupa l'acte\n",
+                    "Tipus d'entrada\n",
+                    "Títol de l'esdeveniment\n",
+                    "URL de l'acte\n",
+                    "Hora d'inici\n",
+                    "Data d'inici\n",
+                    "Telèfon de l'equipament\n",
+                    "Observacions\n",
+                    "Correu de l'equimanent\n",
+                    "Data de finalització\n",
+                    "Llista de temes",
+                    "Coordenades per representació\n",
+                    "Barri on es realitza l'esdeveniment\n",
+                    "Durada\n",
+                    "Identificador de l'esdeveniment\n",
+                    "Preu\n",
+                    "",
+                    "Tipus de públic ",
+                    "",
+                    "",
+                    "",
+                    "Descripció de l'esdeveniment \n"
+                ],
+                "columns_format": [
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_dmy",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_dmy",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "view": "address_coords",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 27379,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2017-06-14T10:21:58.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Cultura i oci",
+                "domain_tags": [
+                    "transparència",
+                    "actes",
+                    "activitats",
+                    "agenda"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Actualització_Periodicitat",
+                        "value": "Diari"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "opendata.l-h.cat",
+                "license": "Creative Commons Attribution 4.0 International"
+            },
+            "permalink": "https://opendata.l-h.cat/d/qtv3-9x52",
+            "link": "https://opendata.l-h.cat/Cultura-i-oci/Agenda-de-la-ciutat/qtv3-9x52",
+            "owner": {
+                "id": "5ged-3nbm",
+                "user_type": "interactive",
+                "display_name": "Dades Obertes de L'Hospitalet"
+            },
+            "creator": {
+                "id": "5ged-3nbm",
+                "user_type": "interactive",
+                "display_name": "Dades Obertes de L'Hospitalet"
+            }
+        },
+        {
+            "resource": {
+                "name": "Registre de casos de COVID-19 a Catalunya per municipi i sexe",
+                "id": "jj6z-iyrp",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "El Departament de Salut ha deixat d'actualitzar aquest conjunt de dades en data 26-7-22. Podeu trobar tota la informació relacionada amb la COVID-19 i la resta d'infeccions respiratòries en els conjunts de dades de SIVIC (Vegeu contingut destacat).\n\n\nAVÍS : a partir del 17 de juny de 2021 s'introdueix en aquest conjunt de dades el canvi que es descriu al final del text.\n\n\nAquestes dades provenen de diversos sistemes d'informació del Departament de Salut i del Servei Català de la Salut, detallats a https://dadescovid.cat/documentacio , i mostren per a cada dia, municipi, sexe i procediment diagnòstic el nombre de casos identificats com a positius mitjançant alguna prova diagnòstica o per estudi epidemiològic; el procediment diagnòstic s'especifica en la variable 'TipusCasDescripcio', i la data del cas és la data d’inici de símptomes, no la data de realització de la prova diagnòstica. Tots ells són casos activats pels serveis de vigilància epidemiològica.\n\nEn els casos en què no ha estat possible identificar el municipi de residència de la persona identificada com a cas positiu, el valor de la variable 'MunicipiDescripcio' és 'No classificat'. I en els casos de persones residents en municipis amb una població inferior a 200 habitants, per evitar la seva identificació i garantir-ne la confidencialitat, en la variable 'MunicipiDescripcio' s'hi fa constar el valor '(Altres municipis)'.\n\n\nCANVI APLICAT EL 17-06-2021 : ELIMINACIÓ DELS CASOS SEROLÒGICS POST-VACUNALS\n\nAmb l'actualització d'avui s'introdueix un canvi en el criteri de definició dels casos serològics, que són aquells diagnosticats per un resultat positiu en una prova d'ELISA o un test ràpid d'anticossos. (Corresponen als registres on la variable \"TipusCasDescripció\" pren els valors \"Positiu per ELISA\" o \"Positiu per Test Ràpid\".)\n\nAquestes dues proves detecten els anticossos contra la COVID-19, de tal manera que indiquen que la persona ja ha superat la infecció (no són casos actius sinó antics). Per aquest motiu no s'han utilitzat mai a https://dadescovid.cat per fer el seguiment de l'evolució de l'epidèmia ni es tenen en compte en els càlculs dels indicadors epidemiològics (IA7, IA14, Rt, RR, positivitat, etc). Les proves d'anticossos resulten positives en les persones que ja han passat la infecció però també en aquelles que han sigut vacunades.\n\nPer aquest motiu, a partir d'avui no es consideraran com a casos aquells resultats positius a una prova ELISA o un test ràpid d'anticossos que s'hagin realitzat amb posterioritat a l'administració de la primera dosi de la vacuna contra el SARS-CoV-2.\n\nS'actualitzen també les dades prèviament publicades en aquest conjunt de dades per aplicar aquest mateix criteri a tota la sèria històrica.",
+                "attribution": "Departament de Salut",
+                "attribution_link": "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-04-07T10:27:06.000Z",
+                "createdAt": "2020-03-31T07:15:24.000Z",
+                "metadata_updated_at": "2025-04-07T10:27:06.000Z",
+                "data_updated_at": "2023-03-17T13:06:11.000Z",
+                "page_views": {
+                    "page_views_last_week": 63,
+                    "page_views_last_month": 210,
+                    "page_views_total": 267812,
+                    "page_views_last_week_log": 6.0,
+                    "page_views_last_month_log": 7.721099188707186,
+                    "page_views_total_log": 18.03086646713909
+                },
+                "columns_name": [
+                    "SexeDescripcio",
+                    "SexeCodi",
+                    "TipusCasDescripcio",
+                    "ComarcaCodi",
+                    "TipusCasData",
+                    "MunicipiDescripcio",
+                    "MunicipiCodi",
+                    "DistricteDescripcio",
+                    "DistricteCodi",
+                    "NumCasos",
+                    "ComarcaDescripcio"
+                ],
+                "columns_field_name": [
+                    "sexedescripcio",
+                    "sexecodi",
+                    "resultatcoviddescripcio",
+                    "comarcacodi",
+                    "data",
+                    "municipidescripcio",
+                    "municipicodi",
+                    "districtedescripcio",
+                    "districtecodi",
+                    "numcasos",
+                    "comarcadescripcio"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Sexe / Sexo / Gender",
+                    "Codi de sexe (0-home, 1-dona) / Código de sexo (0-hombre, 1-mujer) / Gender code (0-male, 1-female)",
+                    "Resultat",
+                    "Codi de Comarca / Código de comarca / Region code",
+                    "Data / Fecha / Date",
+                    "Municipi / Municipio / Municipality",
+                    "Codi de municipi ",
+                    "Districte / Distrito / District",
+                    "Codi de districte",
+                    "Nombre de casos",
+                    "Comarca / Region"
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date_dmy"
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "decimalSeparator": ",",
+                        "groupSeparator": "."
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 187897,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2023-03-17T11:55:53.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Salut",
+                "domain_tags": [
+                    "covid-19",
+                    "coronavirus",
+                    "sars-cov-2",
+                    "covid19",
+                    "ods3_salut i benestar"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                        "value": "Sí"
+                    },
+                    {
+                        "key": "Idioma_Idioma",
+                        "value": "Català"
+                    },
+                    {
+                        "key": "Idioma_Dataset-name-(EN)",
+                        "value": "Record of COVID-19 tests performed in Catalonia. Segregation by sex and municipality"
+                    },
+                    {
+                        "key": "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                        "value": "Registro de test de COVID-19 realizados en Catalunya. Segregación por sexo y municipio"
+                    },
+                    {
+                        "key": "Àmbit-geogràfic_Àmbit-geogràfic",
+                        "value": "Catalunya"
+                    },
+                    {
+                        "key": "Àmbit-geogràfic_Informació-geogràfica",
+                        "value": "Codi d'element"
+                    },
+                    {
+                        "key": "Actors_Departament",
+                        "value": "Salut"
+                    },
+                    {
+                        "key": "Actors_Tipus-actor",
+                        "value": "Generalitat de Catalunya"
+                    },
+                    {
+                        "key": "Freqüència-d'actualització_Freqüència-d'actualització",
+                        "value": "Dades estàtiques"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "analisi.transparenciacatalunya.cat",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://analisi.transparenciacatalunya.cat/d/jj6z-iyrp",
+            "link": "https://analisi.transparenciacatalunya.cat/Salut/Registre-de-casos-de-COVID-19-a-Catalunya-per-muni/jj6z-iyrp",
+            "owner": {
+                "id": "a4b5-gx6v",
+                "user_type": "interactive",
+                "display_name": "Dades Obertes Catalunya"
+            },
+            "creator": {
+                "id": "a4b5-gx6v",
+                "user_type": "interactive",
+                "display_name": "Dades Obertes Catalunya"
+            }
+        },
+        {
+            "resource": {
+                "name": "Open Data RDW: Erkende Bedrijven",
+                "id": "5k74-3jha",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Overzicht van de door RDW erkende bedrijven.",
+                "attribution": null,
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-24T04:23:15.000Z",
+                "createdAt": "2016-01-14T15:35:54.000Z",
+                "metadata_updated_at": "2025-04-22T14:40:58.000Z",
+                "data_updated_at": "2025-08-24T04:23:15.000Z",
+                "page_views": {
+                    "page_views_last_week": 2667,
+                    "page_views_last_month": 12483,
+                    "page_views_total": 247127,
+                    "page_views_last_week_log": 11.381542951184585,
+                    "page_views_last_month_log": 13.607792641919211,
+                    "page_views_total_log": 17.914898954033593
+                },
+                "columns_name": [
+                    "Naam bedrijf",
+                    "Postcode numeriek",
+                    "Postcode alfanumeriek",
+                    "Huisnummer",
+                    "Plaats",
+                    "Volgnummer",
+                    "Huisnummer toevoeging",
+                    "Straat",
+                    "Gevelnaam",
+                    "api_bedrijf_erkenningen"
+                ],
+                "columns_field_name": [
+                    "naam_bedrijf",
+                    "postcode_numeriek",
+                    "postcode_alfanumeriek",
+                    "huisnummer",
+                    "plaats",
+                    "volgnummer",
+                    "huisnummer_toevoeging",
+                    "straat",
+                    "gevelnaam",
+                    "api_bedrijf_erkenningen"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 130136,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2024-08-13T06:28:19.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Erkende bedrijven",
+                "domain_tags": [
+                    "erkende bedrijven"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Licentie_Licentie",
+                        "value": "Creative Commons 0 (CC0)"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "opendata.rdw.nl",
+                "license": "Public Domain"
+            },
+            "permalink": "https://opendata.rdw.nl/d/5k74-3jha",
+            "link": "https://opendata.rdw.nl/Erkende-bedrijven/Open-Data-RDW-Erkende-Bedrijven/5k74-3jha",
+            "owner": {
+                "id": "dtwm-nf4m",
+                "user_type": "interactive",
+                "display_name": "Team Open Data RDW"
+            },
+            "creator": {
+                "id": "dtwm-nf4m",
+                "user_type": "interactive",
+                "display_name": "Team Open Data RDW"
+            }
+        },
+        {
+            "resource": {
+                "name": "Open Data RDW: Gekentekende_voertuigen_brandstof",
+                "id": "8ys7-d773",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "",
+                "attribution": null,
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T06:31:44.000Z",
+                "createdAt": "2015-10-02T13:51:39.000Z",
+                "metadata_updated_at": "2025-03-25T22:28:20.000Z",
+                "data_updated_at": "2025-08-25T06:31:44.000Z",
+                "page_views": {
+                    "page_views_last_week": 2663,
+                    "page_views_last_month": 12753,
+                    "page_views_total": 214106,
+                    "page_views_last_week_log": 11.379378367071263,
+                    "page_views_last_month_log": 13.638662165859655,
+                    "page_views_total_log": 17.70797243830689
+                },
+                "columns_name": [
+                    "Uitstoot deeltjes (zwaar)",
+                    "Brandstofverbruik buiten de stad",
+                    "Brandstof omschrijving",
+                    "Brandstof volgnummer",
+                    "Kenteken",
+                    "Uitlaatemissieniveau",
+                    "Opgegeven maximum snelheid",
+                    "Klasse hybride elektrisch voertuig",
+                    "Netto max vermogen elektrisch",
+                    "Max vermogen 60 minuten",
+                    "Max vermogen 15 minuten",
+                    "Actie radius extern opladen stad wltp",
+                    "Actie radius extern opladen wltp",
+                    "Elektrisch verbruik extern opladen wltp",
+                    "Actie radius enkel elektrisch stad wltp",
+                    "Actie radius enkel elektrisch wltp",
+                    "Brandstof verbruik gewogen gecombineerd wltp",
+                    "Brandstof verbruik gecombineerd wltp",
+                    "Emissie co2 gewogen gecombineerd wltp",
+                    "Emissie co2 gecombineerd wltp",
+                    "Emissie deeltjes type1 wltp",
+                    "Toerental geluidsniveau",
+                    "Roetuitstoot",
+                    "Nominaal continu maximumvermogen",
+                    "Nettomaximumvermogen",
+                    "Uitstoot deeltjes (licht)",
+                    "Milieuklasse EG Goedkeuring (zwaar)",
+                    "Milieuklasse EG Goedkeuring (licht)",
+                    "Emissieklasse",
+                    "Geluidsniveau stationair",
+                    "Geluidsniveau rijdend",
+                    "CO2 uitstoot gewogen",
+                    "CO2 uitstoot gecombineerd",
+                    "Brandstofverbruik stad",
+                    "Brandstofverbruik gecombineerd",
+                    "Elektrisch verbruik enkel elektrisch wltp",
+                    "CO2 emissieklasse"
+                ],
+                "columns_field_name": [
+                    "uitstoot_deeltjes_zwaar",
+                    "brandstofverbruik_buiten",
+                    "brandstof_omschrijving",
+                    "brandstof_volgnummer",
+                    "kenteken",
+                    "uitlaatemissieniveau",
+                    "opgegeven_maximum_snelheid",
+                    "klasse_hybride_elektrisch_voertuig",
+                    "netto_max_vermogen_elektrisch",
+                    "max_vermogen_60_minuten",
+                    "max_vermogen_15_minuten",
+                    "actie_radius_extern_opladen_stad_wltp",
+                    "actie_radius_extern_opladen_wltp",
+                    "elektrisch_verbruik_extern_opladen_wltp",
+                    "actie_radius_enkel_elektrisch_stad_wltp",
+                    "actie_radius_enkel_elektrisch_wltp",
+                    "brandstof_verbruik_gewogen_gecombineerd_wltp",
+                    "brandstof_verbruik_gecombineerd_wltp",
+                    "emis_co2_gewogen_gecombineerd_wltp",
+                    "emissie_co2_gecombineerd_wltp",
+                    "emis_deeltjes_type1_wltp",
+                    "toerental_geluidsniveau",
+                    "roetuitstoot",
+                    "nominaal_continu_maximumvermogen",
+                    "nettomaximumvermogen",
+                    "uitstoot_deeltjes_licht",
+                    "milieuklasse_eg_goedkeuring_zwaar",
+                    "milieuklasse_eg_goedkeuring_licht",
+                    "emissiecode_omschrijving",
+                    "geluidsniveau_stationair",
+                    "geluidsniveau_rijdend",
+                    "co2_uitstoot_gewogen",
+                    "co2_uitstoot_gecombineerd",
+                    "brandstofverbruik_stad",
+                    "brandstofverbruik_gecombineerd",
+                    "elektrisch_verbruik_enkel_elektrisch_wltp",
+                    "co2_emissieklasse"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "De uitstoot van het aantal deeltjes, uitgedrukt in g/kWh, gemeten tijdens een test van de motor op een vermogensbank.",
+                    "Het brandstofverbruik in l/100 km, tijdens een gestandaardiseerde rit buiten de stad, getest op een rollenbank.",
+                    "",
+                    "Volgnummer waarmee de emissiegegevens bij een bepaalde brandstof in de gewenste volgorde kunnen worden getoond.",
+                    "Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Door het kenteken wordt een voertuig uniek en identificeerbaar.",
+                    "",
+                    "",
+                    "Klasse van het hybride elektrisch voertuig.  Mogelijke waarden zijn: OVC-HEV = Off vehicle-charging hybride elektrisch voertuig NOVC-HEV = Not off-vehicle charging hybride elektrisch voertuig OVC-FCHV = Off-vehicle charging fuel cell hybride voertuig NOVC-FCHV = Not off-vehicle charging fuel cell hybride voertuig",
+                    "Nettomaximumvermogen elektrisch",
+                    "Maximumelektrovermogen gemeten over 60 minuten.",
+                    "Nominaal continu maximumvermogen elektrovermogen gemeten over 15 minuten.",
+                    "Elektrisch verbruik gemeten bij een op een rollenbank rijdend extem oplaadbaar hybride voertuig tijdens een rit volgens de WLTP test onder belasting van een gestandaardiseerde stadsrit.",
+                    "Actieradius gemeten bij een op een rollenbank rijdend extem oplaadbaar hybride voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.",
+                    "Elektrisch verbruik gemeten bij een op een rollenbank rijdend extem oplaadbaar hybride voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.",
+                    "Actieradius gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.",
+                    "Actieradius gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.",
+                    "Gewogen brandstofverbruik gemeten bij een op een rollenbank rijdend voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.",
+                    "Brandstofverbruik gemeten bij een op een rollenbank rijdend voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.",
+                    "Gewogen CO2 uitstoot gemeten bij een op een rollenbank rijdend voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.",
+                    "CO2 uitstoot gemeten bij een op een rollenbank rijdend voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.",
+                    "Uitstoot deeltjes (massa) gemeten bij een op een rollenbank rijdend voertuig tijdens een rit volgens de WLTP type 1 test.",
+                    "Het aantal omwentelingen per minuut van de motor bij de meting van het geluidsniveau van een stilstaand voertuig.",
+                    "De mate van vervuiling van de lucht die uit de uitlaat van een voertuig komt tijdens de vrije acceleratietest (roetmeting).\nDe afname van het doorgelaten licht door het in het uitlaatgas aanwezige roet wordt als k-waarde aangegeven in m-1.",
+                    "Het nominaal continu maximumvermogen, uitgedrukt in kW, dat de elektromotor kan leveren.",
+                    "Dit is het maximumvermogen, uitgedrukt in kW, dat de verbrandingsmotor kan leveren bij een bepaald toerental om een voertuig in beweging te brengen.",
+                    "De uitstoot van het aantal deeltjes, uitgedrukt in g/km, gemeten tijdens een test op een rollenbank.",
+                    "Richtlijnnummer voor emissies van motoren waarop het voertuig is getoetst en goedgekeurd.",
+                    "Richtlijnnummer voor emissies van voertuigen waarop het voertuig is getoetst en goedgekeurd.",
+                    "",
+                    "Het geluidsniveau van een stilstaand voertuig met draaiende motor in dB(A), gemeten bij het bijbehorende toerental zoals voorgeschreven in de regelgeving.\n\nVoor elektrische en plug-in hybride voertuigen wordt dit gegeven niet vastgelegd.",
+                    "Het geluidsniveau van een rijdend voertuig in dB(A), gemeten zoals voorgeschreven in de regelgeving. Voor elektrische en plug-in hybride voertuigen wordt dit gegeven niet vastgelegd.",
+                    "CO2 uitstoot gemeten bij een op een rollenbank gemeten voertuig, van toepassing op een extern oplaadbaar hybride elektrisch voertuig, met een oplading van buitenaf gewogen gecombineerd volgens de berekening in de richtlijn.",
+                    "De gewogen uitstoot van CO2 in g/km van een plug-in hybride voertuig, tijdens een combinatie van een stadsrit en een rit buiten de stad, getest op een rollenbank. De waarde is berekend aan de hand van de uitstoot die ontstaat door eenmaal met lege accu’s en eenmaal met volle accu’s te rijden.",
+                    "Het brandstofverbruik in l/100 km, tijdens een gestandaardiseerde stadsritcyclus, getest op een rollenbank.",
+                    "Het brandstofverbruik in l/100 km, tijdens een combinatie van gestandaardiseerde stadsrit- en rit buiten de stad, getest op een rollenbank.",
+                    "Electrisch verbruik gemeten bij een op een rollenbank rijdend puur elektrisch voertuig tijdens een rit volgens de WLTP test onder gecombineerde belasting.",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 71329477,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2025-01-21T16:19:52.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "public safety"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Voertuigen",
+                "domain_tags": [
+                    "kenteken",
+                    "brandstof"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Licentie_Licentie",
+                        "value": "Creative Commons 0 (CC0)"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "opendata.rdw.nl",
+                "license": "Public Domain"
+            },
+            "permalink": "https://opendata.rdw.nl/d/8ys7-d773",
+            "link": "https://opendata.rdw.nl/Voertuigen/Open-Data-RDW-Gekentekende_voertuigen_brandstof/8ys7-d773",
+            "owner": {
+                "id": "dtwm-nf4m",
+                "user_type": "interactive",
+                "display_name": "Team Open Data RDW"
+            },
+            "creator": {
+                "id": "dtwm-nf4m",
+                "user_type": "interactive",
+                "display_name": "Team Open Data RDW"
+            }
+        },
+        {
+            "resource": {
+                "name": "ESIF 2014-2020 FINANCES PLANNED DETAILS",
+                "id": "e4v6-qrrq",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset provides information on planned total and EU financing under the different ESI Funds (2014-2020) in current prices. The data is taken from the adopted financial tables and is broken down by fund, programme, priority axis, thematic objective and category of region (more developed, less developed, etc. where available). It is updated daily to reflect any modifications (i.e; thematic reallocations) agreed between the Member States and the Commission. \r\n\r\nThe data cover the more than 530 programmes and includes the EU and national co-financing covered by the adoption decision. Financial allocations in the programme financial table may change over time (i.e. transfers between themes, between funds). The first wave of major changes took place at end 2017 as a result of the allocation of the \"technical adjustment\" and the increase in the allocation to the Youth Employment initiative.\r\n\r\n- For ERDF, ESF and CF the \"priority\" columns relate to the priority axis (financing blocks) in the programmes; the \"investment priority\" relates to the fixed lists of defined investment objectives set in the three specific fund Regulations.  \r\n- For the European Agricultural fund for Rural Development (EAFRD) detail is also provided by EAFRD \"Focus areas\" and \"Measures\" (the EAFRD Focus Areas are detailed in the EAFRD fund regulation - Article 5 and the EAFRD measures in Article 13-40 of  the relevant Implementing Regulation).\r\n\r\nIf downloading, check the format of financial amounts and where necessary change your regional settings and default formatting in your chosen software. You can check the results of your aggregation of the financial data by comparing results either with (1) the charts on the public platform or (2) with the pre-formatted charts profiled on this metadata page under “featured content”.",
+                "attribution": "European Commission",
+                "attribution_link": "https://cohesiondata.ec.europa.eu/",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-19T05:53:54.000Z",
+                "createdAt": "2015-10-30T18:40:29.000Z",
+                "metadata_updated_at": "2018-11-09T09:40:59.000Z",
+                "data_updated_at": "2025-08-19T05:53:54.000Z",
+                "page_views": {
+                    "page_views_last_week": 53,
+                    "page_views_last_month": 217,
+                    "page_views_total": 185212,
+                    "page_views_last_week_log": 5.754887502163469,
+                    "page_views_last_month_log": 7.768184324776926,
+                    "page_views_total_log": 17.49882583857121
+                },
+                "columns_name": [
+                    "CCI",
+                    "To short",
+                    "Priority",
+                    "EAFRD Measure code",
+                    "Focus area short description",
+                    "TO long",
+                    "MS",
+                    "Category of region",
+                    "Ver",
+                    "Programme Title",
+                    "Measure short description",
+                    "TO_code",
+                    "EU co-financing",
+                    "Total Amount",
+                    "EAFRD Focus Area code",
+                    "EU Amount",
+                    "MS Name",
+                    "Fund",
+                    "National Amount"
+                ],
+                "columns_field_name": [
+                    "cci",
+                    "to_short",
+                    "priority",
+                    "eafrd_measure_code",
+                    "focus_area_short_description",
+                    "to_long",
+                    "ms",
+                    "category_of_region",
+                    "ver",
+                    "title",
+                    "measure_short_description",
+                    "to",
+                    "eu_co_financing",
+                    "total_amount",
+                    "eafrd_fa",
+                    "eu_amount",
+                    "ms_name",
+                    "fund",
+                    "national_amount"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number"
+                ],
+                "columns_description": [
+                    "Unique identifier for each programme.\nMore about CCI codes at: https://ec.europa.eu/sfc/en/2014/support-ms/CCI",
+                    "Short name for the thematic objective. For example: \"Research and Innovation\" stands for \"Strengthening research, technological development and innovation.\"\nFor more information on thematic objectives, see: Regulation (EU) No 1303/ 2013 Art 9.",
+                    "Priority Axis: the investment pillars in the programme. There is no harmonised numbering or naming of Priority Axes.  Programmes were free to structure the Priority Axes as needed. \nFor more information on the structure of the operational programmes, see: Regulation (EU) No 1303/ 2013 Art 27 (Content of programmes), Commission Implementing Regulation (EU) 288/ 2014, Commission Implementing Regulation 808/2014, ",
+                    "Codes for EAFRD policy measures.\nFor more information on EAFRD measures see Commission Implementing Regulation (EU) 808/2014 Part 5. \n",
+                    "",
+                    "Full name of the thematic objective.\nFor more information on thematic objectives, see: Regulation (EU) No 1303/ 2013 Art 9. ",
+                    "2-digit Abbreviation for the name of the Member State (ex: BE for Belgium, TC = Interreg)",
+                    "Data is reported by category of region for ERDF and ESF. There are three categories of region: less developed, transition, and more developed. These \"categories of region\" codes do not formally apply to CF, EAFRD or EMFF. \nFor more information on the categories of regions see: Regulation (EU) No 1303/ 2013 Art 90(2).\n",
+                    "Version of the operational programme reflected in the dataset.",
+                    "Short title of the operational programme. The name is intended for general users; it may not coincide with the formal name of the operational programme, but it is sufficiently precise to allow the unambiguous identification of the OP. ",
+                    "",
+                    "Code for the thematic objective (\"Theme\" in the platform visualizations). In addition to the 11 thematic objectives set out in the legal basis (see notes), the dataset also includes separate codes for TA-technical assistance, a category 12 for additional the support allocated to the outermost and sparsely populated areas and a code \"DM - EAFRD\" for discontinued measures from 2007-2013. \nFor more information on thematic objectives, see: Regulation (EU) No 1303/ 2013 Art 9.",
+                    "Share of EU contribution in total funding",
+                    "Total decided amount (allocation) in euro",
+                    "Codes for EAFRD focus areas.\nFor more information on EAFRD measures see Commission Implementing Regulation (EU) 808/2014 Part 6. ",
+                    "EU decided amount (allocation) in euro",
+                    "Member State Name",
+                    "Name of the ESI fund: \nCF (Cohesion Fund)\nEARDF (European Agricultural Fund for Rural Development)\nEMFF (European Maritime and Fisheries Fund)\nERDF (European Regional Development Fund)\nESF (European Social Fund)\nYEI (Youth Employment Initiative)",
+                    "National decided co-financing (allocation) in euro"
+                ],
+                "columns_format": [
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "right"
+                    },
+                    {
+                        "noCommas": "false",
+                        "align": "right",
+                        "percentScale": "100",
+                        "precisionStyle": "percentage",
+                        "view": "percent_text"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    }
+                ],
+                "download_count": 39877,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2017-08-21T09:41:37.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "2014 / 2020",
+                "domain_tags": [
+                    "esi funds",
+                    "2014-2020",
+                    "fund",
+                    "programme",
+                    "priority axis",
+                    "thematic objective",
+                    "category of region",
+                    "erdf",
+                    "esf",
+                    "cf",
+                    "eafrd",
+                    "emff",
+                    "yei"
+                ],
+                "domain_metadata": [
+
+                ]
+            },
+            "metadata": {
+                "domain": "cohesiondata.ec.europa.eu",
+                "license": "Creative Commons 1.0 Universal (Public Domain Dedication)"
+            },
+            "permalink": "https://cohesiondata.ec.europa.eu/d/e4v6-qrrq",
+            "link": "https://cohesiondata.ec.europa.eu/2014-2020/ESIF-2014-2020-FINANCES-PLANNED-DETAILS/e4v6-qrrq",
+            "owner": {
+                "id": "p5rd-ygin",
+                "user_type": "interactive",
+                "display_name": "John W"
+            },
+            "creator": {
+                "id": "p5rd-ygin",
+                "user_type": "interactive",
+                "display_name": "John W"
+            }
+        },
+        {
+            "resource": {
+                "name": "Comune Brescia - Elenco Decessi",
+                "id": "avft-pty4",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Elenco Decessi",
+                "attribution": "COMUNE DI BRESCIA",
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2024-04-10T01:01:59.000Z",
+                "createdAt": "2018-10-24T13:27:08.000Z",
+                "metadata_updated_at": "2024-04-10T01:01:59.000Z",
+                "data_updated_at": "2024-04-10T01:01:56.000Z",
+                "page_views": {
+                    "page_views_last_week": 127,
+                    "page_views_last_month": 1376,
+                    "page_views_total": 172273,
+                    "page_views_last_week_log": 7.0,
+                    "page_views_last_month_log": 10.427312844134963,
+                    "page_views_total_log": 17.394345457476895
+                },
+                "columns_name": [
+                    "Cittadinanza",
+                    "Sesso",
+                    "Occorrenze",
+                    "Anno di Morte"
+                ],
+                "columns_field_name": [
+                    "cittadinanza",
+                    "sesso",
+                    "occorrenze",
+                    "anno_di_morte"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 4600,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2024-04-10T01:01:59.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Statistica",
+                "domain_tags": [
+                    "comune di brescia",
+                    "decessi",
+                    "morti"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Frequenza_di_aggiornamento_Frequenza",
+                        "value": "Giornaliera"
+                    },
+                    {
+                        "key": "Frequenza_di_aggiornamento_Data-ultima-modifica",
+                        "value": "03/04/2024"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "www.dati.lombardia.it",
+                "license": "Creative Commons 1.0 Universal (Public Domain Dedication)"
+            },
+            "permalink": "https://www.dati.lombardia.it/d/avft-pty4",
+            "link": "https://www.dati.lombardia.it/Statistica/Comune-Brescia-Elenco-Decessi/avft-pty4",
+            "owner": {
+                "id": "xmxf-wnb9",
+                "user_type": "interactive",
+                "display_name": "Comune di Brescia"
+            },
+            "creator": {
+                "id": "xmxf-wnb9",
+                "user_type": "interactive",
+                "display_name": "Comune di Brescia"
+            }
+        },
+        {
+            "resource": {
+                "name": "Retribucions del personal funcionari",
+                "id": "b4zx-cfga",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Es recullen tots els canvis en les retribucions del personal funcionari des de l’any 2007 fins a l’actualitat.\n\nEs presenten les dades de grup, nivell, sou base, complement de destinació, complement específic, sou total mensual, sou total anual, import sou d’una paga extraordinària, import mensual d’un trienni i import d’un trienni d’una paga extraordinària.",
+                "attribution": "Departament d'Economia i Hisenda",
+                "attribution_link": "https://administraciodigital.gencat.cat/ca/dades/dades-obertes/informacio-practica/llicencies/",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-07-15T06:29:31.000Z",
+                "createdAt": "2021-11-09T12:25:45.000Z",
+                "metadata_updated_at": "2025-07-15T06:29:31.000Z",
+                "data_updated_at": "2024-11-27T07:24:06.000Z",
+                "page_views": {
+                    "page_views_last_week": 1063,
+                    "page_views_last_month": 4943,
+                    "page_views_total": 142910,
+                    "page_views_last_week_log": 10.05528243550119,
+                    "page_views_last_month_log": 12.271463027904375,
+                    "page_views_total_log": 17.124757440798344
+                },
+                "columns_name": [
+                    "Complement Destinació",
+                    "Import mensual d'un trienni",
+                    "Sou",
+                    "Total anual",
+                    "Import d'un trienni d'una paga extra",
+                    "Import sou d'una paga extraordinària",
+                    "Any",
+                    "Complement Específic",
+                    "Nivell",
+                    "GRUP",
+                    "Secretari/ària d’alt càrrec",
+                    "Total Mensual"
+                ],
+                "columns_field_name": [
+                    "complement_destinaci",
+                    "import_mensual_d_un_trienni",
+                    "sou",
+                    "total_anual",
+                    "import_d_un_trienni_d_una",
+                    "import_sou_d_una_paga",
+                    "any",
+                    "complement_espec_fic",
+                    "nivell",
+                    "grup",
+                    "secretari_ria_d_alt_c_rrec",
+                    "total_mensual"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number"
+                ],
+                "columns_description": [
+                    "Indica el complement al sou associat al nivell d’adscripció",
+                    "Indica l’import mensual d’un trienni",
+                    "Indica el sou base associat al grup d’adscripció",
+                    "Indica la retribució total anual",
+                    "Indica l’import d’un trienni a una paga extraordinària",
+                    "Indica l’import d’una paga extraordinària",
+                    "Indica l’any ",
+                    "Indica el complement al sou associat al lloc de treball d’adscripció",
+                    "Indica el nivell d’adscripció del personal funcionari",
+                    "Indica el grup d’adscripció del personal funcionari",
+                    "Indica si el lloc de treball és de secretari/ària d'alt càrrec",
+                    "Indica la retribució total mensual"
+                ],
+                "columns_format": [
+                    {
+                        "decimalSeparator": ",",
+                        "groupSeparator": "."
+                    },
+                    {
+                        "decimalSeparator": ",",
+                        "groupSeparator": "."
+                    },
+                    {
+                        "decimalSeparator": ",",
+                        "groupSeparator": "."
+                    },
+                    {
+                        "decimalSeparator": ",",
+                        "groupSeparator": "."
+                    },
+                    {
+                        "decimalSeparator": ","
+                    },
+                    {
+                        "decimalSeparator": ","
+                    },
+                    {
+                        "noCommas": "true"
+                    },
+                    {
+                        "decimalSeparator": ",",
+                        "groupSeparator": "."
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "decimalSeparator": ",",
+                        "groupSeparator": "."
+                    }
+                ],
+                "download_count": 3456,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2023-04-20T06:05:42.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Sector Públic",
+                "domain_tags": [
+                    "retribucions",
+                    "funcionaris",
+                    "ods16_pau justícies i institucions sòlides",
+                    "ods5_igualtat de gènere",
+                    "taules retributives"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Enllaços-relacionats_Nom",
+                        "value": "Retribucions. Administració i Funció Pública"
+                    },
+                    {
+                        "key": "Enllaços-relacionats_URL",
+                        "value": "https://governobert.gencat.cat/ca/portal-de-la-transparencia/publicitat-activa/servidors-publics/retribucions-empleats-publics/index.html"
+                    },
+                    {
+                        "key": "Informació-de-gènere-o-sexe_Informació-de-gènere-o-sexe",
+                        "value": "No"
+                    },
+                    {
+                        "key": "Idioma_Idioma",
+                        "value": "Català"
+                    },
+                    {
+                        "key": "Idioma_Dataset-name-(EN)",
+                        "value": "Remuneration of civil servants"
+                    },
+                    {
+                        "key": "Idioma_Nombre-del-conjunto-de-datos-(ES)",
+                        "value": "Retribuciones del personal funcionario"
+                    },
+                    {
+                        "key": "Àmbit-geogràfic_Àmbit-geogràfic",
+                        "value": "Catalunya"
+                    },
+                    {
+                        "key": "Àmbit-geogràfic_Informació-geogràfica",
+                        "value": "Sense informació geogràfica"
+                    },
+                    {
+                        "key": "Actors_Departament",
+                        "value": "Economia i Finances"
+                    },
+                    {
+                        "key": "Actors_Tipus-actor",
+                        "value": "Generalitat de Catalunya"
+                    },
+                    {
+                        "key": "Freqüència-d'actualització_Freqüència-d'actualització",
+                        "value": "Anual"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "analisi.transparenciacatalunya.cat",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://analisi.transparenciacatalunya.cat/d/b4zx-cfga",
+            "link": "https://analisi.transparenciacatalunya.cat/Sector-Públic/Retribucions-del-personal-funcionari/b4zx-cfga",
+            "owner": {
+                "id": "a4b5-gx6v",
+                "user_type": "interactive",
+                "display_name": "Dades Obertes Catalunya"
+            },
+            "creator": {
+                "id": "a4b5-gx6v",
+                "user_type": "interactive",
+                "display_name": "Dades Obertes Catalunya"
+            }
+        },
+        {
+            "resource": {
+                "name": "Open Data RDW: Terugroep_actie_status",
+                "id": "t49b-isb7",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "",
+                "attribution": null,
+                "attribution_link": null,
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T07:13:40.000Z",
+                "createdAt": "2015-07-07T11:29:26.000Z",
+                "metadata_updated_at": "2025-04-03T11:26:10.000Z",
+                "data_updated_at": "2025-08-25T07:13:40.000Z",
+                "page_views": {
+                    "page_views_last_week": 2420,
+                    "page_views_last_month": 11723,
+                    "page_views_total": 137981,
+                    "page_views_last_week_log": 11.241387363998937,
+                    "page_views_last_month_log": 13.517177252689542,
+                    "page_views_total_log": 17.07412055155271
+                },
+                "columns_name": [
+                    "Referentiecode RDW",
+                    "Status",
+                    "Code Status",
+                    "Kenteken"
+                ],
+                "columns_field_name": [
+                    "referentiecode_rdw",
+                    "status",
+                    "code_status",
+                    "kenteken"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "De code die de producent aan de terugroepactie heeft gegeven. Met deze code is de terugroepactie bij de dealer bekend.",
+                    "De door de producent/distributeur doorgegeven status van het voertuig:\n•\tOpenstaande terugroepactie= De producent/distributeur heeft de RDW geïnformeerd, dat het voertuig moet worden hersteld. (=0)\n•\tProducent heeft herstel gemeld= De producent/distributeur heeft de RDW geïnformeerd, dat het voertuig is hersteld. (=1)\nOpmerking: er kunnen meer terugroepacties op een voertuig van toepassing zijn.\n",
+                    "De code van de status van het voertuig:\n•\tO= Openstaande terugroepactie\n•\tP= Producent heeft herstel gemeld\n",
+                    "Het kenteken van een voertuig bestaat uit een combinatie van cijfers en letters. Deze combinatie is vermeld op het kentekenbewijs en de kentekenplaat. Het wordt met 6 karakters zonder tussenliggende streepjes weergegeven. "
+                ],
+                "columns_format": [
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    }
+                ],
+                "download_count": 154882,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2024-10-02T11:43:44.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Terugroepacties",
+                "domain_tags": [
+                    "terugroep",
+                    "status",
+                    "voertuigen",
+                    "recall"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Licentie_Licentie",
+                        "value": "Creative Commons 0 (CC0)"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "opendata.rdw.nl",
+                "license": "Public Domain"
+            },
+            "permalink": "https://opendata.rdw.nl/d/t49b-isb7",
+            "link": "https://opendata.rdw.nl/Terugroepacties/Open-Data-RDW-Terugroep_actie_status/t49b-isb7",
+            "owner": {
+                "id": "dtwm-nf4m",
+                "user_type": "interactive",
+                "display_name": "Team Open Data RDW"
+            },
+            "creator": {
+                "id": "dtwm-nf4m",
+                "user_type": "interactive",
+                "display_name": "Team Open Data RDW"
+            }
+        }
+    ],
+    "resultSetSize": 5421,
+    "timings": {
+        "serviceMillis": 27,
+        "searchMillis": [
+            3,
+            9
+        ]
+    },
+    "warnings": [
+
+    ]
+}

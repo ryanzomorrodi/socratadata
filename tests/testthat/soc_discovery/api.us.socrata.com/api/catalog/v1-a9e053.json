@@ -1,0 +1,3371 @@
+{
+    "results": [
+        {
+            "resource": {
+                "name": "Current Employee Names, Salaries, and Position Titles",
+                "id": "xzkq-xp2w",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset is a listing of all active City of Chicago employees, complete with full names, departments, positions, employment status (part-time or full-time), frequency of hourly employee –where applicable—and annual salaries or hourly rate. Please note that \"active\" has a specific meaning for Human Resources purposes and will sometimes exclude employees on certain types of temporary leave. For hourly employees, the City is providing the hourly rate and frequency of hourly employees (40, 35, 20 and 10) to allow dataset users to estimate annual wages for hourly employees. Please note that annual wages will vary by employee, depending on number of hours worked and seasonal status. For information on the positions and related salaries detailed in the annual budgets, see https://www.cityofchicago.org/city/en/depts/obm.html\n\nData Disclosure Exemptions:\nInformation disclosed in this dataset is subject to FOIA Exemption Act, 5 ILCS 140/7 (Link:https://www.ilga.gov/legislation/ilcs/documents/000501400K7.htm)",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.chicago.gov",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T04:49:06.000Z",
+                "createdAt": "2011-09-27T20:18:55.000Z",
+                "metadata_updated_at": "2024-06-18T19:22:48.000Z",
+                "data_updated_at": "2025-08-25T04:49:06.000Z",
+                "page_views": {
+                    "page_views_last_week": 2407,
+                    "page_views_last_month": 10109,
+                    "page_views_total": 2136326,
+                    "page_views_last_week_log": 11.233619676759702,
+                    "page_views_last_month_log": 13.303495376790378,
+                    "page_views_total_log": 21.026701061467204
+                },
+                "columns_name": [
+                    "Annual Salary",
+                    "Typical Hours",
+                    "Hourly Rate",
+                    "Name",
+                    "Full or Part-Time",
+                    "Job Titles",
+                    "Salary or Hourly",
+                    "Department"
+                ],
+                "columns_field_name": [
+                    "annual_salary",
+                    "typical_hours",
+                    "hourly_rate",
+                    "name",
+                    "full_or_part_time",
+                    "job_titles",
+                    "salary_or_hourly",
+                    "department"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Annual salary rates. Only applies for employees whose pay frequency is \"Salary\". Hourly employees rates are only shown in \"Hourly Rates\" column.",
+                    "Describes the typical amount of work for hourly employees. This data does not apply to salary employees.\n\n40 - Employee paid on an hourly basis; works an 8 hour day; can be either full-time permanent (FT/P) or full-time temporary (FT-T) which is a seasonal employee; 35 - Employee paid on an hourly basis; works a 7 hour day; can be either full-time permanent (FT/P) or full-time temporary (FT-T) which is a seasonal employee; 20 - Employee paid on a part-time, hourly basis; typically works a 4 hour day, 5 days a week; 10 - Employee paid on a part-time, hourly basis; works 10 hours or less in a week.",
+                    "The hourly salary rates for individuals whose pay frequency is \"hourly\". Hourly employees have varying hours worked throughout the week, which is described in the \"Frequency Description\" column.",
+                    "Name of employee",
+                    "Whether the employee was employed full- (F) or part-time (P).",
+                    "Title of employee at the time when the data were updated.",
+                    "Defines whether an employee is paid on an hourly basis or salary basis. Hourly employees are further defined by the number of hours they work in a week. See the \"Frequency Description\" column.",
+                    "Department where employee worked."
+                ],
+                "columns_format": [
+                    {
+                        "precision": "2",
+                        "align": "right",
+                        "aggregate": "sum",
+                        "currencyStyle": "USD",
+                        "humane": "false",
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "precision": "2",
+                        "align": "right",
+                        "currencyStyle": "USD",
+                        "humane": "false",
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "rdf": "http://xmlns.com/foaf/0.1/name",
+                        "align": "left",
+                        "aggregate": "count"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "rdf": "http://xmlns.com/foaf/0.1/title",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "rdf": "http://xmlns.com/foaf/0.1/workplaceHomepage",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 14172062,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2018-01-30T17:45:21.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Administration & Finance",
+                "domain_tags": [
+                    "personnel"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data are updated daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Human Resources"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "Current"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/xzkq-xp2w",
+            "link": "https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Building Permits",
+                "id": "ydr8-5enu",
+                "resource_name": "building-permits",
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset includes information about building permits issued by the City of Chicago from 2006 to the present, excluding permits that have been voided or revoked after issuance. Most types of permits are issued subject to payment of the applicable permit fee. Work under a permit may not begin until the applicable permit fee is paid. \n\nFor more information about building permits, see http://www.chicago.gov/permit.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T12:09:17.000Z",
+                "createdAt": "2011-09-30T12:00:08.000Z",
+                "metadata_updated_at": "2024-10-21T15:11:40.000Z",
+                "data_updated_at": "2025-08-25T12:09:17.000Z",
+                "page_views": {
+                    "page_views_last_week": 1297,
+                    "page_views_last_month": 5018,
+                    "page_views_total": 932069,
+                    "page_views_last_week_log": 10.342074667999139,
+                    "page_views_last_month_log": 12.29318423075951,
+                    "page_views_total_log": 19.830078782171046
+                },
+                "columns_name": [
+                    "WORK_DESCRIPTION",
+                    "LOCATION",
+                    "BUILDING_FEE_SUBTOTAL",
+                    "CONTACT_8_CITY",
+                    "CONTACT_9_TYPE",
+                    "ID",
+                    "CONTACT_12_TYPE",
+                    "CONTACT_4_ZIPCODE",
+                    "CONTACT_13_ZIPCODE",
+                    "LONGITUDE",
+                    "REVIEW_TYPE",
+                    "CONTACT_14_CITY",
+                    "PERMIT#",
+                    "CONTACT_9_CITY",
+                    "CONTACT_9_STATE",
+                    "CONTACT_3_ZIPCODE",
+                    "CONTACT_12_ZIPCODE",
+                    "CONTACT_12_CITY",
+                    "CONTACT_3_CITY",
+                    "CONTACT_10_CITY",
+                    "CONTACT_11_CITY",
+                    "CONTACT_1_NAME",
+                    "CONTACT_2_ZIPCODE",
+                    "SUBTOTAL_WAIVED",
+                    "ZONING_FEE_WAIVED",
+                    "BUILDING_FEE_WAIVED",
+                    "CONTACT_14_TYPE",
+                    "CONTACT_10_TYPE",
+                    "CONTACT_8_STATE",
+                    "CONTACT_14_NAME",
+                    "STREET_NUMBER",
+                    "CONTACT_8_TYPE",
+                    "OTHER_FEE_UNPAID",
+                    "CONTACT_11_ZIPCODE",
+                    "PROCESSING_TIME",
+                    "ISSUE_DATE",
+                    "PERMIT_MILESTONE",
+                    "SUBTOTAL_UNPAID",
+                    "CONTACT_10_NAME",
+                    "SUBTOTAL_PAID",
+                    "CONTACT_5_CITY",
+                    "BUILDING_FEE_PAID",
+                    "CONTACT_7_CITY",
+                    "CONTACT_9_ZIPCODE",
+                    "CONTACT_7_STATE",
+                    "CONTACT_11_TYPE",
+                    "CONTACT_2_STATE",
+                    "CONTACT_6_CITY",
+                    "OTHER_FEE_WAIVED",
+                    "CONTACT_5_NAME",
+                    "CONTACT_6_STATE",
+                    "CONTACT_14_ZIPCODE",
+                    "CONTACT_13_CITY",
+                    "CONTACT_15_ZIPCODE",
+                    "CONTACT_6_ZIPCODE",
+                    "CONTACT_15_TYPE",
+                    "CONTACT_7_ZIPCODE",
+                    "CONTACT_13_TYPE",
+                    "CONTACT_7_TYPE",
+                    "CONTACT_7_NAME",
+                    "CONTACT_10_STATE",
+                    "STREET_DIRECTION",
+                    "CONTACT_10_ZIPCODE",
+                    "TOTAL_FEE",
+                    "CONTACT_15_STATE",
+                    "CONTACT_11_STATE",
+                    "CONTACT_8_NAME",
+                    "CONTACT_4_NAME",
+                    "CONTACT_15_CITY",
+                    "CONTACT_5_STATE",
+                    "CONTACT_3_TYPE",
+                    "CENSUS_TRACT",
+                    "CONTACT_11_NAME",
+                    "PERMIT_STATUS",
+                    "WARD",
+                    "BUILDING_FEE_UNPAID",
+                    "CONTACT_12_NAME",
+                    "CONTACT_1_TYPE",
+                    "CONTACT_8_ZIPCODE",
+                    "CONTACT_2_CITY",
+                    "OTHER_FEE_SUBTOTAL",
+                    "CONTACT_6_NAME",
+                    "CONTACT_2_NAME",
+                    "CONTACT_9_NAME",
+                    "CONTACT_6_TYPE",
+                    "Boundaries - ZIP Codes",
+                    "Census Tracts",
+                    "CONTACT_13_STATE",
+                    "CONTACT_12_STATE",
+                    "CONTACT_4_STATE",
+                    "CONTACT_5_ZIPCODE",
+                    "PIN_LIST",
+                    "Zip Codes",
+                    "CONTACT_13_NAME",
+                    "CONTACT_4_TYPE",
+                    "OTHER_FEE_PAID",
+                    "Community Areas",
+                    "CONTACT_1_ZIPCODE",
+                    "CONTACT_1_CITY",
+                    "ZONING_FEE_UNPAID",
+                    "ZONING_FEE_PAID",
+                    "PERMIT_TYPE",
+                    "CONTACT_3_STATE",
+                    "CONTACT_1_STATE",
+                    "CONTACT_3_NAME",
+                    "WORK_TYPE",
+                    "APPLICATION_START_DATE",
+                    "LATITUDE",
+                    "YCOORDINATE",
+                    "XCOORDINATE",
+                    "COMMUNITY_AREA",
+                    "CONTACT_5_TYPE",
+                    "REPORTED_COST",
+                    "CONTACT_4_CITY",
+                    "CONTACT_14_STATE",
+                    "STREET_NAME",
+                    "CONTACT_2_TYPE",
+                    "CONTACT_15_NAME",
+                    "ZONING_FEE_SUBTOTAL",
+                    "Historical Wards 2003-2015",
+                    "Wards"
+                ],
+                "columns_field_name": [
+                    "work_description",
+                    "location",
+                    "building_fee_subtotal",
+                    "contact_8_city",
+                    "contact_9_type",
+                    "id",
+                    "contact_12_type",
+                    "contact_4_zipcode",
+                    "contact_13_zipcode",
+                    "longitude",
+                    "review_type",
+                    "contact_14_city",
+                    "permit_",
+                    "contact_9_city",
+                    "contact_9_state",
+                    "contact_3_zipcode",
+                    "contact_12_zipcode",
+                    "contact_12_city",
+                    "contact_3_city",
+                    "contact_10_city",
+                    "contact_11_city",
+                    "contact_1_name",
+                    "contact_2_zipcode",
+                    "subtotal_waived",
+                    "zoning_fee_waived",
+                    "building_fee_waived",
+                    "contact_14_type",
+                    "contact_10_type",
+                    "contact_8_state",
+                    "contact_14_name",
+                    "street_number",
+                    "contact_8_type",
+                    "other_fee_unpaid",
+                    "contact_11_zipcode",
+                    "processing_time",
+                    "issue_date",
+                    "permit_milestone",
+                    "subtotal_unpaid",
+                    "contact_10_name",
+                    "subtotal_paid",
+                    "contact_5_city",
+                    "building_fee_paid",
+                    "contact_7_city",
+                    "contact_9_zipcode",
+                    "contact_7_state",
+                    "contact_11_type",
+                    "contact_2_state",
+                    "contact_6_city",
+                    "other_fee_waived",
+                    "contact_5_name",
+                    "contact_6_state",
+                    "contact_14_zipcode",
+                    "contact_13_city",
+                    "contact_15_zipcode",
+                    "contact_6_zipcode",
+                    "contact_15_type",
+                    "contact_7_zipcode",
+                    "contact_13_type",
+                    "contact_7_type",
+                    "contact_7_name",
+                    "contact_10_state",
+                    "street_direction",
+                    "contact_10_zipcode",
+                    "total_fee",
+                    "contact_15_state",
+                    "contact_11_state",
+                    "contact_8_name",
+                    "contact_4_name",
+                    "contact_15_city",
+                    "contact_5_state",
+                    "contact_3_type",
+                    "census_tract",
+                    "contact_11_name",
+                    "permit_status",
+                    "ward",
+                    "building_fee_unpaid",
+                    "contact_12_name",
+                    "contact_1_type",
+                    "contact_8_zipcode",
+                    "contact_2_city",
+                    "other_fee_subtotal",
+                    "contact_6_name",
+                    "contact_2_name",
+                    "contact_9_name",
+                    "contact_6_type",
+                    ":@computed_region_rpca_8um6",
+                    ":@computed_region_bdys_3d7i",
+                    "contact_13_state",
+                    "contact_12_state",
+                    "contact_4_state",
+                    "contact_5_zipcode",
+                    "pin_list",
+                    ":@computed_region_6mkv_f3dw",
+                    "contact_13_name",
+                    "contact_4_type",
+                    "other_fee_paid",
+                    ":@computed_region_vrxf_vc4k",
+                    "contact_1_zipcode",
+                    "contact_1_city",
+                    "zoning_fee_unpaid",
+                    "zoning_fee_paid",
+                    "permit_type",
+                    "contact_3_state",
+                    "contact_1_state",
+                    "contact_3_name",
+                    "work_type",
+                    "application_start_date",
+                    "latitude",
+                    "ycoordinate",
+                    "xcoordinate",
+                    "community_area",
+                    "contact_5_type",
+                    "reported_cost",
+                    "contact_4_city",
+                    "contact_14_state",
+                    "street_name",
+                    "contact_2_type",
+                    "contact_15_name",
+                    "zoning_fee_subtotal",
+                    ":@computed_region_awaf_s7ux",
+                    ":@computed_region_43wa_7qmu"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Point",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Calendar date",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number"
+                ],
+                "columns_description": [
+                    "Description of work authorized by the permit",
+                    "The location of the property's primary address in a format that allows for creation of maps and other geographic operations on this data portal",
+                    "Sum of BUILDING_FEE_PAID, BUILDING_FEE_UNPAID and BUILDING_FEE_WAIVED",
+                    "Contact 8's primary address city",
+                    "Contact 9's relationship to permit",
+                    "Unique database record identifier",
+                    "Contact 12's relationship to permit",
+                    "Contact 4's primary address ZIP code",
+                    "Contact 13's primary address ZIP code",
+                    "The longitude of the property's primary address",
+                    "Process used to review permit application",
+                    "Contact 14's primary address city",
+                    "Tracking number assigned at beginning of permit application process",
+                    "Contact 9's primary address city",
+                    "Contact 9's primary address state",
+                    "Contact 3's primary address ZIP code",
+                    "Contact 12's primary address ZIP code",
+                    "Contact 12's primary address city",
+                    "Contact 3's primary address city",
+                    "Contact 10's primary address city",
+                    "Contact 11's primary address city",
+                    "Contact 1's full name",
+                    "Contact 2's primary address ZIP code",
+                    "Sum of BUILDING_FEE_WAIVED, ZONING_FEE_WAIVED and OTHER_FEE_WAIVED",
+                    "Amount of zoning review fees waived",
+                    "Amount of building permit fees waived",
+                    "Contact 14's relationship to permit",
+                    "Contact 10's relationship to permit",
+                    "Contact 8's primary address state",
+                    "Contact 14's full name",
+                    "Address number - for buildings with address ranges, primary address is used",
+                    "Contact 8's relationship to permit",
+                    "Amount of other permit-related fees due",
+                    "Contact 11's primary address ZIP code",
+                    "Number of days between APPLICATION_START_DATE and ISSUE_DATE",
+                    "For most permit types, date when City determined permit was ready to issue, subject to payment of permit fees; For Express Permit Program, date when permit issued based on full payment of applicable permit fee",
+                    "Current milestone of permit (not available for all permit types).",
+                    "Sum of BUILDING_FEE_UNPAID, ZONING_FEE_UNPAID and OTHER_FEE_UNPAID",
+                    "Contact 10's full name",
+                    "Sum of BUILDING_FEE_PAID, ZONING_FEE_PAID and OTHER_FEE_PAID",
+                    "Contact 5's primary address city",
+                    "Amount of building permit fees received",
+                    "Contact 7's primary address city",
+                    "Contact 9's primary address ZIP code",
+                    "Contact 7's primary address state",
+                    "Contact 11's relationship to permit",
+                    "Contact 2's primary address state",
+                    "Contact 6's primary address city",
+                    "Amount of other permit-related fees waived",
+                    "Contact 5's full name",
+                    "Contact 6's primary address state",
+                    "Contact 14's primary address ZIP code",
+                    "Contact 13's primary address city",
+                    "Contact 15's primary address ZIP code",
+                    "Contact 6's primary address ZIP code",
+                    "Contact 15's relationship to permit",
+                    "Contact 7's primary address ZIP code",
+                    "Contact 13's relationship to permit",
+                    "Contact 7's relationship to permit",
+                    "Contact 7's full name",
+                    "Contact 10's primary address state",
+                    "Street direction",
+                    "Contact 10's primary address ZIP code",
+                    "Sum of SUBTOTAL_PAID, SUBTOTAL_UNPAID and SUBTOTAL_WAIVED",
+                    "Contact 15's primary address state",
+                    "Contact 11's primary address state",
+                    "Contact 8's full name",
+                    "Contact 4's full name",
+                    "Contact 15's primary address city",
+                    "Contact 5's primary address state",
+                    "Contact 3's relationship to permit",
+                    "The census tract of the property's primary address. The census tract map is available in a separate dataset.",
+                    "Contact 11's full name",
+                    "Current status of permit (not available for all permit types).",
+                    "The ward (city council district) of the property's primary address at the time of permit issuance. The ward map is available in a separate dataset.",
+                    "Amount of building permit fees due",
+                    "Contact 12's full name",
+                    "Contact 1's relationship to permit",
+                    "Contact 8's primary address ZIP code",
+                    "Contact 2's primary address city",
+                    "Sum of OTHER_FEE_PAID, OTHER _FEE_UNPAID and OTHER _FEE_WAIVED",
+                    "Contact 6's full name",
+                    "Contact 2's full name",
+                    "Contact 9's full name",
+                    "Contact 6's relationship to permit",
+                    "",
+                    "",
+                    "Contact 13's primary address state",
+                    "Contact 12's primary address state",
+                    "Contact 4's primary address state",
+                    "Contact 5's primary address ZIP code",
+                    "Property index number(s) (PINs) disclosed by applicant and verified by city staff as part of permit application review (not available for all permits); PINs are assigned to parcels of land for property tax purposes. This column replaces columns PIN1 through PIN10, which will be removed soon, no earlier than 6/1/2024.",
+                    "",
+                    "Contact 13's full name",
+                    "Contact 4's relationship to permit",
+                    "Amount of other permit-related fees received",
+                    "",
+                    "Contact 1's primary address ZIP code",
+                    "Contact 1's primary address city",
+                    "Amount of zoning review fees due",
+                    "Amount of zoning review fees received",
+                    "Type of permit",
+                    "Contact 3's primary address state",
+                    "Contact 1's primary address state",
+                    "Contact 3's full name",
+                    "Classification of activity authorized by permit (not available for all permit types).",
+                    "Date when City began reviewing permit application",
+                    "The latitude of the property's primary address",
+                    "The north-south coordinate of the property's primary address, defined in feet, based on NAD 83 - State Plane Eastern IL",
+                    "The east-west coordinate of the property's primary address, defined in feet, based on NAD 83 - State Plane Eastern IL",
+                    "The Chicago community area of the property's primary address. The community area map is available in a separate dataset.",
+                    "Contact 5's relationship to permit",
+                    "Estimated cost of work provided by applicant (not available for all permits)",
+                    "Contact 4's primary address city",
+                    "Contact 14's primary address state",
+                    "Street name",
+                    "Contact 2's relationship to permit",
+                    "Contact 15's full name",
+                    "Sum of ZONING_FEE_PAID, ZONING _FEE_UNPAID and ZONING _FEE_WAIVED",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right",
+                        "aggregate": "count"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precision": "2",
+                        "align": "right",
+                        "currencyStyle": "USD",
+                        "humane": "false",
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "precision": "0"
+                    },
+                    {
+                        "view": "date",
+                        "rdf": "http://purl.org/dc/terms/date",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "noCommas": "false",
+                        "precision": "2",
+                        "align": "right",
+                        "currencyStyle": "USD",
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "noCommas": "false",
+                        "precision": "2",
+                        "align": "right",
+                        "currencyStyle": "USD",
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "noCommas": "true"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true",
+                        "precision": "0"
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+                        "precisionStyle": "currency",
+                        "precision": "2"
+                    },
+                    {
+                        "rdf": "http://purl.org/dc/terms/type",
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date"
+                    },
+                    {
+
+                    },
+                    {
+                        "noCommas": "true"
+                    },
+                    {
+                        "noCommas": "true"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "noCommas": "false",
+                        "precision": "2",
+                        "align": "right",
+                        "currencyStyle": "USD",
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "currency"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 107510,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2024-07-27T02:19:43.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "economy",
+                    "education",
+                    "politics"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Buildings",
+                "domain_tags": [
+                    "buildings",
+                    "permits"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data are updated daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Department of Buildings"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "2006 to present"
+                    },
+                    {
+                        "key": "Metadata_Changes-and-Other-Historical-Information-Useful-to-Understanding-This-Dataset",
+                        "value": "https://www.google.com/search?as_q=%22Related+dataset+ID+s%22+%22ydr8+5enu%22+inurl%3Astories&as_sitesearch=data.cityofchicago.org"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/ydr8-5enu",
+            "link": "https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Traffic Crashes - Crashes",
+                "id": "85ca-t3if",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Crash data shows information about each traffic crash on city streets within the City of Chicago limits and under the jurisdiction of Chicago Police Department (CPD). Data are shown as is from the electronic crash reporting system (E-Crash) at CPD, excluding any personally identifiable information. Records are added to the data portal when a crash report is finalized or when amendments are made to an existing report in E-Crash. Data from E-Crash are available for some police districts in 2015, but citywide data are not available until September 2017. About half of all crash reports, mostly minor crashes, are self-reported at the police district by the driver(s) involved and the other half are recorded at the scene by the police officer responding to the crash. Many of the crash parameters, including street condition data, weather condition, and posted speed limits, are recorded by the reporting officer based on best available information at the time, but many of these may disagree with posted information or other assessments on road conditions. If any new or updated information on a crash is received, the reporting officer may amend the crash report at a later time. A traffic crash within the city limits for which CPD is not the responding police agency, typically crashes on interstate highways, freeway ramps, and on local roads along the City boundary, are excluded from this dataset.\n\nAll crashes are recorded as per the format specified in the Traffic Crash Report, SR1050, of the Illinois Department of Transportation. The crash data published on the Chicago data portal mostly follows the data elements in SR1050 form. The current version of the SR1050 instructions manual with detailed information on each data elements is available <a href=\"https://idot.illinois.gov/Assets/uploads/files/Transportation-System/Manuals-Guides-&-Handbooks/Safety/Illinois Traffic Crash Report SR 1050 Instruction Manual 2019.pdf\">here<\/a>.\n\nAs per Illinois statute, only crashes with a property damage value of $1,500 or more or involving bodily injury to any person(s) and that happen on a public roadway and that involve at least one moving vehicle, except bike dooring, are considered reportable crashes. However, CPD records every reported traffic crash event, regardless of the statute of limitations, and hence any formal Chicago crash dataset released by Illinois Department of Transportation may not include all the crashes listed here.\n\nChange 11/21/2023: We have removed the RD_NO (Chicago Police Department report number) for privacy reasons.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.chicago.gov",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T15:46:41.000Z",
+                "createdAt": "2017-10-19T22:02:56.000Z",
+                "metadata_updated_at": "2023-12-13T16:58:25.000Z",
+                "data_updated_at": "2025-08-25T15:46:41.000Z",
+                "page_views": {
+                    "page_views_last_week": 4899,
+                    "page_views_last_month": 22018,
+                    "page_views_total": 683737,
+                    "page_views_last_week_log": 12.258566033889934,
+                    "page_views_last_month_log": 14.426461329478043,
+                    "page_views_total_log": 19.383084082426233
+                },
+                "columns_name": [
+                    "Boundaries - ZIP Codes",
+                    "WORK_ZONE_TYPE",
+                    "CRASH_RECORD_ID",
+                    "CRASH_DATE_EST_I",
+                    "CRASH_DATE",
+                    "POSTED_SPEED_LIMIT",
+                    "TRAFFIC_CONTROL_DEVICE",
+                    "DEVICE_CONDITION",
+                    "WEATHER_CONDITION",
+                    "LIGHTING_CONDITION",
+                    "FIRST_CRASH_TYPE",
+                    "TRAFFICWAY_TYPE",
+                    "LANE_CNT",
+                    "ALIGNMENT",
+                    "ROADWAY_SURFACE_COND",
+                    "ROAD_DEFECT",
+                    "REPORT_TYPE",
+                    "CRASH_TYPE",
+                    "INTERSECTION_RELATED_I",
+                    "NOT_RIGHT_OF_WAY_I",
+                    "HIT_AND_RUN_I",
+                    "DAMAGE",
+                    "DATE_POLICE_NOTIFIED",
+                    "PRIM_CONTRIBUTORY_CAUSE",
+                    "SEC_CONTRIBUTORY_CAUSE",
+                    "STREET_NO",
+                    "STREET_DIRECTION",
+                    "STREET_NAME",
+                    "BEAT_OF_OCCURRENCE",
+                    "PHOTOS_TAKEN_I",
+                    "STATEMENTS_TAKEN_I",
+                    "DOORING_I",
+                    "WORK_ZONE_I",
+                    "WORKERS_PRESENT_I",
+                    "NUM_UNITS",
+                    "MOST_SEVERE_INJURY",
+                    "INJURIES_TOTAL",
+                    "INJURIES_FATAL",
+                    "INJURIES_INCAPACITATING",
+                    "INJURIES_NON_INCAPACITATING",
+                    "INJURIES_REPORTED_NOT_EVIDENT",
+                    "INJURIES_NO_INDICATION",
+                    "INJURIES_UNKNOWN",
+                    "CRASH_HOUR",
+                    "CRASH_DAY_OF_WEEK",
+                    "CRASH_MONTH",
+                    "LATITUDE",
+                    "LONGITUDE",
+                    "LOCATION"
+                ],
+                "columns_field_name": [
+                    ":@computed_region_rpca_8um6",
+                    "work_zone_type",
+                    "crash_record_id",
+                    "crash_date_est_i",
+                    "crash_date",
+                    "posted_speed_limit",
+                    "traffic_control_device",
+                    "device_condition",
+                    "weather_condition",
+                    "lighting_condition",
+                    "first_crash_type",
+                    "trafficway_type",
+                    "lane_cnt",
+                    "alignment",
+                    "roadway_surface_cond",
+                    "road_defect",
+                    "report_type",
+                    "crash_type",
+                    "intersection_related_i",
+                    "private_property_i",
+                    "hit_and_run_i",
+                    "damage",
+                    "date_police_notified",
+                    "prim_contributory_cause",
+                    "sec_contributory_cause",
+                    "street_no",
+                    "street_direction",
+                    "street_name",
+                    "beat_of_occurrence",
+                    "photos_taken_i",
+                    "statements_taken_i",
+                    "dooring_i",
+                    "work_zone_i",
+                    "workers_present_i",
+                    "num_units",
+                    "most_severe_injury",
+                    "injuries_total",
+                    "injuries_fatal",
+                    "injuries_incapacitating",
+                    "injuries_non_incapacitating",
+                    "injuries_reported_not_evident",
+                    "injuries_no_indication",
+                    "injuries_unknown",
+                    "crash_hour",
+                    "crash_day_of_week",
+                    "crash_month",
+                    "latitude",
+                    "longitude",
+                    "location"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Point"
+                ],
+                "columns_description": [
+                    "This column was automatically created in order to record in what polygon from the dataset 'Boundaries - ZIP Codes' (rpca-8um6) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                    "The type of work zone, if any",
+                    "This number can be used to link to the same crash in the Vehicles and People datasets. This number also serves as a unique ID in this dataset.",
+                    "Crash date estimated by desk officer or reporting party (only used in cases where crash is reported at police station days after the crash)",
+                    "Date and time of crash as entered by the reporting officer",
+                    "Posted speed limit, as determined by reporting officer",
+                    "Traffic control device present at crash location, as determined by reporting officer",
+                    "Condition of traffic control device, as determined by reporting officer",
+                    "Weather condition at time of crash, as determined by reporting officer",
+                    "Light condition at time of crash, as determined by reporting officer",
+                    "Type of first collision in crash",
+                    "Trafficway type, as determined by reporting officer",
+                    "Total number of through lanes in either direction, excluding turn lanes, as determined by reporting officer (0 = intersection)",
+                    "Street alignment at crash location, as determined by reporting officer",
+                    "Road surface condition, as determined by reporting officer",
+                    "Road defects, as determined by reporting officer",
+                    "Administrative report type (at scene, at desk, amended)",
+                    "A general severity classification for the crash. Can be either Injury and/or Tow Due to Crash or No Injury / Drive Away ",
+                    "A field observation by the police officer whether an intersection played a role in the crash. Does not represent whether or not the crash occurred within the intersection.",
+                    "Whether the crash begun or first contact was made outside of the public right-of-way.",
+                    "Crash did/did not involve a driver who caused the crash and fled the scene without exchanging information and/or rendering aid",
+                    "A field observation of estimated damage.",
+                    "Calendar date on which police were notified of the crash",
+                    "The factor which was most significant in causing the crash, as determined by officer judgment",
+                    "The factor which was second most significant in causing the crash, as determined by officer judgment",
+                    "Street address number of crash location, as determined by reporting officer",
+                    "Street address direction (N,E,S,W) of crash location, as determined by reporting officer",
+                    "Street address name of crash location, as determined by reporting officer",
+                    "Chicago Police Department Beat ID. Boundaries available at https://data.cityofchicago.org/d/aerh-rz74",
+                    "Whether the Chicago Police Department took photos at the location of the crash",
+                    "Whether statements were taken from unit(s) involved in crash",
+                    "Whether crash involved a motor vehicle occupant opening a door into the travel path of a bicyclist, causing a crash",
+                    "Whether the crash occurred in an active work zone",
+                    "Whether construction workers were present in an active work zone at crash location",
+                    "Number of units involved in the crash. A unit can be a motor vehicle, a pedestrian, a bicyclist, or another non-passenger roadway user. Each unit represents a mode of traffic with an independent trajectory. ",
+                    "Most severe injury sustained by any person involved in the crash",
+                    "Total persons sustaining fatal, incapacitating, non-incapacitating, and possible injuries as determined by the reporting officer",
+                    "Total persons sustaining fatal injuries in the crash",
+                    "Total persons sustaining incapacitating/serious injuries in the crash as determined by the reporting officer. Any injury other than fatal injury, which prevents the injured person from walking, driving, or normally continuing the activities they were capable of performing before the injury occurred. Includes severe lacerations, broken limbs, skull or chest injuries, and abdominal injuries.",
+                    "Total persons sustaining non-incapacitating injuries in the crash as determined by the reporting officer. Any injury, other than fatal or incapacitating injury, which is evident to observers at the scene of the crash. Includes lump on head, abrasions, bruises, and minor lacerations.",
+                    "Total persons sustaining possible injuries in the crash as determined by the reporting officer. Includes momentary unconsciousness, claims of injuries not evident, limping, complaint of pain, nausea, and hysteria.",
+                    "Total persons sustaining no injuries in the crash as determined by the reporting officer",
+                    "Total persons for whom injuries sustained, if any, are unknown",
+                    "The hour of the day component of CRASH_DATE.",
+                    "The day of the week component of CRASH_DATE. Sunday=1\n\n",
+                    "The month component of CRASH_DATE.",
+                    "The latitude of the crash location, as determined by reporting officer, as derived from the reported address of crash",
+                    "The longitude of the crash location, as determined by reporting officer, as derived from the reported address of crash",
+                    "The crash location, as determined by reporting officer, as derived from the reported address of crash, in a column type that allows for mapping and other geographic analysis in the data portal software"
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    }
+                ],
+                "download_count": 45229,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2023-07-27T20:59:32.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "transportation",
+                    "health",
+                    "public safety"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "link to article present",
+                    "public safety",
+                    "traffic crashes",
+                    "transportation",
+                    "vision zero"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Chicago Police Department"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "2015 to present (All police districts September 2017 - present)"
+                    },
+                    {
+                        "key": "Metadata_Changes-and-Other-Historical-Information-Useful-to-Understanding-This-Dataset",
+                        "value": "http://dev.cityofchicago.org/open%20data/data%20portal/2020/07/21/traffic-crash-data-source.html | http://dev.cityofchicago.org/open%20data/data%20portal/2020/02/11/traffic-crash-rd-numbers.html"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/85ca-t3if",
+            "link": "https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if",
+            "owner": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            },
+            "creator": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            }
+        },
+        {
+            "resource": {
+                "name": "Affordable Rental Housing Developments",
+                "id": "s6ha-ppgi",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "The rental housing developments listed below are among the thousands of affordable units that are supported by City of Chicago programs to maintain affordability in local neighborhoods. The list is updated periodically when construction is completed for new projects or when the compliance period for older projects expire, typically after 30 years. The list is provided as a courtesy to the public. It does not include every City-assisted affordable housing unit that may be available for rent, nor does it include the hundreds of thousands of naturally occurring affordable housing units located throughout Chicago without City subsidies. For information on rents, income requirements and availability for the projects listed, contact each property directly. For information on other affordable rental properties in Chicago and Illinois, call (877) 428-8844, or visit www.ILHousingSearch.org.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2024-12-30T22:11:37.000Z",
+                "createdAt": "2013-03-14T21:05:29.000Z",
+                "metadata_updated_at": "2024-12-30T22:11:34.000Z",
+                "data_updated_at": "2024-12-30T22:11:37.000Z",
+                "page_views": {
+                    "page_views_last_week": 313,
+                    "page_views_last_month": 1155,
+                    "page_views_total": 557730,
+                    "page_views_last_week_log": 8.294620748891626,
+                    "page_views_last_month_log": 10.17492568250068,
+                    "page_views_total_log": 19.089209936025593
+                },
+                "columns_name": [
+                    "X Coordinate",
+                    "Community Areas",
+                    "Census Tracts",
+                    "Y Coordinate",
+                    "Community Area Number",
+                    "Management Company",
+                    "Phone Number",
+                    "Location (state)",
+                    "Location (address)",
+                    "Location (zip)",
+                    "Longitude",
+                    "Location",
+                    "Property Name",
+                    "Latitude",
+                    "Community Area Name",
+                    "Address",
+                    "Zip Codes",
+                    "Wards",
+                    "Historical Wards 2003-2015",
+                    "Location (city)",
+                    "Units",
+                    "Zip Code",
+                    "Property Type"
+                ],
+                "columns_field_name": [
+                    "x_coordinate",
+                    ":@computed_region_vrxf_vc4k",
+                    ":@computed_region_bdys_3d7i",
+                    "y_coordinate",
+                    "community_area_number",
+                    "management_company",
+                    "phone_number",
+                    "location_state",
+                    "location_address",
+                    "location_zip",
+                    "longitude",
+                    "location",
+                    "property_name",
+                    "latitude",
+                    "community_area",
+                    "address",
+                    ":@computed_region_6mkv_f3dw",
+                    ":@computed_region_43wa_7qmu",
+                    ":@computed_region_awaf_s7ux",
+                    "location_city",
+                    "units",
+                    "zip_code",
+                    "property_type"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Point",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "coords",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left",
+                        "aggregate": "count"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right",
+                        "aggregate": "sum"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 66260,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2018-07-02T20:18:25.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Community & Economic Development",
+                "domain_tags": [
+                    "housing"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data are updated as needed"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Department of Housing"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "Current as of March 2013"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org"
+            },
+            "permalink": "https://data.cityofchicago.org/d/s6ha-ppgi",
+            "link": "https://data.cityofchicago.org/Community-Economic-Development/Affordable-Rental-Housing-Developments/s6ha-ppgi",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Food Inspections",
+                "id": "4ijn-s7e5",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This information is derived from inspections of restaurants and other food establishments in Chicago from January 1, 2010 to the present. Inspections are performed by staff from the Chicago Department of Public Health’s Food Protection Program using a standardized procedure. The results of the inspection are inputted into a database, then reviewed and approved by a State of Illinois Licensed Environmental Health Practitioner (LEHP). For descriptions of the data elements included in this set, please click <a href=\"https://data.cityofchicago.org/api/assets/BAD5301B-681A-4202-9D25-51B2CAE672FF\">here<\/a>.\n\nNote about 7/1/2018 change to food inspection procedures that affects the data in this dataset: http://bit.ly/2yWd2JB\n\nDisclaimer: Attempts have been made to minimize any and all duplicate inspection reports. However, the dataset may still contain such duplicates and the appropriate precautions should be exercised when viewing or analyzing these data. The result of the inspections (pass, pass with conditions or fail) as well as the violations noted are based on the findings identified and reported by the inspector at the time of the inspection, and may not reflect the findings noted at other times. For more information about Food Inspections, go to https://www.chicago.gov/city/en/depts/cdph/provdrs/food_safety.html.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-23T09:06:38.000Z",
+                "createdAt": "2011-08-08T21:44:31.000Z",
+                "metadata_updated_at": "2024-12-05T12:42:03.000Z",
+                "data_updated_at": "2025-08-23T09:06:38.000Z",
+                "page_views": {
+                    "page_views_last_week": 1130,
+                    "page_views_last_month": 4495,
+                    "page_views_total": 541377,
+                    "page_views_last_week_log": 10.143383213989821,
+                    "page_views_last_month_log": 12.134426320220927,
+                    "page_views_total_log": 19.046276736323293
+                },
+                "columns_name": [
+                    "Inspection Date",
+                    "Zip",
+                    "Location (city)",
+                    "Latitude",
+                    "License #",
+                    "AKA Name",
+                    "Results",
+                    "Risk",
+                    "Address",
+                    "Location (state)",
+                    "Location (address)",
+                    "Violations",
+                    "Location (zip)",
+                    "DBA Name",
+                    "Facility Type",
+                    "Location",
+                    "City",
+                    "Inspection ID",
+                    "Inspection Type",
+                    "Community Areas",
+                    "Zip Codes",
+                    "Historical Wards 2003-2015",
+                    "State",
+                    "Longitude",
+                    "Census Tracts",
+                    "Wards"
+                ],
+                "columns_field_name": [
+                    "inspection_date",
+                    "zip",
+                    "location_city",
+                    "latitude",
+                    "license_",
+                    "aka_name",
+                    "results",
+                    "risk",
+                    "address",
+                    "location_state",
+                    "location_address",
+                    "violations",
+                    "location_zip",
+                    "dba_name",
+                    "facility_type",
+                    "location",
+                    "city",
+                    "inspection_id",
+                    "inspection_type",
+                    ":@computed_region_vrxf_vc4k",
+                    ":@computed_region_6mkv_f3dw",
+                    ":@computed_region_awaf_s7ux",
+                    "state",
+                    "longitude",
+                    ":@computed_region_bdys_3d7i",
+                    ":@computed_region_43wa_7qmu"
+                ],
+                "columns_datatype": [
+                    "Calendar date",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Point",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Also Known As",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Doing Business As",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left",
+                        "aggregate": "count"
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "coords",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 168268,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2024-12-05T12:42:03.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "health"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Health & Human Services",
+                "domain_tags": [
+                    "food",
+                    "inspections"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Updated daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Public Health"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "January 2010 to present"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/4ijn-s7e5",
+            "link": "https://data.cityofchicago.org/Health-Human-Services/Food-Inspections/4ijn-s7e5",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Lobbyist Data - Historical - Lobbyist Registry - 2010",
+                "id": "2ft4-4uik",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "All lobbyist registration fillings submitted to the Board of Ethics during the 2010 reporting period. / All lobbyists must register with the City of Chicago Board of Ethics by filing a Statement of Registration within five business days of engaging in lobbying activity and annually thereafter by January 20th. \r\nLobbyist registration information is submitted to the Board of Ethics in paper form and is available in its entirety in the Board's offices. The Board has, since 2000, compiled and posted static lists of all lobbyists and their clients online. Data for the 2010 reporting period is limited because previous policy did not require the Board of Ethics to prioritize the reporting of all data available from paper filings. \r\nMoving forward, the Board of Ethics will compile and report more data about lobbyists and their activities, and make that additional information publicly available in machine-readable format. /  \r\nData Owner:  Board of Ethics \r\n[http://j.mp/mbH9BN] /\r\n\r\nTime Period: January 1, 2010 to December 31, 2010 /\r\nRelated Applications:  Registered Lobbyist List [http://j.mp/l8LwAq], \r\n2011 Lobbyist Registry  [http://j.mp/ifigjs]",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2015-10-23T20:57:41.000Z",
+                "createdAt": "2011-06-07T17:30:57.000Z",
+                "metadata_updated_at": "2015-10-23T20:57:41.000Z",
+                "data_updated_at": "2011-08-21T02:47:57.000Z",
+                "page_views": {
+                    "page_views_last_week": 7,
+                    "page_views_last_month": 30,
+                    "page_views_total": 372089,
+                    "page_views_last_week_log": 3.0,
+                    "page_views_last_month_log": 4.954196310386876,
+                    "page_views_total_log": 18.505292092677248
+                },
+                "columns_name": [
+                    "LOBBYIST ZIP",
+                    "LOBBYIST FIRST NAME",
+                    "LOBBYIST CITY",
+                    "LOBBYING CLIENTS NAMES",
+                    "REGISTERED EMPLOYERS NAMES",
+                    "LOBBYIST LAST NAME",
+                    "LOBBYIST ADDRESS"
+                ],
+                "columns_field_name": [
+                    "lobbyist_zip",
+                    "lobbyist_first_name",
+                    "lobbyist_city",
+                    "lobbying_clients_names",
+                    "registered_employers_names",
+                    "lobbyist_last_name",
+                    "lobbyist_address"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 7290,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2011-06-07T17:30:57.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "politics"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Ethics",
+                "domain_tags": [
+                    "historical",
+                    "lobbyists"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Ethics"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "2010"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org"
+            },
+            "permalink": "https://data.cityofchicago.org/d/2ft4-4uik",
+            "link": "https://data.cityofchicago.org/Ethics/Lobbyist-Data-Historical-Lobbyist-Registry-2010/2ft4-4uik",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Chicago Street Names",
+                "id": "i6bp-fvbx",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "List of all Chicago streets with suffixes and minimum and maximum address numbers.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2012-05-30T22:29:43.000Z",
+                "createdAt": "2010-12-22T01:42:52.000Z",
+                "metadata_updated_at": "2012-05-30T22:29:43.000Z",
+                "data_updated_at": "2012-05-30T22:29:40.000Z",
+                "page_views": {
+                    "page_views_last_week": 381,
+                    "page_views_last_month": 1490,
+                    "page_views_total": 358277,
+                    "page_views_last_week_log": 8.57742882803575,
+                    "page_views_last_month_log": 10.542064542283443,
+                    "page_views_total_log": 18.450719932260224
+                },
+                "columns_name": [
+                    "Street ",
+                    "Max Address",
+                    "Min Address",
+                    "Suffix",
+                    "Full Street Name",
+                    "Direction",
+                    "Suffix Direction"
+                ],
+                "columns_field_name": [
+                    "street",
+                    "max_address",
+                    "min_address",
+                    "suffix",
+                    "full_street_name",
+                    "direction",
+                    "suffix_direction"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left",
+                        "aggregate": "count"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 20621,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2012-05-30T22:29:43.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "gis",
+                    "streets"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": ""
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": ""
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": ""
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org"
+            },
+            "permalink": "https://data.cityofchicago.org/d/i6bp-fvbx",
+            "link": "https://data.cityofchicago.org/Transportation/Chicago-Street-Names/i6bp-fvbx",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Business Licenses",
+                "id": "r5kz-chrr",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "NOTE, 2/21/2025 - We have <a href=\"https://data.cityofchicago.org/stories/s/yu97-as3j\" target=\"_blank\">added<\/a> three geographic columns to this dataset.\n\nBusiness licenses issued by the Department of Business Affairs and Consumer Protection in the City of Chicago from 2002 to the present. This dataset contains a large number of records/rows of data and may not be viewed in full in Microsoft Excel. Therefore, when downloading the file, select CSV from the Export menu. Open the file in an ASCII text editor, such as Notepad or Wordpad, to view and search. \n \nData fields requiring description are detailed below. \n\nAPPLICATION TYPE:  ‘ISSUE’ is the record associated with the initial license application.  ‘RENEW’ is a subsequent renewal record.  All renewal records are created with a term start date and term expiration date.  ‘C_LOC’ is a change of location record.  It means the business moved.   ‘C_CAPA’ is a change of capacity record.  Only a few license types may file this type of application.  ‘C_EXPA’ only applies to businesses that have liquor licenses.  It means the business location expanded.  'C_SBA' is a change of business activity record. It means that a new business activity was added or an existing business activity was marked as expired.\n\nLICENSE STATUS: ‘AAI’ means the license was issued. ‘AAC’ means the license was cancelled during its term.  ‘REV’ means the license was revoked. 'REA' means the license revocation has been appealed.\n\nLICENSE STATUS CHANGE DATE:  This date corresponds to the date a license was cancelled (AAC), revoked (REV) or appealed (REA).\n\nBusiness License Owner information may be accessed at:  https://data.cityofchicago.org/dataset/Business-Owners/ezma-pppn. To identify the owner of a business, you will need the account number or legal name, which may be obtained from this Business Licenses dataset. \n\nData Owner: Business Affairs and Consumer Protection. Time Period: January 1, 2002 to present. Frequency: Data is updated daily.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-24T09:59:44.000Z",
+                "createdAt": "2011-09-27T16:03:34.000Z",
+                "metadata_updated_at": "2025-02-21T21:42:37.000Z",
+                "data_updated_at": "2025-08-24T09:59:44.000Z",
+                "page_views": {
+                    "page_views_last_week": 1083,
+                    "page_views_last_month": 4012,
+                    "page_views_total": 302527,
+                    "page_views_last_week_log": 10.082149041353873,
+                    "page_views_last_month_log": 11.970465440779996,
+                    "page_views_total_log": 18.20670914935865
+                },
+                "columns_name": [
+                    "WARD",
+                    "LICENSE STATUS CHANGE DATE",
+                    "LONGITUDE",
+                    "DATE ISSUED",
+                    "LOCATION (zip)",
+                    "SSA",
+                    "LICENSE CODE",
+                    "LICENSE DESCRIPTION",
+                    "BUSINESS ACTIVITY",
+                    "APPLICATION TYPE",
+                    "NEIGHBORHOOD",
+                    "LICENSE APPROVED FOR ISSUANCE",
+                    "LICENSE TERM EXPIRATION DATE",
+                    "LICENSE TERM START DATE",
+                    "POLICE DISTRICT",
+                    "PAYMENT DATE",
+                    "APPLICATION CREATED DATE",
+                    "LICENSE NUMBER",
+                    "LOCATION",
+                    "LATITUDE",
+                    "COMMUNITY AREA",
+                    "SITE NUMBER",
+                    "LICENSE ID",
+                    "ACCOUNT NUMBER",
+                    "COMMUNITY AREA NAME",
+                    "DOING BUSINESS AS NAME",
+                    "BUSINESS ACTIVITY ID",
+                    "PRECINCT",
+                    "CONDITIONAL APPROVAL",
+                    "ADDRESS",
+                    "LEGAL NAME",
+                    "LICENSE STATUS",
+                    "STATE",
+                    "CITY",
+                    "ZIP CODE",
+                    "Zip Codes",
+                    "LOCATION (state)",
+                    "LOCATION (address)",
+                    "WARD PRECINCT",
+                    "APPLICATION REQUIREMENTS COMPLETE",
+                    "Census Tracts",
+                    "ID",
+                    "Wards",
+                    "Historical Wards 2003-2015",
+                    "Community Areas",
+                    "LOCATION (city)"
+                ],
+                "columns_field_name": [
+                    "ward",
+                    "license_status_change_date",
+                    "longitude",
+                    "date_issued",
+                    "location_zip",
+                    "ssa",
+                    "license_code",
+                    "license_description",
+                    "business_activity",
+                    "application_type",
+                    "neighborhood",
+                    "license_approved_for_issuance",
+                    "expiration_date",
+                    "license_start_date",
+                    "police_district",
+                    "payment_date",
+                    "application_created_date",
+                    "license_number",
+                    "location",
+                    "latitude",
+                    "community_area",
+                    "site_number",
+                    "license_id",
+                    "account_number",
+                    "community_area_name",
+                    "doing_business_as_name",
+                    "business_activity_id",
+                    "precinct",
+                    "conditional_approval",
+                    "address",
+                    "legal_name",
+                    "license_status",
+                    "state",
+                    "city",
+                    "zip_code",
+                    ":@computed_region_6mkv_f3dw",
+                    "location_state",
+                    "location_address",
+                    "ward_precinct",
+                    "application_requirements_complete",
+                    ":@computed_region_bdys_3d7i",
+                    "id",
+                    ":@computed_region_43wa_7qmu",
+                    ":@computed_region_awaf_s7ux",
+                    ":@computed_region_vrxf_vc4k",
+                    "location_city"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Calendar date",
+                    "Number",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Calendar date",
+                    "Calendar date",
+                    "Number",
+                    "Calendar date",
+                    "Calendar date",
+                    "Number",
+                    "Point",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "The ward where the business is located.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Special Service Areas  are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs",
+                    "A code for the type of license. Each code value corresponds to a specific LICENSE DESCRIPTION value.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "This is the date the license was ready for issuance. Licenses may not be issued if the customer owes debt to the City. ",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "The date the business license application was created.  RENEW type records do not have an application.",
+                    "The license number known to the public and generally used in other data sources that refer to the license. This is the field most users will want for most purposes. Each license has a single license number that stays consistent throughout the lifetime of the license. By contrast, the LICENSE ID field is an internal database ID and not generally useful to external users.",
+                    "",
+                    "",
+                    "Community Area Number",
+                    "An internal database ID indicating the location of this licensed business to account for business owners with more than one location.",
+                    "An internal database ID for each record.  Each license can have multiple records as it goes through renewals and other transactions.  See the LICENSE NUMBER field for the number generally known to the public and used in most other data sources that refer to the license.",
+                    "The account number of the business owner, which will stay consistent across that owner's licenses and can be used to find the owner in the Business Owners dataset.",
+                    "Community Area Name",
+                    "",
+                    "A code for the business activity. Each ID value corresponds to a specific BUSINESS ACTIVITY value.",
+                    "The precinct within the ward where the business is located. Note the the same precinct numbers exist in multiple wards.",
+                    "This pertains to applications that contain liquor licenses. Customers may request a conditional approval prior to building out the space.",
+                    "",
+                    "",
+                    "See the dataset description for the codes used.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "The ward and precinct where the business is located. This column can be used to filter by precinct more easily across multiple wards. ",
+                    "For all application types except RENEW, this is the date all required application documents were received.  For RENEW type records, this is the date the record was created.",
+                    "",
+                    "A calculated ID for each record.",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "view": "coords",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right",
+                        "aggregate": "count"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 218205,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2025-02-21T02:15:51.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Community & Economic Development",
+                "domain_tags": [
+                    "business",
+                    "licenses"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data is updated daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Business Affairs & Consumer Protection"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "2002 to present"
+                    },
+                    {
+                        "key": "Metadata_Changes-and-Other-Historical-Information-Useful-to-Understanding-This-Dataset",
+                        "value": "https://www.google.com/search?as_q=%22Related+dataset+ID+s%22+%22r5kz-chrr%22+inurl%3Astories&as_sitesearch=data.cityofchicago.org"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/r5kz-chrr",
+            "link": "https://data.cityofchicago.org/Community-Economic-Development/Business-Licenses/r5kz-chrr",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Building Violations",
+                "id": "22u3-xenr",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Violations issued by the Department of Buildings from 2006 to the present.  Lenders and title companies, please note: These data are historical in nature and should not be relied upon for real estate transactions. For transactional purposes such as closings, please consult the title commitment for outstanding enforcement actions in the Circuit Court of Cook County or the Chicago Department of Administrative Hearings. Violations are always associated to an inspection and there can be multiple violation records to one inspection record. Related Applications: Building Data Warehouse http://www.cityofchicago.org/city/en/depts/bldgs/provdrs/inspect/svcs/building_violationsonline.html. The information presented on this website is informational only and does not necessarily reflect the current condition of the building or property. The dataset contains cases where a respondent has been found to be liable as well as cases where the respondent has been found to be not liable.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T06:54:26.000Z",
+                "createdAt": "2012-06-26T17:28:59.000Z",
+                "metadata_updated_at": "2023-01-05T15:55:21.000Z",
+                "data_updated_at": "2025-08-25T06:54:26.000Z",
+                "page_views": {
+                    "page_views_last_week": 1112,
+                    "page_views_last_month": 5059,
+                    "page_views_total": 296105,
+                    "page_views_last_week_log": 10.12023787734196,
+                    "page_views_last_month_log": 12.304921669581672,
+                    "page_views_total_log": 18.175754198598156
+                },
+                "columns_name": [
+                    "STREET TYPE",
+                    "VIOLATION LAST MODIFIED DATE",
+                    "Historical Wards 2003-2015",
+                    "LATITUDE",
+                    "Community Areas",
+                    "STREET NUMBER",
+                    "VIOLATION CODE",
+                    "VIOLATION DATE",
+                    "VIOLATION DESCRIPTION",
+                    "INSPECTOR ID",
+                    "LONGITUDE",
+                    "LOCATION (zip)",
+                    "LOCATION (state)",
+                    "INSPECTION STATUS",
+                    "LOCATION",
+                    "LOCATION (city)",
+                    "Boundaries - ZIP Codes",
+                    "Zip Codes",
+                    "VIOLATION STATUS DATE",
+                    "Census Tracts",
+                    "Wards",
+                    "VIOLATION STATUS",
+                    "ADDRESS",
+                    "VIOLATION LOCATION",
+                    "INSPECTION NUMBER",
+                    "LOCATION (address)",
+                    "INSPECTION CATEGORY",
+                    "ID",
+                    "STREET NAME",
+                    "INSPECTION WAIVED",
+                    "VIOLATION INSPECTOR COMMENTS",
+                    "SSA",
+                    "DEPARTMENT BUREAU",
+                    "VIOLATION ORDINANCE",
+                    "PROPERTY GROUP",
+                    "STREET DIRECTION"
+                ],
+                "columns_field_name": [
+                    "street_type",
+                    "violation_last_modified_date",
+                    ":@computed_region_awaf_s7ux",
+                    "latitude",
+                    ":@computed_region_vrxf_vc4k",
+                    "street_number",
+                    "violation_code",
+                    "violation_date",
+                    "violation_description",
+                    "inspector_id",
+                    "longitude",
+                    "location_zip",
+                    "location_state",
+                    "inspection_status",
+                    "location",
+                    "location_city",
+                    ":@computed_region_rpca_8um6",
+                    ":@computed_region_6mkv_f3dw",
+                    "violation_status_date",
+                    ":@computed_region_bdys_3d7i",
+                    ":@computed_region_43wa_7qmu",
+                    "violation_status",
+                    "address",
+                    "violation_location",
+                    "inspection_number",
+                    "location_address",
+                    "inspection_category",
+                    "id",
+                    "street_name",
+                    "inspection_waived",
+                    "violation_inspector_comments",
+                    "ssa",
+                    "department_bureau",
+                    "violation_ordinance",
+                    "property_group",
+                    "street_direction"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Calendar date",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Point",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Calendar date",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "The Violation Code. See Violation Description for the description of what the code means.",
+                    "The date the violation was cited.",
+                    "The description of the violation corresponding to the Violation Code value.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Complied = Violations have been addressed;\nOpen = Violations are open;\nNo Entry = Inspector could not gain access to the premise to conduct an inspection.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Inspections are categorized by one of the following: COMPLAINT – Inspection is a result of a 311 Complaint. PERIODIC – Inspection is a result of recurring inspection (typically on an annual cycle). PERMIT – Inspection is a result of a permit. REGISTRATION – Inspection is a result of a Registration (typically Vacant Building Registration).",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs",
+                    "",
+                    "",
+                    "Properties (lots) in the City of Chicago can typically have multiple point addresses, range addresses and buildings. Examples are corner lots, large lots, lots with front and rear buildings, etc. As a result, inspections (and their associated violations), permits and complaints related to a single property could have different addresses. This problem can be reconciled by using Property Group. All point and range addresses for a property are assigned the same Property Group key.",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "view": "coords",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right",
+                        "aggregate": "count"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 42044,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2018-01-26T16:43:59.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Buildings",
+                "domain_tags": [
+                    "inspections",
+                    "violations"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data is updated daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Buildings"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "January 1, 2006 to present"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org"
+            },
+            "permalink": "https://data.cityofchicago.org/d/22u3-xenr",
+            "link": "https://data.cityofchicago.org/Buildings/Building-Violations/22u3-xenr",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Performance Metrics - Streets & Sanitation - Graffiti Removal",
+                "id": "qcfn-tiw7",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "The Department of Streets & Sanitation's (DSS) Graffiti Blasters crews offer a vandalism removal service to private property owners. This metric tracks the average number of days DSS takes to complete graffiti removal requests per week. Median days to complete requests as well as total number of requests fulfilled per week are available by mousing over columns. Currently the performance target for completing a graffiti removal request is 10 days. For more information on graffiti removal requests, see https://data.cityofchicago.org/d/hec5-y4x5",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org/performance",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2024-02-06T17:21:55.000Z",
+                "createdAt": "2011-09-22T14:18:26.000Z",
+                "metadata_updated_at": "2024-02-06T17:21:55.000Z",
+                "data_updated_at": "2012-07-16T14:58:31.000Z",
+                "page_views": {
+                    "page_views_last_week": 16,
+                    "page_views_last_month": 53,
+                    "page_views_total": 213821,
+                    "page_views_last_week_log": 4.08746284125034,
+                    "page_views_last_month_log": 5.754887502163469,
+                    "page_views_total_log": 17.70605077304258
+                },
+                "columns_name": [
+                    "Median Days to Complete Graffiti Removal Request",
+                    "Week",
+                    "Total Completed Requests",
+                    "Average Days to Complete Graffiti Removal",
+                    "Target Response Time (Days)"
+                ],
+                "columns_field_name": [
+                    "median_days_to_complete_graffiti_removal_request",
+                    "week",
+                    "total_completed_requests",
+                    "average_days_to_complete_graffiti_removal",
+                    "target_response_time_days_"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    }
+                ],
+                "download_count": 3038,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2012-07-16T14:58:35.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Administration & Finance",
+                "domain_tags": [
+                    "graffiti",
+                    "service delivery",
+                    "performance metrics"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data is updated weekly"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Streets & Sanitation"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "April 2011 - present"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org"
+            },
+            "permalink": "https://data.cityofchicago.org/d/qcfn-tiw7",
+            "link": "https://data.cityofchicago.org/Administration-Finance/Performance-Metrics-Streets-Sanitation-Graffiti-Re/qcfn-tiw7",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        }
+    ],
+    "resultSetSize": 585,
+    "timings": {
+        "serviceMillis": 45,
+        "searchMillis": [
+            6,
+            11
+        ]
+    },
+    "warnings": [
+
+    ]
+}

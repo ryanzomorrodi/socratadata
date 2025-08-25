@@ -1,0 +1,2807 @@
+{
+    "results": [
+        {
+            "resource": {
+                "name": "Traffic Crashes - Crashes",
+                "id": "85ca-t3if",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "Crash data shows information about each traffic crash on city streets within the City of Chicago limits and under the jurisdiction of Chicago Police Department (CPD). Data are shown as is from the electronic crash reporting system (E-Crash) at CPD, excluding any personally identifiable information. Records are added to the data portal when a crash report is finalized or when amendments are made to an existing report in E-Crash. Data from E-Crash are available for some police districts in 2015, but citywide data are not available until September 2017. About half of all crash reports, mostly minor crashes, are self-reported at the police district by the driver(s) involved and the other half are recorded at the scene by the police officer responding to the crash. Many of the crash parameters, including street condition data, weather condition, and posted speed limits, are recorded by the reporting officer based on best available information at the time, but many of these may disagree with posted information or other assessments on road conditions. If any new or updated information on a crash is received, the reporting officer may amend the crash report at a later time. A traffic crash within the city limits for which CPD is not the responding police agency, typically crashes on interstate highways, freeway ramps, and on local roads along the City boundary, are excluded from this dataset.\n\nAll crashes are recorded as per the format specified in the Traffic Crash Report, SR1050, of the Illinois Department of Transportation. The crash data published on the Chicago data portal mostly follows the data elements in SR1050 form. The current version of the SR1050 instructions manual with detailed information on each data elements is available <a href=\"https://idot.illinois.gov/Assets/uploads/files/Transportation-System/Manuals-Guides-&-Handbooks/Safety/Illinois Traffic Crash Report SR 1050 Instruction Manual 2019.pdf\">here<\/a>.\n\nAs per Illinois statute, only crashes with a property damage value of $1,500 or more or involving bodily injury to any person(s) and that happen on a public roadway and that involve at least one moving vehicle, except bike dooring, are considered reportable crashes. However, CPD records every reported traffic crash event, regardless of the statute of limitations, and hence any formal Chicago crash dataset released by Illinois Department of Transportation may not include all the crashes listed here.\n\nChange 11/21/2023: We have removed the RD_NO (Chicago Police Department report number) for privacy reasons.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.chicago.gov",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T15:46:41.000Z",
+                "createdAt": "2017-10-19T22:02:56.000Z",
+                "metadata_updated_at": "2023-12-13T16:58:25.000Z",
+                "data_updated_at": "2025-08-25T15:46:41.000Z",
+                "page_views": {
+                    "page_views_last_week": 4899,
+                    "page_views_last_month": 22018,
+                    "page_views_total": 683737,
+                    "page_views_last_week_log": 12.258566033889934,
+                    "page_views_last_month_log": 14.426461329478043,
+                    "page_views_total_log": 19.383084082426233
+                },
+                "columns_name": [
+                    "Boundaries - ZIP Codes",
+                    "WORK_ZONE_TYPE",
+                    "CRASH_RECORD_ID",
+                    "CRASH_DATE_EST_I",
+                    "CRASH_DATE",
+                    "POSTED_SPEED_LIMIT",
+                    "TRAFFIC_CONTROL_DEVICE",
+                    "DEVICE_CONDITION",
+                    "WEATHER_CONDITION",
+                    "LIGHTING_CONDITION",
+                    "FIRST_CRASH_TYPE",
+                    "TRAFFICWAY_TYPE",
+                    "LANE_CNT",
+                    "ALIGNMENT",
+                    "ROADWAY_SURFACE_COND",
+                    "ROAD_DEFECT",
+                    "REPORT_TYPE",
+                    "CRASH_TYPE",
+                    "INTERSECTION_RELATED_I",
+                    "NOT_RIGHT_OF_WAY_I",
+                    "HIT_AND_RUN_I",
+                    "DAMAGE",
+                    "DATE_POLICE_NOTIFIED",
+                    "PRIM_CONTRIBUTORY_CAUSE",
+                    "SEC_CONTRIBUTORY_CAUSE",
+                    "STREET_NO",
+                    "STREET_DIRECTION",
+                    "STREET_NAME",
+                    "BEAT_OF_OCCURRENCE",
+                    "PHOTOS_TAKEN_I",
+                    "STATEMENTS_TAKEN_I",
+                    "DOORING_I",
+                    "WORK_ZONE_I",
+                    "WORKERS_PRESENT_I",
+                    "NUM_UNITS",
+                    "MOST_SEVERE_INJURY",
+                    "INJURIES_TOTAL",
+                    "INJURIES_FATAL",
+                    "INJURIES_INCAPACITATING",
+                    "INJURIES_NON_INCAPACITATING",
+                    "INJURIES_REPORTED_NOT_EVIDENT",
+                    "INJURIES_NO_INDICATION",
+                    "INJURIES_UNKNOWN",
+                    "CRASH_HOUR",
+                    "CRASH_DAY_OF_WEEK",
+                    "CRASH_MONTH",
+                    "LATITUDE",
+                    "LONGITUDE",
+                    "LOCATION"
+                ],
+                "columns_field_name": [
+                    ":@computed_region_rpca_8um6",
+                    "work_zone_type",
+                    "crash_record_id",
+                    "crash_date_est_i",
+                    "crash_date",
+                    "posted_speed_limit",
+                    "traffic_control_device",
+                    "device_condition",
+                    "weather_condition",
+                    "lighting_condition",
+                    "first_crash_type",
+                    "trafficway_type",
+                    "lane_cnt",
+                    "alignment",
+                    "roadway_surface_cond",
+                    "road_defect",
+                    "report_type",
+                    "crash_type",
+                    "intersection_related_i",
+                    "private_property_i",
+                    "hit_and_run_i",
+                    "damage",
+                    "date_police_notified",
+                    "prim_contributory_cause",
+                    "sec_contributory_cause",
+                    "street_no",
+                    "street_direction",
+                    "street_name",
+                    "beat_of_occurrence",
+                    "photos_taken_i",
+                    "statements_taken_i",
+                    "dooring_i",
+                    "work_zone_i",
+                    "workers_present_i",
+                    "num_units",
+                    "most_severe_injury",
+                    "injuries_total",
+                    "injuries_fatal",
+                    "injuries_incapacitating",
+                    "injuries_non_incapacitating",
+                    "injuries_reported_not_evident",
+                    "injuries_no_indication",
+                    "injuries_unknown",
+                    "crash_hour",
+                    "crash_day_of_week",
+                    "crash_month",
+                    "latitude",
+                    "longitude",
+                    "location"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Point"
+                ],
+                "columns_description": [
+                    "This column was automatically created in order to record in what polygon from the dataset 'Boundaries - ZIP Codes' (rpca-8um6) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens.",
+                    "The type of work zone, if any",
+                    "This number can be used to link to the same crash in the Vehicles and People datasets. This number also serves as a unique ID in this dataset.",
+                    "Crash date estimated by desk officer or reporting party (only used in cases where crash is reported at police station days after the crash)",
+                    "Date and time of crash as entered by the reporting officer",
+                    "Posted speed limit, as determined by reporting officer",
+                    "Traffic control device present at crash location, as determined by reporting officer",
+                    "Condition of traffic control device, as determined by reporting officer",
+                    "Weather condition at time of crash, as determined by reporting officer",
+                    "Light condition at time of crash, as determined by reporting officer",
+                    "Type of first collision in crash",
+                    "Trafficway type, as determined by reporting officer",
+                    "Total number of through lanes in either direction, excluding turn lanes, as determined by reporting officer (0 = intersection)",
+                    "Street alignment at crash location, as determined by reporting officer",
+                    "Road surface condition, as determined by reporting officer",
+                    "Road defects, as determined by reporting officer",
+                    "Administrative report type (at scene, at desk, amended)",
+                    "A general severity classification for the crash. Can be either Injury and/or Tow Due to Crash or No Injury / Drive Away ",
+                    "A field observation by the police officer whether an intersection played a role in the crash. Does not represent whether or not the crash occurred within the intersection.",
+                    "Whether the crash begun or first contact was made outside of the public right-of-way.",
+                    "Crash did/did not involve a driver who caused the crash and fled the scene without exchanging information and/or rendering aid",
+                    "A field observation of estimated damage.",
+                    "Calendar date on which police were notified of the crash",
+                    "The factor which was most significant in causing the crash, as determined by officer judgment",
+                    "The factor which was second most significant in causing the crash, as determined by officer judgment",
+                    "Street address number of crash location, as determined by reporting officer",
+                    "Street address direction (N,E,S,W) of crash location, as determined by reporting officer",
+                    "Street address name of crash location, as determined by reporting officer",
+                    "Chicago Police Department Beat ID. Boundaries available at https://data.cityofchicago.org/d/aerh-rz74",
+                    "Whether the Chicago Police Department took photos at the location of the crash",
+                    "Whether statements were taken from unit(s) involved in crash",
+                    "Whether crash involved a motor vehicle occupant opening a door into the travel path of a bicyclist, causing a crash",
+                    "Whether the crash occurred in an active work zone",
+                    "Whether construction workers were present in an active work zone at crash location",
+                    "Number of units involved in the crash. A unit can be a motor vehicle, a pedestrian, a bicyclist, or another non-passenger roadway user. Each unit represents a mode of traffic with an independent trajectory. ",
+                    "Most severe injury sustained by any person involved in the crash",
+                    "Total persons sustaining fatal, incapacitating, non-incapacitating, and possible injuries as determined by the reporting officer",
+                    "Total persons sustaining fatal injuries in the crash",
+                    "Total persons sustaining incapacitating/serious injuries in the crash as determined by the reporting officer. Any injury other than fatal injury, which prevents the injured person from walking, driving, or normally continuing the activities they were capable of performing before the injury occurred. Includes severe lacerations, broken limbs, skull or chest injuries, and abdominal injuries.",
+                    "Total persons sustaining non-incapacitating injuries in the crash as determined by the reporting officer. Any injury, other than fatal or incapacitating injury, which is evident to observers at the scene of the crash. Includes lump on head, abrasions, bruises, and minor lacerations.",
+                    "Total persons sustaining possible injuries in the crash as determined by the reporting officer. Includes momentary unconsciousness, claims of injuries not evident, limping, complaint of pain, nausea, and hysteria.",
+                    "Total persons sustaining no injuries in the crash as determined by the reporting officer",
+                    "Total persons for whom injuries sustained, if any, are unknown",
+                    "The hour of the day component of CRASH_DATE.",
+                    "The day of the week component of CRASH_DATE. Sunday=1\n\n",
+                    "The month component of CRASH_DATE.",
+                    "The latitude of the crash location, as determined by reporting officer, as derived from the reported address of crash",
+                    "The longitude of the crash location, as determined by reporting officer, as derived from the reported address of crash",
+                    "The crash location, as determined by reporting officer, as derived from the reported address of crash, in a column type that allows for mapping and other geographic analysis in the data portal software"
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    }
+                ],
+                "download_count": 45229,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2023-07-27T20:59:32.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "transportation",
+                    "health",
+                    "public safety"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "link to article present",
+                    "public safety",
+                    "traffic crashes",
+                    "transportation",
+                    "vision zero"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Chicago Police Department"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "2015 to present (All police districts September 2017 - present)"
+                    },
+                    {
+                        "key": "Metadata_Changes-and-Other-Historical-Information-Useful-to-Understanding-This-Dataset",
+                        "value": "http://dev.cityofchicago.org/open%20data/data%20portal/2020/07/21/traffic-crash-data-source.html | http://dev.cityofchicago.org/open%20data/data%20portal/2020/02/11/traffic-crash-rd-numbers.html"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/85ca-t3if",
+            "link": "https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if",
+            "owner": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            },
+            "creator": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            }
+        },
+        {
+            "resource": {
+                "name": "Chicago Street Names",
+                "id": "i6bp-fvbx",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "List of all Chicago streets with suffixes and minimum and maximum address numbers.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2012-05-30T22:29:43.000Z",
+                "createdAt": "2010-12-22T01:42:52.000Z",
+                "metadata_updated_at": "2012-05-30T22:29:43.000Z",
+                "data_updated_at": "2012-05-30T22:29:40.000Z",
+                "page_views": {
+                    "page_views_last_week": 381,
+                    "page_views_last_month": 1490,
+                    "page_views_total": 358277,
+                    "page_views_last_week_log": 8.57742882803575,
+                    "page_views_last_month_log": 10.542064542283443,
+                    "page_views_total_log": 18.450719932260224
+                },
+                "columns_name": [
+                    "Street ",
+                    "Max Address",
+                    "Min Address",
+                    "Suffix",
+                    "Full Street Name",
+                    "Direction",
+                    "Suffix Direction"
+                ],
+                "columns_field_name": [
+                    "street",
+                    "max_address",
+                    "min_address",
+                    "suffix",
+                    "full_street_name",
+                    "direction",
+                    "suffix_direction"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left",
+                        "aggregate": "count"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 20621,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2012-05-30T22:29:43.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "gis",
+                    "streets"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": ""
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": ""
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": ""
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org"
+            },
+            "permalink": "https://data.cityofchicago.org/d/i6bp-fvbx",
+            "link": "https://data.cityofchicago.org/Transportation/Chicago-Street-Names/i6bp-fvbx",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Towed Vehicles",
+                "id": "ygr5-vcbg",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset displays location for vehicles that have been towed and impounded by the City of Chicago within the last 90 days. Illegally parked vehicles, abandoned vehicles and vehicles used for illegal activities may be towed by the Chicago Police Department, the Department of Streets and Sanitation, the Department of Revenue, Aviation and the office of the City Clerk. After a tow request is issued, an inventory number is assigned by the Department of Streets and Sanitation and a truck is dispatched to tow the requested vehicle to a City auto pound. Disclaimer: This dataset includes vehicles towed or relocated by the City of Chicago; it does not include vehicles towed by a private towing company. \r\n\r\nBackground Information: \r\nAuto Pound Locations (http://j.mp/kG5sgF).\r\nTow Process Overview (http://j.mp/lfBOEP).\r\nCommon Towing Questions (http://j.mp/imFYlp).\r\nParking and Standing Violations (http://j.mp/ifW8Uj).\r\nRelated Applications: Find Your Vehicle (http://j.mp/lWn0S7).",
+                "attribution": "Chicago Police Department",
+                "attribution_link": "http://www.chicagopolice.org/",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T16:16:30.000Z",
+                "createdAt": "2011-09-30T08:00:05.000Z",
+                "metadata_updated_at": "2017-10-12T15:23:55.000Z",
+                "data_updated_at": "2025-08-25T16:16:30.000Z",
+                "page_views": {
+                    "page_views_last_week": 279,
+                    "page_views_last_month": 1095,
+                    "page_views_total": 161918,
+                    "page_views_last_week_log": 8.129283016944965,
+                    "page_views_last_month_log": 10.098032082960527,
+                    "page_views_total_log": 17.30491275962925
+                },
+                "columns_name": [
+                    "Towed to Address",
+                    "State",
+                    "Inventory Number",
+                    "Tow Date",
+                    "Make",
+                    "Tow Facility Phone",
+                    "Color",
+                    "Plate",
+                    "Model",
+                    "Style"
+                ],
+                "columns_field_name": [
+                    "towed_to_address",
+                    "state",
+                    "inventory_number",
+                    "tow_date",
+                    "make",
+                    "tow_facility_phone",
+                    "color",
+                    "plate",
+                    "model",
+                    "style"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+                        "view": "date",
+                        "align": "left",
+                        "aggregate": "count"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 27047,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2014-12-01T15:17:41.000Z"
+            },
+            "classification": {
+                "categories": [
+                    "public safety",
+                    "economy",
+                    "transportation"
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "streets",
+                    "towing",
+                    "vehicles"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data are updated multiple times per hour"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Chicago Police Department"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "Last 90 days"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org"
+            },
+            "permalink": "https://data.cityofchicago.org/d/ygr5-vcbg",
+            "link": "https://data.cityofchicago.org/Transportation/Towed-Vehicles/ygr5-vcbg",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Transportation Network Providers - Trips (2018 - 2022)",
+                "id": "m6dm-c72p",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "<b>This dataset ends with 2022. Please see the Featured Content link below for the dataset that starts in 2023.<\/b>\r\n\r\nAll trips, from November 2018 to December 2022, reported by Transportation Network Providers (sometimes called rideshare companies) to the City of Chicago as part of routine reporting required by ordinance.\r\n\r\nCensus Tracts are suppressed in some cases, and times are rounded to the nearest 15 minutes. Fares are rounded to the nearest $2.50 and tips are rounded to the nearest $1.00.\r\n\r\nFor a discussion of the approach to privacy in this dataset, please see https://data.cityofchicago.org/stories/s/82d7-i4i2.",
+                "attribution": "City of Chicago",
+                "attribution_link": "https://www.chicago.gov",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-02-27T22:25:47.000Z",
+                "createdAt": "2018-10-02T15:31:29.000Z",
+                "metadata_updated_at": "2025-02-27T22:25:47.000Z",
+                "data_updated_at": "2023-03-29T22:57:23.000Z",
+                "page_views": {
+                    "page_views_last_week": 252,
+                    "page_views_last_month": 992,
+                    "page_views_total": 93501,
+                    "page_views_last_week_log": 7.98299357469431,
+                    "page_views_last_month_log": 9.955649907528375,
+                    "page_views_total_log": 16.51270960400665
+                },
+                "columns_name": [
+                    "Trip End Timestamp",
+                    "Additional Charges",
+                    "Pickup Centroid Longitude",
+                    "Trip Miles",
+                    "Dropoff Centroid Longitude",
+                    "Dropoff Centroid Latitude",
+                    "Trips Pooled",
+                    "Dropoff Community Area",
+                    "Tip",
+                    "Dropoff Census Tract",
+                    "Trip Start Timestamp",
+                    "Trip ID",
+                    "Trip Total",
+                    "Shared Trip Authorized",
+                    "Dropoff Centroid Location",
+                    "Pickup Census Tract",
+                    "Trip Seconds",
+                    "Pickup Centroid Location",
+                    "Fare",
+                    "Pickup Community Area",
+                    "Pickup Centroid Latitude"
+                ],
+                "columns_field_name": [
+                    "trip_end_timestamp",
+                    "additional_charges",
+                    "pickup_centroid_longitude",
+                    "trip_miles",
+                    "dropoff_centroid_longitude",
+                    "dropoff_centroid_latitude",
+                    "trips_pooled",
+                    "dropoff_community_area",
+                    "tip",
+                    "dropoff_census_tract",
+                    "trip_start_timestamp",
+                    "trip_id",
+                    "trip_total",
+                    "shared_trip_authorized",
+                    "dropoff_centroid_location",
+                    "pickup_census_tract",
+                    "trip_seconds",
+                    "pickup_centroid_location",
+                    "fare",
+                    "pickup_community_area",
+                    "pickup_centroid_latitude"
+                ],
+                "columns_datatype": [
+                    "Calendar date",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Number",
+                    "Checkbox",
+                    "Point",
+                    "Text",
+                    "Number",
+                    "Point",
+                    "Number",
+                    "Number",
+                    "Number"
+                ],
+                "columns_description": [
+                    "When the trip ended, rounded to the nearest 15 minutes.",
+                    "The taxes, fees, and any other charges for the trip.",
+                    "The longitude of the center of the pickup census tract or the community area if the census tract has been hidden for privacy. This column often will be blank for locations outside Chicago.",
+                    "Distance of the trip in miles.",
+                    "The longitude of the center of the dropoff census tract or the community area if the census tract has been hidden for privacy. This column often will be blank for locations outside Chicago.",
+                    "The latitude of the center of the dropoff census tract or the community area if the census tract has been hidden for privacy. This column often will be blank for locations outside Chicago.",
+                    "If customers were matched for a shared trip, how many trips, including this one, were pooled. All customer trips from the time the vehicle was empty until it was empty again contribute to this count, even if some customers were never present in the vehicle at the same time. Each trip making up the overall shared trip will have a separate record in this dataset, with the same value in this column.",
+                    "The Community Area where the trip ended. This column will be blank for locations outside Chicago.",
+                    "The tip for the trip, rounded to the nearest $1.00. Cash tips will not be recorded.",
+                    "The Census Tract where the trip ended. This column often will be blank for locations outside Chicago.",
+                    "When the trip started, rounded to the nearest 15 minutes.",
+                    "A unique identifier for the trip.",
+                    "Total cost of the trip. This is calculated as the total of the previous columns, including rounding.",
+                    "Whether the customer agreed to a shared trip with another customer, regardless of whether the customer was actually matched for a shared trip.",
+                    "The location of the center of the dropoff census tract or the community area if the census tract has been hidden for privacy. This column often will be blank for locations outside Chicago.",
+                    "The Census Tract where the trip began.This column often will be blank for locations outside Chicago.",
+                    "Time of the trip in seconds.",
+                    "The location of the center of the pickup census tract or the community area if the census tract has been hidden for privacy. This column often will be blank for locations outside Chicago.",
+                    "The fare for the trip, rounded to the nearest $2.50.",
+                    "The Community Area where the trip began. This column will be blank for locations outside Chicago.",
+                    "The latitude of the center of the pickup census tract or the community area if the census tract has been hidden for privacy. This column often will be blank for locations outside Chicago."
+                ],
+                "columns_format": [
+                    {
+                        "view": "date_time"
+                    },
+                    {
+                        "precisionStyle": "currency"
+                    },
+                    {
+
+                    },
+                    {
+                        "precision": "1"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "currency"
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date_time"
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "currency"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "currency"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 21424,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2019-03-13T21:48:46.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "2018",
+                    "2019",
+                    "2020",
+                    "2021",
+                    "2022",
+                    "historical",
+                    "rideshare",
+                    "tnp",
+                    "transportation",
+                    "transportation network provider",
+                    "trips"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Chicago Department of Business Affairs & Consumer Protection"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "November 2018 to December 2022"
+                    },
+                    {
+                        "key": "Metadata_Changes-and-Other-Historical-Information-Useful-to-Understanding-This-Dataset",
+                        "value": "https://www.google.com/search?as_q=\"Related+dataset+ID+s\"+\"m6dm-c72p\"+inurl:stories&as_sitesearch=data.cityofchicago.org"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/m6dm-c72p",
+            "link": "https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips-2018-2022-/m6dm-c72p",
+            "owner": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            },
+            "creator": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            }
+        },
+        {
+            "resource": {
+                "name": "CTA - Ridership - Daily Boarding Totals",
+                "id": "6iiy-9s97",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset shows systemwide boardings for both bus and rail services provided by CTA, dating back to 2001. Daytypes are as follows: W = Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for information on how these numbers are calculated.",
+                "attribution": "Chicago Transit Authority",
+                "attribution_link": "http://www.transitchicago.com",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-06-30T18:44:33.000Z",
+                "createdAt": "2011-08-12T15:40:31.000Z",
+                "metadata_updated_at": "2025-06-30T18:44:32.000Z",
+                "data_updated_at": "2025-06-30T18:44:33.000Z",
+                "page_views": {
+                    "page_views_last_week": 485,
+                    "page_views_last_month": 1963,
+                    "page_views_total": 110311,
+                    "page_views_last_week_log": 8.92481250360578,
+                    "page_views_last_month_log": 10.939579214314694,
+                    "page_views_total_log": 16.751230213678145
+                },
+                "columns_name": [
+                    "day_type",
+                    "rail_boardings",
+                    "service_date",
+                    "total_rides",
+                    "bus"
+                ],
+                "columns_field_name": [
+                    "day_type",
+                    "rail_boardings",
+                    "service_date",
+                    "total_rides",
+                    "bus"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Number",
+                    "Calendar date",
+                    "Number",
+                    "Number"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date",
+                        "align": "left",
+                        "aggregate": "count"
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 40326,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2025-04-29T16:35:04.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "cta",
+                    "public transit",
+                    "ridership"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Chicago Transit Authority "
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/6iiy-9s97",
+            "link": "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97",
+            "owner": {
+                "id": "6bsn-5494",
+                "user_type": "interactive",
+                "display_name": "CTA"
+            },
+            "creator": {
+                "id": "6bsn-5494",
+                "user_type": "interactive",
+                "display_name": "CTA"
+            }
+        },
+        {
+            "resource": {
+                "name": "Speed Camera Locations",
+                "id": "4i42-qv3h",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset shows the location, first operational date, and approaches of the speed cameras in the City of Chicago. The approach describes the originating direction of travel which is monitored by a speed camera.\n\nTo attempt to make historical versions of this dataset more available, \"Dataset Changelog\" is enabled at the bottom of the main page. We cannot guarantee that the archival records will remain permanently so advise downloading any you think you may want. Some intermediate versions, especially minor changes, may not be visible. The map based on this dataset will not have past versions.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-06T10:12:16.000Z",
+                "createdAt": "2014-08-11T15:35:01.000Z",
+                "metadata_updated_at": "2023-08-17T17:22:45.000Z",
+                "data_updated_at": "2025-08-06T10:12:16.000Z",
+                "page_views": {
+                    "page_views_last_week": 316,
+                    "page_views_last_month": 1156,
+                    "page_views_total": 68993,
+                    "page_views_last_week_log": 8.308339030139408,
+                    "page_views_last_month_log": 10.176173149107491,
+                    "page_views_total_log": 16.07418328424283
+                },
+                "columns_name": [
+                    "LOCATION (city)",
+                    "LATITUDE",
+                    "GO-LIVE DATE",
+                    "ID",
+                    "LOCATION (zip)",
+                    "SECOND APPROACH",
+                    "LOCATION ID",
+                    "LOCATION",
+                    "LOCATION (state)",
+                    "Community Areas",
+                    "Census Tracts",
+                    "FIRST APPROACH",
+                    "LOCATION (address)",
+                    "Wards",
+                    "Historical Wards 2003-2015",
+                    "Zip Codes",
+                    "LONGITUDE",
+                    "ADDRESS"
+                ],
+                "columns_field_name": [
+                    "location_city",
+                    "latitude",
+                    "go_live_date",
+                    "id",
+                    "location_zip",
+                    "second_approach",
+                    "location_id",
+                    "location",
+                    "location_state",
+                    ":@computed_region_vrxf_vc4k",
+                    ":@computed_region_bdys_3d7i",
+                    "first_approach",
+                    "location_address",
+                    ":@computed_region_43wa_7qmu",
+                    ":@computed_region_awaf_s7ux",
+                    ":@computed_region_6mkv_f3dw",
+                    "longitude",
+                    "address"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Point",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "",
+                    "",
+                    "An internal-only unique ID for the speed camera. This ID will not match any other data source.",
+                    "",
+                    "",
+                    "An ID for the speed camera that may match other data sources.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "noCommas": "true"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "coords",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "left",
+                        "aggregate": "count"
+                    }
+                ],
+                "download_count": 12076,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2023-08-17T17:22:45.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "speed cameras",
+                    "traffic",
+                    "transportation"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Updated daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Department of Transportation"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "Current"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/4i42-qv3h",
+            "link": "https://data.cityofchicago.org/Transportation/Speed-Camera-Locations/4i42-qv3h",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Chicago Traffic Tracker - Congestion Estimates by Segments",
+                "id": "n4j6-wkkf",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset contains the current estimated speed for about 1250 segments covering 300 miles of arterial roads. For a more detailed description,  please go to https://tas.chicago.gov, click the About button at the bottom of the page, and then the MAP LAYERS tab.\n\nThe Chicago Traffic Tracker estimates traffic congestion on Chicago’s arterial streets (nonfreeway\nstreets) in real-time by continuously monitoring and analyzing GPS traces received from Chicago Transit Authority (CTA) buses. Two types of congestion estimates are produced every ten minutes: 1) by Traffic Segments and 2) by Traffic Regions or Zones. Congestion estimate by traffic segments gives the observed speed typically for one-half mile of a street in one direction of traffic.\n\nTraffic Segment level congestion is available for about 300 miles of principal arterials. Congestion by Traffic Region gives the average traffic condition for all arterial street segments within a region. A traffic region is comprised of two or three community areas with comparable traffic patterns. 29 regions are created to cover the entire city (except O’Hare airport area).\nThis dataset contains the current estimated speed for about 1250 segments covering 300 miles of arterial roads.\nThere is much volatility in traffic segment speed. However, the congestion estimates for the traffic regions remain consistent for relatively longer period. Most volatility in arterial speed comes from the very nature of the arterials themselves. Due to a myriad of factors, including but not limited to frequent\nintersections, traffic signals, transit movements, availability of alternative routes, crashes, short length of the segments, etc. speed on individual arterial segments can fluctuate from heavily congested to no congestion and back in a few minutes. The segment speed and traffic region congestion estimates\ntogether may give a better understanding of the actual traffic conditions.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.chicagotraffictracker.com/",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T16:33:27.000Z",
+                "createdAt": "2011-11-20T03:28:25.000Z",
+                "metadata_updated_at": "2025-02-10T18:57:39.000Z",
+                "data_updated_at": "2025-08-25T16:33:27.000Z",
+                "page_views": {
+                    "page_views_last_week": 402,
+                    "page_views_last_month": 1866,
+                    "page_views_total": 81411,
+                    "page_views_last_week_log": 8.654636028527968,
+                    "page_views_last_month_log": 10.866506212226202,
+                    "page_views_total_log": 16.312953840681292
+                },
+                "columns_name": [
+                    "FROM_STREET",
+                    "DIRECTION",
+                    "LENGTH",
+                    "SEGMENTID",
+                    " CURRENT_SPEED",
+                    " START_LATITUDE",
+                    "STREET",
+                    "END_LONGITUDE",
+                    " COMMENTS",
+                    " STREET_HEADING",
+                    " END_LATITUDE",
+                    " LAST_UPDATED",
+                    "START_LONGITUDE",
+                    "TO_STREET"
+                ],
+                "columns_field_name": [
+                    "_fromst",
+                    "_direction",
+                    "_length",
+                    "segmentid",
+                    "_traffic",
+                    "_lif_lat",
+                    "street",
+                    "_lit_lon",
+                    "_comments",
+                    "_strheading",
+                    "_lit_lat",
+                    "_last_updt",
+                    "start_lon",
+                    "_tost"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Start street for the segment in the direction of traffic flow.",
+                    "Traffic flow direction for the segment.",
+                    "Length of the segment in miles.",
+                    "Unique arbitrary number to represent each segment.",
+                    "A value of -1 means no estimate is available.",
+                    "",
+                    "Street name of the traffic segment.",
+                    "",
+                    "",
+                    "The position of the segment in the address grid. North, South, East, or West of State and Madison. ",
+                    "",
+                    "",
+                    "The longitude associated with the starting point of the segment in the direction of traffic flow. For two-way streets it is roughly at the middle of the half that the segment is representing. For one-way streets this is the street center line. The startin",
+                    "End street for the segment in the direction of traffic flow."
+                ],
+                "columns_format": [
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    }
+                ],
+                "download_count": 1828297,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2014-09-26T21:18:26.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "sustainability",
+                    "traffic"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data is updated every 15 minutes"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Transportation"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "Real-time / reflects the last 10 minutes of traffic"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/n4j6-wkkf",
+            "link": "https://data.cityofchicago.org/Transportation/Chicago-Traffic-Tracker-Congestion-Estimates-by-Se/n4j6-wkkf",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Relocated Vehicles",
+                "id": "5k2z-suxx",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset presents current and former locations of vehicles that have been relocated by the City of Chicago within the last 90 days. Vehicles may be relocated, but not impounded, due to inoperability, accident, severe weather, special events, construction or other work being performed in a thoroughfare where the vehicle was previously located.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T16:01:37.000Z",
+                "createdAt": "2011-09-30T08:00:22.000Z",
+                "metadata_updated_at": "2020-09-02T15:14:28.000Z",
+                "data_updated_at": "2025-08-25T16:01:37.000Z",
+                "page_views": {
+                    "page_views_last_week": 74,
+                    "page_views_last_month": 299,
+                    "page_views_total": 46525,
+                    "page_views_last_week_log": 6.22881869049588,
+                    "page_views_last_month_log": 8.228818690495881,
+                    "page_views_total_log": 15.505749538528914
+                },
+                "columns_name": [
+                    "Relocated From Location (city)",
+                    "Relocated From X Coordinate",
+                    "Relocated Reason",
+                    "Relocated From Location (address)",
+                    "Relocated From Address Number",
+                    "Census Tracts",
+                    "Relocated From Suffix",
+                    "Boundaries - ZIP Codes",
+                    "Make",
+                    "Historical Wards 2003-2015",
+                    "Community Areas",
+                    "Zip Codes",
+                    "Relocated To Address Number",
+                    "Relocated From Location",
+                    "Relocated From Street Name",
+                    "Plate",
+                    "Relocated Date",
+                    "Wards",
+                    "Relocated From Y Coordinate",
+                    "Relocated From Longitude",
+                    "Color",
+                    "Relocated From Latitude",
+                    "State",
+                    "Relocated From Location (state)",
+                    "Relocated From Street Direction",
+                    "Relocated From Location (zip)",
+                    "Service Request Number",
+                    "Relocated To Direction",
+                    "Relocated To Suffix",
+                    "Relocated To Street Name"
+                ],
+                "columns_field_name": [
+                    "relocated_from_location_city",
+                    "relocated_from_x_coordinate",
+                    "relocated_reason",
+                    "relocated_from_location_address",
+                    "relocated_from_address_number",
+                    ":@computed_region_bdys_3d7i",
+                    "relocated_from_suffix",
+                    ":@computed_region_rpca_8um6",
+                    "make",
+                    ":@computed_region_awaf_s7ux",
+                    ":@computed_region_vrxf_vc4k",
+                    ":@computed_region_6mkv_f3dw",
+                    "relocated_to_address_number",
+                    "relocated_from_location",
+                    "relocated_from_street_name",
+                    "plate",
+                    "relocated_date",
+                    ":@computed_region_43wa_7qmu",
+                    "relocated_from_y_coordinate",
+                    "relocated_from_longitude",
+                    "color",
+                    "relocated_from_latitude",
+                    "state",
+                    "relocated_from_location_state",
+                    "relocated_from_street_direction",
+                    "relocated_from_location_zip",
+                    "service_request_number",
+                    "relocated_to_direction",
+                    "relocated_to_suffix",
+                    "relocated_to_street_name"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Point",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    "The x coordinate of the location from which the vehicle was relocated, in State Plane Illinois East NAD 1983 projection.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "The location from which the vehicle was relocated in a special format that allows for mapping on this data portal.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "The y coordinate of the location from which the vehicle was relocated, in State Plane Illinois East NAD 1983 projection.",
+                    "The longitude of the location from which the vehicle was relocated",
+                    "",
+                    "The latitude of the location from which the vehicle was relocated.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "false",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "view": "coords",
+                        "align": "left"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "left",
+                        "aggregate": "count"
+                    },
+                    {
+
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    },
+                    {
+
+                    }
+                ],
+                "download_count": 13741,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2019-08-08T17:42:35.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "streets",
+                    "vehicles"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data are updated multiple times per hour"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Streets & Sanitation"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "Last 90 days"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/5k2z-suxx",
+            "link": "https://data.cityofchicago.org/Transportation/Relocated-Vehicles/5k2z-suxx",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Traffic Crashes - Vehicles",
+                "id": "68nd-jvt3",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset contains information about vehicles (or units as they are identified in crash reports) involved in a traffic crash. This dataset should be used in conjunction with the traffic Crash and People dataset available in the portal. “Vehicle” information includes motor vehicle and non-motor vehicle modes of transportation, such as bicycles and pedestrians. Each mode of transportation involved in a crash is a “unit” and get one entry here. Each vehicle, each pedestrian, each motorcyclist, and each bicyclist is considered an independent unit that can have a trajectory separate from the other units. However, people inside a vehicle including the driver do not have a trajectory separate from the vehicle in which they are travelling and hence only the vehicle they are travelling in get any entry here. This type of identification of “units” is needed to determine how each movement affected the crash. Data for occupants who do not make up an independent unit, typically drivers and passengers, are available in the People table. Many of the fields are coded to denote the type and location of damage on the vehicle. Vehicle information can be linked back to Crash data using the “CRASH_RECORD_ID” field. Since this dataset is a combination of vehicles, pedestrians, and pedal cyclists not all columns are applicable to each record. Look at the Unit Type field to determine what additional data may be available for that record.\n\nThe Chicago Police Department reports crashes on IL Traffic Crash Reporting form SR1050. The crash data published on the Chicago data portal mostly follows the data elements in SR1050 form. The current version of the SR1050 instructions manual with detailed information on each data elements is available <a href=\"https://idot.illinois.gov/Assets/uploads/files/Transportation-System/Manuals-Guides-&-Handbooks/Safety/Illinois Traffic Crash Report SR 1050 Instruction Manual 2019.pdf\">here<\/a>.\n\nChange 11/21/2023: We have removed the RD_NO (Chicago Police Department report number) for privacy reasons.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.chicago.gov",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T15:14:08.000Z",
+                "createdAt": "2018-01-04T23:24:43.000Z",
+                "metadata_updated_at": "2024-08-02T21:12:34.000Z",
+                "data_updated_at": "2025-08-25T15:14:08.000Z",
+                "page_views": {
+                    "page_views_last_week": 696,
+                    "page_views_last_month": 3116,
+                    "page_views_total": 104436,
+                    "page_views_last_week_log": 9.445014845868423,
+                    "page_views_last_month_log": 11.605942439625368,
+                    "page_views_total_log": 16.672273395728688
+                },
+                "columns_name": [
+                    "CRASH_DATE",
+                    "LIC_PLATE_STATE",
+                    "VEHICLE_YEAR",
+                    "MCS_VIO_CAUSE_CRASH_I",
+                    "GVWR",
+                    "COMMERCIAL_SRC",
+                    "FIRST_CONTACT_POINT",
+                    "IDOT_PERMIT_NO",
+                    "VEHICLE_USE",
+                    "WIDE_LOAD_I",
+                    "HAZMAT_PRESENT_I",
+                    "TOTAL_VEHICLE_LENGTH",
+                    "MAKE",
+                    "LOAD_TYPE",
+                    "TRAILER1_LENGTH",
+                    "TRAVEL_DIRECTION",
+                    "MANEUVER",
+                    "USDOT_NO",
+                    "TOWED_TO",
+                    "UNIT_NO",
+                    "AREA_10_I",
+                    "TOWED_BY",
+                    "FIRE_I",
+                    "CRASH_RECORD_ID",
+                    "HAZMAT_REPORT_I",
+                    "HAZMAT_NAME",
+                    "TRAILER2_WIDTH",
+                    "VEHICLE_DEFECT",
+                    "AREA_99_I",
+                    "AREA_04_I",
+                    "CARRIER_CITY",
+                    "CARGO_BODY_TYPE",
+                    "AREA_02_I",
+                    "HAZMAT_CLASS",
+                    "AREA_01_I",
+                    "UNIT_TYPE",
+                    "AREA_11_I",
+                    "CCMC_NO",
+                    "CARRIER_NAME",
+                    "AREA_08_I",
+                    "AREA_09_I",
+                    "TOWED_I",
+                    "VEHICLE_ID",
+                    "OCCUPANT_CNT",
+                    "HAZMAT_REPORT_NO",
+                    "TRAILER1_WIDTH",
+                    "AXLE_CNT",
+                    "AREA_05_I",
+                    "AREA_07_I",
+                    "MODEL",
+                    "VEHICLE_CONFIG",
+                    "EXCEED_SPEED_LIMIT_I",
+                    "NUM_PASSENGERS",
+                    "UN_NO",
+                    "CMV_ID",
+                    "ILCC_NO",
+                    "CARRIER_STATE",
+                    "HAZMAT_OUT_OF_SERVICE_I",
+                    "CMRC_VEH_I",
+                    "HAZMAT_VIO_CAUSE_CRASH_I",
+                    "AREA_00_I",
+                    "HAZMAT_PLACARDS_I",
+                    "CRASH_UNIT_ID",
+                    "AREA_12_I",
+                    "VEHICLE_TYPE",
+                    "AREA_03_I",
+                    "AREA_06_I",
+                    "MCS_OUT_OF_SERVICE_I",
+                    "TRAILER2_LENGTH",
+                    "MCS_REPORT_NO",
+                    "MCS_REPORT_I"
+                ],
+                "columns_field_name": [
+                    "crash_date",
+                    "lic_plate_state",
+                    "vehicle_year",
+                    "mcs_vio_cause_crash_i",
+                    "gvwr",
+                    "commercial_src",
+                    "first_contact_point",
+                    "idot_permit_no",
+                    "vehicle_use",
+                    "wide_load_i",
+                    "hazmat_present_i",
+                    "total_vehicle_length",
+                    "make",
+                    "load_type",
+                    "trailer1_length",
+                    "travel_direction",
+                    "maneuver",
+                    "usdot_no",
+                    "towed_to",
+                    "unit_no",
+                    "area_10_i",
+                    "towed_by",
+                    "fire_i",
+                    "crash_record_id",
+                    "hazmat_report_i",
+                    "hazmat_name",
+                    "trailer2_width",
+                    "vehicle_defect",
+                    "area_99_i",
+                    "area_04_i",
+                    "carrier_city",
+                    "cargo_body_type",
+                    "area_02_i",
+                    "hazmat_class",
+                    "area_01_i",
+                    "unit_type",
+                    "area_11_i",
+                    "ccmc_no",
+                    "carrier_name",
+                    "area_08_i",
+                    "area_09_i",
+                    "towed_i",
+                    "vehicle_id",
+                    "occupant_cnt",
+                    "hazmat_report_no",
+                    "trailer1_width",
+                    "axle_cnt",
+                    "area_05_i",
+                    "area_07_i",
+                    "model",
+                    "vehicle_config",
+                    "exceed_speed_limit_i",
+                    "num_passengers",
+                    "un_no",
+                    "cmv_id",
+                    "ilcc_no",
+                    "carrier_state",
+                    "hazmat_out_of_service_i",
+                    "cmrc_veh_i",
+                    "hazmat_vio_cause_crash_i",
+                    "area_00_i",
+                    "hazmat_placards_i",
+                    "crash_unit_id",
+                    "area_12_i",
+                    "vehicle_type",
+                    "area_03_i",
+                    "area_06_i",
+                    "mcs_out_of_service_i",
+                    "trailer2_length",
+                    "mcs_report_no",
+                    "mcs_report_i"
+                ],
+                "columns_datatype": [
+                    "Calendar date",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Date and time of crash as entered by the reporting officer",
+                    "The state issuing the license plate of the vehicle, if relevant",
+                    "The model year of the vehicle, if relevant",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "The normal use of the vehicle, if relevant",
+                    "",
+                    "",
+                    "",
+                    "The make (brand) of the vehicle, if relevant",
+                    "",
+                    "",
+                    "The direction in which the unit was traveling prior to the crash, as determined by the reporting officer",
+                    "The action the unit was taking prior to the crash, as determined by the reporting officer",
+                    "",
+                    "Location to which the unit was towed, if relevant",
+                    "A unique ID for each unit within a specific crash report.",
+                    "",
+                    "Entity that towed the unit, if relevant",
+                    "",
+                    "This number can be used to link to the same crash in the Crashes and People datasets. This number also serves as a unique ID in the Crashes dataset.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "The type of unit",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Indicator of whether the vehicle was towed",
+                    "",
+                    "The number of people in the unit, as determined by the reporting officer",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "The model of the vehicle, if relevant",
+                    "",
+                    "Indicator of whether the unit was speeding, as determined by the reporting officer",
+                    "Number of passengers in the vehicle. The driver is not included. More information on passengers is in the People dataset.",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "A unique identifier for each vehicle record.",
+                    "",
+                    "The type of vehicle, if relevant",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "view": "date_time",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "decimalSeparator": ".",
+                        "groupSeparator": ",",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    }
+                ],
+                "download_count": 11180,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2020-02-11T22:14:19.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "link to article present",
+                    "public safety",
+                    "traffic crashes",
+                    "transportation",
+                    "vision zero"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Chicago Police Department"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "2015 to present (All police districts September 2017 - present)"
+                    },
+                    {
+                        "key": "Metadata_Changes-and-Other-Historical-Information-Useful-to-Understanding-This-Dataset",
+                        "value": "http://dev.cityofchicago.org/open%20data/data%20portal/2020/07/21/traffic-crash-data-source.html | http://dev.cityofchicago.org/open%20data/data%20portal/2020/02/11/traffic-crash-rd-numbers.html"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/68nd-jvt3",
+            "link": "https://data.cityofchicago.org/Transportation/Traffic-Crashes-Vehicles/68nd-jvt3",
+            "owner": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            },
+            "creator": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            }
+        },
+        {
+            "resource": {
+                "name": "Traffic Crashes - People",
+                "id": "u6pd-qa9d",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This data contains information about people involved in a crash and if any injuries were sustained. This dataset should be used in combination with the traffic Crash and Vehicle dataset. Each record corresponds to an occupant in a vehicle listed in the Crash dataset. Some people involved in a crash may not have been an occupant in a motor vehicle, but may have been a pedestrian, bicyclist, or using another non-motor vehicle mode of transportation. Injuries reported are reported by the responding police officer. Fatalities that occur after the initial reports are typically updated in these records up to 30 days after the date of the crash. Person data can be linked with the Crash and Vehicle dataset using the “CRASH_RECORD_ID” field. A vehicle can have multiple occupants and hence have a one to many relationship between Vehicle and Person dataset. However, a pedestrian is a “unit” by itself and have a one to one relationship between the Vehicle and Person table.\n\nThe Chicago Police Department reports crashes on IL Traffic Crash Reporting form SR1050. The crash data published on the Chicago data portal mostly follows the data elements in SR1050 form. The current version of the SR1050 instructions manual with detailed information on each data elements is available <a href=\"https://idot.illinois.gov/Assets/uploads/files/Transportation-System/Manuals-Guides-&-Handbooks/Safety/Illinois Traffic Crash Report SR 1050 Instruction Manual 2019.pdf\">here<\/a>.\n\nChange 11/21/2023: We have removed the RD_NO (Chicago Police Department report number) for privacy reasons.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.chicago.gov",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T15:11:28.000Z",
+                "createdAt": "2018-01-09T21:46:54.000Z",
+                "metadata_updated_at": "2023-12-13T16:04:00.000Z",
+                "data_updated_at": "2025-08-25T15:11:28.000Z",
+                "page_views": {
+                    "page_views_last_week": 462,
+                    "page_views_last_month": 1884,
+                    "page_views_total": 75362,
+                    "page_views_last_week_log": 8.854868383260238,
+                    "page_views_last_month_log": 10.880348808156027,
+                    "page_views_total_log": 16.201568775484443
+                },
+                "columns_name": [
+                    "CRASH_RECORD_ID",
+                    "CELL_PHONE_USE",
+                    "DRIVER_VISION",
+                    "PERSON_TYPE",
+                    "PEDPEDAL_LOCATION",
+                    "EMS_AGENCY",
+                    "CITY",
+                    "STATE",
+                    "EMS_RUN_NO",
+                    "SEX",
+                    "SAFETY_EQUIPMENT",
+                    "ZIPCODE",
+                    "PHYSICAL_CONDITION",
+                    "PEDPEDAL_VISIBILITY",
+                    "DRIVERS_LICENSE_STATE",
+                    "INJURY_CLASSIFICATION",
+                    "EJECTION",
+                    "HOSPITAL",
+                    "CRASH_DATE",
+                    "AIRBAG_DEPLOYED",
+                    "PEDPEDAL_ACTION",
+                    "DRIVER_ACTION",
+                    "DRIVERS_LICENSE_CLASS",
+                    "SEAT_NO",
+                    "VEHICLE_ID",
+                    "AGE",
+                    "BAC_RESULT",
+                    "BAC_RESULT VALUE",
+                    "PERSON_ID"
+                ],
+                "columns_field_name": [
+                    "crash_record_id",
+                    "cell_phone_use",
+                    "driver_vision",
+                    "person_type",
+                    "pedpedal_location",
+                    "ems_agency",
+                    "city",
+                    "state",
+                    "ems_run_no",
+                    "sex",
+                    "safety_equipment",
+                    "zipcode",
+                    "physical_condition",
+                    "pedpedal_visibility",
+                    "drivers_license_state",
+                    "injury_classification",
+                    "ejection",
+                    "hospital",
+                    "crash_date",
+                    "airbag_deployed",
+                    "pedpedal_action",
+                    "driver_action",
+                    "drivers_license_class",
+                    "seat_no",
+                    "vehicle_id",
+                    "age",
+                    "bac_result",
+                    "bac_result_value",
+                    "person_id"
+                ],
+                "columns_datatype": [
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Calendar date",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Number",
+                    "Text",
+                    "Number",
+                    "Text"
+                ],
+                "columns_description": [
+                    "This number can be used to link to the same crash in the Crashes and Vehicles datasets. This number also serves as a unique ID in the Crashes dataset.",
+                    "Whether person was/was not using cellphone at the time of the crash, as determined by the reporting officer",
+                    "What, if any, objects obscured the driver’s vision at time of crash",
+                    "Type of roadway user involved in crash",
+                    "Location of pedestrian or cyclist at the time of crash",
+                    "EMS agency who transported person injured in crash to the hospital",
+                    "City of residence of person involved in crash",
+                    "State of residence of person involved in crash",
+                    "EMS agency run number",
+                    "Gender of person involved in crash, as determined by reporting officer",
+                    "Safety equipment used by vehicle occupant in crash, if any",
+                    "ZIP Code of residence of person involved in crash",
+                    "Driver’s apparent physical condition at time of crash, as observed by the reporting officer",
+                    "Visibility of pedestrian of cyclist safety equipment in use at time of crash",
+                    "State issuing driver's license of person involved in crash",
+                    "Severity of injury person sustained in the crash",
+                    "Whether vehicle occupant was ejected or extricated from the vehicle as a result of crash",
+                    "Hospital to which person injured in the crash was taken",
+                    "Date and time of crash as entered by the reporting officer",
+                    "Whether vehicle occupant airbag deployed as result of crash",
+                    "Action of pedestrian or cyclist at the time of crash",
+                    "Driver action that contributed to the crash, as determined by reporting officer",
+                    "Class of driver's license of person involved in crash",
+                    "Code for seating position of motor vehicle occupant:\n\n1= driver, 2= center front, 3 = front passenger, 4 = second row left, 5 = second row center, 6 = second row right, 7 = enclosed passengers, 8 = exposed passengers, 9= unknown position, 10 = third row left, 11 = third row center, 12 = third row right",
+                    "The corresponding CRASH_UNIT_ID from the Vehicles dataset.",
+                    "Age of person involved in crash",
+                    "Status of blood alcohol concentration testing for driver or other person involved in crash",
+                    "Driver’s blood alcohol concentration test result (fatal crashes may include pedestrian or cyclist results)",
+                    "A unique identifier for each person record. IDs starting with P indicate passengers. IDs starting with O indicate a person who was not a passenger in the vehicle (e.g., driver, pedestrian, cyclist, etc.)."
+                ],
+                "columns_format": [
+                    {
+
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "view": "date_time",
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "precision": "0",
+                        "align": "right"
+                    },
+                    {
+                        "align": "right"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "precision": "4",
+                        "align": "right"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "right",
+                        "aggregate": "count"
+                    }
+                ],
+                "download_count": 10102,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2020-02-11T22:10:53.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Transportation",
+                "domain_tags": [
+                    "link to article present",
+                    "public safety",
+                    "traffic crashes",
+                    "transportation",
+                    "vision zero"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Chicago Police Department"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "2015 to present (All police districts September 2017 - present)"
+                    },
+                    {
+                        "key": "Metadata_Changes-and-Other-Historical-Information-Useful-to-Understanding-This-Dataset",
+                        "value": "http://dev.cityofchicago.org/open%20data/data%20portal/2020/07/21/traffic-crash-data-source.html | http://dev.cityofchicago.org/open%20data/data%20portal/2020/02/11/traffic-crash-rd-numbers.html"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/u6pd-qa9d",
+            "link": "https://data.cityofchicago.org/Transportation/Traffic-Crashes-People/u6pd-qa9d",
+            "owner": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            },
+            "creator": {
+                "id": "vewm-vupz",
+                "user_type": "interactive",
+                "display_name": "Jonathan Levy"
+            }
+        }
+    ],
+    "resultSetSize": 86,
+    "timings": {
+        "serviceMillis": 40,
+        "searchMillis": [
+            22,
+            6
+        ]
+    },
+    "warnings": [
+
+    ]
+}

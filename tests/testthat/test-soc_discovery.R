@@ -103,5 +103,5 @@ with_mock_dir(
       expect_gte(nrow(datasets), 1)
     })
   },
-  simplify = FALSE
+  simplify = TRUE
 )

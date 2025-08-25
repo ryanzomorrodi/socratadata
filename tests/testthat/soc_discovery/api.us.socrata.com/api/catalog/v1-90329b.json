@@ -1,0 +1,281 @@
+{
+    "results": [
+        {
+            "resource": {
+                "name": "Current Employee Names, Salaries, and Position Titles",
+                "id": "xzkq-xp2w",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset is a listing of all active City of Chicago employees, complete with full names, departments, positions, employment status (part-time or full-time), frequency of hourly employee –where applicable—and annual salaries or hourly rate. Please note that \"active\" has a specific meaning for Human Resources purposes and will sometimes exclude employees on certain types of temporary leave. For hourly employees, the City is providing the hourly rate and frequency of hourly employees (40, 35, 20 and 10) to allow dataset users to estimate annual wages for hourly employees. Please note that annual wages will vary by employee, depending on number of hours worked and seasonal status. For information on the positions and related salaries detailed in the annual budgets, see https://www.cityofchicago.org/city/en/depts/obm.html\n\nData Disclosure Exemptions:\nInformation disclosed in this dataset is subject to FOIA Exemption Act, 5 ILCS 140/7 (Link:https://www.ilga.gov/legislation/ilcs/documents/000501400K7.htm)",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.chicago.gov",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2025-08-25T04:49:06.000Z",
+                "createdAt": "2011-09-27T20:18:55.000Z",
+                "metadata_updated_at": "2024-06-18T19:22:48.000Z",
+                "data_updated_at": "2025-08-25T04:49:06.000Z",
+                "page_views": {
+                    "page_views_last_week": 2407,
+                    "page_views_last_month": 10109,
+                    "page_views_total": 2136326,
+                    "page_views_last_week_log": 11.233619676759702,
+                    "page_views_last_month_log": 13.303495376790378,
+                    "page_views_total_log": 21.026701061467204
+                },
+                "columns_name": [
+                    "Annual Salary",
+                    "Typical Hours",
+                    "Hourly Rate",
+                    "Name",
+                    "Full or Part-Time",
+                    "Job Titles",
+                    "Salary or Hourly",
+                    "Department"
+                ],
+                "columns_field_name": [
+                    "annual_salary",
+                    "typical_hours",
+                    "hourly_rate",
+                    "name",
+                    "full_or_part_time",
+                    "job_titles",
+                    "salary_or_hourly",
+                    "department"
+                ],
+                "columns_datatype": [
+                    "Number",
+                    "Number",
+                    "Number",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text",
+                    "Text"
+                ],
+                "columns_description": [
+                    "Annual salary rates. Only applies for employees whose pay frequency is \"Salary\". Hourly employees rates are only shown in \"Hourly Rates\" column.",
+                    "Describes the typical amount of work for hourly employees. This data does not apply to salary employees.\n\n40 - Employee paid on an hourly basis; works an 8 hour day; can be either full-time permanent (FT/P) or full-time temporary (FT-T) which is a seasonal employee; 35 - Employee paid on an hourly basis; works a 7 hour day; can be either full-time permanent (FT/P) or full-time temporary (FT-T) which is a seasonal employee; 20 - Employee paid on a part-time, hourly basis; typically works a 4 hour day, 5 days a week; 10 - Employee paid on a part-time, hourly basis; works 10 hours or less in a week.",
+                    "The hourly salary rates for individuals whose pay frequency is \"hourly\". Hourly employees have varying hours worked throughout the week, which is described in the \"Frequency Description\" column.",
+                    "Name of employee",
+                    "Whether the employee was employed full- (F) or part-time (P).",
+                    "Title of employee at the time when the data were updated.",
+                    "Defines whether an employee is paid on an hourly basis or salary basis. Hourly employees are further defined by the number of hours they work in a week. See the \"Frequency Description\" column.",
+                    "Department where employee worked."
+                ],
+                "columns_format": [
+                    {
+                        "precision": "2",
+                        "align": "right",
+                        "aggregate": "sum",
+                        "currencyStyle": "USD",
+                        "humane": "false",
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "precisionStyle": "standard",
+                        "noCommas": "true",
+                        "align": "left"
+                    },
+                    {
+                        "precision": "2",
+                        "align": "right",
+                        "currencyStyle": "USD",
+                        "humane": "false",
+                        "precisionStyle": "currency"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "rdf": "http://xmlns.com/foaf/0.1/name",
+                        "align": "left",
+                        "aggregate": "count"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "rdf": "http://xmlns.com/foaf/0.1/title",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "align": "left"
+                    },
+                    {
+                        "displayStyle": "plain",
+                        "rdf": "http://xmlns.com/foaf/0.1/workplaceHomepage",
+                        "align": "left"
+                    }
+                ],
+                "download_count": 14172062,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2018-01-30T17:45:21.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Administration & Finance",
+                "domain_tags": [
+                    "personnel"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": "Data are updated daily"
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Human Resources"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": "Current"
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org",
+                "license": "See Terms of Use"
+            },
+            "permalink": "https://data.cityofchicago.org/d/xzkq-xp2w",
+            "link": "https://data.cityofchicago.org/Administration-Finance/Current-Employee-Names-Salaries-and-Position-Title/xzkq-xp2w",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        },
+        {
+            "resource": {
+                "name": "Landmark Districts",
+                "id": "zidz-sdfj",
+                "resource_name": null,
+                "parent_fxf": [
+
+                ],
+                "description": "This dataset is a list of Chicago Landmark Districts designated by City Council upon recommendation of the Commission on Chicago Landmarks. It contains the name of each Chicago Landmark District along with the date of its designation. Additional information about each Chicago Landmark District, including district maps, is available on the Chicago Landmarks home page at http://j.mp/lRJVnh. Districts which have been proposed for landmark designation by the Commission on Chicago Landmarks and remain under consideration are not included. This information is for illustrative purposes only; the legal boundaries are as identified by the respective landmark designation ordinances. A data set containing Individual Chicago Landmarks is available separately. Go to http://j.mp/m7t5nB to access the related GIS layer files. You will need compression software and special software, such as ESRI ArcGIS, to use the GIS files.",
+                "attribution": "City of Chicago",
+                "attribution_link": "http://www.cityofchicago.org",
+                "contact_email": null,
+                "type": "dataset",
+                "updatedAt": "2011-08-28T20:12:44.000Z",
+                "createdAt": "2010-04-28T22:44:13.000Z",
+                "metadata_updated_at": "2011-08-28T20:12:44.000Z",
+                "data_updated_at": "2011-08-21T02:47:29.000Z",
+                "page_views": {
+                    "page_views_last_week": 60,
+                    "page_views_last_month": 139,
+                    "page_views_total": 21907,
+                    "page_views_last_week_log": 5.930737337562887,
+                    "page_views_last_month_log": 7.129283016944966,
+                    "page_views_total_log": 14.419170165028536
+                },
+                "columns_name": [
+                    "DESIGNATION DATE",
+                    "DISTRICT NAME"
+                ],
+                "columns_field_name": [
+                    "designation_date",
+                    "district_name"
+                ],
+                "columns_datatype": [
+                    "Date",
+                    "Text"
+                ],
+                "columns_description": [
+                    "",
+                    ""
+                ],
+                "columns_format": [
+                    {
+                        "view": "date",
+                        "align": "left"
+                    },
+                    {
+                        "align": "left"
+                    }
+                ],
+                "download_count": 3712,
+                "provenance": "official",
+                "lens_view_type": "tabular",
+                "lens_display_type": "table",
+                "locked": false,
+                "blob_mime_type": null,
+                "hide_from_data_json": false,
+                "publication_date": "2011-04-17T00:03:09.000Z"
+            },
+            "classification": {
+                "categories": [
+
+                ],
+                "tags": [
+
+                ],
+                "domain_category": "Historic Preservation",
+                "domain_tags": [
+                    "gis",
+                    "landmarks",
+                    "tourism"
+                ],
+                "domain_metadata": [
+                    {
+                        "key": "Metadata_Frequency",
+                        "value": ""
+                    },
+                    {
+                        "key": "Metadata_Data-Owner",
+                        "value": "Housing & Economic Development"
+                    },
+                    {
+                        "key": "Metadata_Time-Period",
+                        "value": ""
+                    }
+                ]
+            },
+            "metadata": {
+                "domain": "data.cityofchicago.org"
+            },
+            "permalink": "https://data.cityofchicago.org/d/zidz-sdfj",
+            "link": "https://data.cityofchicago.org/Historic-Preservation/Landmark-Districts/zidz-sdfj",
+            "owner": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            },
+            "creator": {
+                "id": "scy9-9wg4",
+                "user_type": "interactive",
+                "display_name": "cocadmin"
+            }
+        }
+    ],
+    "resultSetSize": 2,
+    "timings": {
+        "serviceMillis": 35,
+        "searchMillis": [
+            6,
+            6
+        ]
+    },
+    "warnings": [
+
+    ]
+}
