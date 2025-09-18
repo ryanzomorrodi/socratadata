@@ -202,7 +202,12 @@ set_metdata <- function(result, url, alias) {
   col_alias <- metadata$columns$column_label
   names(col_alias) <- metadata$columns$column_name
   if (alias == "replace") {
-    colnames(result) <- col_alias[colnames(result)]
+    sf_column <- attr(result, "sf_column")
+    if (!is.null(sf_column)) {
+      attr(result, "sf_column") <- col_alias[sf_column]
+    }
+    new_colnames <- col_alias[colnames(result)]
+    colnames(result)[!is.na(new_colnames)] <- new_colnames[!is.na(new_colnames)]
   } else if (alias == "label") {
     for (i in seq_along(result)) {
       attr(result[[i]], "label") <- unname(col_alias[colnames(result)[i]])
