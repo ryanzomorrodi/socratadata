@@ -42,13 +42,12 @@ query <- soc_query(
 )
 print(query)
 
-\donttest{
+\dontshow{if (interactive() && httr2::is_online()) withAutoprint(\{ # examplesIf}
 earthquakes_by_region <- soc_read(
   "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/",
   query = query
 )
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Use this with a function that executes Socrata requests, e.g., \code{soc_read(url, query = soc_query(...))}

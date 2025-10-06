@@ -36,8 +36,7 @@
 #'   \item{license}{License associated with the asset.}
 #' }
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf interactive() && httr2::is_online()
 #' url <- "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"
 #' data <- soc_read(url, soc_query(limit = 1000L))
 #' metadata <- soc_metadata(data)
@@ -45,7 +44,6 @@
 #'
 #' metadata <- soc_metadata(url)
 #' print(metadata)
-#' }
 #'
 #' @export
 soc_metadata <- function(dataset) {

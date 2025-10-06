@@ -47,8 +47,7 @@
 #'   \item{license}{License associated with the asset.}
 #' }
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf interactive() && httr2::is_online()
 #' soc_read(
 #'   "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"
 #' )
@@ -62,7 +61,6 @@
 #'     order_by = "avg_magnitude DESC"
 #'   )
 #' )
-#' }
 #'
 #' @export
 soc_read <- function(

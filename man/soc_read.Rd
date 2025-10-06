@@ -72,7 +72,7 @@ Downloads and parses a dataset from a Socrata open data portal URL, returning it
 Metadata is also returned as attributes on the returned object.
 }
 \examples{
-\donttest{
+\dontshow{if (interactive() && httr2::is_online()) withAutoprint(\{ # examplesIf}
 soc_read(
   "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"
 )
@@ -86,6 +86,5 @@ soc_read(
     order_by = "avg_magnitude DESC"
   )
 )
-}
-
+\dontshow{\}) # examplesIf}
 }

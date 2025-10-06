@@ -80,15 +80,14 @@ all levels publish data on topics including crime, permits, finance, healthcare,
 research, and performance.
 }
 \examples{
-\donttest{
+\dontshow{if (interactive() && httr2::is_online()) withAutoprint(\{ # examplesIf}
 # Search for crime-related datasets in the Public Safety category
 results <- soc_discover(
   query = "crime",
   categories = "Public Safety",
   only = "dataset"
 )
-}
-
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \url{https://dev.socrata.com/docs/other/discovery}

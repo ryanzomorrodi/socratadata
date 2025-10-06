@@ -47,7 +47,7 @@ creation and update timestamps, description, any domain-specific fields, and fie
 data provider.
 }
 \examples{
-\donttest{
+\dontshow{if (interactive() && httr2::is_online()) withAutoprint(\{ # examplesIf}
 url <- "https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"
 data <- soc_read(url, soc_query(limit = 1000L))
 metadata <- soc_metadata(data)
@@ -55,6 +55,5 @@ print(metadata)
 
 metadata <- soc_metadata(url)
 print(metadata)
-}
-
+\dontshow{\}) # examplesIf}
 }

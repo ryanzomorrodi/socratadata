@@ -44,15 +44,13 @@
 #'   \item{license}{License associated with the asset.}
 #' }
 #'
-#' @examples
-#' \donttest{
+#' @examplesIf interactive() && httr2::is_online()
 #' # Search for crime-related datasets in the Public Safety category
 #' results <- soc_discover(
 #'   query = "crime",
 #'   categories = "Public Safety",
 #'   only = "dataset"
 #' )
-#' }
 #'
 #' @seealso \url{https://dev.socrata.com/docs/other/discovery}
 #'
