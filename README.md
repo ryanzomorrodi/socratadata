@@ -46,7 +46,7 @@ Use `soc_discover()` to explore the datasets with a domain.
 library(socratadata)
 
 soc_discover(domains = "data.cityofchicago.org")
-#> # A tibble: 880 × 21
+#> # A tibble: 884 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
 #>  1 xzkq… Curr… City of Ch… cocadmin   official   "This data… 2011-09-27 00:00:00
@@ -58,8 +58,8 @@ soc_discover(domains = "data.cityofchicago.org")
 #>  7 2ft4… Lobb… City of Ch… cocadmin   official   "All lobby… 2011-06-07 00:00:00
 #>  8 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
 #>  9 kn9c… Cens… U.S. Censu… Jamyia     official   "This data… 2012-01-05 00:00:00
-#> 10 z8bn… Poli… Chicago Po… cocadmin   official   "Chicago P… 2010-12-22 00:00:00
-#> # ℹ 870 more rows
+#> 10 r5kz… Busi… City of Ch… cocadmin   official   "NOTE, 9/2… 2011-09-27 00:00:00
+#> # ℹ 874 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
@@ -71,20 +71,20 @@ Or with a query.
 
 ``` r
 soc_discover(query = "bus")
-#> # A tibble: 876 × 21
+#> # A tibble: 882 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
 #>  1 ez4e… Bus … Department… NYC OpenD… official   "The Bus B… 2015-09-30 00:00:00
-#>  2 bd2s… KCAT… KCATA Tran… DataKC     official   "This data… 2013-04-23 00:00:00
-#>  3 6qat… DART… Department… Delaware … official   "This cont… 2017-07-28 00:00:00
+#>  2 6qat… DART… Department… Delaware … official   "This cont… 2017-07-28 00:00:00
+#>  3 bd2s… KCAT… KCATA Tran… DataKC     official   "This data… 2013-04-23 00:00:00
 #>  4 ycrg… Bus … Department… NYC OpenD… official   "Bus lanes… 2020-12-04 00:00:00
-#>  5 s5c7… Bus … <NA>        Karl Suey… official   ""          2015-05-23 00:00:00
-#>  6 eqmj… Bron… mta.info    Elkin      official   "Bronx Tra… 2012-10-06 00:00:00
-#>  7 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00
-#>  8 nmjv… Bus … Transit Se… City of M… official   "***NOTE: … 2019-06-03 00:00:00
-#>  9 cudb… MTA … Metropolit… NY Open D… official   "Bus Speed… 2021-12-29 00:00:00
-#> 10 6uva… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-31 00:00:00
-#> # ℹ 866 more rows
+#>  5 eqmj… Bron… mta.info    Elkin      official   "Bronx Tra… 2012-10-06 00:00:00
+#>  6 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00
+#>  7 nmjv… Bus … Transit Se… City of M… official   "***NOTE: … 2019-06-03 00:00:00
+#>  8 6uva… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-31 00:00:00
+#>  9 s5c7… Bus … <NA>        Karl Suey… official   ""          2015-05-23 00:00:00
+#> 10 cudb… MTA … Metropolit… NY Open D… official   "Bus Speed… 2021-12-29 00:00:00
+#> # ℹ 872 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
@@ -96,20 +96,20 @@ Or with categories.
 
 ``` r
 soc_discover(categories = "transportation")
-#> # A tibble: 457 × 21
+#> # A tibble: 447 × 21
 #>    id    name  attribution owner_name provenance description created            
 #>    <chr> <chr> <chr>       <chr>      <chr>      <chr>       <dttm>             
 #>  1 pksj… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
-#>  2 f57x… Vita… <NA>        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00
-#>  3 2tq4… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-22 00:00:00
-#>  4 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00
-#>  5 cwsm… Quar… New York S… NY Open D… official   "The Quart… 2013-02-15 00:00:00
-#>  6 muzh… Calg… The City o… Calgary O… official   "Calgary T… 2018-09-07 00:00:00
-#>  7 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00
-#>  8 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00
-#>  9 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00
-#> 10 w96p… Dail… Maryland T… Titlow, K… official   "The Daily… 2020-05-19 00:00:00
-#> # ℹ 447 more rows
+#>  2 2tq4… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-22 00:00:00
+#>  3 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00
+#>  4 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00
+#>  5 f57x… Vita… <NA>        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00
+#>  6 wdpr… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00
+#>  7 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00
+#>  8 cwsm… Quar… New York S… NY Open D… official   "The Quart… 2013-02-15 00:00:00
+#>  9 muzh… Calg… The City o… Calgary O… official   "Calgary T… 2018-09-07 00:00:00
+#> 10 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00
+#> # ℹ 437 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
 #> #   domain_metadata <list>, column_names <list>, column_labels <list>,
@@ -126,13 +126,13 @@ soc_discover(
 #>  1 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00
 #>  2 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00
 #>  3 ygr5… Towe… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00
-#>  4 5k2z… Relo… City of Ch… cocadmin   official   "This data… 2011-09-30 00:00:00
-#>  5 m6dm… Tran… City of Ch… Jonathan … official   "<b>This d… 2018-10-02 00:00:00
-#>  6 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00
-#>  7 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00
-#>  8 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00
-#>  9 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00
-#> 10 hhkd… Spee… City of Ch… cocadmin   official   "This data… 2014-08-08 00:00:00
+#>  4 m6dm… Tran… City of Ch… Jonathan … official   "<b>This d… 2018-10-02 00:00:00
+#>  5 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00
+#>  6 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00
+#>  7 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00
+#>  8 t2qc… Chic… <NA>        cocadmin   official   "This data… 2011-11-20 00:00:00
+#>  9 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00
+#> 10 u6pd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-09 00:00:00
 #> # ℹ 76 more rows
 #> # ℹ 14 more variables: data_last_updated <dttm>, metadata_last_updated <dttm>,
 #> #   categories <list>, tags <list>, domain_category <chr>, domain_tags <list>,
@@ -217,7 +217,8 @@ Use `soc_read()` to read a socrata dataset into R.
 soc_read(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
-#> # A tibble: 8,886 × 9
+#> ⠙ iterating 2 done (0.97/s) | 2.1s
+#> # A tibble: 8,978 × 9
 #>    service_date        day_type    bus rail_boardings total_rides `:id`         
 #>    <dttm>              <chr>     <dbl>          <dbl>       <dbl> <chr>         
 #>  1 2001-01-01 00:00:00 U        297192         126455      423647 row-pux9_24p6…
@@ -230,7 +231,7 @@ soc_read(
 #>  8 2001-01-08 00:00:00 W        985221         590706     1575927 row-mxrr.356r…
 #>  9 2001-01-09 00:00:00 W        978377         599905     1578282 row-i9ii.759a…
 #> 10 2001-01-10 00:00:00 W        984884         602052     1586936 row-fedk_g2kd…
-#> # ℹ 8,876 more rows
+#> # ℹ 8,968 more rows
 #> # ℹ 3 more variables: `:version` <chr>, `:created_at` <dttm>,
 #> #   `:updated_at` <dttm>
 ```
@@ -392,8 +393,8 @@ soc_metadata(
 #> Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for
 #> information on how these numbers are calculated.
 #> Created: 2011-08-12 15:40:31
-#> Data last updated: 2025-06-30 18:44:33
-#> Metadata last Updated: 2025-06-30 18:44:32
+#> Data last updated: 2025-09-22 14:31:04
+#> Metadata last Updated: 2025-09-22 14:31:03
 #> Domain Category: Transportation
 #> Domain Tags: cta, public transit, and ridership
 #> Domain fields:
