@@ -102,14 +102,12 @@ This function does not execute the query; it creates an object that can be passe
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">HAVING</span> count &gt;= 5</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">ORDER BY</span> avg_magnitude DESC</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive() &amp;&amp; httr2::is_online()</span></span></span>
 <span class="r-in"><span><span class="va">earthquakes_by_region</span> <span class="op">&lt;-</span> <span class="fu"><a href="soc_read.html">soc_read</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="st">"https://soda.demo.socrata.com/dataset/USGS-Earthquakes-2012-11-08/3wfw-mdbc/"</span>,</span></span>
 <span class="r-in"><span>  query <span class="op">=</span> <span class="va">query</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Utilizing v2.1 API. `include_synthetic_cols` will be ignored. Provide an `api_key_id` and `api_key_secret` to perform a v3 request.</span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
