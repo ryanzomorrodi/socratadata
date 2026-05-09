@@ -15,10 +15,18 @@ An object of class \code{soc_meta}, which includes:
 \item{id}{Asset identifier (four-by-four ID).}
 \item{name}{Asset name.}
 \item{attribution}{Attribution or publisher of the asset.}
-\item{owner_name}{Display name of the asset owner.}
+\item{attribution_link}{Link to attribution.}
+\item{resource_type}{Type of resource: api, calendar, chart, dataset, federated_href, file, filter, form, href, link, map, measure, story, visualization.}
+\item{owner}{Owner:
+\describe{
+\item{id}{Owner ID.}
+\item{display_name}{Display name of owner.}
+}
+}
 \item{provenance}{Provenance of asset (official or community).}
 \item{description}{Textual description of the asset.}
 \item{created}{Date asset was created.}
+\item{published}{Date asset was published (if published).}
 \item{data_last_updated}{Date asset data was last updated}
 \item{metadata_last_updated}{Date asset metadata was last updated}
 \item{domain_category}{Category label assigned by the domain.}
@@ -26,14 +34,13 @@ An object of class \code{soc_meta}, which includes:
 \item{domain_metadata}{Metadata associated with the asset assigned by the domain.}
 \item{columns}{A dataframe with the following columns:
 \describe{
-\item{column_name}{Names of asset columns.}
-\item{column_label}{Labels of asset columns.}
-\item{column_datatype}{Datatypes of asset columns.}
-\item{column_description}{Description of asset columns.}
+\item{name}{Names of asset columns.}
+\item{label}{Labels of asset columns.}
+\item{description}{Description of asset columns.}
+\item{datatype}{Datatypes of asset columns.}
 }
 }
 \item{permalink}{Permanent URL where the asset can be accessed.}
-\item{link}{Direct asset link.}
 \item{license}{License associated with the asset.}
 }
 }

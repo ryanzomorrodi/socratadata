@@ -1,4 +1,6 @@
 url: https://ryanzomorrodi.github.io/socratadata/
 template:
   bootstrap: 5
-
+  bslib:
+    bg: "#ffffff"
+    fg: "#212529"

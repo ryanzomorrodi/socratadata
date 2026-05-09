@@ -6,11 +6,15 @@ edition = '2021'
 rust-version = '1.65'
 
 [lib]
-crate-type = [ 'staticlib' ]
+crate-type = [ 'rlib', 'staticlib' ]
 name = 'socratadata'
 
+[[bin]]
+name = 'document'
+path = 'document.rs'
+
 [dependencies]
-extendr-api = '0.8.1'
+extendr-api = '0.9.0'
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 chrono = { version = "0.4", features = ["serde"] }
