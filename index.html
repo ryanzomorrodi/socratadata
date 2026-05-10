@@ -6,11 +6,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Explore Socrata Data with Ease • socratadata</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-<link rel="icon" type="”image/svg+xml”" href="favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" sizes="any" href="favicon.ico">
-<link rel="manifest" href="site.webmanifest">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
@@ -18,7 +13,6 @@
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Explore Socrata Data with Ease">
 <meta name="description" content="Provides an interface to search, read, query, and retrieve metadata for datasets hosted on Socrata open data portals. Supports all Socrata data types, including spatial data returned as sf objects.">
 <meta property="og:description" content="Provides an interface to search, read, query, and retrieve metadata for datasets hosted on Socrata open data portals. Supports all Socrata data types, including spatial data returned as sf objects.">
-<meta property="og:image" content="https://ryanzomorrodi.github.io/socratadata/logo.png">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -53,10 +47,8 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="socratadata">socratadata<a class="anchor" aria-label="anchor" href="#socratadata"></a>
-</h1>
-</div>
+<div class="page-header"><h1 id="socratadata">socratadata<a class="anchor" aria-label="anchor" href="#socratadata"></a>
+</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>Explore Socrata data with ease.</p>
@@ -84,132 +76,140 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ryanzomorrodi.github.io/socratadata/">socratadata</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>domains <span class="op">=</span> <span class="st">"data.cityofchicago.org"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 884 × 21</span></span>
-<span><span class="co">#&gt;    id    name  attribution owner_name provenance description created            </span></span>
-<span><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;       &lt;dttm&gt;             </span></span>
-<span><span class="co">#&gt;  1 xzkq… Curr… City of Ch… cocadmin   official   "This data… 2011-09-27 00:00:00</span></span>
-<span><span class="co">#&gt;  2 ijzp… Crim… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00</span></span>
-<span><span class="co">#&gt;  3 ydr8… Buil… City of Ch… cocadmin   official   "This data… 2011-09-30 00:00:00</span></span>
-<span><span class="co">#&gt;  4 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00</span></span>
-<span><span class="co">#&gt;  5 s6ha… Affo… City of Ch… cocadmin   official   "The renta… 2013-03-14 00:00:00</span></span>
-<span><span class="co">#&gt;  6 4ijn… Food… City of Ch… cocadmin   official   "This info… 2011-08-08 00:00:00</span></span>
-<span><span class="co">#&gt;  7 2ft4… Lobb… City of Ch… cocadmin   official   "All lobby… 2011-06-07 00:00:00</span></span>
-<span><span class="co">#&gt;  8 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00</span></span>
-<span><span class="co">#&gt;  9 kn9c… Cens… U.S. Censu… Jamyia     official   "This data… 2012-01-05 00:00:00</span></span>
-<span><span class="co">#&gt; 10 r5kz… Busi… City of Ch… cocadmin   official   "NOTE, 9/2… 2011-09-27 00:00:00</span></span>
-<span><span class="co">#&gt; # ℹ 874 more rows</span></span>
-<span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
-<span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   domain_metadata &lt;list&gt;, column_names &lt;list&gt;, column_labels &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   column_datatypes &lt;list&gt;, column_descriptions &lt;list&gt;, permalink &lt;chr&gt;,</span></span>
-<span><span class="co">#&gt; #   link &lt;chr&gt;, license &lt;chr&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # A tibble: 907 × 30</span></span>
+<span><span class="co">#&gt;    id        parent_ids name          attribution attribution_link contact_email</span></span>
+<span><span class="co">#&gt;  * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
+<span><span class="co">#&gt;  1 ydr8-5enu &lt;chr [0]&gt;  Building Per… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  2 xzkq-xp2w &lt;chr [0]&gt;  Current Empl… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  3 ijzp-q8t2 &lt;chr [0]&gt;  Crimes - 200… Chicago Po… https://www.chi… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  4 85ca-t3if &lt;chr [0]&gt;  Traffic Cras… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  5 4ijn-s7e5 &lt;chr [0]&gt;  Food Inspect… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  6 s6ha-ppgi &lt;chr [0]&gt;  Affordable R… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  7 2ft4-4uik &lt;chr [0]&gt;  Lobbyist Dat… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 i6bp-fvbx &lt;chr [0]&gt;  Chicago Stre… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  9 kn9c-c2s2 &lt;chr [0]&gt;  Census Data … U.S. Censu… http://factfind… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 10 r5kz-chrr &lt;chr [0]&gt;  Business Lic… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; # ℹ 897 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
+<span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   metadata_last_updated &lt;dttm&gt;, categories &lt;list&gt;, tags &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   domain_categories &lt;chr&gt;, domain_tags &lt;list&gt;, domain_metadata &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   columns &lt;list&gt;, permalink &lt;chr&gt;, link &lt;chr&gt;, domain &lt;chr&gt;, license &lt;chr&gt;, …</span></span></code></pre></div>
 <p>Or with a query.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>query <span class="op">=</span> <span class="st">"bus"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 882 × 21</span></span>
-<span><span class="co">#&gt;    id    name  attribution owner_name provenance description created            </span></span>
-<span><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;       &lt;dttm&gt;             </span></span>
-<span><span class="co">#&gt;  1 ez4e… Bus … Department… NYC OpenD… official   "The Bus B… 2015-09-30 00:00:00</span></span>
-<span><span class="co">#&gt;  2 6qat… DART… Department… Delaware … official   "This cont… 2017-07-28 00:00:00</span></span>
-<span><span class="co">#&gt;  3 bd2s… KCAT… KCATA Tran… DataKC     official   "This data… 2013-04-23 00:00:00</span></span>
-<span><span class="co">#&gt;  4 ycrg… Bus … Department… NYC OpenD… official   "Bus lanes… 2020-12-04 00:00:00</span></span>
-<span><span class="co">#&gt;  5 eqmj… Bron… mta.info    Elkin      official   "Bronx Tra… 2012-10-06 00:00:00</span></span>
-<span><span class="co">#&gt;  6 wgnh… Capi… Capital Di… NY Open D… official   "Bus stops… 2013-05-22 00:00:00</span></span>
-<span><span class="co">#&gt;  7 nmjv… Bus … Transit Se… City of M… official   "***NOTE: … 2019-06-03 00:00:00</span></span>
-<span><span class="co">#&gt;  8 6uva… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-31 00:00:00</span></span>
-<span><span class="co">#&gt;  9 s5c7… Bus … &lt;NA&gt;        Karl Suey… official   ""          2015-05-23 00:00:00</span></span>
-<span><span class="co">#&gt; 10 cudb… MTA … Metropolit… NY Open D… official   "Bus Speed… 2021-12-29 00:00:00</span></span>
-<span><span class="co">#&gt; # ℹ 872 more rows</span></span>
-<span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
-<span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   domain_metadata &lt;list&gt;, column_names &lt;list&gt;, column_labels &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   column_datatypes &lt;list&gt;, column_descriptions &lt;list&gt;, permalink &lt;chr&gt;,</span></span>
-<span><span class="co">#&gt; #   link &lt;chr&gt;, license &lt;chr&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # A tibble: 881 × 30</span></span>
+<span><span class="co">#&gt;    id        parent_ids name          attribution attribution_link contact_email</span></span>
+<span><span class="co">#&gt;  * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
+<span><span class="co">#&gt;  1 ez4e-fazm &lt;chr [0]&gt;  Bus Breakdow… Department… &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  2 bzwk-3hb4 &lt;chr [0]&gt;  MTA Bus Rout… Metropolit… https://www.mta… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  3 6qat-uaei &lt;chr [0]&gt;  DART Bus Sch… Department… http://www.dart… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  4 eqmj-6b8d &lt;chr [0]&gt;  Bronx Bus St… mta.info    http://mta.info… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  5 2ucp-7wg5 &lt;chr [0]&gt;  MTA Bus Stops Metropolit… https://www.mta… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  6 ycrg-ses3 &lt;chr [0]&gt;  Bus Lanes - … Department… &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  7 bd2s-bfst &lt;chr [0]&gt;  KCATA Bus St… KCATA Tran… http://www.kcat… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 6uva-a5ei &lt;chr [0]&gt;  CTA - Bus Ro… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  9 nmjv-498y &lt;chr [0]&gt;  Bus Ridership Transit Se… &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 10 ifm8-78yv &lt;chr [0]&gt;  Bus Routes    Transport … &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; # ℹ 871 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
+<span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   metadata_last_updated &lt;dttm&gt;, categories &lt;list&gt;, tags &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   domain_categories &lt;chr&gt;, domain_tags &lt;list&gt;, domain_metadata &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   columns &lt;list&gt;, permalink &lt;chr&gt;, link &lt;chr&gt;, domain &lt;chr&gt;, license &lt;chr&gt;, …</span></span></code></pre></div>
 <p>Or with categories.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>categories <span class="op">=</span> <span class="st">"transportation"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 447 × 21</span></span>
-<span><span class="co">#&gt;    id    name  attribution owner_name provenance description created            </span></span>
-<span><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;       &lt;dttm&gt;             </span></span>
-<span><span class="co">#&gt;  1 pksj… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00</span></span>
-<span><span class="co">#&gt;  2 2tq4… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-22 00:00:00</span></span>
-<span><span class="co">#&gt;  3 9mau… Vita… U.S. Censu… Raleigh M… official   "VITAL SIG… 2020-04-09 00:00:00</span></span>
-<span><span class="co">#&gt;  4 btc8… Citi… The City o… Calgary O… official   "These are… 2021-06-10 00:00:00</span></span>
-<span><span class="co">#&gt;  5 f57x… Vita… &lt;NA&gt;        Raleigh M… official   "VITAL SIG… 2018-08-20 00:00:00</span></span>
-<span><span class="co">#&gt;  6 wdpr… Vita… Federal Tr… Raleigh M… official   "VITAL SIG… 2017-05-24 00:00:00</span></span>
-<span><span class="co">#&gt;  7 ei2q… Park… Division o… City of N… official   "This data… 2018-09-20 00:00:00</span></span>
-<span><span class="co">#&gt;  8 cwsm… Quar… New York S… NY Open D… official   "The Quart… 2013-02-15 00:00:00</span></span>
-<span><span class="co">#&gt;  9 muzh… Calg… The City o… Calgary O… official   "Calgary T… 2018-09-07 00:00:00</span></span>
-<span><span class="co">#&gt; 10 7y2e… Weig… New York S… NY Open D… official   "This data… 2015-01-21 00:00:00</span></span>
-<span><span class="co">#&gt; # ℹ 437 more rows</span></span>
-<span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
-<span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   domain_metadata &lt;list&gt;, column_names &lt;list&gt;, column_labels &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   column_datatypes &lt;list&gt;, column_descriptions &lt;list&gt;, permalink &lt;chr&gt;,</span></span>
-<span><span class="co">#&gt; #   link &lt;chr&gt;, license &lt;chr&gt;</span></span>
+<span><span class="co">#&gt; # A tibble: 406 × 30</span></span>
+<span><span class="co">#&gt;    id        parent_ids name          attribution attribution_link contact_email</span></span>
+<span><span class="co">#&gt;  * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
+<span><span class="co">#&gt;  1 2tq4-9mfn &lt;chr [0]&gt;  Vital Signs:… Federal Tr… http://www.ntdp… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  2 pksj-2mmj &lt;chr [0]&gt;  Vital Signs:… Federal Tr… http://www.ntdp… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  3 f57x-8ifw &lt;chr [0]&gt;  Vital Signs:… &lt;NA&gt;        &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  4 wdpr-f2dr &lt;chr [0]&gt;  Vital Signs:… Federal Tr… http://www.ntdp… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  5 ei2q-6g8n &lt;chr [0]&gt;  Parking Cita… Division o… https://www.nor… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  6 muzh-c9qc &lt;chr [0]&gt;  Calgary Tran… The City o… &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  7 btc8-9kef &lt;chr [0]&gt;  Citizen Sati… The City o… https://calgary… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 cwsm-2ns3 &lt;chr [0]&gt;  Quarterly Ce… New York S… http://www.labo… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  9 7y2e-49j8 &lt;chr [0]&gt;  Weigh-In-Mot… New York S… https://www.dot… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 10 w96p-f2qv &lt;chr [0]&gt;  Daily Mobili… Maryland T… https://mti.umd… kyle.titlow@…</span></span>
+<span><span class="co">#&gt; # ℹ 396 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
+<span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   metadata_last_updated &lt;dttm&gt;, categories &lt;list&gt;, tags &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   domain_categories &lt;chr&gt;, domain_tags &lt;list&gt;, domain_metadata &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   columns &lt;list&gt;, permalink &lt;chr&gt;, link &lt;chr&gt;, domain &lt;chr&gt;, license &lt;chr&gt;, …</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span></span>
 <span>  domains <span class="op">=</span> <span class="st">"data.cityofchicago.org"</span>,</span>
 <span>  domain_category <span class="op">=</span> <span class="st">"Transportation"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 86 × 21</span></span>
-<span><span class="co">#&gt;    id    name  attribution owner_name provenance description created            </span></span>
-<span><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;       &lt;dttm&gt;             </span></span>
-<span><span class="co">#&gt;  1 85ca… Traf… City of Ch… Jonathan … official   "Crash dat… 2017-10-19 00:00:00</span></span>
-<span><span class="co">#&gt;  2 i6bp… Chic… City of Ch… cocadmin   official   "List of a… 2010-12-22 00:00:00</span></span>
-<span><span class="co">#&gt;  3 ygr5… Towe… Chicago Po… cocadmin   official   "This data… 2011-09-30 00:00:00</span></span>
-<span><span class="co">#&gt;  4 m6dm… Tran… City of Ch… Jonathan … official   "&lt;b&gt;This d… 2018-10-02 00:00:00</span></span>
-<span><span class="co">#&gt;  5 68nd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-04 00:00:00</span></span>
-<span><span class="co">#&gt;  6 4i42… Spee… City of Ch… cocadmin   official   "This data… 2014-08-11 00:00:00</span></span>
-<span><span class="co">#&gt;  7 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00</span></span>
-<span><span class="co">#&gt;  8 t2qc… Chic… &lt;NA&gt;        cocadmin   official   "This data… 2011-11-20 00:00:00</span></span>
-<span><span class="co">#&gt;  9 n4j6… Chic… City of Ch… cocadmin   official   "This data… 2011-11-20 00:00:00</span></span>
-<span><span class="co">#&gt; 10 u6pd… Traf… City of Ch… Jonathan … official   "This data… 2018-01-09 00:00:00</span></span>
-<span><span class="co">#&gt; # ℹ 76 more rows</span></span>
-<span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
-<span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   domain_metadata &lt;list&gt;, column_names &lt;list&gt;, column_labels &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   column_datatypes &lt;list&gt;, column_descriptions &lt;list&gt;, permalink &lt;chr&gt;,</span></span>
-<span><span class="co">#&gt; #   link &lt;chr&gt;, license &lt;chr&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # A tibble: 87 × 30</span></span>
+<span><span class="co">#&gt;    id        parent_ids name          attribution attribution_link contact_email</span></span>
+<span><span class="co">#&gt;  * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
+<span><span class="co">#&gt;  1 85ca-t3if &lt;chr [0]&gt;  Traffic Cras… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  2 i6bp-fvbx &lt;chr [0]&gt;  Chicago Stre… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  3 ygr5-vcbg &lt;chr [0]&gt;  Towed Vehicl… Chicago Po… http://www.chic… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  4 6iiy-9s97 &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  5 u6pd-qa9d &lt;chr [0]&gt;  Traffic Cras… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  6 spqx-js37 &lt;chr [0]&gt;  Red Light Ca… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  7 m6dm-c72p &lt;chr [0]&gt;  Transportati… City of Ch… https://www.chi… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 kf7e-cur8 &lt;chr [0]&gt;  Chicago Traf… City of Ch… https://www.chi… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  9 pnau-cf66 &lt;chr [0]&gt;  CTA - List o… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 10 sxs8-h27x &lt;chr [0]&gt;  Chicago Traf… City of Ch… https://www.cit… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; # ℹ 77 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
+<span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   metadata_last_updated &lt;dttm&gt;, categories &lt;list&gt;, tags &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   domain_categories &lt;chr&gt;, domain_tags &lt;list&gt;, domain_metadata &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   columns &lt;list&gt;, permalink &lt;chr&gt;, link &lt;chr&gt;, domain &lt;chr&gt;, license &lt;chr&gt;, …</span></span></code></pre></div>
 <p>Or with tags.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span></span>
 <span>  domains <span class="op">=</span> <span class="st">"data.cityofchicago.org"</span>,</span>
 <span>  domain_tags <span class="op">=</span> <span class="st">"public transit"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 12 × 21</span></span>
-<span><span class="co">#&gt;    id    name  attribution owner_name provenance description created            </span></span>
-<span><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;       &lt;dttm&gt;             </span></span>
-<span><span class="co">#&gt;  1 6iiy… CTA … Chicago Tr… CTA        official   "This data… 2011-08-12 00:00:00</span></span>
-<span><span class="co">#&gt;  2 pnau… CTA … Chicago Tr… CTA        official   "This list… 2011-08-12 00:00:00</span></span>
-<span><span class="co">#&gt;  3 t2rn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00</span></span>
-<span><span class="co">#&gt;  4 5neh… CTA … Chicago Tr… CTA        official   "This list… 2011-08-05 00:00:00</span></span>
-<span><span class="co">#&gt;  5 8pix… CTA … Chicago Tr… CTA        official   "This list… 2011-08-04 00:00:00</span></span>
-<span><span class="co">#&gt;  6 bynn… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00</span></span>
-<span><span class="co">#&gt;  7 w8km… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00</span></span>
-<span><span class="co">#&gt;  8 mq3i… CTA … Chicago Tr… CTA        official   "This data… 2011-08-11 00:00:00</span></span>
-<span><span class="co">#&gt;  9 jyb9… CTA … Chicago Tr… CTA        official   "This data… 2011-08-05 00:00:00</span></span>
-<span><span class="co">#&gt; 10 6uva… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-31 00:00:00</span></span>
-<span><span class="co">#&gt; 11 xbyr… CTA … City of Ch… Jonathan … official   "Lines rep… 2024-07-12 00:00:00</span></span>
-<span><span class="co">#&gt; 12 3tzw… CTA … City of Ch… Jonathan … official   "Points re… 2024-08-09 00:00:00</span></span>
-<span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
-<span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   domain_metadata &lt;list&gt;, column_names &lt;list&gt;, column_labels &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   column_datatypes &lt;list&gt;, column_descriptions &lt;list&gt;, permalink &lt;chr&gt;,</span></span>
-<span><span class="co">#&gt; #   link &lt;chr&gt;, license &lt;chr&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # A tibble: 12 × 30</span></span>
+<span><span class="co">#&gt;    id        parent_ids name          attribution attribution_link contact_email</span></span>
+<span><span class="co">#&gt;  * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
+<span><span class="co">#&gt;  1 6iiy-9s97 &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  2 pnau-cf66 &lt;chr [0]&gt;  CTA - List o… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  3 5neh-572f &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  4 t2rn-p8d7 &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  5 w8km-9pzd &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  6 bynn-gwxy &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  7 jyb9-n7fm &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 8pix-ypme &lt;chr [0]&gt;  CTA - System… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  9 mq3i-nnqe &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 10 6uva-a5ei &lt;chr [0]&gt;  CTA - Bus Ro… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 11 xbyr-jnvx &lt;chr [0]&gt;  CTA - 'L' (R… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 12 3tzw-cg4m &lt;chr [0]&gt;  CTA - 'L' (R… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
+<span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   metadata_last_updated &lt;dttm&gt;, categories &lt;list&gt;, tags &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   domain_categories &lt;chr&gt;, domain_tags &lt;list&gt;, domain_metadata &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   columns &lt;list&gt;, permalink &lt;chr&gt;, link &lt;chr&gt;, domain &lt;chr&gt;, license &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   page_views_last_week &lt;dbl&gt;, page_views_last_month &lt;dbl&gt;, …</span></span></code></pre></div>
 <p>Or with ids.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>ids <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"6iiy-9s97"</span>, <span class="st">"pnau-cf66"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 2 × 21</span></span>
-<span><span class="co">#&gt;   id     name  attribution owner_name provenance description created            </span></span>
-<span><span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;       &lt;dttm&gt;             </span></span>
-<span><span class="co">#&gt; 1 6iiy-… CTA … Chicago Tr… CTA        official   This datas… 2011-08-12 00:00:00</span></span>
-<span><span class="co">#&gt; 2 pnau-… CTA … Chicago Tr… CTA        official   This lists… 2011-08-12 00:00:00</span></span>
-<span><span class="co">#&gt; # ℹ 14 more variables: data_last_updated &lt;dttm&gt;, metadata_last_updated &lt;dttm&gt;,</span></span>
-<span><span class="co">#&gt; #   categories &lt;list&gt;, tags &lt;list&gt;, domain_category &lt;chr&gt;, domain_tags &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   domain_metadata &lt;list&gt;, column_names &lt;list&gt;, column_labels &lt;list&gt;,</span></span>
-<span><span class="co">#&gt; #   column_datatypes &lt;list&gt;, column_descriptions &lt;list&gt;, permalink &lt;chr&gt;,</span></span>
-<span><span class="co">#&gt; #   link &lt;chr&gt;, license &lt;chr&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # A tibble: 2 × 30</span></span>
+<span><span class="co">#&gt;   id        parent_ids name           attribution attribution_link contact_email</span></span>
+<span><span class="co">#&gt; * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;          &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
+<span><span class="co">#&gt; 1 6iiy-9s97 &lt;chr [0]&gt;  CTA - Ridersh… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 2 pnau-cf66 &lt;chr [0]&gt;  CTA - List of… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
+<span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   metadata_last_updated &lt;dttm&gt;, categories &lt;list&gt;, tags &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   domain_categories &lt;chr&gt;, domain_tags &lt;list&gt;, domain_metadata &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   columns &lt;list&gt;, permalink &lt;chr&gt;, link &lt;chr&gt;, domain &lt;chr&gt;, license &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   page_views_last_week &lt;dbl&gt;, page_views_last_month &lt;dbl&gt;, …</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="download-data">Download data<a class="anchor" aria-label="anchor" href="#download-data"></a>
@@ -229,8 +229,7 @@
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; ⠙ iterating 2 done (0.97/s) | 2.1s</span></span>
-<span><span class="co">#&gt; # A tibble: 8,978 × 9</span></span>
+<span><span class="co">#&gt; # A tibble: 9,190 × 9</span></span>
 <span><span class="co">#&gt;    service_date        day_type    bus rail_boardings total_rides `:id`         </span></span>
 <span><span class="co">#&gt;    &lt;dttm&gt;              &lt;chr&gt;     &lt;dbl&gt;          &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;         </span></span>
 <span><span class="co">#&gt;  1 2001-01-01 00:00:00 U        297192         126455      423647 row-pux9_24p6…</span></span>
@@ -243,7 +242,7 @@
 <span><span class="co">#&gt;  8 2001-01-08 00:00:00 W        985221         590706     1575927 row-mxrr.356r…</span></span>
 <span><span class="co">#&gt;  9 2001-01-09 00:00:00 W        978377         599905     1578282 row-i9ii.759a…</span></span>
 <span><span class="co">#&gt; 10 2001-01-10 00:00:00 W        984884         602052     1586936 row-fedk_g2kd…</span></span>
-<span><span class="co">#&gt; # ℹ 8,968 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 9,180 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 3 more variables: `:version` &lt;chr&gt;, `:created_at` &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   `:updated_at` &lt;dttm&gt;</span></span></code></pre></div>
 <p>Spatial data will be read as an <code>sf</code> object.</p>
@@ -327,57 +326,46 @@
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_metadata.html">soc_metadata</a></span><span class="op">(</span><span class="va">cta_ridership</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ID: wrvz-psew</span></span>
-<span><span class="co">#&gt; Name: Taxi Trips (2013-2023)</span></span>
 <span><span class="co">#&gt; Attribution: City of Chicago</span></span>
-<span><span class="co">#&gt; Owner: Jonathan Levy</span></span>
+<span><span class="co">#&gt; Attribution Link: https://www.chicago.gov</span></span>
+<span><span class="co">#&gt; Resource Type: dataset</span></span>
+<span><span class="co">#&gt; Owner ID: vewm-vupz</span></span>
+<span><span class="co">#&gt; Owner Display Name: Jonathan Levy</span></span>
 <span><span class="co">#&gt; Provenance: official</span></span>
-<span><span class="co">#&gt; Description: &lt;b&gt;This dataset ends with 2023. Please see the Featured Content</span></span>
-<span><span class="co">#&gt; link below for the dataset that starts in 2024.&lt;/b&gt; Taxi trips from 2013 to</span></span>
-<span><span class="co">#&gt; 2023 reported to the City of Chicago in its role as a regulatory agency.  To</span></span>
-<span><span class="co">#&gt; protect privacy but allow for aggregate analyses, the Taxi ID is consistent for</span></span>
-<span><span class="co">#&gt; any given taxi medallion number but does not show the number, Census Tracts are</span></span>
-<span><span class="co">#&gt; suppressed in some cases, and times are rounded to the nearest 15 minutes. Due</span></span>
-<span><span class="co">#&gt; to the data reporting process, not all trips are reported but the City believes</span></span>
-<span><span class="co">#&gt; that most are.</span></span>
+<span><span class="co">#&gt; Description: &lt;b&gt;This dataset ends with 2023. Please see the Featured Content link below for the dataset that starts in 2024.&lt;/b&gt;</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Taxi trips from 2013 to 2023 reported to the City of Chicago in its role as a regulatory agency.  To protect privacy but allow for aggregate analyses, the Taxi ID is consistent for any given taxi medallion number but does not show the number, Census Tracts are suppressed in some cases, and times are rounded to the nearest 15 minutes.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Due to the data reporting process, not all trips are reported but the City believes that most are.</span></span>
 <span><span class="co">#&gt; Created: 2016-05-27 21:27:48</span></span>
-<span><span class="co">#&gt; Data last updated: 2024-02-07 20:40:12</span></span>
-<span><span class="co">#&gt; Metadata last Updated: 2024-06-21 17:06:18</span></span>
+<span><span class="co">#&gt; Published: 2016-11-14 17:40:03</span></span>
+<span><span class="co">#&gt; Data Last Updated: 2024-02-07 20:40:12</span></span>
+<span><span class="co">#&gt; Metadata Last Updated: 2026-03-19 18:55:14</span></span>
 <span><span class="co">#&gt; Domain Category: Transportation</span></span>
-<span><span class="co">#&gt; Domain Tags: taxis, transportation, and historical</span></span>
-<span><span class="co">#&gt; Domain fields:</span></span>
-<span><span class="co">#&gt; • Time Period: 2013 - 2023</span></span>
-<span><span class="co">#&gt; • Changes and Other Historical Information Useful to Understanding This</span></span>
-<span><span class="co">#&gt; Dataset:</span></span>
-<span><span class="co">#&gt; https://www.google.com/search?as_q="Related+dataset+ID+s"+"wrvz-psew"+inurl:stories&amp;as_sitesearch=data.cityofchicago.org</span></span>
+<span><span class="co">#&gt; Domain Tags: </span></span>
+<span><span class="co">#&gt; • taxis</span></span>
+<span><span class="co">#&gt; • transportation</span></span>
+<span><span class="co">#&gt; • historical</span></span>
+<span><span class="co">#&gt; Domain Metadata: </span></span>
+<span><span class="co">#&gt; • Changes and Other Historical Information Useful to Understanding This Dataset: https://www.google.com/search?q=site:data.cityofchicago.org/stories+"Related+dataset+ID+s"+"wrvz-psew"</span></span>
 <span><span class="co">#&gt; • Data Owner: Department of Business Affairs &amp; Consumer Protection</span></span>
-<span><span class="co">#&gt; Columns:</span></span>
+<span><span class="co">#&gt; • Time Period: 2013 - 2023</span></span>
+<span><span class="co">#&gt; Columns: </span></span>
 <span><span class="co">#&gt; # A tibble: 24 × 4</span></span>
-<span><span class="co">#&gt;    column_name               column_label     column_datatype column_description</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;                     &lt;chr&gt;            &lt;chr&gt;           &lt;chr&gt;             </span></span>
-<span><span class="co">#&gt;  1 trip_id                   Trip ID          text            A unique identifi…</span></span>
-<span><span class="co">#&gt;  2 taxi_id                   Taxi ID          text            A unique identifi…</span></span>
-<span><span class="co">#&gt;  3 trip_start_timestamp      Trip Start Time… calendar_date   When the trip sta…</span></span>
-<span><span class="co">#&gt;  4 trip_end_timestamp        Trip End Timest… calendar_date   When the trip end…</span></span>
-<span><span class="co">#&gt;  5 trip_seconds              Trip Seconds     number          Time of the trip …</span></span>
-<span><span class="co">#&gt;  6 trip_miles                Trip Miles       number          Distance of the t…</span></span>
-<span><span class="co">#&gt;  7 pickup_census_tract       Pickup Census T… text            The Census Tract …</span></span>
-<span><span class="co">#&gt;  8 dropoff_census_tract      Dropoff Census … text            The Census Tract …</span></span>
-<span><span class="co">#&gt;  9 pickup_community_area     Pickup Communit… number          The Community Are…</span></span>
-<span><span class="co">#&gt; 10 dropoff_community_area    Dropoff Communi… number          The Community Are…</span></span>
-<span><span class="co">#&gt; 11 fare                      Fare             number          The fare for the …</span></span>
-<span><span class="co">#&gt; 12 tips                      Tips             number          The tip for the t…</span></span>
-<span><span class="co">#&gt; 13 tolls                     Tolls            number          The tolls for the…</span></span>
-<span><span class="co">#&gt; 14 extras                    Extras           number          Extra charges for…</span></span>
-<span><span class="co">#&gt; 15 trip_total                Trip Total       number          Total cost of the…</span></span>
-<span><span class="co">#&gt; 16 payment_type              Payment Type     text            Type of payment f…</span></span>
-<span><span class="co">#&gt; 17 company                   Company          text            The taxi company. </span></span>
-<span><span class="co">#&gt; 18 pickup_centroid_latitude  Pickup Centroid… number          The latitude of t…</span></span>
-<span><span class="co">#&gt; 19 pickup_centroid_longitude Pickup Centroid… number          The longitude of …</span></span>
-<span><span class="co">#&gt; 20 pickup_centroid_location  Pickup Centroid… point           The location of t…</span></span>
-<span><span class="co">#&gt; # ℹ 4 more rows</span></span>
+<span><span class="co">#&gt;    name                   label                  description            datatype</span></span>
+<span><span class="co">#&gt;  * &lt;chr&gt;                  &lt;chr&gt;                  &lt;chr&gt;                  &lt;chr&gt;   </span></span>
+<span><span class="co">#&gt;  1 trip_id                Trip ID                A unique identifier f… text    </span></span>
+<span><span class="co">#&gt;  2 taxi_id                Taxi ID                A unique identifier f… text    </span></span>
+<span><span class="co">#&gt;  3 trip_start_timestamp   Trip Start Timestamp   When the trip started… calenda…</span></span>
+<span><span class="co">#&gt;  4 trip_end_timestamp     Trip End Timestamp     When the trip ended, … calenda…</span></span>
+<span><span class="co">#&gt;  5 trip_seconds           Trip Seconds           Time of the trip in s… number  </span></span>
+<span><span class="co">#&gt;  6 trip_miles             Trip Miles             Distance of the trip … number  </span></span>
+<span><span class="co">#&gt;  7 pickup_census_tract    Pickup Census Tract    The Census Tract wher… text    </span></span>
+<span><span class="co">#&gt;  8 dropoff_census_tract   Dropoff Census Tract   The Census Tract wher… text    </span></span>
+<span><span class="co">#&gt;  9 pickup_community_area  Pickup Community Area  The Community Area wh… number  </span></span>
+<span><span class="co">#&gt; 10 dropoff_community_area Dropoff Community Area The Community Area wh… number  </span></span>
+<span><span class="co">#&gt; # ℹ 14 more rows</span></span>
 <span><span class="co">#&gt; Permalink: https://data.cityofchicago.org/d/wrvz-psew</span></span>
-<span><span class="co">#&gt; Link:</span></span>
-<span><span class="co">#&gt; https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew</span></span>
 <span><span class="co">#&gt; License: See Terms of Use</span></span></code></pre></div>
 <p>Or explore a dataset’s metadata using it’s url.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
@@ -385,33 +373,36 @@
 <span>  <span class="st">"https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"</span></span>
 <span><span class="op">)</span></span>
 <span><span class="co">#&gt; ID: 6iiy-9s97</span></span>
-<span><span class="co">#&gt; Name: CTA - Ridership - Daily Boarding Totals</span></span>
 <span><span class="co">#&gt; Attribution: Chicago Transit Authority</span></span>
-<span><span class="co">#&gt; Owner: CTA</span></span>
+<span><span class="co">#&gt; Attribution Link: http://www.transitchicago.com</span></span>
+<span><span class="co">#&gt; Resource Type: dataset</span></span>
+<span><span class="co">#&gt; Owner ID: 6bsn-5494</span></span>
+<span><span class="co">#&gt; Owner Display Name: CTA</span></span>
 <span><span class="co">#&gt; Provenance: official</span></span>
-<span><span class="co">#&gt; Description: This dataset shows systemwide boardings for both bus and rail</span></span>
-<span><span class="co">#&gt; services provided by CTA, dating back to 2001. Daytypes are as follows: W =</span></span>
-<span><span class="co">#&gt; Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for</span></span>
-<span><span class="co">#&gt; information on how these numbers are calculated.</span></span>
+<span><span class="co">#&gt; Description: This dataset shows systemwide boardings for both bus and rail services provided by CTA, dating back to 2001. Daytypes are as follows: W = Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for information on how these numbers are calculated.</span></span>
 <span><span class="co">#&gt; Created: 2011-08-12 15:40:31</span></span>
-<span><span class="co">#&gt; Data last updated: 2025-09-22 14:31:04</span></span>
-<span><span class="co">#&gt; Metadata last Updated: 2025-09-22 14:31:03</span></span>
+<span><span class="co">#&gt; Published: 2025-04-29 16:35:04</span></span>
+<span><span class="co">#&gt; Data Last Updated: 2026-04-17 21:29:45</span></span>
+<span><span class="co">#&gt; Metadata Last Updated: 2026-04-17 21:29:44</span></span>
 <span><span class="co">#&gt; Domain Category: Transportation</span></span>
-<span><span class="co">#&gt; Domain Tags: cta, public transit, and ridership</span></span>
-<span><span class="co">#&gt; Domain fields:</span></span>
-<span><span class="co">#&gt; • Data Owner: Chicago Transit Authority</span></span>
-<span><span class="co">#&gt; Columns:</span></span>
+<span><span class="co">#&gt; Domain Tags: </span></span>
+<span><span class="co">#&gt; • cta</span></span>
+<span><span class="co">#&gt; • public transit</span></span>
+<span><span class="co">#&gt; • ridership</span></span>
+<span><span class="co">#&gt; Domain Metadata: </span></span>
+<span><span class="co">#&gt; • Changes and Other Historical Information Useful to Understanding This Dataset: https://www.google.com/search?q=site:data.cityofchicago.org/stories+"Related+dataset+ID+s"+"6iiy-9s97"</span></span>
+<span><span class="co">#&gt; • Time Period: 2001 - Current</span></span>
+<span><span class="co">#&gt; • Data Owner: Chicago Transit Authority </span></span>
+<span><span class="co">#&gt; Columns: </span></span>
 <span><span class="co">#&gt; # A tibble: 5 × 4</span></span>
-<span><span class="co">#&gt;   column_name    column_label   column_datatype column_description</span></span>
-<span><span class="co">#&gt;   &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;           &lt;chr&gt;             </span></span>
-<span><span class="co">#&gt; 1 service_date   service_date   calendar_date   ""                </span></span>
-<span><span class="co">#&gt; 2 day_type       day_type       text            ""                </span></span>
-<span><span class="co">#&gt; 3 bus            bus            number          ""                </span></span>
-<span><span class="co">#&gt; 4 rail_boardings rail_boardings number          ""                </span></span>
-<span><span class="co">#&gt; 5 total_rides    total_rides    number          ""</span></span>
+<span><span class="co">#&gt;   name           label          description datatype     </span></span>
+<span><span class="co">#&gt; * &lt;chr&gt;          &lt;chr&gt;          &lt;chr&gt;       &lt;chr&gt;        </span></span>
+<span><span class="co">#&gt; 1 service_date   service_date   ""          calendar_date</span></span>
+<span><span class="co">#&gt; 2 day_type       day_type       ""          text         </span></span>
+<span><span class="co">#&gt; 3 bus            bus            ""          number       </span></span>
+<span><span class="co">#&gt; 4 rail_boardings rail_boardings ""          number       </span></span>
+<span><span class="co">#&gt; 5 total_rides    total_rides    ""          number       </span></span>
 <span><span class="co">#&gt; Permalink: https://data.cityofchicago.org/d/6iiy-9s97</span></span>
-<span><span class="co">#&gt; Link:</span></span>
-<span><span class="co">#&gt; https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97</span></span>
 <span><span class="co">#&gt; License: See Terms of Use</span></span></code></pre></div>
 </div>
 </div>
@@ -459,7 +450,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
