@@ -22,12 +22,29 @@
 #' @return A tibble containing metadata for each discovered asset. Columns include:
 #' \describe{
 #'   \item{id}{Asset identifier (four-by-four ID).}
+#'   \item{parent_ids}{Asset parent identifiers.}
 #'   \item{name}{Asset name.}
 #'   \item{attribution}{Attribution or publisher of the asset.}
-#'   \item{owner_name}{Display name of the asset owner.}
+#'   \item{attribution_link}{Link to attribution.}
+#'   \item{contact_email}{Email to contact asset owner.}
+#'   \item{resource_type}{Type of resource: api, calendar, chart, dataset, federated_href, file, filter, form, href, link, map, measure, story, visualization.}
+#'   \item{owner}{Owner:
+#'     \describe{
+#'       \item{id}{Owner ID.}
+#'       \item{display_name}{Display name of owner.}
+#'     }
+#'   }
+#'   \item{creator}{Creator:
+#'     \describe{
+#'       \item{id}{Creator ID.}
+#'       \item{display_name}{Display name of creator.}
+#'     }
+#'   }
 #'   \item{provenance}{Provenance of asset (official or community).}
 #'   \item{description}{Textual description of the asset.}
 #'   \item{created}{Date asset was created.}
+#'   \item{updated}{Date asset was last updated.}
+#'   \item{published}{Date asset was published (if published).}
 #'   \item{data_last_updated}{Date asset data was last updated}
 #'   \item{metadata_last_updated}{Date asset metadata was last updated}
 #'   \item{categories}{Category labels assigned to the asset.}
@@ -35,13 +52,22 @@
 #'   \item{domain_category}{Category label assigned by the domain.}
 #'   \item{domain_tags}{Tags applied by the domain.}
 #'   \item{domain_metadata}{Metadata associated with the asset assigned by the domain.}
-#'   \item{column_names}{Names of asset columns.}
-#'   \item{column_labels}{Labels of asset columns.}
-#'   \item{column_datatypes}{Datatypes of asset columns.}
-#'   \item{column_descriptions}{Description of asset columns.}
+#'   \item{columns}{A dataframe with the following columns:
+#'     \describe{
+#'       \item{name}{Names of asset columns.}
+#'       \item{label}{Labels of asset columns.}
+#'       \item{description}{Description of asset columns.}
+#'       \item{datatype}{Datatypes of asset columns.}
+#'     }
+#'   }
 #'   \item{permalink}{Permanent URL where the asset can be accessed.}
 #'   \item{link}{Direct asset link.}
+#'   \item{domain}{Domain of the asset.}
 #'   \item{license}{License associated with the asset.}
+#'   \item{page_views_last_week}{Page views in the last week.}
+#'   \item{page_views_last_month}{Page views in the last month.}
+#'   \item{page_views_total}{Total page views.}
+#'   \item{downloads}{Total number of downloads.}
 #' }
 #'
 #' @examplesIf interactive() && httr2::is_online()
@@ -165,42 +191,7 @@ soc_discover <- function(
       )
   }
 
-  resp <- req |>
-    httr2::req_perform()
+  resp <- httr2::req_perform(req)
 
-  results <- resp |>
-    list() |>
-    httr2::resps_data(
-      \(resp) httr2::resp_body_json(resp, simplifyVector = TRUE)$results
-    )
-
-  tibble::tibble(
-    id = results$resource$id,
-    name = results$resource$name,
-    attribution = results$resource$attribution,
-    owner_name = results$owner$display_name,
-    provenance = results$resource$provenance,
-    description = results$resource$description,
-    created = as.POSIXct(results$resource$createdAt, tz = "UTC"),
-    data_last_updated = as.POSIXct(
-      results$resource$data_updated_at,
-      tz = "UTC"
-    ),
-    metadata_last_updated = as.POSIXct(
-      results$resource$metadata_updated_at,
-      tz = "UTC"
-    ),
-    categories = results$classification$categories,
-    tags = results$classification$tags,
-    domain_category = results$classification$domain_category,
-    domain_tags = results$classification$domain_tags,
-    domain_metadata = results$classification$domain_metadata,
-    column_names = results$resource$columns_name,
-    column_labels = results$resource$columns_field_name,
-    column_datatypes = results$resource$columns_datatype,
-    column_descriptions = results$resource$columns_description,
-    permalink = results$permalink,
-    link = results$link,
-    license = results$metadata$license
-  )
+  parse_discovery_resp(resp)
 }

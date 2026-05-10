@@ -55,13 +55,12 @@ soc_query <- function(
 print.soc_query <- function(x, ...) {
   query_parts <- get_query_parts(x)
 
-  lines <- paste(
-    paste0("{.strong ", query_parts$clauses, "}"),
-    query_parts$params
-  )
-
-  for (line in lines) {
-    cli::cli_text(line)
+  for (i in seq_along(query_parts$clauses)) {
+    cli::cat_line(
+      cli::style_bold(query_parts$clauses[i]),
+      " ",
+      query_parts$params[i]
+    )
   }
 
   invisible(x)
@@ -86,6 +85,6 @@ get_query_parts <- function(query) {
     clauses = names(query)[action_is_not_null] |>
       gsub(pattern = "_", replacement = " ") |>
       toupper(),
-    params = query[action_is_not_null]
+    params = unlist(query[action_is_not_null])
   )
 }

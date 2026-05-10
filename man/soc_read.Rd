@@ -11,7 +11,8 @@ soc_read(
   page_size = 10000,
   include_synthetic_cols = TRUE,
   api_key_id = NULL,
-  api_key_secret = NULL
+  api_key_secret = NULL,
+  timezone = Sys.timezone()
 )
 }
 \arguments{
@@ -35,37 +36,12 @@ environment variable)}
 
 \item{api_key_secret}{string; API key secret to authenticate requests. (Can also be stored as \code{"soc_api_key_secret"}
 environment variable)}
+
+\item{timezone}{string; Timezone to set floating_timestamps to.}
 }
 \value{
-A tibble with additional attributes containing dataset metadata.
+A tibble with an additional \code{soc_meta} attribute storing metadata.
 If the dataset contains a single non-nested geospatial field, it will be returned as an \code{sf} object.
-
-The returned object has the following attributes:
-\describe{
-\item{id}{Asset identifier (four-by-four ID).}
-\item{name}{Asset name.}
-\item{attribution}{Attribution or publisher of the asset.}
-\item{owner_name}{Display name of the asset owner.}
-\item{provenance}{Provenance of asset (official or community).}
-\item{description}{Textual description of the asset.}
-\item{created}{Date asset was created.}
-\item{data_last_updated}{Date asset data was last updated}
-\item{metadata_last_updated}{Date asset metadata was last updated}
-\item{domain_category}{Category label assigned by the domain.}
-\item{domain_tags}{Tags applied by the domain.}
-\item{domain_metadata}{Metadata associated with the asset assigned by the domain.}
-\item{columns}{A dataframe with the following columns:
-\describe{
-\item{column_name}{Names of asset columns.}
-\item{column_label}{Labels of asset columns.}
-\item{column_datatype}{Datatypes of asset columns.}
-\item{column_description}{Description of asset columns.}
-}
-}
-\item{permalink}{Permanent URL where the asset can be accessed.}
-\item{link}{Direct asset link.}
-\item{license}{License associated with the asset.}
-}
 }
 \description{
 Downloads and parses a dataset from a Socrata open data portal URL, returning it as a tibble or \code{sf} object.
