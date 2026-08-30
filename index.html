@@ -7,12 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Explore Socrata Data with Ease • socratadata</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Explore Socrata Data with Ease">
 <meta name="description" content="Provides an interface to search, read, query, and retrieve metadata for datasets hosted on Socrata open data portals. Supports all Socrata data types, including spatial data returned as sf objects.">
 <meta property="og:description" content="Provides an interface to search, read, query, and retrieve metadata for datasets hosted on Socrata open data portals. Supports all Socrata data types, including spatial data returned as sf objects.">
+<meta property="og:image" content="https://ryanzomorrodi.github.io/socratadata/logo.png">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -47,8 +48,11 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="socratadata">socratadata<a class="anchor" aria-label="anchor" href="#socratadata"></a>
-</h1></div>
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="socratadata-">socratadata 
+<a class="anchor" aria-label="anchor" href="#socratadata-"></a>
+</h1>
+</div>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>Explore Socrata data with ease.</p>
@@ -76,7 +80,7 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ryanzomorrodi.github.io/socratadata/">socratadata</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>domains <span class="op">=</span> <span class="st">"data.cityofchicago.org"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 907 × 30</span></span>
+<span><span class="co">#&gt; # A tibble: 914 × 30</span></span>
 <span><span class="co">#&gt;    id        parent_ids name          attribution attribution_link contact_email</span></span>
 <span><span class="co">#&gt;  * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
 <span><span class="co">#&gt;  1 ydr8-5enu &lt;chr [0]&gt;  Building Per… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
@@ -85,11 +89,11 @@
 <span><span class="co">#&gt;  4 85ca-t3if &lt;chr [0]&gt;  Traffic Cras… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  5 4ijn-s7e5 &lt;chr [0]&gt;  Food Inspect… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  6 s6ha-ppgi &lt;chr [0]&gt;  Affordable R… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  7 2ft4-4uik &lt;chr [0]&gt;  Lobbyist Dat… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  8 i6bp-fvbx &lt;chr [0]&gt;  Chicago Stre… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  9 kn9c-c2s2 &lt;chr [0]&gt;  Census Data … U.S. Censu… http://factfind… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt; 10 r5kz-chrr &lt;chr [0]&gt;  Business Lic… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt; # ℹ 897 more rows</span></span>
+<span><span class="co">#&gt;  7 i6bp-fvbx &lt;chr [0]&gt;  Chicago Stre… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 r5kz-chrr &lt;chr [0]&gt;  Business Lic… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  9 2ft4-4uik &lt;chr [0]&gt;  Lobbyist Dat… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 10 22u3-xenr &lt;chr [0]&gt;  Building Vio… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; # ℹ 904 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
 <span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
@@ -99,20 +103,20 @@
 <p>Or with a query.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>query <span class="op">=</span> <span class="st">"bus"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 881 × 30</span></span>
+<span><span class="co">#&gt; # A tibble: 777 × 30</span></span>
 <span><span class="co">#&gt;    id        parent_ids name          attribution attribution_link contact_email</span></span>
 <span><span class="co">#&gt;  * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
 <span><span class="co">#&gt;  1 ez4e-fazm &lt;chr [0]&gt;  Bus Breakdow… Department… &lt;NA&gt;             &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  2 bzwk-3hb4 &lt;chr [0]&gt;  MTA Bus Rout… Metropolit… https://www.mta… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  3 6qat-uaei &lt;chr [0]&gt;  DART Bus Sch… Department… http://www.dart… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  4 eqmj-6b8d &lt;chr [0]&gt;  Bronx Bus St… mta.info    http://mta.info… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  5 2ucp-7wg5 &lt;chr [0]&gt;  MTA Bus Stops Metropolit… https://www.mta… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  3 2ucp-7wg5 &lt;chr [0]&gt;  MTA Bus Stops Metropolit… https://www.mta… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  4 6qat-uaei &lt;chr [0]&gt;  DART Bus Sch… Department… http://www.dart… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  5 6uva-a5ei &lt;chr [0]&gt;  CTA - Bus Ro… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  6 ycrg-ses3 &lt;chr [0]&gt;  Bus Lanes - … Department… &lt;NA&gt;             &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  7 bd2s-bfst &lt;chr [0]&gt;  KCATA Bus St… KCATA Tran… http://www.kcat… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  8 6uva-a5ei &lt;chr [0]&gt;  CTA - Bus Ro… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 eqmj-6b8d &lt;chr [0]&gt;  Bronx Bus St… mta.info    http://mta.info… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  9 nmjv-498y &lt;chr [0]&gt;  Bus Ridership Transit Se… &lt;NA&gt;             &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt; 10 ifm8-78yv &lt;chr [0]&gt;  Bus Routes    Transport … &lt;NA&gt;             &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt; # ℹ 871 more rows</span></span>
+<span><span class="co">#&gt; 10 8f58-98vp &lt;chr [0]&gt;  Bus Frequency Oakland GI… &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; # ℹ 767 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
 <span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
@@ -122,20 +126,20 @@
 <p>Or with categories.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_discover.html">soc_discover</a></span><span class="op">(</span>categories <span class="op">=</span> <span class="st">"transportation"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 406 × 30</span></span>
+<span><span class="co">#&gt; # A tibble: 181 × 30</span></span>
 <span><span class="co">#&gt;    id        parent_ids name          attribution attribution_link contact_email</span></span>
 <span><span class="co">#&gt;  * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
-<span><span class="co">#&gt;  1 2tq4-9mfn &lt;chr [0]&gt;  Vital Signs:… Federal Tr… http://www.ntdp… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  1 f57x-8ifw &lt;chr [0]&gt;  Vital Signs:… &lt;NA&gt;        &lt;NA&gt;             &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  2 pksj-2mmj &lt;chr [0]&gt;  Vital Signs:… Federal Tr… http://www.ntdp… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  3 f57x-8ifw &lt;chr [0]&gt;  Vital Signs:… &lt;NA&gt;        &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  3 btc8-9kef &lt;chr [0]&gt;  Citizen Sati… The City o… https://calgary… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  4 wdpr-f2dr &lt;chr [0]&gt;  Vital Signs:… Federal Tr… http://www.ntdp… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  5 ei2q-6g8n &lt;chr [0]&gt;  Parking Cita… Division o… https://www.nor… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  6 muzh-c9qc &lt;chr [0]&gt;  Calgary Tran… The City o… &lt;NA&gt;             &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  7 btc8-9kef &lt;chr [0]&gt;  Citizen Sati… The City o… https://calgary… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  8 cwsm-2ns3 &lt;chr [0]&gt;  Quarterly Ce… New York S… http://www.labo… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  9 7y2e-49j8 &lt;chr [0]&gt;  Weigh-In-Mot… New York S… https://www.dot… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt; 10 w96p-f2qv &lt;chr [0]&gt;  Daily Mobili… Maryland T… https://mti.umd… kyle.titlow@…</span></span>
-<span><span class="co">#&gt; # ℹ 396 more rows</span></span>
+<span><span class="co">#&gt;  5 muzh-c9qc &lt;chr [0]&gt;  Calgary Tran… The City o… &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  6 ei2q-6g8n &lt;chr [0]&gt;  Parking Cita… Division o… https://www.nor… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  7 2tq4-9mfn &lt;chr [0]&gt;  Vital Signs:… Federal Tr… http://www.ntdp… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 2rrd-659g &lt;chr [0]&gt;  Vital Signs:… Metropolit… &lt;NA&gt;             &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  9 a84c-t6j3 &lt;chr [0]&gt;  Snow Route P… The City o… https://www.cal… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 10 gvsx-wejg &lt;chr [0]&gt;  Vital Signs:… Federal Tr… http://www.ntdp… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; # ℹ 171 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
 <span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
@@ -147,20 +151,20 @@
 <span>  domains <span class="op">=</span> <span class="st">"data.cityofchicago.org"</span>,</span>
 <span>  domain_category <span class="op">=</span> <span class="st">"Transportation"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 87 × 30</span></span>
+<span><span class="co">#&gt; # A tibble: 88 × 30</span></span>
 <span><span class="co">#&gt;    id        parent_ids name          attribution attribution_link contact_email</span></span>
 <span><span class="co">#&gt;  * &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;        </span></span>
 <span><span class="co">#&gt;  1 85ca-t3if &lt;chr [0]&gt;  Traffic Cras… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  2 i6bp-fvbx &lt;chr [0]&gt;  Chicago Stre… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  3 ygr5-vcbg &lt;chr [0]&gt;  Towed Vehicl… Chicago Po… http://www.chic… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  4 6iiy-9s97 &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  5 u6pd-qa9d &lt;chr [0]&gt;  Traffic Cras… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  6 spqx-js37 &lt;chr [0]&gt;  Red Light Ca… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  7 m6dm-c72p &lt;chr [0]&gt;  Transportati… City of Ch… https://www.chi… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  8 kf7e-cur8 &lt;chr [0]&gt;  Chicago Traf… City of Ch… https://www.chi… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  9 pnau-cf66 &lt;chr [0]&gt;  CTA - List o… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt; 10 sxs8-h27x &lt;chr [0]&gt;  Chicago Traf… City of Ch… https://www.cit… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt; # ℹ 77 more rows</span></span>
+<span><span class="co">#&gt;  4 m6dm-c72p &lt;chr [0]&gt;  Transportati… City of Ch… https://www.chi… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  5 68nd-jvt3 &lt;chr [0]&gt;  Traffic Cras… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  6 n4j6-wkkf &lt;chr [0]&gt;  Chicago Traf… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  7 6iiy-9s97 &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 4i42-qv3h &lt;chr [0]&gt;  Speed Camera… City of Ch… http://www.city… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  9 t2qc-9pjd &lt;chr [0]&gt;  Chicago Traf… City of Ch… https://www.chi… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 10 u6pd-qa9d &lt;chr [0]&gt;  Traffic Cras… City of Ch… http://www.chic… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; # ℹ 78 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
 <span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
@@ -181,13 +185,13 @@
 <span><span class="co">#&gt;  3 5neh-572f &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  4 t2rn-p8d7 &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  5 w8km-9pzd &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  6 bynn-gwxy &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  7 jyb9-n7fm &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt;  8 8pix-ypme &lt;chr [0]&gt;  CTA - System… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  6 8pix-ypme &lt;chr [0]&gt;  CTA - System… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  7 bynn-gwxy &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt;  8 jyb9-n7fm &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt;  9 mq3i-nnqe &lt;chr [0]&gt;  CTA - Riders… Chicago Tr… http://www.tran… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt; 10 6uva-a5ei &lt;chr [0]&gt;  CTA - Bus Ro… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt; 11 xbyr-jnvx &lt;chr [0]&gt;  CTA - 'L' (R… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
-<span><span class="co">#&gt; 12 3tzw-cg4m &lt;chr [0]&gt;  CTA - 'L' (R… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 11 3tzw-cg4m &lt;chr [0]&gt;  CTA - 'L' (R… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
+<span><span class="co">#&gt; 12 xbyr-jnvx &lt;chr [0]&gt;  CTA - 'L' (R… City of Ch… http://www.tran… &lt;NA&gt;         </span></span>
 <span><span class="co">#&gt; # ℹ 24 more variables: resource_type &lt;chr&gt;, owner &lt;tibble[,2]&gt;,</span></span>
 <span><span class="co">#&gt; #   creator &lt;tibble[,2]&gt;, provenance &lt;chr&gt;, description &lt;chr&gt;, created &lt;dttm&gt;,</span></span>
 <span><span class="co">#&gt; #   updated &lt;dttm&gt;, published &lt;dttm&gt;, data_last_updated &lt;dttm&gt;,</span></span>
@@ -229,33 +233,33 @@
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 9,190 × 9</span></span>
-<span><span class="co">#&gt;    service_date        day_type    bus rail_boardings total_rides `:id`         </span></span>
-<span><span class="co">#&gt;    &lt;dttm&gt;              &lt;chr&gt;     &lt;dbl&gt;          &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;         </span></span>
-<span><span class="co">#&gt;  1 2001-01-01 00:00:00 U        297192         126455      423647 row-pux9_24p6…</span></span>
-<span><span class="co">#&gt;  2 2001-01-02 00:00:00 W        780827         501952     1282779 row-ekyk_7mqh…</span></span>
-<span><span class="co">#&gt;  3 2001-01-03 00:00:00 W        824923         536432     1361355 row-7knw-h4az…</span></span>
-<span><span class="co">#&gt;  4 2001-01-04 00:00:00 W        870021         550011     1420032 row-xnam~m72f…</span></span>
-<span><span class="co">#&gt;  5 2001-01-05 00:00:00 W        890426         557917     1448343 row-7pqj-uxkc…</span></span>
-<span><span class="co">#&gt;  6 2001-01-06 00:00:00 A        577401         255356      832757 row-kvuw~shzc…</span></span>
-<span><span class="co">#&gt;  7 2001-01-07 00:00:00 U        375831         169825      545656 row-3f5d.axqe…</span></span>
-<span><span class="co">#&gt;  8 2001-01-08 00:00:00 W        985221         590706     1575927 row-mxrr.356r…</span></span>
-<span><span class="co">#&gt;  9 2001-01-09 00:00:00 W        978377         599905     1578282 row-i9ii.759a…</span></span>
-<span><span class="co">#&gt; 10 2001-01-10 00:00:00 W        984884         602052     1586936 row-fedk_g2kd…</span></span>
-<span><span class="co">#&gt; # ℹ 9,180 more rows</span></span>
-<span><span class="co">#&gt; # ℹ 3 more variables: `:version` &lt;chr&gt;, `:created_at` &lt;dttm&gt;,</span></span>
-<span><span class="co">#&gt; #   `:updated_at` &lt;dttm&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; ℹ Utilizing v2.1 API. `include_synthetic_cols` will be ignored. Provide an `api_key_id` and `api_key_secret` to perform a v3 request.</span></span>
+<span><span class="co">#&gt; # A tibble: 9,312 × 5</span></span>
+<span><span class="co">#&gt;    service_date        day_type    bus rail_boardings total_rides</span></span>
+<span><span class="co">#&gt;    &lt;dttm&gt;              &lt;chr&gt;     &lt;dbl&gt;          &lt;dbl&gt;       &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt;  1 2001-01-01 00:00:00 U        297192         126455      423647</span></span>
+<span><span class="co">#&gt;  2 2001-01-02 00:00:00 W        780827         501952     1282779</span></span>
+<span><span class="co">#&gt;  3 2001-01-03 00:00:00 W        824923         536432     1361355</span></span>
+<span><span class="co">#&gt;  4 2001-01-04 00:00:00 W        870021         550011     1420032</span></span>
+<span><span class="co">#&gt;  5 2001-01-05 00:00:00 W        890426         557917     1448343</span></span>
+<span><span class="co">#&gt;  6 2001-01-06 00:00:00 A        577401         255356      832757</span></span>
+<span><span class="co">#&gt;  7 2001-01-07 00:00:00 U        375831         169825      545656</span></span>
+<span><span class="co">#&gt;  8 2001-01-08 00:00:00 W        985221         590706     1575927</span></span>
+<span><span class="co">#&gt;  9 2001-01-09 00:00:00 W        978377         599905     1578282</span></span>
+<span><span class="co">#&gt; 10 2001-01-10 00:00:00 W        984884         602052     1586936</span></span>
+<span><span class="co">#&gt; # ℹ 9,302 more rows</span></span></code></pre></div>
 <p>Spatial data will be read as an <code>sf</code> object.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; Simple feature collection with 77 features and 9 fields</span></span>
+<span><span class="co">#&gt; ℹ Utilizing v2.1 API. `include_synthetic_cols` will be ignored. Provide an `api_key_id` and `api_key_secret` to perform a v3 request.</span></span>
+<span><span class="co">#&gt; Simple feature collection with 77 features and 5 fields</span></span>
 <span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
 <span><span class="co">#&gt; Dimension:     XY</span></span>
 <span><span class="co">#&gt; Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52414 ymax: 42.02304</span></span>
 <span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
-<span><span class="co">#&gt; # A tibble: 77 × 10</span></span>
+<span><span class="co">#&gt; # A tibble: 77 × 6</span></span>
 <span><span class="co">#&gt;                              the_geom area_numbe community area_num_1 shape_area</span></span>
 <span><span class="co">#&gt;  *                 &lt;MULTIPOLYGON [°]&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt;  1 (((-87.65456 41.99817, -87.65574 …          1 ROGERS P… 1           51259902.</span></span>
@@ -269,8 +273,7 @@
 <span><span class="co">#&gt;  9 (((-87.80676 42.00084, -87.80676 …          9 EDISON P… 9           31636314.</span></span>
 <span><span class="co">#&gt; 10 (((-87.78002 41.99741, -87.78049 …         10 NORWOOD … 10         121959105.</span></span>
 <span><span class="co">#&gt; # ℹ 67 more rows</span></span>
-<span><span class="co">#&gt; # ℹ 5 more variables: shape_len &lt;dbl&gt;, `:id` &lt;chr&gt;, `:version` &lt;chr&gt;,</span></span>
-<span><span class="co">#&gt; #   `:created_at` &lt;dttm&gt;, `:updated_at` &lt;dttm&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # ℹ 1 more variable: shape_len &lt;dbl&gt;</span></span></code></pre></div>
 <p>You can even perform complex queries using <a href="https://dev.socrata.com/docs/queries/" class="external-link">Socrata Query Language (SoQL)</a> via <code><a href="reference/soc_query.html">soc_query()</a></code>.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">lower_west_side</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
@@ -280,17 +283,15 @@
 <span>  <span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">lower_west_side</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Simple feature collection with 1 feature and 9 fields</span></span>
+<span><span class="co">#&gt; Simple feature collection with 1 feature and 5 fields</span></span>
 <span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
 <span><span class="co">#&gt; Dimension:     XY</span></span>
 <span><span class="co">#&gt; Bounding box:  xmin: -87.68807 ymin: 41.8348 xmax: -87.63516 ymax: 41.86002</span></span>
 <span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
-<span><span class="co">#&gt; # A tibble: 1 × 10</span></span>
+<span><span class="co">#&gt; # A tibble: 1 × 6</span></span>
 <span><span class="co">#&gt;                    the_geom area_numbe community area_num_1 shape_area shape_len</span></span>
 <span><span class="co">#&gt; *        &lt;MULTIPOLYGON [°]&gt;      &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;</span></span>
 <span><span class="co">#&gt; 1 (((-87.63516 41.85772, -…         31 LOWER WE… 31          81550724.    43229.</span></span>
-<span><span class="co">#&gt; # ℹ 4 more variables: `:id` &lt;chr&gt;, `:version` &lt;chr&gt;, `:created_at` &lt;dttm&gt;,</span></span>
-<span><span class="co">#&gt; #   `:updated_at` &lt;dttm&gt;</span></span>
 <span></span>
 <span><span class="va">cta_ridership</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/soc_read.html">soc_read</a></span><span class="op">(</span></span>
 <span>  <span class="st">"https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data"</span>,</span>
@@ -347,8 +348,8 @@
 <span><span class="co">#&gt; • transportation</span></span>
 <span><span class="co">#&gt; • historical</span></span>
 <span><span class="co">#&gt; Domain Metadata: </span></span>
-<span><span class="co">#&gt; • Changes and Other Historical Information Useful to Understanding This Dataset: https://www.google.com/search?q=site:data.cityofchicago.org/stories+"Related+dataset+ID+s"+"wrvz-psew"</span></span>
 <span><span class="co">#&gt; • Data Owner: Department of Business Affairs &amp; Consumer Protection</span></span>
+<span><span class="co">#&gt; • Changes and Other Historical Information Useful to Understanding This Dataset: https://www.google.com/search?q=site:data.cityofchicago.org/stories+"Related+dataset+ID+s"+"wrvz-psew"</span></span>
 <span><span class="co">#&gt; • Time Period: 2013 - 2023</span></span>
 <span><span class="co">#&gt; Columns: </span></span>
 <span><span class="co">#&gt; # A tibble: 24 × 4</span></span>
@@ -382,8 +383,8 @@
 <span><span class="co">#&gt; Description: This dataset shows systemwide boardings for both bus and rail services provided by CTA, dating back to 2001. Daytypes are as follows: W = Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for information on how these numbers are calculated.</span></span>
 <span><span class="co">#&gt; Created: 2011-08-12 15:40:31</span></span>
 <span><span class="co">#&gt; Published: 2025-04-29 16:35:04</span></span>
-<span><span class="co">#&gt; Data Last Updated: 2026-04-17 21:29:45</span></span>
-<span><span class="co">#&gt; Metadata Last Updated: 2026-04-17 21:29:44</span></span>
+<span><span class="co">#&gt; Data Last Updated: 2026-08-13 18:51:59</span></span>
+<span><span class="co">#&gt; Metadata Last Updated: 2026-08-13 18:51:59</span></span>
 <span><span class="co">#&gt; Domain Category: Transportation</span></span>
 <span><span class="co">#&gt; Domain Tags: </span></span>
 <span><span class="co">#&gt; • cta</span></span>
@@ -450,7 +451,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer>

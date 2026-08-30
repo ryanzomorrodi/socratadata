@@ -1,8 +1,8 @@
 pandoc: 3.8.3
-pkgdown: 2.2.0
+pkgdown: 2.2.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2026-05-10T23:41Z
+last_built: 2026-08-30T19:33Z
 urls:
   reference: https://ryanzomorrodi.github.io/socratadata/reference
   article: https://ryanzomorrodi.github.io/socratadata/articles
