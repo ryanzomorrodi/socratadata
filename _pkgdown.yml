@@ -2,5 +2,7 @@ url: https://ryanzomorrodi.github.io/socratadata/
 template:
   bootstrap: 5
   bslib:
-    bg: "#ffffff"
-    fg: "#212529"
+    navbar-light-bg: "#288cc0"
+    navbar-dark-bg: "#e67516"
+  light-switch: true
+
