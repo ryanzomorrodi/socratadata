@@ -2,8 +2,6 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -13,7 +11,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# socratadata
+# socratadata <a href="https://ryanzomorrodi.github.io/socratadata/"><img src="man/figures/logo.png" align="right" height="120" alt="socratadata website" /></a>
 
 <!-- badges: start -->
 <!-- badges: end -->

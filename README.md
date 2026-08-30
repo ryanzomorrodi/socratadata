@@ -1,7 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# socratadata
+# socratadata <a href="https://ryanzomorrodi.github.io/socratadata/"><img src="man/figures/logo.png" align="right" height="120" alt="socratadata website" /></a>
 
 <!-- badges: start -->
 
@@ -46,7 +44,7 @@ Use `soc_discover()` to explore the datasets with a domain.
 library(socratadata)
 
 soc_discover(domains = "data.cityofchicago.org")
-#> # A tibble: 907 × 30
+#> # A tibble: 914 × 30
 #>    id        parent_ids name          attribution attribution_link contact_email
 #>  * <chr>     <list>     <chr>         <chr>       <chr>            <chr>        
 #>  1 ydr8-5enu <chr [0]>  Building Per… City of Ch… http://www.city… <NA>         
@@ -55,11 +53,11 @@ soc_discover(domains = "data.cityofchicago.org")
 #>  4 85ca-t3if <chr [0]>  Traffic Cras… City of Ch… http://www.chic… <NA>         
 #>  5 4ijn-s7e5 <chr [0]>  Food Inspect… City of Ch… http://www.city… <NA>         
 #>  6 s6ha-ppgi <chr [0]>  Affordable R… City of Ch… http://www.city… <NA>         
-#>  7 2ft4-4uik <chr [0]>  Lobbyist Dat… City of Ch… http://www.city… <NA>         
-#>  8 i6bp-fvbx <chr [0]>  Chicago Stre… City of Ch… http://www.city… <NA>         
-#>  9 kn9c-c2s2 <chr [0]>  Census Data … U.S. Censu… http://factfind… <NA>         
-#> 10 r5kz-chrr <chr [0]>  Business Lic… City of Ch… http://www.city… <NA>         
-#> # ℹ 897 more rows
+#>  7 i6bp-fvbx <chr [0]>  Chicago Stre… City of Ch… http://www.city… <NA>         
+#>  8 r5kz-chrr <chr [0]>  Business Lic… City of Ch… http://www.city… <NA>         
+#>  9 2ft4-4uik <chr [0]>  Lobbyist Dat… City of Ch… http://www.city… <NA>         
+#> 10 22u3-xenr <chr [0]>  Building Vio… City of Ch… http://www.city… <NA>         
+#> # ℹ 904 more rows
 #> # ℹ 24 more variables: resource_type <chr>, owner <tibble[,2]>,
 #> #   creator <tibble[,2]>, provenance <chr>, description <chr>, created <dttm>,
 #> #   updated <dttm>, published <dttm>, data_last_updated <dttm>,
@@ -72,20 +70,20 @@ Or with a query.
 
 ``` r
 soc_discover(query = "bus")
-#> # A tibble: 881 × 30
+#> # A tibble: 777 × 30
 #>    id        parent_ids name          attribution attribution_link contact_email
 #>  * <chr>     <list>     <chr>         <chr>       <chr>            <chr>        
 #>  1 ez4e-fazm <chr [0]>  Bus Breakdow… Department… <NA>             <NA>         
 #>  2 bzwk-3hb4 <chr [0]>  MTA Bus Rout… Metropolit… https://www.mta… <NA>         
-#>  3 6qat-uaei <chr [0]>  DART Bus Sch… Department… http://www.dart… <NA>         
-#>  4 eqmj-6b8d <chr [0]>  Bronx Bus St… mta.info    http://mta.info… <NA>         
-#>  5 2ucp-7wg5 <chr [0]>  MTA Bus Stops Metropolit… https://www.mta… <NA>         
+#>  3 2ucp-7wg5 <chr [0]>  MTA Bus Stops Metropolit… https://www.mta… <NA>         
+#>  4 6qat-uaei <chr [0]>  DART Bus Sch… Department… http://www.dart… <NA>         
+#>  5 6uva-a5ei <chr [0]>  CTA - Bus Ro… City of Ch… http://www.tran… <NA>         
 #>  6 ycrg-ses3 <chr [0]>  Bus Lanes - … Department… <NA>             <NA>         
 #>  7 bd2s-bfst <chr [0]>  KCATA Bus St… KCATA Tran… http://www.kcat… <NA>         
-#>  8 6uva-a5ei <chr [0]>  CTA - Bus Ro… City of Ch… http://www.tran… <NA>         
+#>  8 eqmj-6b8d <chr [0]>  Bronx Bus St… mta.info    http://mta.info… <NA>         
 #>  9 nmjv-498y <chr [0]>  Bus Ridership Transit Se… <NA>             <NA>         
-#> 10 ifm8-78yv <chr [0]>  Bus Routes    Transport … <NA>             <NA>         
-#> # ℹ 871 more rows
+#> 10 8f58-98vp <chr [0]>  Bus Frequency Oakland GI… <NA>             <NA>         
+#> # ℹ 767 more rows
 #> # ℹ 24 more variables: resource_type <chr>, owner <tibble[,2]>,
 #> #   creator <tibble[,2]>, provenance <chr>, description <chr>, created <dttm>,
 #> #   updated <dttm>, published <dttm>, data_last_updated <dttm>,
@@ -98,20 +96,20 @@ Or with categories.
 
 ``` r
 soc_discover(categories = "transportation")
-#> # A tibble: 406 × 30
+#> # A tibble: 181 × 30
 #>    id        parent_ids name          attribution attribution_link contact_email
 #>  * <chr>     <list>     <chr>         <chr>       <chr>            <chr>        
-#>  1 2tq4-9mfn <chr [0]>  Vital Signs:… Federal Tr… http://www.ntdp… <NA>         
+#>  1 f57x-8ifw <chr [0]>  Vital Signs:… <NA>        <NA>             <NA>         
 #>  2 pksj-2mmj <chr [0]>  Vital Signs:… Federal Tr… http://www.ntdp… <NA>         
-#>  3 f57x-8ifw <chr [0]>  Vital Signs:… <NA>        <NA>             <NA>         
+#>  3 btc8-9kef <chr [0]>  Citizen Sati… The City o… https://calgary… <NA>         
 #>  4 wdpr-f2dr <chr [0]>  Vital Signs:… Federal Tr… http://www.ntdp… <NA>         
-#>  5 ei2q-6g8n <chr [0]>  Parking Cita… Division o… https://www.nor… <NA>         
-#>  6 muzh-c9qc <chr [0]>  Calgary Tran… The City o… <NA>             <NA>         
-#>  7 btc8-9kef <chr [0]>  Citizen Sati… The City o… https://calgary… <NA>         
-#>  8 cwsm-2ns3 <chr [0]>  Quarterly Ce… New York S… http://www.labo… <NA>         
-#>  9 7y2e-49j8 <chr [0]>  Weigh-In-Mot… New York S… https://www.dot… <NA>         
-#> 10 w96p-f2qv <chr [0]>  Daily Mobili… Maryland T… https://mti.umd… kyle.titlow@…
-#> # ℹ 396 more rows
+#>  5 muzh-c9qc <chr [0]>  Calgary Tran… The City o… <NA>             <NA>         
+#>  6 ei2q-6g8n <chr [0]>  Parking Cita… Division o… https://www.nor… <NA>         
+#>  7 2tq4-9mfn <chr [0]>  Vital Signs:… Federal Tr… http://www.ntdp… <NA>         
+#>  8 2rrd-659g <chr [0]>  Vital Signs:… Metropolit… <NA>             <NA>         
+#>  9 a84c-t6j3 <chr [0]>  Snow Route P… The City o… https://www.cal… <NA>         
+#> 10 gvsx-wejg <chr [0]>  Vital Signs:… Federal Tr… http://www.ntdp… <NA>         
+#> # ℹ 171 more rows
 #> # ℹ 24 more variables: resource_type <chr>, owner <tibble[,2]>,
 #> #   creator <tibble[,2]>, provenance <chr>, description <chr>, created <dttm>,
 #> #   updated <dttm>, published <dttm>, data_last_updated <dttm>,
@@ -123,20 +121,20 @@ soc_discover(
   domains = "data.cityofchicago.org",
   domain_category = "Transportation"
 )
-#> # A tibble: 87 × 30
+#> # A tibble: 88 × 30
 #>    id        parent_ids name          attribution attribution_link contact_email
 #>  * <chr>     <list>     <chr>         <chr>       <chr>            <chr>        
 #>  1 85ca-t3if <chr [0]>  Traffic Cras… City of Ch… http://www.chic… <NA>         
 #>  2 i6bp-fvbx <chr [0]>  Chicago Stre… City of Ch… http://www.city… <NA>         
 #>  3 ygr5-vcbg <chr [0]>  Towed Vehicl… Chicago Po… http://www.chic… <NA>         
-#>  4 6iiy-9s97 <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
-#>  5 u6pd-qa9d <chr [0]>  Traffic Cras… City of Ch… http://www.chic… <NA>         
-#>  6 spqx-js37 <chr [0]>  Red Light Ca… City of Ch… http://www.city… <NA>         
-#>  7 m6dm-c72p <chr [0]>  Transportati… City of Ch… https://www.chi… <NA>         
-#>  8 kf7e-cur8 <chr [0]>  Chicago Traf… City of Ch… https://www.chi… <NA>         
-#>  9 pnau-cf66 <chr [0]>  CTA - List o… Chicago Tr… http://www.tran… <NA>         
-#> 10 sxs8-h27x <chr [0]>  Chicago Traf… City of Ch… https://www.cit… <NA>         
-#> # ℹ 77 more rows
+#>  4 m6dm-c72p <chr [0]>  Transportati… City of Ch… https://www.chi… <NA>         
+#>  5 68nd-jvt3 <chr [0]>  Traffic Cras… City of Ch… http://www.chic… <NA>         
+#>  6 n4j6-wkkf <chr [0]>  Chicago Traf… City of Ch… http://www.chic… <NA>         
+#>  7 6iiy-9s97 <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
+#>  8 4i42-qv3h <chr [0]>  Speed Camera… City of Ch… http://www.city… <NA>         
+#>  9 t2qc-9pjd <chr [0]>  Chicago Traf… City of Ch… https://www.chi… <NA>         
+#> 10 u6pd-qa9d <chr [0]>  Traffic Cras… City of Ch… http://www.chic… <NA>         
+#> # ℹ 78 more rows
 #> # ℹ 24 more variables: resource_type <chr>, owner <tibble[,2]>,
 #> #   creator <tibble[,2]>, provenance <chr>, description <chr>, created <dttm>,
 #> #   updated <dttm>, published <dttm>, data_last_updated <dttm>,
@@ -160,13 +158,13 @@ soc_discover(
 #>  3 5neh-572f <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
 #>  4 t2rn-p8d7 <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
 #>  5 w8km-9pzd <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
-#>  6 bynn-gwxy <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
-#>  7 jyb9-n7fm <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
-#>  8 8pix-ypme <chr [0]>  CTA - System… Chicago Tr… http://www.tran… <NA>         
+#>  6 8pix-ypme <chr [0]>  CTA - System… Chicago Tr… http://www.tran… <NA>         
+#>  7 bynn-gwxy <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
+#>  8 jyb9-n7fm <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
 #>  9 mq3i-nnqe <chr [0]>  CTA - Riders… Chicago Tr… http://www.tran… <NA>         
 #> 10 6uva-a5ei <chr [0]>  CTA - Bus Ro… City of Ch… http://www.tran… <NA>         
-#> 11 xbyr-jnvx <chr [0]>  CTA - 'L' (R… City of Ch… http://www.tran… <NA>         
-#> 12 3tzw-cg4m <chr [0]>  CTA - 'L' (R… City of Ch… http://www.tran… <NA>         
+#> 11 3tzw-cg4m <chr [0]>  CTA - 'L' (R… City of Ch… http://www.tran… <NA>         
+#> 12 xbyr-jnvx <chr [0]>  CTA - 'L' (R… City of Ch… http://www.tran… <NA>         
 #> # ℹ 24 more variables: resource_type <chr>, owner <tibble[,2]>,
 #> #   creator <tibble[,2]>, provenance <chr>, description <chr>, created <dttm>,
 #> #   updated <dttm>, published <dttm>, data_last_updated <dttm>,
@@ -225,22 +223,21 @@ Use `soc_read()` to read a socrata dataset into R.
 soc_read(
   "https://data.cityofchicago.org/Transportation/CTA-Ridership-Daily-Boarding-Totals/6iiy-9s97/about_data"
 )
-#> # A tibble: 9,190 × 9
-#>    service_date        day_type    bus rail_boardings total_rides `:id`         
-#>    <dttm>              <chr>     <dbl>          <dbl>       <dbl> <chr>         
-#>  1 2001-01-01 00:00:00 U        297192         126455      423647 row-pux9_24p6…
-#>  2 2001-01-02 00:00:00 W        780827         501952     1282779 row-ekyk_7mqh…
-#>  3 2001-01-03 00:00:00 W        824923         536432     1361355 row-7knw-h4az…
-#>  4 2001-01-04 00:00:00 W        870021         550011     1420032 row-xnam~m72f…
-#>  5 2001-01-05 00:00:00 W        890426         557917     1448343 row-7pqj-uxkc…
-#>  6 2001-01-06 00:00:00 A        577401         255356      832757 row-kvuw~shzc…
-#>  7 2001-01-07 00:00:00 U        375831         169825      545656 row-3f5d.axqe…
-#>  8 2001-01-08 00:00:00 W        985221         590706     1575927 row-mxrr.356r…
-#>  9 2001-01-09 00:00:00 W        978377         599905     1578282 row-i9ii.759a…
-#> 10 2001-01-10 00:00:00 W        984884         602052     1586936 row-fedk_g2kd…
-#> # ℹ 9,180 more rows
-#> # ℹ 3 more variables: `:version` <chr>, `:created_at` <dttm>,
-#> #   `:updated_at` <dttm>
+#> ℹ Utilizing v2.1 API. `include_synthetic_cols` will be ignored. Provide an `api_key_id` and `api_key_secret` to perform a v3 request.
+#> # A tibble: 9,312 × 5
+#>    service_date        day_type    bus rail_boardings total_rides
+#>    <dttm>              <chr>     <dbl>          <dbl>       <dbl>
+#>  1 2001-01-01 00:00:00 U        297192         126455      423647
+#>  2 2001-01-02 00:00:00 W        780827         501952     1282779
+#>  3 2001-01-03 00:00:00 W        824923         536432     1361355
+#>  4 2001-01-04 00:00:00 W        870021         550011     1420032
+#>  5 2001-01-05 00:00:00 W        890426         557917     1448343
+#>  6 2001-01-06 00:00:00 A        577401         255356      832757
+#>  7 2001-01-07 00:00:00 U        375831         169825      545656
+#>  8 2001-01-08 00:00:00 W        985221         590706     1575927
+#>  9 2001-01-09 00:00:00 W        978377         599905     1578282
+#> 10 2001-01-10 00:00:00 W        984884         602052     1586936
+#> # ℹ 9,302 more rows
 ```
 
 Spatial data will be read as an `sf` object.
@@ -249,12 +246,13 @@ Spatial data will be read as an `sf` object.
 soc_read(
   "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy/about_data"
 )
-#> Simple feature collection with 77 features and 9 fields
+#> ℹ Utilizing v2.1 API. `include_synthetic_cols` will be ignored. Provide an `api_key_id` and `api_key_secret` to perform a v3 request.
+#> Simple feature collection with 77 features and 5 fields
 #> Geometry type: MULTIPOLYGON
 #> Dimension:     XY
 #> Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52414 ymax: 42.02304
 #> Geodetic CRS:  WGS 84
-#> # A tibble: 77 × 10
+#> # A tibble: 77 × 6
 #>                              the_geom area_numbe community area_num_1 shape_area
 #>  *                 <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>
 #>  1 (((-87.65456 41.99817, -87.65574 …          1 ROGERS P… 1           51259902.
@@ -268,8 +266,7 @@ soc_read(
 #>  9 (((-87.80676 42.00084, -87.80676 …          9 EDISON P… 9           31636314.
 #> 10 (((-87.78002 41.99741, -87.78049 …         10 NORWOOD … 10         121959105.
 #> # ℹ 67 more rows
-#> # ℹ 5 more variables: shape_len <dbl>, `:id` <chr>, `:version` <chr>,
-#> #   `:created_at` <dttm>, `:updated_at` <dttm>
+#> # ℹ 1 more variable: shape_len <dbl>
 ```
 
 You can even perform complex queries using [Socrata Query Language
@@ -283,17 +280,15 @@ lower_west_side <- soc_read(
   )
 )
 print(lower_west_side)
-#> Simple feature collection with 1 feature and 9 fields
+#> Simple feature collection with 1 feature and 5 fields
 #> Geometry type: MULTIPOLYGON
 #> Dimension:     XY
 #> Bounding box:  xmin: -87.68807 ymin: 41.8348 xmax: -87.63516 ymax: 41.86002
 #> Geodetic CRS:  WGS 84
-#> # A tibble: 1 × 10
+#> # A tibble: 1 × 6
 #>                    the_geom area_numbe community area_num_1 shape_area shape_len
 #> *        <MULTIPOLYGON [°]>      <dbl> <chr>     <chr>           <dbl>     <dbl>
 #> 1 (((-87.63516 41.85772, -…         31 LOWER WE… 31          81550724.    43229.
-#> # ℹ 4 more variables: `:id` <chr>, `:version` <chr>, `:created_at` <dttm>,
-#> #   `:updated_at` <dttm>
 
 cta_ridership <- soc_read(
   "https://data.cityofchicago.org/Transportation/Taxi-Trips-2013-2023-/wrvz-psew/about_data",
@@ -351,8 +346,8 @@ soc_metadata(cta_ridership)
 #> • transportation
 #> • historical
 #> Domain Metadata: 
-#> • Changes and Other Historical Information Useful to Understanding This Dataset: https://www.google.com/search?q=site:data.cityofchicago.org/stories+"Related+dataset+ID+s"+"wrvz-psew"
 #> • Data Owner: Department of Business Affairs & Consumer Protection
+#> • Changes and Other Historical Information Useful to Understanding This Dataset: https://www.google.com/search?q=site:data.cityofchicago.org/stories+"Related+dataset+ID+s"+"wrvz-psew"
 #> • Time Period: 2013 - 2023
 #> Columns: 
 #> # A tibble: 24 × 4
@@ -389,8 +384,8 @@ soc_metadata(
 #> Description: This dataset shows systemwide boardings for both bus and rail services provided by CTA, dating back to 2001. Daytypes are as follows: W = Weekday, A = Saturday, U = Sunday/Holiday. See attached readme file for information on how these numbers are calculated.
 #> Created: 2011-08-12 15:40:31
 #> Published: 2025-04-29 16:35:04
-#> Data Last Updated: 2026-04-17 21:29:45
-#> Metadata Last Updated: 2026-04-17 21:29:44
+#> Data Last Updated: 2026-08-13 18:51:59
+#> Metadata Last Updated: 2026-08-13 18:51:59
 #> Domain Category: Transportation
 #> Domain Tags: 
 #> • cta
